@@ -44,6 +44,12 @@ Thumbs.db
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
 
+# Python ML engine
+.pythonlibs/
+__pycache__/
+*.pyc
+artifacts/api-server/data/checkpoints/
+
 # Replit
 .cache/
 .local/

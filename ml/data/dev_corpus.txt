@@ -1,0 +1,6 @@
+Denarixx D0 is an experimental research model.
+Evidence matters more than marketing.
+Every experiment records its data, configuration, seed, and conclusion.
+Small reproducible tests come before expensive scaling.
+Data quality, efficiency, and reliability are part of intelligence research.
+The model learns from a local development corpus for pipeline validation.

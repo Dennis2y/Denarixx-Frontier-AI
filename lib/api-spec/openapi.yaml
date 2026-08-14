@@ -3,13 +3,19 @@ info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: Denarixx Frontier AI research control plane API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: research
+    description: Research dashboard and registry operations
+  - name: training
+    description: Executable D0 training runs
+  - name: inference
+    description: D0 inference operations
 paths:
   /healthz:
     get:
@@ -24,6 +30,140 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /research/overview:
+    get:
+      operationId: getResearchOverview
+      tags: [research]
+      summary: Get research overview
+      responses:
+        "200":
+          description: Current control-plane state
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResearchOverview"
+  /models:
+    get:
+      operationId: listModels
+      tags: [research]
+      summary: List registered models
+      responses:
+        "200":
+          description: Registered models
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Model"
+  /datasets:
+    get:
+      operationId: listDatasets
+      tags: [research]
+      summary: List registered datasets
+      responses:
+        "200":
+          description: Registered datasets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Dataset"
+  /experiments:
+    get:
+      operationId: listExperiments
+      tags: [research]
+      summary: List research experiments
+      responses:
+        "200":
+          description: Research experiments
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Experiment"
+    post:
+      operationId: createExperiment
+      tags: [research]
+      summary: Record a research experiment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ExperimentInput"
+      responses:
+        "201":
+          description: Created experiment
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Experiment"
+  /training-runs:
+    get:
+      operationId: listTrainingRuns
+      tags: [training]
+      summary: List training runs
+      responses:
+        "200":
+          description: Training runs with real metrics
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TrainingRun"
+    post:
+      operationId: startTrainingRun
+      tags: [training]
+      summary: Start a tiny CPU-compatible D0 training run
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TrainingRunInput"
+      responses:
+        "202":
+          description: Training run accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrainingRun"
+  /evaluations:
+    get:
+      operationId: listEvaluations
+      tags: [research]
+      summary: List evaluations
+      responses:
+        "200":
+          description: Evaluation results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Evaluation"
+  /inference:
+    post:
+      operationId: runInference
+      tags: [inference]
+      summary: Generate a D0 inference sample
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InferenceInput"
+      responses:
+        "200":
+          description: Inference result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InferenceResult"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +173,146 @@ components:
           type: string
       required:
         - status
+    ResearchOverview:
+      type: object
+      required: [program, models, datasets, experiments, trainingRuns, evaluations, milestones, systemStatus]
+      properties:
+        program: { type: string }
+        models: { type: number }
+        datasets: { type: number }
+        experiments: { type: number }
+        trainingRuns: { type: number }
+        evaluations: { type: number }
+        systemStatus: { type: string }
+        latestRun:
+          anyOf:
+            - $ref: "#/components/schemas/TrainingRun"
+            - type: "null"
+        milestones:
+          type: array
+          items:
+            $ref: "#/components/schemas/Milestone"
+    Milestone:
+      type: object
+      required: [id, label, status, description]
+      properties:
+        id: { type: string }
+        label: { type: string }
+        status: { type: string, enum: [complete, active, planned] }
+        description: { type: string }
+    Model:
+      type: object
+      required: [id, name, family, status, parameters, contextLength, architecture]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        family: { type: string }
+        status: { type: string }
+        parameters: { type: number }
+        contextLength: { type: number }
+        architecture: { type: string }
+        note: { type: ["string", "null"] }
+    Dataset:
+      type: object
+      required: [id, name, version, stage, provenance, documents, tokens, license]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        version: { type: string }
+        stage: { type: string }
+        provenance: { type: string }
+        documents: { type: number }
+        tokens: { type: number }
+        license: { type: string }
+        qualityScore: { type: ["number", "null"] }
+    Experiment:
+      type: object
+      required: [id, name, hypothesis, baseline, variant, dataset, status, conclusion, createdAt]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        hypothesis: { type: string }
+        baseline: { type: string }
+        variant: { type: string }
+        dataset: { type: string }
+        status: { type: string }
+        conclusion: { type: string }
+        createdAt: { type: string, format: date-time }
+    ExperimentInput:
+      type: object
+      required: [name, hypothesis, baseline, variant, dataset]
+      properties:
+        name: { type: string, minLength: 1 }
+        hypothesis: { type: string, minLength: 1 }
+        baseline: { type: string, minLength: 1 }
+        variant: { type: string, minLength: 1 }
+        dataset: { type: string, minLength: 1 }
+    TrainingRunInput:
+      type: object
+      properties:
+        maxSteps: { type: number, minimum: 1, maximum: 200, default: 20 }
+        seed: { type: number, minimum: 0, default: 42 }
+    TrainingMetric:
+      type: object
+      required: [step, trainingLoss, validationLoss, learningRate, tokensProcessed, tokensPerSecond]
+      properties:
+        step: { type: number }
+        trainingLoss: { type: number }
+        validationLoss: { type: ["number", "null"] }
+        learningRate: { type: number }
+        tokensProcessed: { type: number }
+        tokensPerSecond: { type: number }
+    TrainingRun:
+      type: object
+      required: [id, status, model, dataset, device, maxSteps, seed, startedAt, metrics, checkpointPath, measured]
+      properties:
+        id: { type: string }
+        status: { type: string }
+        model: { type: string }
+        dataset: { type: string }
+        device: { type: string }
+        maxSteps: { type: number }
+        seed: { type: number }
+        startedAt: { type: string, format: date-time }
+        completedAt: { type: ["string", "null"], format: date-time }
+        metrics:
+          type: array
+          items:
+            $ref: "#/components/schemas/TrainingMetric"
+        checkpointPath: { type: ["string", "null"] }
+        measured: { type: boolean }
+        error: { type: ["string", "null"] }
+    Evaluation:
+      type: object
+      required: [id, benchmark, benchmarkVersion, model, checkpoint, score, source, status, evaluatedAt]
+      properties:
+        id: { type: string }
+        benchmark: { type: string }
+        benchmarkVersion: { type: string }
+        model: { type: string }
+        checkpoint: { type: string }
+        score: { type: ["number", "null"] }
+        source: { type: string }
+        status: { type: string }
+        evaluatedAt: { type: string, format: date-time }
+        rawResults: { type: string }
+    InferenceInput:
+      type: object
+      required: [prompt]
+      properties:
+        prompt: { type: string, minLength: 1, maxLength: 1000 }
+        maxTokens: { type: number, minimum: 1, maximum: 64, default: 24 }
+        temperature: { type: number, minimum: 0.1, maximum: 2, default: 0.8 }
+    InferenceResult:
+      type: object
+      required: [model, checkpoint, prompt, output, measured, tokensGenerated, latencyMs, tokensPerSecond]
+      properties:
+        model: { type: string }
+        checkpoint: { type: string }
+        prompt: { type: string }
+        output: { type: string }
+        measured: { type: boolean }
+        tokensGenerated: { type: number }
+        latencyMs: { type: number }
+        tokensPerSecond: { type: number }
 
