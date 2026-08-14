@@ -15,6 +15,8 @@ export interface TrainingRun {
   device: string;
   maxSteps: number;
   seed: number;
+  /** @nullable */
+  resumedFromRunId: string | null;
   startedAt: Date;
   /** @nullable */
   completedAt?: Date | null;

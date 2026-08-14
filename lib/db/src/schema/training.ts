@@ -8,6 +8,7 @@ export const trainingRunsTable = pgTable("training_runs", {
   device: text("device").notNull(),
   maxSteps: integer("max_steps").notNull(),
   seed: integer("seed").notNull(),
+  resumedFromRunId: text("resumed_from_run_id"),
   startedAt: timestamp("started_at", { withTimezone: true }).notNull().defaultNow(),
   completedAt: timestamp("completed_at", { withTimezone: true }),
   checkpointPath: text("checkpoint_path"),

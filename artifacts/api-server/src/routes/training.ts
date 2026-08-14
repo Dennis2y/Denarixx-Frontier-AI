@@ -37,6 +37,7 @@ function mapRun(row: typeof trainingRunsTable.$inferSelect, metrics: Array<typeo
     device: row.device,
     maxSteps: row.maxSteps,
     seed: row.seed,
+    resumedFromRunId: row.resumedFromRunId,
     startedAt: row.startedAt.toISOString(),
     completedAt: row.completedAt?.toISOString() ?? null,
     checkpointPath: row.checkpointPath,
@@ -70,6 +71,26 @@ router.post("/training-runs", requireResearchRole, async (req, res, next) => {
   try {
     await seedResearchData();
     const input = StartTrainingRunBody.parse(req.body ?? {});
+    let resumeCheckpointPath: string | undefined;
+    let resumedFromRunId: string | null = input.resumeFromRunId ?? null;
+    let seed = input.seed ?? 42;
+    if (resumedFromRunId) {
+      const [sourceRun] = await db
+        .select()
+        .from(trainingRunsTable)
+        .where(eq(trainingRunsTable.id, resumedFromRunId))
+        .limit(1);
+      if (!sourceRun || sourceRun.status !== "complete" || !sourceRun.checkpointPath) {
+        res.status(409).json({ error: "Resume requires a complete run with a checkpoint." });
+        return;
+      }
+      if ((input.maxSteps ?? 20) <= sourceRun.maxSteps) {
+        res.status(400).json({ error: `Resume maxSteps must be greater than ${sourceRun.maxSteps}.` });
+        return;
+      }
+      resumeCheckpointPath = sourceRun.checkpointPath;
+      seed = sourceRun.seed;
+    }
     const id = randomUUID();
     const startedAt = new Date();
     const [row] = await db
@@ -81,12 +102,13 @@ router.post("/training-runs", requireResearchRole, async (req, res, next) => {
         dataset: "denarixx-local-dev-v1",
         device: "pending",
         maxSteps: input.maxSteps ?? 20,
-        seed: input.seed ?? 42,
+        seed,
+        resumedFromRunId,
         startedAt,
         measured: true,
       })
       .returning();
-    runTrainingProcess(id, row.maxSteps, row.seed);
+    runTrainingProcess(id, row.maxSteps, row.seed, resumeCheckpointPath);
     res.status(202).json(
       StartTrainingRunResponse.parse({
         ...mapRun(row, []),
@@ -98,12 +120,14 @@ router.post("/training-runs", requireResearchRole, async (req, res, next) => {
   }
 });
 
-function runTrainingProcess(runId: string, maxSteps: number, seed: number) {
+function runTrainingProcess(runId: string, maxSteps: number, seed: number, resumeCheckpointPath?: string) {
   const python = path.join(process.cwd(), ".pythonlibs", "bin", "python");
   const command = process.env.PYTHON_BIN || python;
   const script = path.resolve(process.cwd(), "ml", "run_experiment.py");
   const checkpointDir = path.resolve(process.cwd(), "artifacts", "api-server", "data", "checkpoints");
-  const child = spawn(command, [script, "--max-steps", String(maxSteps), "--seed", String(seed), "--checkpoint-dir", checkpointDir, "--run-id", runId], {
+  const args = [script, "--max-steps", String(maxSteps), "--seed", String(seed), "--checkpoint-dir", checkpointDir, "--run-id", runId];
+  if (resumeCheckpointPath) args.push("--resume-checkpoint", resumeCheckpointPath);
+  const child = spawn(command, args, {
     cwd: process.cwd(),
     env: { ...process.env, PYTHONPATH: path.resolve(process.cwd(), "ml") },
   });

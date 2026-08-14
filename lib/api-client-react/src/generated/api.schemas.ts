@@ -27,6 +27,8 @@ export interface TrainingRun {
   device: string;
   maxSteps: number;
   seed: number;
+  /** @nullable */
+  resumedFromRunId: string | null;
   startedAt: string;
   /** @nullable */
   completedAt?: string | null;
@@ -124,6 +126,8 @@ export interface TrainingRunInput {
   maxSteps?: number;
   /** @minimum 0 */
   seed?: number;
+  /** @nullable */
+  resumeFromRunId?: string | null;
 }
 
 export interface Evaluation {

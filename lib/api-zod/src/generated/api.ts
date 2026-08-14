@@ -36,6 +36,7 @@ export const GetResearchOverviewResponse = zod.object({
   "device": zod.string(),
   "maxSteps": zod.number(),
   "seed": zod.number(),
+  "resumedFromRunId": zod.string().nullable(),
   "startedAt": zod.coerce.date(),
   "completedAt": zod.coerce.date().nullish(),
   "metrics": zod.array(zod.object({
@@ -151,6 +152,7 @@ export const ListTrainingRunsResponseItem = zod.object({
   "device": zod.string(),
   "maxSteps": zod.number(),
   "seed": zod.number(),
+  "resumedFromRunId": zod.string().nullable(),
   "startedAt": zod.coerce.date(),
   "completedAt": zod.coerce.date().nullish(),
   "metrics": zod.array(zod.object({
@@ -169,7 +171,7 @@ export const ListTrainingRunsResponse = zod.array(ListTrainingRunsResponseItem)
 
 
 /**
- * @summary Start a tiny CPU-compatible D0 training run
+ * @summary Start or resume a tiny CPU-compatible D0 training run
  */
 export const startTrainingRunBodyMaxStepsDefault = 20;
 export const startTrainingRunBodyMaxStepsMax = 200;
@@ -181,7 +183,8 @@ export const startTrainingRunBodySeedMin = 0;
 
 export const StartTrainingRunBody = zod.object({
   "maxSteps": zod.number().min(1).max(startTrainingRunBodyMaxStepsMax).default(startTrainingRunBodyMaxStepsDefault),
-  "seed": zod.number().min(startTrainingRunBodySeedMin).default(startTrainingRunBodySeedDefault)
+  "seed": zod.number().min(startTrainingRunBodySeedMin).default(startTrainingRunBodySeedDefault),
+  "resumeFromRunId": zod.string().nullish()
 })
 
 export const StartTrainingRunResponse = zod.object({
@@ -192,6 +195,7 @@ export const StartTrainingRunResponse = zod.object({
   "device": zod.string(),
   "maxSteps": zod.number(),
   "seed": zod.number(),
+  "resumedFromRunId": zod.string().nullable(),
   "startedAt": zod.coerce.date(),
   "completedAt": zod.coerce.date().nullish(),
   "metrics": zod.array(zod.object({

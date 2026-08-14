@@ -118,7 +118,7 @@ paths:
     post:
       operationId: startTrainingRun
       tags: [training]
-      summary: Start a tiny CPU-compatible D0 training run
+      summary: Start or resume a tiny CPU-compatible D0 training run
       requestBody:
         required: false
         content:
@@ -252,6 +252,7 @@ components:
       properties:
         maxSteps: { type: number, minimum: 1, maximum: 200, default: 20 }
         seed: { type: number, minimum: 0, default: 42 }
+        resumeFromRunId: { type: ["string", "null"] }
     TrainingMetric:
       type: object
       required: [step, trainingLoss, validationLoss, learningRate, tokensProcessed, tokensPerSecond]
@@ -264,7 +265,7 @@ components:
         tokensPerSecond: { type: number }
     TrainingRun:
       type: object
-      required: [id, status, model, dataset, device, maxSteps, seed, startedAt, metrics, checkpointPath, measured]
+      required: [id, status, model, dataset, device, maxSteps, seed, startedAt, metrics, checkpointPath, measured, resumedFromRunId]
       properties:
         id: { type: string }
         status: { type: string }
@@ -273,6 +274,7 @@ components:
         device: { type: string }
         maxSteps: { type: number }
         seed: { type: number }
+        resumedFromRunId: { type: ["string", "null"] }
         startedAt: { type: string, format: date-time }
         completedAt: { type: ["string", "null"], format: date-time }
         metrics:

@@ -603,7 +603,7 @@ export const getStartTrainingRunUrl = () => {
 }
 
 /**
- * @summary Start a tiny CPU-compatible D0 training run
+ * @summary Start or resume a tiny CPU-compatible D0 training run
  */
 export const startTrainingRun = async (trainingRunInput?: TrainingRunInput, options?: Parameters<typeof customFetch>[1]): Promise<TrainingRun> => {
 
@@ -652,7 +652,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
     export type StartTrainingRunMutationError = ErrorType<unknown>
 
     /**
- * @summary Start a tiny CPU-compatible D0 training run
+ * @summary Start or resume a tiny CPU-compatible D0 training run
  */
 export const useStartTrainingRun = <TError = ErrorType<unknown>,
     TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof startTrainingRun>>, TError,{data?: BodyType<TrainingRunInput>}, TContext>, request?: SecondParameter<typeof customFetch>}

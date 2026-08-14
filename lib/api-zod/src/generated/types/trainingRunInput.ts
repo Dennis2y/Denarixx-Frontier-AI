@@ -14,4 +14,6 @@ export interface TrainingRunInput {
   maxSteps?: number;
   /** @minimum 0 */
   seed?: number;
+  /** @nullable */
+  resumeFromRunId?: string | null;
 }
