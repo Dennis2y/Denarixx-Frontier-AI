@@ -53,3 +53,10 @@ artifacts/api-server/data/checkpoints/
 # Replit
 .cache/
 .local/
+
+# Denarixx local ML research artifacts
+local-checkpoints/
+research/reports/*.json
+local-backups/
+ml/**/__pycache__/
+*.pyc
