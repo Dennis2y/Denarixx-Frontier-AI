@@ -1,1 +1,1 @@
-"""Checkpoint-backed inference."""
+"""Inference utilities for Denarixx research models."""
