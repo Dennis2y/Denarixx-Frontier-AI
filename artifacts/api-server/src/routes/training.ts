@@ -148,12 +148,18 @@ function runTrainingProcess(runId: string, maxSteps: number, seed: number, resum
         metrics?: Array<{
           step: number;
           trainingLoss: number;
-          validationLoss: number;
           learningRate: number;
-          tokensProcessed: number;
+          tokensProcessedThisRun: number;
           tokensPerSecond: number;
+          gradientNorm: number;
           elapsedSeconds: number;
         }>;
+        finalEvaluation?: {
+          average_loss: number;
+          perplexity: number;
+          batches_evaluated: number;
+          tokens_evaluated: number;
+        };
       };
       if (code !== 0 || payload.status !== "complete") {
         await db.update(trainingRunsTable).set({ status: "failed", error: payload.error ?? `training process exited with ${code}` }).where(eq(trainingRunsTable.id, runId));
@@ -171,9 +177,9 @@ function runTrainingProcess(runId: string, maxSteps: number, seed: number, resum
           runId,
           step: metric.step,
           trainingLoss: metric.trainingLoss,
-          validationLoss: metric.validationLoss,
+          validationLoss: payload.finalEvaluation?.average_loss ?? null,
           learningRate: metric.learningRate,
-          tokensProcessed: metric.tokensProcessed,
+          tokensProcessed: metric.tokensProcessedThisRun,
           tokensPerSecond: metric.tokensPerSecond,
           elapsedSeconds: metric.elapsedSeconds,
         })));
@@ -184,10 +190,17 @@ function runTrainingProcess(runId: string, maxSteps: number, seed: number, resum
           benchmarkVersion: "v1",
           model: "denarixx-d0-baseline",
           checkpoint: payload.checkpointPath ?? "unknown",
-          score: latest?.validationLoss ?? null,
+          score: payload.finalEvaluation?.average_loss ?? null,
           source: "Denarixx measured",
           status: "complete",
-          rawResults: JSON.stringify({ metric: "validation_loss", value: latest?.validationLoss ?? null, runId }),
+          rawResults: JSON.stringify({
+            metric: "validation_loss",
+            value: payload.finalEvaluation?.average_loss ?? null,
+            perplexity: payload.finalEvaluation?.perplexity ?? null,
+            batchesEvaluated: payload.finalEvaluation?.batches_evaluated ?? null,
+            tokensEvaluated: payload.finalEvaluation?.tokens_evaluated ?? null,
+            runId,
+          }),
         });
       }
     } catch (error) {

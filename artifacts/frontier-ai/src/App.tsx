@@ -1,5 +1,5 @@
 import { type ReactNode, useState } from 'react';
-import { QueryClient, QueryClientProvider, useQueryClient } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider, useQuery, useQueryClient } from '@tanstack/react-query';
 import { ClerkProvider, SignIn, SignUp, useClerk, useUser } from '@clerk/react';
 import { publishableKeyFromHost } from '@clerk/react/internal';
 import { shadcn } from '@clerk/themes';
@@ -9,7 +9,7 @@ import {
   RefreshCw, SlidersHorizontal, Sparkles, Terminal, X, Zap,
 } from 'lucide-react';
 import {
-  getGetResearchOverviewQueryKey, getListExperimentsQueryKey, getListTrainingRunsQueryKey,
+  getGetResearchOverviewQueryKey, getListExperimentsQueryKey, getListTrainingRunsQueryKey, getListTrainingRunsQueryOptions,
   useCreateExperiment, useGetResearchOverview, useListDatasets, useListEvaluations,
   useListExperiments, useListModels, useListTrainingRuns, useRunInference,
   useStartTrainingRun,
@@ -445,7 +445,7 @@ function ExperimentRow({ experiment }: { experiment: Experiment }) {
 }
 
 function TrainingPage() {
-  const query = useListTrainingRuns({ query: { refetchInterval: 2000 } }); const runs = query.data as TrainingRun[] | undefined; const start = useStartTrainingRun(); const client = useQueryClient(); const [open, setOpen] = useState(false); const [maxSteps, setMaxSteps] = useState('40'); const [seed, setSeed] = useState('7'); const [resumeFromRunId, setResumeFromRunId] = useState('');
+  const query = useQuery({ ...getListTrainingRunsQueryOptions(), refetchInterval: 2000 }); const runs = query.data as TrainingRun[] | undefined; const start = useStartTrainingRun(); const client = useQueryClient(); const [open, setOpen] = useState(false); const [maxSteps, setMaxSteps] = useState('40'); const [seed, setSeed] = useState('7'); const [resumeFromRunId, setResumeFromRunId] = useState('');
   const resumableRuns = runs?.filter((run) => run.status === 'complete' && Boolean(run.checkpointPath)) ?? [];
   const submit = () => start.mutate({ data: { maxSteps: Number(maxSteps), seed: Number(seed), resumeFromRunId: resumeFromRunId || null } }, { onSuccess: () => { setOpen(false); setResumeFromRunId(''); client.invalidateQueries({ queryKey: getListTrainingRunsQueryKey() }); client.invalidateQueries({ queryKey: getGetResearchOverviewQueryKey() }); } });
   return <PageFrame><PageTitle eyebrow="Lifecycle / Training" title="Training runs" description="Small, reproducible runs with metrics attached. Start a CPU-compatible D0 run, resume a checkpoint, and inspect the trace." action={<button data-testid="button-start-training" onClick={() => setOpen(true)} className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Start tiny run</button>} />

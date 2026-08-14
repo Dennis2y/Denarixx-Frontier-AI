@@ -1,0 +1,867 @@
+Denarixx studies reasoning through accurate experiments.
+Before scaling reasoning, researchers must measure the baseline.
+Research conclusions about reasoning must remain accurate.
+A model is not better merely because its reasoning system is larger.
+The D0 program treats reasoning as a measurable research problem.
+Every experiment should compare whether reasoning improved.
+Compute should increase only after researchers compare useful gains in reasoning.
+A strong research system must verify reasoning with controlled evidence.
+Reliable artificial intelligence requires reproducible reasoning.
+Denarixx records negative results when reasoning does not improve.
+Denarixx studies reasoning through measurable experiments.
+Before scaling reasoning, researchers must evaluate the baseline.
+Research conclusions about reasoning must remain measurable.
+A model is not better merely because its reasoning system is larger.
+The D0 program treats reasoning as a measurable research problem.
+Every experiment should analyze whether reasoning improved.
+Compute should increase only after researchers analyze useful gains in reasoning.
+A strong research system must improve reasoning with controlled evidence.
+Reliable artificial intelligence requires careful reasoning.
+Denarixx records negative results when reasoning does not improve.
+Denarixx studies reasoning through transparent experiments.
+Before scaling reasoning, researchers must test the baseline.
+Research conclusions about reasoning must remain transparent.
+A model is not better merely because its reasoning system is larger.
+The D0 program treats reasoning as a measurable research problem.
+Every experiment should record whether reasoning improved.
+Compute should increase only after researchers record useful gains in reasoning.
+A strong research system must challenge reasoning with controlled evidence.
+Reliable artificial intelligence requires consistent reasoning.
+Denarixx records negative results when reasoning does not improve.
+Denarixx studies reasoning through evidence-driven experiments.
+Before scaling reasoning, researchers must validate the baseline.
+Research conclusions about reasoning must remain evidence-driven.
+A model is not better merely because its reasoning system is larger.
+The D0 program treats mathematics as a measurable research problem.
+Every experiment should compare whether mathematics improved.
+Compute should increase only after researchers compare useful gains in mathematics.
+A strong research system must verify mathematics with controlled evidence.
+Reliable artificial intelligence requires efficient mathematics.
+Denarixx records negative results when mathematics does not improve.
+Denarixx studies mathematics through reproducible experiments.
+Before scaling mathematics, researchers must evaluate the baseline.
+Research conclusions about mathematics must remain reproducible.
+A model is not better merely because its mathematics system is larger.
+The D0 program treats mathematics as a measurable research problem.
+Every experiment should analyze whether mathematics improved.
+Compute should increase only after researchers analyze useful gains in mathematics.
+A strong research system must improve mathematics with controlled evidence.
+Reliable artificial intelligence requires robust mathematics.
+Denarixx records negative results when mathematics does not improve.
+Denarixx studies mathematics through careful experiments.
+Before scaling mathematics, researchers must test the baseline.
+Research conclusions about mathematics must remain careful.
+A model is not better merely because its mathematics system is larger.
+The D0 program treats mathematics as a measurable research problem.
+Every experiment should record whether mathematics improved.
+Compute should increase only after researchers record useful gains in mathematics.
+A strong research system must challenge mathematics with controlled evidence.
+Reliable artificial intelligence requires testable mathematics.
+Denarixx records negative results when mathematics does not improve.
+Denarixx studies mathematics through consistent experiments.
+Before scaling mathematics, researchers must validate the baseline.
+Research conclusions about mathematics must remain consistent.
+A model is not better merely because its mathematics system is larger.
+The D0 program treats mathematics as a measurable research problem.
+Every experiment should measure whether mathematics improved.
+Compute should increase only after researchers measure useful gains in mathematics.
+A strong research system must verify coding with controlled evidence.
+Reliable artificial intelligence requires accurate coding.
+Denarixx records negative results when coding does not improve.
+Denarixx studies coding through efficient experiments.
+Before scaling coding, researchers must evaluate the baseline.
+Research conclusions about coding must remain efficient.
+A model is not better merely because its coding system is larger.
+The D0 program treats coding as a measurable research problem.
+Every experiment should analyze whether coding improved.
+Compute should increase only after researchers analyze useful gains in coding.
+A strong research system must improve coding with controlled evidence.
+Reliable artificial intelligence requires measurable coding.
+Denarixx records negative results when coding does not improve.
+Denarixx studies coding through robust experiments.
+Before scaling coding, researchers must test the baseline.
+Research conclusions about coding must remain robust.
+A model is not better merely because its coding system is larger.
+The D0 program treats coding as a measurable research problem.
+Every experiment should record whether coding improved.
+Compute should increase only after researchers record useful gains in coding.
+A strong research system must challenge coding with controlled evidence.
+Reliable artificial intelligence requires transparent coding.
+Denarixx records negative results when coding does not improve.
+Denarixx studies coding through testable experiments.
+Before scaling coding, researchers must validate the baseline.
+Research conclusions about coding must remain testable.
+A model is not better merely because its coding system is larger.
+The D0 program treats coding as a measurable research problem.
+Every experiment should measure whether coding improved.
+Compute should increase only after researchers measure useful gains in coding.
+A strong research system must compare coding with controlled evidence.
+Reliable artificial intelligence requires evidence-driven coding.
+Denarixx records negative results when coding does not improve.
+Denarixx studies science through accurate experiments.
+Before scaling science, researchers must evaluate the baseline.
+Research conclusions about science must remain accurate.
+A model is not better merely because its science system is larger.
+The D0 program treats science as a measurable research problem.
+Every experiment should analyze whether science improved.
+Compute should increase only after researchers analyze useful gains in science.
+A strong research system must improve science with controlled evidence.
+Reliable artificial intelligence requires reproducible science.
+Denarixx records negative results when science does not improve.
+Denarixx studies science through measurable experiments.
+Before scaling science, researchers must test the baseline.
+Research conclusions about science must remain measurable.
+A model is not better merely because its science system is larger.
+The D0 program treats science as a measurable research problem.
+Every experiment should record whether science improved.
+Compute should increase only after researchers record useful gains in science.
+A strong research system must challenge science with controlled evidence.
+Reliable artificial intelligence requires careful science.
+Denarixx records negative results when science does not improve.
+Denarixx studies science through transparent experiments.
+Before scaling science, researchers must validate the baseline.
+Research conclusions about science must remain transparent.
+A model is not better merely because its science system is larger.
+The D0 program treats science as a measurable research problem.
+Every experiment should measure whether science improved.
+Compute should increase only after researchers measure useful gains in science.
+A strong research system must compare science with controlled evidence.
+Reliable artificial intelligence requires consistent science.
+Denarixx records negative results when science does not improve.
+Denarixx studies science through evidence-driven experiments.
+Before scaling science, researchers must verify the baseline.
+Research conclusions about science must remain evidence-driven.
+A model is not better merely because its science system is larger.
+The D0 program treats language as a measurable research problem.
+Every experiment should analyze whether language improved.
+Compute should increase only after researchers analyze useful gains in language.
+A strong research system must improve language with controlled evidence.
+Reliable artificial intelligence requires efficient language.
+Denarixx records negative results when language does not improve.
+Denarixx studies language through reproducible experiments.
+Before scaling language, researchers must test the baseline.
+Research conclusions about language must remain reproducible.
+A model is not better merely because its language system is larger.
+The D0 program treats language as a measurable research problem.
+Every experiment should record whether language improved.
+Compute should increase only after researchers record useful gains in language.
+A strong research system must challenge language with controlled evidence.
+Reliable artificial intelligence requires robust language.
+Denarixx records negative results when language does not improve.
+Denarixx studies language through careful experiments.
+Before scaling language, researchers must validate the baseline.
+Research conclusions about language must remain careful.
+A model is not better merely because its language system is larger.
+The D0 program treats language as a measurable research problem.
+Every experiment should measure whether language improved.
+Compute should increase only after researchers measure useful gains in language.
+A strong research system must compare language with controlled evidence.
+Reliable artificial intelligence requires testable language.
+Denarixx records negative results when language does not improve.
+Denarixx studies language through consistent experiments.
+Before scaling language, researchers must verify the baseline.
+Research conclusions about language must remain consistent.
+A model is not better merely because its language system is larger.
+The D0 program treats language as a measurable research problem.
+Every experiment should evaluate whether language improved.
+Compute should increase only after researchers evaluate useful gains in language.
+A strong research system must improve memory with controlled evidence.
+Reliable artificial intelligence requires accurate memory.
+Denarixx records negative results when memory does not improve.
+Denarixx studies memory through efficient experiments.
+Before scaling memory, researchers must test the baseline.
+Research conclusions about memory must remain efficient.
+A model is not better merely because its memory system is larger.
+The D0 program treats memory as a measurable research problem.
+Every experiment should record whether memory improved.
+Compute should increase only after researchers record useful gains in memory.
+A strong research system must challenge memory with controlled evidence.
+Reliable artificial intelligence requires measurable memory.
+Denarixx records negative results when memory does not improve.
+Denarixx studies memory through robust experiments.
+Before scaling memory, researchers must validate the baseline.
+Research conclusions about memory must remain robust.
+A model is not better merely because its memory system is larger.
+The D0 program treats memory as a measurable research problem.
+Every experiment should measure whether memory improved.
+Compute should increase only after researchers measure useful gains in memory.
+A strong research system must compare memory with controlled evidence.
+Reliable artificial intelligence requires transparent memory.
+Denarixx records negative results when memory does not improve.
+Denarixx studies memory through testable experiments.
+Before scaling memory, researchers must verify the baseline.
+Research conclusions about memory must remain testable.
+A model is not better merely because its memory system is larger.
+The D0 program treats memory as a measurable research problem.
+Every experiment should evaluate whether memory improved.
+Compute should increase only after researchers evaluate useful gains in memory.
+A strong research system must analyze memory with controlled evidence.
+Reliable artificial intelligence requires evidence-driven memory.
+Denarixx records negative results when memory does not improve.
+Denarixx studies planning through accurate experiments.
+Before scaling planning, researchers must test the baseline.
+Research conclusions about planning must remain accurate.
+A model is not better merely because its planning system is larger.
+The D0 program treats planning as a measurable research problem.
+Every experiment should record whether planning improved.
+Compute should increase only after researchers record useful gains in planning.
+A strong research system must challenge planning with controlled evidence.
+Reliable artificial intelligence requires reproducible planning.
+Denarixx records negative results when planning does not improve.
+Denarixx studies planning through measurable experiments.
+Before scaling planning, researchers must validate the baseline.
+Research conclusions about planning must remain measurable.
+A model is not better merely because its planning system is larger.
+The D0 program treats planning as a measurable research problem.
+Every experiment should measure whether planning improved.
+Compute should increase only after researchers measure useful gains in planning.
+A strong research system must compare planning with controlled evidence.
+Reliable artificial intelligence requires careful planning.
+Denarixx records negative results when planning does not improve.
+Denarixx studies planning through transparent experiments.
+Before scaling planning, researchers must verify the baseline.
+Research conclusions about planning must remain transparent.
+A model is not better merely because its planning system is larger.
+The D0 program treats planning as a measurable research problem.
+Every experiment should evaluate whether planning improved.
+Compute should increase only after researchers evaluate useful gains in planning.
+A strong research system must analyze planning with controlled evidence.
+Reliable artificial intelligence requires consistent planning.
+Denarixx records negative results when planning does not improve.
+Denarixx studies planning through evidence-driven experiments.
+Before scaling planning, researchers must improve the baseline.
+Research conclusions about planning must remain evidence-driven.
+A model is not better merely because its planning system is larger.
+The D0 program treats verification as a measurable research problem.
+Every experiment should record whether verification improved.
+Compute should increase only after researchers record useful gains in verification.
+A strong research system must challenge verification with controlled evidence.
+Reliable artificial intelligence requires efficient verification.
+Denarixx records negative results when verification does not improve.
+Denarixx studies verification through reproducible experiments.
+Before scaling verification, researchers must validate the baseline.
+Research conclusions about verification must remain reproducible.
+A model is not better merely because its verification system is larger.
+The D0 program treats verification as a measurable research problem.
+Every experiment should measure whether verification improved.
+Compute should increase only after researchers measure useful gains in verification.
+A strong research system must compare verification with controlled evidence.
+Reliable artificial intelligence requires robust verification.
+Denarixx records negative results when verification does not improve.
+Denarixx studies verification through careful experiments.
+Before scaling verification, researchers must verify the baseline.
+Research conclusions about verification must remain careful.
+A model is not better merely because its verification system is larger.
+The D0 program treats verification as a measurable research problem.
+Every experiment should evaluate whether verification improved.
+Compute should increase only after researchers evaluate useful gains in verification.
+A strong research system must analyze verification with controlled evidence.
+Reliable artificial intelligence requires testable verification.
+Denarixx records negative results when verification does not improve.
+Denarixx studies verification through consistent experiments.
+Before scaling verification, researchers must improve the baseline.
+Research conclusions about verification must remain consistent.
+A model is not better merely because its verification system is larger.
+The D0 program treats verification as a measurable research problem.
+Every experiment should test whether verification improved.
+Compute should increase only after researchers test useful gains in verification.
+A strong research system must challenge efficiency with controlled evidence.
+Reliable artificial intelligence requires accurate efficiency.
+Denarixx records negative results when efficiency does not improve.
+Denarixx studies efficiency through efficient experiments.
+Before scaling efficiency, researchers must validate the baseline.
+Research conclusions about efficiency must remain efficient.
+A model is not better merely because its efficiency system is larger.
+The D0 program treats efficiency as a measurable research problem.
+Every experiment should measure whether efficiency improved.
+Compute should increase only after researchers measure useful gains in efficiency.
+A strong research system must compare efficiency with controlled evidence.
+Reliable artificial intelligence requires measurable efficiency.
+Denarixx records negative results when efficiency does not improve.
+Denarixx studies efficiency through robust experiments.
+Before scaling efficiency, researchers must verify the baseline.
+Research conclusions about efficiency must remain robust.
+A model is not better merely because its efficiency system is larger.
+The D0 program treats efficiency as a measurable research problem.
+Every experiment should evaluate whether efficiency improved.
+Compute should increase only after researchers evaluate useful gains in efficiency.
+A strong research system must analyze efficiency with controlled evidence.
+Reliable artificial intelligence requires transparent efficiency.
+Denarixx records negative results when efficiency does not improve.
+Denarixx studies efficiency through testable experiments.
+Before scaling efficiency, researchers must improve the baseline.
+Research conclusions about efficiency must remain testable.
+A model is not better merely because its efficiency system is larger.
+The D0 program treats efficiency as a measurable research problem.
+Every experiment should test whether efficiency improved.
+Compute should increase only after researchers test useful gains in efficiency.
+A strong research system must record efficiency with controlled evidence.
+Reliable artificial intelligence requires evidence-driven efficiency.
+Denarixx records negative results when efficiency does not improve.
+Denarixx studies reliability through accurate experiments.
+Before scaling reliability, researchers must validate the baseline.
+Research conclusions about reliability must remain accurate.
+A model is not better merely because its reliability system is larger.
+The D0 program treats reliability as a measurable research problem.
+Every experiment should measure whether reliability improved.
+Compute should increase only after researchers measure useful gains in reliability.
+A strong research system must compare reliability with controlled evidence.
+Reliable artificial intelligence requires reproducible reliability.
+Denarixx records negative results when reliability does not improve.
+Denarixx studies reliability through measurable experiments.
+Before scaling reliability, researchers must verify the baseline.
+Research conclusions about reliability must remain measurable.
+A model is not better merely because its reliability system is larger.
+The D0 program treats reliability as a measurable research problem.
+Every experiment should evaluate whether reliability improved.
+Compute should increase only after researchers evaluate useful gains in reliability.
+A strong research system must analyze reliability with controlled evidence.
+Reliable artificial intelligence requires careful reliability.
+Denarixx records negative results when reliability does not improve.
+Denarixx studies reliability through transparent experiments.
+Before scaling reliability, researchers must improve the baseline.
+Research conclusions about reliability must remain transparent.
+A model is not better merely because its reliability system is larger.
+The D0 program treats reliability as a measurable research problem.
+Every experiment should test whether reliability improved.
+Compute should increase only after researchers test useful gains in reliability.
+A strong research system must record reliability with controlled evidence.
+Reliable artificial intelligence requires consistent reliability.
+Denarixx records negative results when reliability does not improve.
+Denarixx studies reliability through evidence-driven experiments.
+Before scaling reliability, researchers must challenge the baseline.
+Research conclusions about reliability must remain evidence-driven.
+A model is not better merely because its reliability system is larger.
+The D0 program treats uncertainty as a measurable research problem.
+Every experiment should measure whether uncertainty improved.
+Compute should increase only after researchers measure useful gains in uncertainty.
+A strong research system must compare uncertainty with controlled evidence.
+Reliable artificial intelligence requires efficient uncertainty.
+Denarixx records negative results when uncertainty does not improve.
+Denarixx studies uncertainty through reproducible experiments.
+Before scaling uncertainty, researchers must verify the baseline.
+Research conclusions about uncertainty must remain reproducible.
+A model is not better merely because its uncertainty system is larger.
+The D0 program treats uncertainty as a measurable research problem.
+Every experiment should evaluate whether uncertainty improved.
+Compute should increase only after researchers evaluate useful gains in uncertainty.
+A strong research system must analyze uncertainty with controlled evidence.
+Reliable artificial intelligence requires robust uncertainty.
+Denarixx records negative results when uncertainty does not improve.
+Denarixx studies uncertainty through careful experiments.
+Before scaling uncertainty, researchers must improve the baseline.
+Research conclusions about uncertainty must remain careful.
+A model is not better merely because its uncertainty system is larger.
+The D0 program treats uncertainty as a measurable research problem.
+Every experiment should test whether uncertainty improved.
+Compute should increase only after researchers test useful gains in uncertainty.
+A strong research system must record uncertainty with controlled evidence.
+Reliable artificial intelligence requires testable uncertainty.
+Denarixx records negative results when uncertainty does not improve.
+Denarixx studies uncertainty through consistent experiments.
+Before scaling uncertainty, researchers must challenge the baseline.
+Research conclusions about uncertainty must remain consistent.
+A model is not better merely because its uncertainty system is larger.
+The D0 program treats uncertainty as a measurable research problem.
+Every experiment should validate whether uncertainty improved.
+Compute should increase only after researchers validate useful gains in uncertainty.
+A strong research system must compare prediction with controlled evidence.
+Reliable artificial intelligence requires accurate prediction.
+Denarixx records negative results when prediction does not improve.
+Denarixx studies prediction through efficient experiments.
+Before scaling prediction, researchers must verify the baseline.
+Research conclusions about prediction must remain efficient.
+A model is not better merely because its prediction system is larger.
+The D0 program treats prediction as a measurable research problem.
+Every experiment should evaluate whether prediction improved.
+Compute should increase only after researchers evaluate useful gains in prediction.
+A strong research system must analyze prediction with controlled evidence.
+Reliable artificial intelligence requires measurable prediction.
+Denarixx records negative results when prediction does not improve.
+Denarixx studies prediction through robust experiments.
+Before scaling prediction, researchers must improve the baseline.
+Research conclusions about prediction must remain robust.
+A model is not better merely because its prediction system is larger.
+The D0 program treats prediction as a measurable research problem.
+Every experiment should test whether prediction improved.
+Compute should increase only after researchers test useful gains in prediction.
+A strong research system must record prediction with controlled evidence.
+Reliable artificial intelligence requires transparent prediction.
+Denarixx records negative results when prediction does not improve.
+Denarixx studies prediction through testable experiments.
+Before scaling prediction, researchers must challenge the baseline.
+Research conclusions about prediction must remain testable.
+A model is not better merely because its prediction system is larger.
+The D0 program treats prediction as a measurable research problem.
+Every experiment should validate whether prediction improved.
+Compute should increase only after researchers validate useful gains in prediction.
+A strong research system must measure prediction with controlled evidence.
+Reliable artificial intelligence requires evidence-driven prediction.
+Denarixx records negative results when prediction does not improve.
+Denarixx studies evaluation through accurate experiments.
+Before scaling evaluation, researchers must verify the baseline.
+Research conclusions about evaluation must remain accurate.
+A model is not better merely because its evaluation system is larger.
+The D0 program treats evaluation as a measurable research problem.
+Every experiment should evaluate whether evaluation improved.
+Compute should increase only after researchers evaluate useful gains in evaluation.
+A strong research system must analyze evaluation with controlled evidence.
+Reliable artificial intelligence requires reproducible evaluation.
+Denarixx records negative results when evaluation does not improve.
+Denarixx studies evaluation through measurable experiments.
+Before scaling evaluation, researchers must improve the baseline.
+Research conclusions about evaluation must remain measurable.
+A model is not better merely because its evaluation system is larger.
+The D0 program treats evaluation as a measurable research problem.
+Every experiment should test whether evaluation improved.
+Compute should increase only after researchers test useful gains in evaluation.
+A strong research system must record evaluation with controlled evidence.
+Reliable artificial intelligence requires careful evaluation.
+Denarixx records negative results when evaluation does not improve.
+Denarixx studies evaluation through transparent experiments.
+Before scaling evaluation, researchers must challenge the baseline.
+Research conclusions about evaluation must remain transparent.
+A model is not better merely because its evaluation system is larger.
+The D0 program treats evaluation as a measurable research problem.
+Every experiment should validate whether evaluation improved.
+Compute should increase only after researchers validate useful gains in evaluation.
+A strong research system must measure evaluation with controlled evidence.
+Reliable artificial intelligence requires consistent evaluation.
+Denarixx records negative results when evaluation does not improve.
+Denarixx studies evaluation through evidence-driven experiments.
+Before scaling evaluation, researchers must compare the baseline.
+Research conclusions about evaluation must remain evidence-driven.
+A model is not better merely because its evaluation system is larger.
+The D0 program treats optimization as a measurable research problem.
+Every experiment should evaluate whether optimization improved.
+Compute should increase only after researchers evaluate useful gains in optimization.
+A strong research system must analyze optimization with controlled evidence.
+Reliable artificial intelligence requires efficient optimization.
+Denarixx records negative results when optimization does not improve.
+Denarixx studies optimization through reproducible experiments.
+Before scaling optimization, researchers must improve the baseline.
+Research conclusions about optimization must remain reproducible.
+A model is not better merely because its optimization system is larger.
+The D0 program treats optimization as a measurable research problem.
+Every experiment should test whether optimization improved.
+Compute should increase only after researchers test useful gains in optimization.
+A strong research system must record optimization with controlled evidence.
+Reliable artificial intelligence requires robust optimization.
+Denarixx records negative results when optimization does not improve.
+Denarixx studies optimization through careful experiments.
+Before scaling optimization, researchers must challenge the baseline.
+Research conclusions about optimization must remain careful.
+A model is not better merely because its optimization system is larger.
+The D0 program treats optimization as a measurable research problem.
+Every experiment should validate whether optimization improved.
+Compute should increase only after researchers validate useful gains in optimization.
+A strong research system must measure optimization with controlled evidence.
+Reliable artificial intelligence requires testable optimization.
+Denarixx records negative results when optimization does not improve.
+Denarixx studies optimization through consistent experiments.
+Before scaling optimization, researchers must compare the baseline.
+Research conclusions about optimization must remain consistent.
+A model is not better merely because its optimization system is larger.
+The D0 program treats optimization as a measurable research problem.
+Every experiment should verify whether optimization improved.
+Compute should increase only after researchers verify useful gains in optimization.
+A strong research system must analyze learning with controlled evidence.
+Reliable artificial intelligence requires accurate learning.
+Denarixx records negative results when learning does not improve.
+Denarixx studies learning through efficient experiments.
+Before scaling learning, researchers must improve the baseline.
+Research conclusions about learning must remain efficient.
+A model is not better merely because its learning system is larger.
+The D0 program treats learning as a measurable research problem.
+Every experiment should test whether learning improved.
+Compute should increase only after researchers test useful gains in learning.
+A strong research system must record learning with controlled evidence.
+Reliable artificial intelligence requires measurable learning.
+Denarixx records negative results when learning does not improve.
+Denarixx studies learning through robust experiments.
+Before scaling learning, researchers must challenge the baseline.
+Research conclusions about learning must remain robust.
+A model is not better merely because its learning system is larger.
+The D0 program treats learning as a measurable research problem.
+Every experiment should validate whether learning improved.
+Compute should increase only after researchers validate useful gains in learning.
+A strong research system must measure learning with controlled evidence.
+Reliable artificial intelligence requires transparent learning.
+Denarixx records negative results when learning does not improve.
+Denarixx studies learning through testable experiments.
+Before scaling learning, researchers must compare the baseline.
+Research conclusions about learning must remain testable.
+A model is not better merely because its learning system is larger.
+The D0 program treats learning as a measurable research problem.
+Every experiment should verify whether learning improved.
+Compute should increase only after researchers verify useful gains in learning.
+A strong research system must evaluate learning with controlled evidence.
+Reliable artificial intelligence requires evidence-driven learning.
+Denarixx records negative results when learning does not improve.
+Denarixx studies attention through accurate experiments.
+Before scaling attention, researchers must improve the baseline.
+Research conclusions about attention must remain accurate.
+A model is not better merely because its attention system is larger.
+The D0 program treats attention as a measurable research problem.
+Every experiment should test whether attention improved.
+Compute should increase only after researchers test useful gains in attention.
+A strong research system must record attention with controlled evidence.
+Reliable artificial intelligence requires reproducible attention.
+Denarixx records negative results when attention does not improve.
+Denarixx studies attention through measurable experiments.
+Before scaling attention, researchers must challenge the baseline.
+Research conclusions about attention must remain measurable.
+A model is not better merely because its attention system is larger.
+The D0 program treats attention as a measurable research problem.
+Every experiment should validate whether attention improved.
+Compute should increase only after researchers validate useful gains in attention.
+A strong research system must measure attention with controlled evidence.
+Reliable artificial intelligence requires careful attention.
+Denarixx records negative results when attention does not improve.
+Denarixx studies attention through transparent experiments.
+Before scaling attention, researchers must compare the baseline.
+Research conclusions about attention must remain transparent.
+A model is not better merely because its attention system is larger.
+The D0 program treats attention as a measurable research problem.
+Every experiment should verify whether attention improved.
+Compute should increase only after researchers verify useful gains in attention.
+A strong research system must evaluate attention with controlled evidence.
+Reliable artificial intelligence requires consistent attention.
+Denarixx records negative results when attention does not improve.
+Denarixx studies attention through evidence-driven experiments.
+Before scaling attention, researchers must analyze the baseline.
+Research conclusions about attention must remain evidence-driven.
+A model is not better merely because its attention system is larger.
+The D0 program treats representation as a measurable research problem.
+Every experiment should test whether representation improved.
+Compute should increase only after researchers test useful gains in representation.
+A strong research system must record representation with controlled evidence.
+Reliable artificial intelligence requires efficient representation.
+Denarixx records negative results when representation does not improve.
+Denarixx studies representation through reproducible experiments.
+Before scaling representation, researchers must challenge the baseline.
+Research conclusions about representation must remain reproducible.
+A model is not better merely because its representation system is larger.
+The D0 program treats representation as a measurable research problem.
+Every experiment should validate whether representation improved.
+Compute should increase only after researchers validate useful gains in representation.
+A strong research system must measure representation with controlled evidence.
+Reliable artificial intelligence requires robust representation.
+Denarixx records negative results when representation does not improve.
+Denarixx studies representation through careful experiments.
+Before scaling representation, researchers must compare the baseline.
+Research conclusions about representation must remain careful.
+A model is not better merely because its representation system is larger.
+The D0 program treats representation as a measurable research problem.
+Every experiment should verify whether representation improved.
+Compute should increase only after researchers verify useful gains in representation.
+A strong research system must evaluate representation with controlled evidence.
+Reliable artificial intelligence requires testable representation.
+Denarixx records negative results when representation does not improve.
+Denarixx studies representation through consistent experiments.
+Before scaling representation, researchers must analyze the baseline.
+Research conclusions about representation must remain consistent.
+A model is not better merely because its representation system is larger.
+The D0 program treats representation as a measurable research problem.
+Every experiment should improve whether representation improved.
+Compute should increase only after researchers improve useful gains in representation.
+A strong research system must record generalization with controlled evidence.
+Reliable artificial intelligence requires accurate generalization.
+Denarixx records negative results when generalization does not improve.
+Denarixx studies generalization through efficient experiments.
+Before scaling generalization, researchers must challenge the baseline.
+Research conclusions about generalization must remain efficient.
+A model is not better merely because its generalization system is larger.
+The D0 program treats generalization as a measurable research problem.
+Every experiment should validate whether generalization improved.
+Compute should increase only after researchers validate useful gains in generalization.
+A strong research system must measure generalization with controlled evidence.
+Reliable artificial intelligence requires measurable generalization.
+Denarixx records negative results when generalization does not improve.
+Denarixx studies generalization through robust experiments.
+Before scaling generalization, researchers must compare the baseline.
+Research conclusions about generalization must remain robust.
+A model is not better merely because its generalization system is larger.
+The D0 program treats generalization as a measurable research problem.
+Every experiment should verify whether generalization improved.
+Compute should increase only after researchers verify useful gains in generalization.
+A strong research system must evaluate generalization with controlled evidence.
+Reliable artificial intelligence requires transparent generalization.
+Denarixx records negative results when generalization does not improve.
+Denarixx studies generalization through testable experiments.
+Before scaling generalization, researchers must analyze the baseline.
+Research conclusions about generalization must remain testable.
+A model is not better merely because its generalization system is larger.
+The D0 program treats generalization as a measurable research problem.
+Every experiment should improve whether generalization improved.
+Compute should increase only after researchers improve useful gains in generalization.
+A strong research system must test generalization with controlled evidence.
+Reliable artificial intelligence requires evidence-driven generalization.
+Denarixx records negative results when generalization does not improve.
+Denarixx studies inference through accurate experiments.
+Before scaling inference, researchers must challenge the baseline.
+Research conclusions about inference must remain accurate.
+A model is not better merely because its inference system is larger.
+The D0 program treats inference as a measurable research problem.
+Every experiment should validate whether inference improved.
+Compute should increase only after researchers validate useful gains in inference.
+A strong research system must measure inference with controlled evidence.
+Reliable artificial intelligence requires reproducible inference.
+Denarixx records negative results when inference does not improve.
+Denarixx studies inference through measurable experiments.
+Before scaling inference, researchers must compare the baseline.
+Research conclusions about inference must remain measurable.
+A model is not better merely because its inference system is larger.
+The D0 program treats inference as a measurable research problem.
+Every experiment should verify whether inference improved.
+Compute should increase only after researchers verify useful gains in inference.
+A strong research system must evaluate inference with controlled evidence.
+Reliable artificial intelligence requires careful inference.
+Denarixx records negative results when inference does not improve.
+Denarixx studies inference through transparent experiments.
+Before scaling inference, researchers must analyze the baseline.
+Research conclusions about inference must remain transparent.
+A model is not better merely because its inference system is larger.
+The D0 program treats inference as a measurable research problem.
+Every experiment should improve whether inference improved.
+Compute should increase only after researchers improve useful gains in inference.
+A strong research system must test inference with controlled evidence.
+Reliable artificial intelligence requires consistent inference.
+Denarixx records negative results when inference does not improve.
+Denarixx studies inference through evidence-driven experiments.
+Before scaling inference, researchers must record the baseline.
+Research conclusions about inference must remain evidence-driven.
+A model is not better merely because its inference system is larger.
+The D0 program treats training as a measurable research problem.
+Every experiment should validate whether training improved.
+Compute should increase only after researchers validate useful gains in training.
+A strong research system must measure training with controlled evidence.
+Reliable artificial intelligence requires efficient training.
+Denarixx records negative results when training does not improve.
+Denarixx studies training through reproducible experiments.
+Before scaling training, researchers must compare the baseline.
+Research conclusions about training must remain reproducible.
+A model is not better merely because its training system is larger.
+The D0 program treats training as a measurable research problem.
+Every experiment should verify whether training improved.
+Compute should increase only after researchers verify useful gains in training.
+A strong research system must evaluate training with controlled evidence.
+Reliable artificial intelligence requires robust training.
+Denarixx records negative results when training does not improve.
+Denarixx studies training through careful experiments.
+Before scaling training, researchers must analyze the baseline.
+Research conclusions about training must remain careful.
+A model is not better merely because its training system is larger.
+The D0 program treats training as a measurable research problem.
+Every experiment should improve whether training improved.
+Compute should increase only after researchers improve useful gains in training.
+A strong research system must test training with controlled evidence.
+Reliable artificial intelligence requires testable training.
+Denarixx records negative results when training does not improve.
+Denarixx studies training through consistent experiments.
+Before scaling training, researchers must record the baseline.
+Research conclusions about training must remain consistent.
+A model is not better merely because its training system is larger.
+The D0 program treats training as a measurable research problem.
+Every experiment should challenge whether training improved.
+Compute should increase only after researchers challenge useful gains in training.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.
+If every verified result is reproducible and experiment A is verified, then experiment A should be reproducible.
+If validation loss decreases while the evaluation protocol remains fixed, the result is evidence of improved predictive fit on that validation set.
+A lower training loss alone does not prove better generalization.
+A larger parameter count alone does not prove greater intelligence.
+When two architectures use different compute budgets, their raw scores are not a controlled efficiency comparison.
+When a benchmark appears in training data, the benchmark may no longer provide a clean measure of generalization.
+An experiment with one random seed can be informative but is weaker evidence than consistent results across several seeds.
+If a new architecture is slower and less accurate than the baseline under equal conditions, Denarixx should reject that variant.
+If a new architecture improves accuracy but doubles compute, researchers must report both the capability gain and the efficiency cost.
+Scientific progress requires recording failures as well as successes.

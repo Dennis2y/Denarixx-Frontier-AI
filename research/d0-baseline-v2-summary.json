@@ -1,0 +1,18 @@
+{
+  "runs": 3,
+  "runIds": [
+    "d0-baseline-v2-seed42",
+    "d0-baseline-v2-seed1337",
+    "d0-baseline-v2-seed2026"
+  ],
+  "seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "meanValidationLoss": 2.9548653910557428,
+  "validationLossStdDev": 0.03411915638657979,
+  "meanPerplexity": 19.206585949000864,
+  "perplexityStdDev": 0.6548271194663073,
+  "meanTrainingTokensPerSecond": 17772.500422123776
+}

@@ -104,9 +104,18 @@ def run(
     checkpoint_dir: Path,
     run_id: str,
     resume_checkpoint: Path | None = None,
+    corpus_path: Path | None = None,
+    batch_size: int = 8,
+    learning_rate: float = 3e-4,
 ) -> dict:
     if max_steps < 1:
         raise ValueError("max_steps must be >= 1")
+
+    if batch_size < 1:
+        raise ValueError("batch_size must be >= 1")
+
+    if learning_rate <= 0:
+        raise ValueError("learning_rate must be > 0")
 
     seed_everything(seed)
 
@@ -115,7 +124,20 @@ def run(
 
     device = select_device()
 
-    corpus_path = Path(__file__).parent / "data" / "dev_corpus.txt"
+    if corpus_path is None:
+        corpus_path = (
+            Path(__file__).parent
+            / "data"
+            / "dev_corpus.txt"
+        )
+
+    corpus_path = corpus_path.resolve()
+
+    if not corpus_path.exists():
+        raise FileNotFoundError(
+            f"corpus not found: {corpus_path}"
+        )
+
     corpus_text = load_text(corpus_path)
     dataset_hash = sha256_file(corpus_path)
 
@@ -158,7 +180,7 @@ def run(
 
     optimizer = torch.optim.AdamW(
         model.parameters(),
-        lr=3e-4,
+        lr=learning_rate,
         weight_decay=0.01,
     )
 
@@ -205,7 +227,7 @@ def run(
         inputs, targets = batch(
             train_tokens,
             config.context_length,
-            4,
+            batch_size,
             batch_generator,
         )
 
@@ -279,7 +301,7 @@ def run(
         "parameter_counts": parameter_counts(model),
         "tokenizer": tokenizer.to_dict(),
         "dataset": {
-            "id": "denarixx-local-dev-v1",
+            "id": corpus_path.stem,
             "path": str(corpus_path),
             "sha256": dataset_hash,
             "characters": len(corpus_text),
@@ -336,7 +358,7 @@ def run(
         "createdAt": created_at,
         "device": str(device),
         "model": "denarixx-d0-baseline",
-        "dataset": "denarixx-local-dev-v1",
+        "dataset": corpus_path.stem,
         "datasetSha256": dataset_hash,
         "startStep": start_step,
         "maxSteps": max_steps,
@@ -364,6 +386,11 @@ def run(
             ),
         },
         "modelConfig": model.config_dict(),
+        "trainingConfig": {
+            "batchSize": batch_size,
+            "learningRate": learning_rate,
+            "maxSteps": max_steps,
+        },
         "environment": environment_metadata(),
         "limitations": [
             "D0 is a tiny research model.",
@@ -426,6 +453,23 @@ def main() -> None:
         type=Path,
     )
 
+    parser.add_argument(
+        "--corpus",
+        type=Path,
+    )
+
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=8,
+    )
+
+    parser.add_argument(
+        "--learning-rate",
+        type=float,
+        default=3e-4,
+    )
+
     args = parser.parse_args()
 
     try:
@@ -435,6 +479,9 @@ def main() -> None:
             checkpoint_dir=args.checkpoint_dir,
             run_id=args.run_id,
             resume_checkpoint=args.resume_checkpoint,
+            corpus_path=args.corpus,
+            batch_size=args.batch_size,
+            learning_rate=args.learning_rate,
         )
 
         print(json.dumps(result))
