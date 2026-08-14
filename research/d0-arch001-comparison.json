@@ -1,0 +1,50 @@
+{
+  "experiment": "D0-ARCH-001",
+  "hypothesis": "Replacing LayerNorm with RMSNorm improves D0 held-out validation performance while keeping the rest of the training configuration fixed.",
+  "baseline": {
+    "normalization": "layernorm",
+    "commit": "9fcac04",
+    "meanValidationLoss": 2.9548653910557428,
+    "meanPerplexity": 19.206585949000864
+  },
+  "variant": {
+    "normalization": "rmsnorm",
+    "meanValidationLoss": 2.9577718575795493,
+    "meanPerplexity": 19.261408524693937
+  },
+  "pairedRuns": [
+    {
+      "seed": 42,
+      "baselineLoss": 2.920356050133705,
+      "rmsnormLoss": 2.9258273988962173,
+      "lossDelta": 0.005471348762512207,
+      "baselinePerplexity": 18.54789026302072,
+      "rmsnormPerplexity": 18.649650368116543,
+      "perplexityDelta": 0.10176010509582412
+    },
+    {
+      "seed": 1337,
+      "baselineLoss": 2.988580495119095,
+      "rmsnormLoss": 2.988915741443634,
+      "lossDelta": 0.00033524632453918457,
+      "baselinePerplexity": 19.857474693497885,
+      "rmsnormPerplexity": 19.864132954919985,
+      "perplexityDelta": 0.006658261422099798
+    },
+    {
+      "seed": 2026,
+      "baselineLoss": 2.9556596279144287,
+      "rmsnormLoss": 2.958572432398796,
+      "lossDelta": 0.0029128044843673706,
+      "baselinePerplexity": 19.214392890483992,
+      "rmsnormPerplexity": 19.270442251045285,
+      "perplexityDelta": 0.056049360561292616
+    }
+  ],
+  "meanLossDelta": 0.002906466523806254,
+  "relativeMeanLossChangePercent": 0.09836206185919703,
+  "rmsnormSeedWins": 0,
+  "totalSeeds": 3,
+  "decision": "REJECT_RMSNORM",
+  "decisionRule": "Retain RMSNorm only if mean held-out validation loss is lower than LayerNorm and RMSNorm wins at least 2 of 3 paired seeds."
+}

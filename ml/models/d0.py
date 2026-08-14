@@ -14,6 +14,7 @@ class D0Config:
     layers: int = 2
     attention_heads: int = 4
     dropout: float = 0.0
+    normalization: str = "layernorm"
 
 
 class CausalSelfAttention(nn.Module):
@@ -42,12 +43,75 @@ class CausalSelfAttention(nn.Module):
         return self.output(attended)
 
 
+
+class RMSNorm(nn.Module):
+    """Root Mean Square Layer Normalization.
+
+    This implementation intentionally contains only a learned scale.
+    It does not subtract the mean and does not use a learned bias.
+    """
+
+    def __init__(
+        self,
+        hidden_size: int,
+        eps: float = 1e-6,
+    ) -> None:
+        super().__init__()
+        self.weight = nn.Parameter(
+            torch.ones(hidden_size)
+        )
+        self.eps = eps
+
+    def forward(
+        self,
+        x: torch.Tensor,
+    ) -> torch.Tensor:
+        input_dtype = x.dtype
+
+        # Compute normalization statistics in float32 for
+        # numerical stability across CPU/MPS execution.
+        value = x.float()
+        variance = value.pow(2).mean(
+            dim=-1,
+            keepdim=True,
+        )
+
+        normalized = value * torch.rsqrt(
+            variance + self.eps
+        )
+
+        return (
+            normalized.to(input_dtype)
+            * self.weight
+        )
+
+
+def build_normalization(
+    config: D0Config,
+) -> nn.Module:
+    if config.normalization == "layernorm":
+        return nn.LayerNorm(
+            config.hidden_size
+        )
+
+    if config.normalization == "rmsnorm":
+        return RMSNorm(
+            config.hidden_size
+        )
+
+    raise ValueError(
+        "normalization must be "
+        "'layernorm' or 'rmsnorm', "
+        f"got {config.normalization!r}"
+    )
+
+
 class TransformerBlock(nn.Module):
     def __init__(self, config: D0Config) -> None:
         super().__init__()
-        self.normalization_one = nn.LayerNorm(config.hidden_size)
+        self.normalization_one = build_normalization(config)
         self.attention = CausalSelfAttention(config)
-        self.normalization_two = nn.LayerNorm(config.hidden_size)
+        self.normalization_two = build_normalization(config)
         self.feed_forward = nn.Sequential(
             nn.Linear(config.hidden_size, config.hidden_size * 4),
             nn.GELU(),
@@ -69,7 +133,7 @@ class D0Model(nn.Module):
         self.token_embedding = nn.Embedding(config.vocab_size, config.hidden_size)
         self.position_embedding = nn.Embedding(config.context_length, config.hidden_size)
         self.blocks = nn.ModuleList([TransformerBlock(config) for _ in range(config.layers)])
-        self.normalization = nn.LayerNorm(config.hidden_size)
+        self.normalization = build_normalization(config)
         self.output_projection = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
         self.output_projection.weight = self.token_embedding.weight
         self.apply(self._initialize_weights)

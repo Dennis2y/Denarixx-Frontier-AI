@@ -107,6 +107,7 @@ def run(
     corpus_path: Path | None = None,
     batch_size: int = 8,
     learning_rate: float = 3e-4,
+    normalization: str = "layernorm",
 ) -> dict:
     if max_steps < 1:
         raise ValueError("max_steps must be >= 1")
@@ -116,6 +117,11 @@ def run(
 
     if learning_rate <= 0:
         raise ValueError("learning_rate must be > 0")
+
+    if normalization not in {"layernorm", "rmsnorm"}:
+        raise ValueError(
+            "normalization must be 'layernorm' or 'rmsnorm'"
+        )
 
     seed_everything(seed)
 
@@ -174,6 +180,7 @@ def run(
             layers=2,
             attention_heads=4,
             dropout=0.0,
+            normalization=normalization,
         )
 
     model = D0Model(config).to(device)
@@ -470,6 +477,12 @@ def main() -> None:
         default=3e-4,
     )
 
+    parser.add_argument(
+        "--normalization",
+        choices=["layernorm", "rmsnorm"],
+        default="layernorm",
+    )
+
     args = parser.parse_args()
 
     try:
@@ -482,6 +495,7 @@ def main() -> None:
             corpus_path=args.corpus,
             batch_size=args.batch_size,
             learning_rate=args.learning_rate,
+        normalization=args.normalization,
         )
 
         print(json.dumps(result))

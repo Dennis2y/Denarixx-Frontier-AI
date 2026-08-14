@@ -1,0 +1,18 @@
+{
+  "runs": 3,
+  "runIds": [
+    "d0-arch001-rmsnorm-seed42",
+    "d0-arch001-rmsnorm-seed1337",
+    "d0-arch001-rmsnorm-seed2026"
+  ],
+  "seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "meanValidationLoss": 2.9577718575795493,
+  "validationLossStdDev": 0.0315517896699372,
+  "meanPerplexity": 19.261408524693937,
+  "perplexityStdDev": 0.6072916882117176,
+  "meanTrainingTokensPerSecond": 17117.707549927116
+}
