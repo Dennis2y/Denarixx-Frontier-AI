@@ -1,0 +1,18 @@
+{
+  "runs": 3,
+  "runIds": [
+    "d0-arch002-rope-seed42",
+    "d0-arch002-rope-seed1337",
+    "d0-arch002-rope-seed2026"
+  ],
+  "seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "meanValidationLoss": 2.924865593512853,
+  "validationLossStdDev": 0.002633563275449889,
+  "meanPerplexity": 18.631786250564232,
+  "perplexityStdDev": 0.04904691921635985,
+  "meanTrainingTokensPerSecond": 16276.874043273703
+}

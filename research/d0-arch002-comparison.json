@@ -1,0 +1,68 @@
+{
+  "experiment": "D0-ARCH-002",
+  "hypothesis": "Replacing learned absolute positional embeddings with Rotary Positional Embeddings improves D0 held-out validation performance while keeping the rest of the architecture and training configuration fixed.",
+  "experimentalControl": {
+    "normalization": "layernorm",
+    "baselinePositionEncoding": "absolute",
+    "variantPositionEncoding": "rope",
+    "corpusSha256": "936b53855c5fa65cc408fb0b29108966445215a474ccfcce7ae7fe9f41fcc072",
+    "seeds": [
+      42,
+      1337,
+      2026
+    ]
+  },
+  "baseline": {
+    "positionEncoding": "absolute",
+    "meanValidationLoss": 2.9548653910557428,
+    "meanPerplexity": 19.206585949000864,
+    "parameters": 104832
+  },
+  "variant": {
+    "positionEncoding": "rope",
+    "meanValidationLoss": 2.924865593512853,
+    "meanPerplexity": 18.631786250564232,
+    "parameters": 102784
+  },
+  "pairedRuns": [
+    {
+      "seed": 42,
+      "baselineLoss": 2.920356050133705,
+      "ropeLoss": 2.9277550280094147,
+      "lossDelta": 0.007398977875709534,
+      "baselinePerplexity": 18.54789026302072,
+      "ropePerplexity": 18.685634648147587,
+      "perplexityDelta": 0.1377443851268687,
+      "winner": "Absolute"
+    },
+    {
+      "seed": 1337,
+      "baselineLoss": 2.988580495119095,
+      "ropeLoss": 2.9213857203722,
+      "lossDelta": -0.06719477474689484,
+      "baselinePerplexity": 19.857474693497885,
+      "ropePerplexity": 18.566998309416537,
+      "perplexityDelta": -1.290476384081348,
+      "winner": "RoPE"
+    },
+    {
+      "seed": 2026,
+      "baselineLoss": 2.9556596279144287,
+      "ropeLoss": 2.9254560321569443,
+      "lossDelta": -0.030203595757484436,
+      "baselinePerplexity": 19.214392890483992,
+      "ropePerplexity": 18.64272579412857,
+      "perplexityDelta": -0.5716670963554229,
+      "winner": "RoPE"
+    }
+  ],
+  "meanLossDelta": -0.029999797542889617,
+  "relativeMeanLossChangePercent": -1.0152678234919865,
+  "ropeSeedWins": 2,
+  "totalSeeds": 3,
+  "parameterReduction": 2048,
+  "parameterReductionPercent": 1.9536019536019535,
+  "decision": "ACCEPT_ROPE",
+  "decisionRule": "Retain RoPE only if mean held-out validation loss is lower than the learned absolute positional baseline and RoPE wins at least 2 of 3 paired seeds.",
+  "historicalBaselineNote": "The d0-baseline-v2 reports predate the normalization and position_encoding config fields. At that baseline commit the model used LayerNorm and learned absolute positional embeddings."
+}

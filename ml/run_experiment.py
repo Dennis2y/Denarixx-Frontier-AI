@@ -108,6 +108,7 @@ def run(
     batch_size: int = 8,
     learning_rate: float = 3e-4,
     normalization: str = "layernorm",
+    position_encoding: str = "rope",
 ) -> dict:
     if max_steps < 1:
         raise ValueError("max_steps must be >= 1")
@@ -121,6 +122,11 @@ def run(
     if normalization not in {"layernorm", "rmsnorm"}:
         raise ValueError(
             "normalization must be 'layernorm' or 'rmsnorm'"
+        )
+
+    if position_encoding not in {"absolute", "rope"}:
+        raise ValueError(
+            "position_encoding must be 'absolute' or 'rope'"
         )
 
     seed_everything(seed)
@@ -181,6 +187,7 @@ def run(
             attention_heads=4,
             dropout=0.0,
             normalization=normalization,
+            position_encoding=position_encoding,
         )
 
     model = D0Model(config).to(device)
@@ -483,6 +490,12 @@ def main() -> None:
         default="layernorm",
     )
 
+    parser.add_argument(
+        "--position-encoding",
+        choices=["absolute", "rope"],
+        default="rope",
+    )
+
     args = parser.parse_args()
 
     try:
@@ -495,7 +508,8 @@ def main() -> None:
             corpus_path=args.corpus,
             batch_size=args.batch_size,
             learning_rate=args.learning_rate,
-        normalization=args.normalization,
+            normalization=args.normalization,
+            position_encoding=args.position_encoding,
         )
 
         print(json.dumps(result))
