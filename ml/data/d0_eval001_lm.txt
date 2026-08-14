@@ -1,0 +1,5 @@
+Careful experiments compare models on information excluded from optimization.
+Reliable evaluation measures predictive behavior on frozen unseen examples.
+A research result should separate training evidence from evaluation evidence.
+model comparisons require identical metrics, datasets, and checkpoint reconstruction.
+held out measurements help detect whether an optimization change generalizes.

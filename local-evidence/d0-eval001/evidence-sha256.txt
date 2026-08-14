@@ -1,0 +1,6 @@
+3d0278d6d755111c7cd079a67961822798a165643b83386599f64b07c95ca5ec  local-evidence/d0-eval001/artifact-identities.txt
+312f34229b30da6f1658d65a78b2eda554b5275331da92b41a326c5c9de18882  local-evidence/d0-eval001/pretrained-run1.json
+312f34229b30da6f1658d65a78b2eda554b5275331da92b41a326c5c9de18882  local-evidence/d0-eval001/pretrained-run2.json
+30d0bb73a1fe8dbddad82827903ca31578840c66e4ca6fb3d29815f4926e3759  local-evidence/d0-eval001/sft-run1.json
+30d0bb73a1fe8dbddad82827903ca31578840c66e4ca6fb3d29815f4926e3759  local-evidence/d0-eval001/sft-run2.json
+1bec8a5d7703f021270504dc1e755a21a1eb03f344ddf72b09ac7b3cf05b4e50  local-evidence/d0-eval001/comparison.json

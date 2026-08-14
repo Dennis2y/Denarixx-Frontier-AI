@@ -1,0 +1,51 @@
+{
+  "comparison": "accepted pretrained checkpoint vs accepted SFT checkpoint",
+  "delta_sft_minus_pretrained": {
+    "instruction_exact_match_rate": 0.0,
+    "instruction_response_loss": -0.2129485934388402,
+    "instruction_response_perplexity": -4.836797747107958,
+    "lm_average_loss": 0.2282834982570212,
+    "lm_perplexity": 4.839640926279337
+  },
+  "experiment": "D0-EVAL-001",
+  "percent_change_sft_vs_pretrained": {
+    "instruction_response_loss": -6.597854748136742,
+    "instruction_response_perplexity": -19.18023171877682,
+    "lm_average_loss": 7.7708363775599905,
+    "lm_perplexity": 25.64414739141257
+  },
+  "pretrained": {
+    "checkpoint": "local-checkpoints/d0-arch002-rope-seed42.pt",
+    "instruction": {
+      "exact_match_rate": 0.0,
+      "exact_matches": 0,
+      "examples_evaluated": 6,
+      "response_loss": 3.2275429145962584,
+      "response_perplexity": 25.217618942386874,
+      "response_tokens_evaluated": 51
+    },
+    "language_model": {
+      "average_loss": 2.9376953414723843,
+      "perplexity": 18.872301942469658,
+      "tokens_evaluated": 395,
+      "windows_evaluated": 13
+    }
+  },
+  "sft": {
+    "checkpoint": "local-checkpoints/d0-post001-sft-seed42.pt",
+    "instruction": {
+      "exact_match_rate": 0.0,
+      "exact_matches": 0,
+      "examples_evaluated": 6,
+      "response_loss": 3.014594321157418,
+      "response_perplexity": 20.380821195278916,
+      "response_tokens_evaluated": 51
+    },
+    "language_model": {
+      "average_loss": 3.1659788397294055,
+      "perplexity": 23.711942868748995,
+      "tokens_evaluated": 395,
+      "windows_evaluated": 13
+    }
+  }
+}

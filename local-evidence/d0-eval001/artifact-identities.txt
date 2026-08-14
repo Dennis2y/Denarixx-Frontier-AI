@@ -1,0 +1,10 @@
+D0-EVAL-001 FORMAL ARTIFACT IDENTITIES
+
+repository_head=847f57a
+
+lm_sha256=7ebff5e6dd3ef0d22fc4424296ec0ad8806bf304068328c0c74d2d5b1235b6e4
+instruction_sha256=78896135affacc51fd22d5cf8e0e68798d69f32b415220b9c137f2855be21bd5
+
+checkpoint_sha256:
+ce1dbc9ce5ef650c69b5e0808d6e8c182c86c14caff936fb739f6deb622160b8  local-checkpoints/d0-arch002-rope-seed42.pt
+3b701f47d4cea911e6299ed41e015575e02257c7df9d9ee48bdf26780932d01b  local-checkpoints/d0-post001-sft-seed42.pt
