@@ -1,0 +1,77 @@
+{
+  "experiment": "D0-POST-001",
+  "stage": "supervised_fine_tuning",
+  "baseCheckpoint": "local-checkpoints/d0-arch002-rope-seed42.pt",
+  "design": {
+    "totalExamples": 12,
+    "trainingExamples": 9,
+    "validationExamples": 3,
+    "validationFraction": 0.25,
+    "splitStrategy": "ordered_tail_holdout",
+    "validationInstructions": [
+      "say true",
+      "say false",
+      "say token"
+    ],
+    "sftSeeds": [
+      42,
+      1337,
+      2026
+    ],
+    "maxSteps": 20,
+    "batchSize": 4,
+    "learningRate": 0.0001,
+    "sameBaseCheckpointForAllSeeds": true
+  },
+  "rows": [
+    {
+      "seed": 42,
+      "initialHeldOutResponseLoss": 3.557425625184003,
+      "finalHeldOutResponseLoss": 3.0655267378863167,
+      "lossDelta": -0.4918988872976864,
+      "initialHeldOutPerplexity": 35.07279031638806,
+      "finalHeldOutPerplexity": 21.445755304431007,
+      "winner": "SFT"
+    },
+    {
+      "seed": 1337,
+      "initialHeldOutResponseLoss": 3.557425625184003,
+      "finalHeldOutResponseLoss": 3.0669369136585907,
+      "lossDelta": -0.4904887115254124,
+      "initialHeldOutPerplexity": 35.07279031638806,
+      "finalHeldOutPerplexity": 21.476018922474733,
+      "winner": "SFT"
+    },
+    {
+      "seed": 2026,
+      "initialHeldOutResponseLoss": 3.557425625184003,
+      "finalHeldOutResponseLoss": 3.0775976321276497,
+      "lossDelta": -0.4798279930563534,
+      "initialHeldOutPerplexity": 35.07279031638806,
+      "finalHeldOutPerplexity": 21.706193446987665,
+      "winner": "SFT"
+    }
+  ],
+  "meanInitialHeldOutResponseLoss": 3.557425625184003,
+  "meanFinalHeldOutResponseLoss": 3.0700204278908525,
+  "meanLossDelta": -0.48740519729315074,
+  "relativeMeanLossChangePercent": -13.70106500168757,
+  "sftWins": 3,
+  "pairedSeeds": 3,
+  "allFinite": true,
+  "decisionRule": {
+    "lowerMeanHeldOutResponseLoss": true,
+    "winAtLeastTwoOfThreeSeeds": true,
+    "tokenizerMustRemainIdentical": true,
+    "architectureMustRemainIdentical": true,
+    "parameterCountMustRemain102784": true,
+    "lossesAndGradientsMustRemainFinite": true
+  },
+  "decision": "ACCEPT_SFT",
+  "limitations": [
+    "All three SFT runs begin from the same accepted pretrained seed-42 checkpoint.",
+    "The experiment measures SFT optimization variation, not independent pretraining variation.",
+    "The dataset contains only 12 tiny instruction examples and is intended for pipeline validation.",
+    "This experiment is not evidence of frontier-model capability."
+  ]
+}

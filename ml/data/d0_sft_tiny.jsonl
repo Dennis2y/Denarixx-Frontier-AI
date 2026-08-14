@@ -1,0 +1,12 @@
+{"instruction": "say yes", "response": "yes"}
+{"instruction": "say no", "response": "no"}
+{"instruction": "say ai", "response": "ai"}
+{"instruction": "say data", "response": "data"}
+{"instruction": "say safe", "response": "safe"}
+{"instruction": "say model", "response": "model"}
+{"instruction": "say code", "response": "code"}
+{"instruction": "say train", "response": "train"}
+{"instruction": "say test", "response": "test"}
+{"instruction": "say true", "response": "true"}
+{"instruction": "say false", "response": "false"}
+{"instruction": "say token", "response": "token"}
