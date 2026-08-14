@@ -1,0 +1,23 @@
+{
+  "stage": "D0-POST-002",
+  "status": "accepted",
+  "candidate": {
+    "runId": "d0-post002-mixed-l025-seed42",
+    "retentionWeight": 0.25,
+    "sourceCheckpoint": "local-checkpoints/d0-post002-mixed-l025-seed42.pt",
+    "canonicalCheckpoint": "local-checkpoints/d0-post002-accepted.pt",
+    "sha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97"
+  },
+  "evaluation": {
+    "primary": "D0-EVAL-001",
+    "secondary": "D0-EVAL-002-v4",
+    "secondaryLmSha256": "add74fe6a0402708d0263e804f9c2f063411b16e6a12906cc64c5620950c0b3b",
+    "secondaryInstructionSha256": "f4016c10c1b493a8ba5e2bc71d9435436e703aec64f4bd1890e262d1865c1f2e"
+  },
+  "decision": {
+    "instructionImprovedOnBothEvaluations": true,
+    "lmImprovedOnBothEvaluations": true,
+    "baselineLmDegradationBelow7Percent": true,
+    "accepted": true
+  }
+}

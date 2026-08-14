@@ -1,0 +1,17 @@
+{
+  "evaluation": "D0-EVAL-002",
+  "revision": "v4",
+  "candidate": "POST-002-l025",
+  "comparison": "POST-001",
+  "metrics": {
+    "lm_improvement_percent_vs_post001": 2.0635249879336395,
+    "instruction_improvement_percent_vs_post001": 0.7105527867767062,
+    "lm_degradation_percent_vs_pretrained": 2.8973956497208704
+  },
+  "gates": {
+    "lm_improves_over_post001": true,
+    "instruction_improves_over_post001": true,
+    "lm_degradation_below_7_percent": true
+  },
+  "note": "This summary reports EVAL-002 V4 only. Canonical acceptance additionally requires comparison with frozen EVAL-001 results."
+}

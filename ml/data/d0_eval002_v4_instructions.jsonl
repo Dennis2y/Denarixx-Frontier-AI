@@ -1,0 +1,20 @@
+{"instruction":"say base","response":"compare"}
+{"instruction":"say frozen","response":"fixed data"}
+{"instruction":"say hash","response":"data identity"}
+{"instruction":"say audit","response":"check model"}
+{"instruction":"say learn","response":"fit model"}
+{"instruction":"say proof","response":"show claim"}
+{"instruction":"say retain","response":"keep skill"}
+{"instruction":"say held","response":"new data"}
+{"instruction":"say meta","response":"record run"}
+{"instruction":"say regress","response":"lost skill"}
+{"instruction":"say state","response":"model state"}
+{"instruction":"say repeat","response":"same setup"}
+{"instruction":"say tokens","response":"map text"}
+{"instruction":"say trial","response":"fair test"}
+{"instruction":"say lm","response":"track skill"}
+{"instruction":"say reply","response":"track learn"}
+{"instruction":"say compare","response":"find shift"}
+{"instruction":"say split","response":"avoid match"}
+{"instruction":"say metric","response":"measure"}
+{"instruction":"say valid","response":"check result"}

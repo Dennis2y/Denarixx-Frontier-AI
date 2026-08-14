@@ -1,0 +1,40 @@
+research needs tests.
+models need checks.
+data stays separate.
+hashes mark identity.
+tests check models.
+training changes models.
+held data tests models.
+results need evidence.
+metrics show change.
+loss measures learning.
+baselines aid checks.
+frozen data stays fixed.
+research uses repeats.
+models store state.
+tokens represent text.
+tests find regressions.
+retention keeps skill.
+training alters behavior.
+evidence supports claims.
+results need review.
+models learn patterns.
+tests remain stable.
+trials need controls.
+checks detect change.
+research compares runs.
+data identity matters.
+metadata records runs.
+training fits models.
+test data checks models.
+loss tracks behavior.
+results support claims.
+checkpoints store state.
+repeat runs test stability.
+model checks need proof.
+held data reduces bias.
+split data aids testing.
+metrics measure results.
+validation checks results.
+research records results.
+controls improve tests.

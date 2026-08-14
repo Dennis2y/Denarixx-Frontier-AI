@@ -1,0 +1,24 @@
+{
+  "evaluation": "D0-EVAL-002",
+  "revision": "v4",
+  "status": "frozen",
+  "modelScoredBeforeFreeze": false,
+  "language_model": {
+    "path": "ml/data/d0_eval002_v4_lm.txt",
+    "sha256": "add74fe6a0402708d0263e804f9c2f063411b16e6a12906cc64c5620950c0b3b",
+    "lines": 40
+  },
+  "instruction": {
+    "path": "ml/data/d0_eval002_v4_instructions.jsonl",
+    "sha256": "f4016c10c1b493a8ba5e2bc71d9435436e703aec64f4bd1890e262d1865c1f2e",
+    "examples": 20
+  },
+  "constraints": {
+    "tokenizerCoverageRequired": true,
+    "contextLength": 32,
+    "instructionPredictionTokenCeiling": 22,
+    "exactSftFieldOverlapAllowed": false,
+    "exactSftPairOverlapAllowed": false,
+    "exactPretrainingLmOverlapAllowed": false
+  }
+}

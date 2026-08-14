@@ -1,0 +1,274 @@
+{
+  "post001_vs_pretrained": {
+    "instructionLossPct": -6.597854748136742,
+    "lmLossPct": 7.7708363775599905
+  },
+  "post002_vs_post001": {
+    "instructionLossPct": -1.0099496320988508,
+    "lmLossPct": -2.414214333524967
+  },
+  "post002_vs_pretrained": {
+    "instructionLossPct": -7.541169370480369,
+    "lmLossPct": 5.169017398373198
+  },
+  "results": {
+    "post001": {
+      "checkpoint": "local-checkpoints/d0-post001-sft-seed42.pt",
+      "datasets": {
+        "instruction": {
+          "path": "ml/data/d0_eval001_instructions.jsonl",
+          "sha256": "78896135affacc51fd22d5cf8e0e68798d69f32b415220b9c137f2855be21bd5"
+        },
+        "language_model": {
+          "path": "ml/data/d0_eval001_lm.txt",
+          "sha256": "7ebff5e6dd3ef0d22fc4424296ec0ad8806bf304068328c0c74d2d5b1235b6e4"
+        }
+      },
+      "instruction": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples_evaluated": 6,
+        "response_loss": 3.014594321157418,
+        "response_perplexity": 20.380821195278916,
+        "response_tokens_evaluated": 51
+      },
+      "language_model": {
+        "average_loss": 3.1659788397294055,
+        "perplexity": 23.711942868748995,
+        "tokens_evaluated": 395,
+        "windows_evaluated": 13
+      },
+      "model_config": {
+        "attention_heads": 4,
+        "context_length": 32,
+        "dropout": 0.0,
+        "hidden_size": 64,
+        "layers": 2,
+        "normalization": "layernorm",
+        "position_encoding": "rope",
+        "vocab_size": 42
+      },
+      "model_name": "denarixx-d0-sft",
+      "parameter_count": 102784,
+      "post_training_stage": "sft",
+      "tokenizer": {
+        "alphabet": [
+          "\n",
+          " ",
+          ",",
+          "-",
+          ".",
+          "0",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "I",
+          "R",
+          "S",
+          "T",
+          "W",
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "n",
+          "o",
+          "p",
+          "q",
+          "r",
+          "s",
+          "t",
+          "u",
+          "v",
+          "w",
+          "x",
+          "y",
+          "z"
+        ]
+      }
+    },
+    "post002_l025": {
+      "checkpoint": "local-checkpoints/d0-post002-mixed-l025-seed42.pt",
+      "datasets": {
+        "instruction": {
+          "path": "ml/data/d0_eval001_instructions.jsonl",
+          "sha256": "78896135affacc51fd22d5cf8e0e68798d69f32b415220b9c137f2855be21bd5"
+        },
+        "language_model": {
+          "path": "ml/data/d0_eval001_lm.txt",
+          "sha256": "7ebff5e6dd3ef0d22fc4424296ec0ad8806bf304068328c0c74d2d5b1235b6e4"
+        }
+      },
+      "instruction": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples_evaluated": 6,
+        "response_loss": 2.984148436901616,
+        "response_perplexity": 19.769659953370876,
+        "response_tokens_evaluated": 51
+      },
+      "language_model": {
+        "average_loss": 3.089545324784291,
+        "perplexity": 21.967087814405623,
+        "tokens_evaluated": 395,
+        "windows_evaluated": 13
+      },
+      "model_config": {
+        "attention_heads": 4,
+        "context_length": 32,
+        "dropout": 0.0,
+        "hidden_size": 64,
+        "layers": 2,
+        "normalization": "layernorm",
+        "position_encoding": "rope",
+        "vocab_size": 42
+      },
+      "model_name": "denarixx-d0-mixed-post-training",
+      "parameter_count": 102784,
+      "post_training_stage": "mixed_sft_lm_retention",
+      "tokenizer": {
+        "alphabet": [
+          "\n",
+          " ",
+          ",",
+          "-",
+          ".",
+          "0",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "I",
+          "R",
+          "S",
+          "T",
+          "W",
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "n",
+          "o",
+          "p",
+          "q",
+          "r",
+          "s",
+          "t",
+          "u",
+          "v",
+          "w",
+          "x",
+          "y",
+          "z"
+        ]
+      }
+    },
+    "pretrained": {
+      "checkpoint": "local-checkpoints/d0-arch002-rope-seed42.pt",
+      "datasets": {
+        "instruction": {
+          "path": "ml/data/d0_eval001_instructions.jsonl",
+          "sha256": "78896135affacc51fd22d5cf8e0e68798d69f32b415220b9c137f2855be21bd5"
+        },
+        "language_model": {
+          "path": "ml/data/d0_eval001_lm.txt",
+          "sha256": "7ebff5e6dd3ef0d22fc4424296ec0ad8806bf304068328c0c74d2d5b1235b6e4"
+        }
+      },
+      "instruction": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples_evaluated": 6,
+        "response_loss": 3.2275429145962584,
+        "response_perplexity": 25.217618942386874,
+        "response_tokens_evaluated": 51
+      },
+      "language_model": {
+        "average_loss": 2.9376953414723843,
+        "perplexity": 18.872301942469658,
+        "tokens_evaluated": 395,
+        "windows_evaluated": 13
+      },
+      "model_config": {
+        "attention_heads": 4,
+        "context_length": 32,
+        "dropout": 0.0,
+        "hidden_size": 64,
+        "layers": 2,
+        "normalization": "layernorm",
+        "position_encoding": "rope",
+        "vocab_size": 42
+      },
+      "model_name": "denarixx-d0-baseline",
+      "parameter_count": 102784,
+      "post_training_stage": null,
+      "tokenizer": {
+        "alphabet": [
+          "\n",
+          " ",
+          ",",
+          "-",
+          ".",
+          "0",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "I",
+          "R",
+          "S",
+          "T",
+          "W",
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "n",
+          "o",
+          "p",
+          "q",
+          "r",
+          "s",
+          "t",
+          "u",
+          "v",
+          "w",
+          "x",
+          "y",
+          "z"
+        ]
+      }
+    }
+  }
+}
