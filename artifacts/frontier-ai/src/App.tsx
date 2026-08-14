@@ -38,7 +38,7 @@ function stripBase(path: string) {
 }
 
 const nav = [
-  { href: '/', label: 'Overview', icon: Activity },
+  { href: '/overview', label: 'Overview', icon: Activity },
   { href: '/models', label: 'Model registry', icon: BrainCircuit },
   { href: '/datasets', label: 'Datasets', icon: Database },
   { href: '/experiments', label: 'Experiments', icon: FlaskConical },
@@ -181,6 +181,180 @@ function Shell({ children }: { children: ReactNode }) {
   );
 }
 
+function LandingPage() {
+  return (
+    <div className="landing-page min-h-[100dvh] overflow-hidden bg-[#101723] text-white">
+      <header className="relative z-20 border-b border-white/10">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
+          <Link href="/" className="flex items-center gap-3" data-testid="landing-brand">
+            <img src={`${basePath}/denarixx-logo.png`} alt="Denarixx" className="h-11 w-11 rounded-lg object-cover shadow-[0_0_24px_rgba(247,210,62,.15)]" />
+            <div>
+              <div className="text-sm font-extrabold tracking-[.12em]">DENARIXX</div>
+              <div className="font-mono text-[9px] uppercase tracking-[.2em] text-white/45">frontier intelligence</div>
+            </div>
+          </Link>
+          <nav className="hidden items-center gap-8 text-sm text-white/60 md:flex">
+            <a href="#platform" className="hover:text-white">Platform</a>
+            <a href="#method" className="hover:text-white">Method</a>
+            <a href="#evidence" className="hover:text-white">Evidence</a>
+          </nav>
+          <div className="flex items-center gap-3">
+            <Link href="/sign-in" className="hidden text-sm font-semibold text-white/70 hover:text-white sm:block">Sign in</Link>
+            <Link href="/overview" data-testid="landing-open-console" className="inline-flex items-center gap-2 rounded-md bg-[#f7d23e] px-4 py-2.5 text-sm font-bold text-[#101723] hover:bg-[#ffe36c]">
+              Open console <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative isolate">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_20%,rgba(247,210,62,.18),transparent_28%),radial-gradient(circle_at_20%_70%,rgba(45,212,191,.08),transparent_25%)]" />
+          <div className="mx-auto grid min-h-[690px] max-w-7xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[.86fr_1.14fr] lg:gap-10 lg:py-24">
+            <div className="relative z-10 max-w-2xl">
+              <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#f7d23e]/30 bg-[#f7d23e]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.18em] text-[#f7d23e]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#f7d23e] shadow-[0_0_10px_#f7d23e]" />
+                D0 / experimental research system
+              </div>
+              <h1 className="max-w-3xl text-5xl font-extrabold leading-[.98] tracking-[-.06em] sm:text-6xl lg:text-[76px]">
+                Build intelligence you can <span className="text-[#f7d23e]">measure.</span>
+              </h1>
+              <p className="mt-7 max-w-xl text-base leading-8 text-white/60 sm:text-lg">
+                Denarixx Frontier AI is an evidence-first control plane for turning a raw corpus into a tested, inspectable model artifact — without hiding the work behind a chatbot demo.
+              </p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Link href="/overview" data-testid="landing-start-research" className="inline-flex items-center justify-center gap-2 rounded-md bg-[#f7d23e] px-5 py-3.5 text-sm font-bold text-[#101723] hover:bg-[#ffe36c]">
+                  Start the research loop <ArrowUpRight className="h-4 w-4" />
+                </Link>
+                <a href="#method" className="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 px-5 py-3.5 text-sm font-semibold text-white/80 hover:border-white/35 hover:bg-white/5">
+                  See how it works <span className="text-[#f7d23e]">↓</span>
+                </a>
+              </div>
+              <div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[.14em] text-white/40">
+                <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> API connected</span>
+                <span>OpenAPI-first</span>
+                <span>CPU-compatible D0</span>
+              </div>
+            </div>
+
+            <div className="relative lg:-mr-20">
+              <div className="absolute -inset-10 -z-10 rounded-full bg-[#f7d23e]/10 blur-3xl" />
+              <div className="landing-hero-frame relative overflow-hidden rounded-2xl border border-white/15 bg-[#182333] shadow-2xl shadow-black/40">
+                <img src={`${basePath}/frontier-ai-hero.png`} alt="Abstract AI research infrastructure with glowing data layers" className="aspect-[4/3] h-full w-full object-cover opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#101723]/75 via-transparent to-transparent" />
+                <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/15 bg-[#101723]/75 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.15em] text-white/70 backdrop-blur">
+                  <span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> live artifact surface
+                </div>
+                <div className="absolute bottom-5 left-5 right-5 grid gap-3 sm:grid-cols-3">
+                  {[
+                    ['01', 'Corpus', 'authored + versioned'],
+                    ['02', 'D0 model', 'tiny transformer'],
+                    ['03', 'Evidence', 'checkpoint-backed'],
+                  ].map(([number, label, detail]) => (
+                    <div key={number} className="rounded-lg border border-white/15 bg-[#101723]/80 p-3 backdrop-blur">
+                      <div className="font-mono text-[9px] text-[#f7d23e]">{number}</div>
+                      <div className="mt-1 text-xs font-bold">{label}</div>
+                      <div className="mt-1 font-mono text-[9px] uppercase tracking-[.1em] text-white/40">{detail}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="absolute -bottom-7 -left-5 hidden w-48 rounded-lg border border-white/10 bg-[#151f2d]/95 p-4 shadow-xl backdrop-blur sm:block">
+                <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[.14em] text-white/45"><span>validation loss</span><span className="text-teal-300">↓ measured</span></div>
+                <div className="mt-3 flex items-end gap-1">
+                  {[38, 48, 35, 31, 26, 23, 18, 14, 11].map((height, index) => <span key={index} className="w-2 rounded-t-sm bg-[#f7d23e]" style={{ height }} />)}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="evidence" className="border-y border-white/10 bg-[#0d141f]">
+          <div className="mx-auto grid max-w-7xl gap-px px-5 sm:grid-cols-3 sm:px-8">
+            {[
+              ['01', 'One traceable loop', 'Dataset → tokenizer → model → checkpoint → evaluation → inference.'],
+              ['02', 'Measured by default', 'Loss, latency, throughput, and benchmark results stay attached to the artifact.'],
+              ['03', 'Honest about unknowns', 'Planned milestones never masquerade as shipped capabilities.'],
+            ].map(([number, title, description]) => (
+              <div key={number} className="border-white/10 py-9 sm:border-r sm:px-8 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0">
+                <div className="font-mono text-[10px] tracking-[.18em] text-[#f7d23e]">{number}</div>
+                <h2 className="mt-3 text-base font-bold">{title}</h2>
+                <p className="mt-2 max-w-xs text-sm leading-6 text-white/45">{description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="platform" className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
+          <div className="max-w-2xl">
+            <div className="font-mono text-[10px] uppercase tracking-[.2em] text-[#f7d23e]">The platform surface</div>
+            <h2 className="mt-4 text-4xl font-extrabold tracking-[-.05em] sm:text-5xl">Less theater. More signal.</h2>
+            <p className="mt-5 text-base leading-7 text-white/50">A focused research cockpit for teams who want to see exactly what happened, why it happened, and what to run next.</p>
+          </div>
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            {[
+              { icon: Database, label: 'Provenance', title: 'Start with the source.', body: 'Keep datasets, tokenizer choices, and experiment hypotheses visible before training begins.' },
+              { icon: Gauge, label: 'Instrumentation', title: 'Make progress legible.', body: 'Surface real loss curves, gradient norms, throughput, checkpoints, and evaluation outcomes.' },
+              { icon: BrainCircuit, label: 'Inference', title: 'Serve the exact artifact.', body: 'Probe the checkpoint that produced the result and carry latency and throughput into every sample.' },
+            ].map(({ icon: Icon, label, title, body }) => (
+              <article key={label} className="group rounded-xl border border-white/10 bg-white/[.03] p-6 transition hover:-translate-y-1 hover:border-[#f7d23e]/40 hover:bg-white/[.05]">
+                <div className="flex items-center justify-between"><Icon className="h-5 w-5 text-[#f7d23e]" /><span className="font-mono text-[9px] uppercase tracking-[.16em] text-white/35">{label}</span></div>
+                <h3 className="mt-10 text-xl font-bold">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-white/45">{body}</p>
+                <div className="mt-8 h-px w-10 bg-[#f7d23e] transition-all group-hover:w-full" />
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="method" className="border-y border-white/10 bg-[#f7d23e] text-[#101723]">
+          <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[.7fr_1.3fr] lg:items-center">
+            <div>
+              <div className="font-mono text-[10px] uppercase tracking-[.2em] text-[#101723]/60">Research method / D0</div>
+              <h2 className="mt-4 text-4xl font-extrabold tracking-[-.05em] sm:text-5xl">Every claim has a trail.</h2>
+              <p className="mt-5 max-w-md text-sm leading-7 text-[#101723]/65">The first vertical slice is intentionally small: a real CPU-compatible transformer, a reproducible corpus, a checkpoint, and an API that can be inspected.</p>
+              <Link href="/overview" className="mt-8 inline-flex items-center gap-2 rounded-md bg-[#101723] px-5 py-3.5 text-sm font-bold text-[#f7d23e] hover:bg-[#1d2a3c]">Inspect the control plane <ArrowUpRight className="h-4 w-4" /></Link>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                ['01', 'Register', 'Record the model, dataset, and experiment intent.'],
+                ['02', 'Train', 'Run the D0 loop with real metrics and checkpoints.'],
+                ['03', 'Evaluate', 'Tie measured results to the exact artifact.'],
+                ['04', 'Infer', 'Query the checkpoint and see the latency.'],
+              ].map(([number, title, body]) => (
+                <div key={number} className="rounded-lg border border-[#101723]/15 bg-white/20 p-5">
+                  <div className="font-mono text-xs text-[#101723]/50">{number}</div>
+                  <h3 className="mt-7 text-lg font-bold">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#101723]/60">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#182333] px-6 py-14 text-center sm:px-12">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(247,210,62,.2),transparent_55%)]" />
+            <div className="relative">
+              <Sparkles className="mx-auto h-6 w-6 text-[#f7d23e]" />
+              <h2 className="mx-auto mt-5 max-w-2xl text-4xl font-extrabold tracking-[-.05em] sm:text-5xl">Make the next run count.</h2>
+              <p className="mx-auto mt-4 max-w-lg text-sm leading-7 text-white/50">Open the research console and move from a hypothesis to a measured artifact.</p>
+              <Link href="/overview" className="mt-8 inline-flex items-center gap-2 rounded-md bg-[#f7d23e] px-5 py-3.5 text-sm font-bold text-[#101723] hover:bg-[#ffe36c]">Enter Denarixx Frontier AI <ArrowUpRight className="h-4 w-4" /></Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+          <span>© 2026 Denarixx Digital Solutions</span>
+          <span className="font-mono uppercase tracking-[.14em]">Evidence-first intelligence</span>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
 function OverviewPage() {
   const query = useGetResearchOverview();
   const overview = query.data as ResearchOverview | undefined;
@@ -310,7 +484,7 @@ function SignUpPage() {
   return <div className="flex min-h-[100dvh] items-center justify-center bg-background px-4"><SignUp routing="path" path={`${basePath}/sign-up`} signInUrl={`${basePath}/sign-in`} /></div>;
 }
 
-function Router() { return <RoutedErrorBoundary><Switch><Route path="/sign-in/*?" component={SignInPage} /><Route path="/sign-up/*?" component={SignUpPage} /><Route path="/" component={OverviewPage} /><Route path="/models" component={ModelsPage} /><Route path="/datasets" component={DatasetsPage} /><Route path="/experiments" component={ExperimentsPage} /><Route path="/training" component={TrainingPage} /><Route path="/evaluations" component={EvaluationsPage} /><Route path="/playground" component={PlaygroundPage} /><Route component={NotFound} /></Switch></RoutedErrorBoundary>; }
+function Router() { return <RoutedErrorBoundary><Switch><Route path="/sign-in/*?" component={SignInPage} /><Route path="/sign-up/*?" component={SignUpPage} /><Route path="/" component={LandingPage} /><Route path="/overview" component={OverviewPage} /><Route path="/models" component={ModelsPage} /><Route path="/datasets" component={DatasetsPage} /><Route path="/experiments" component={ExperimentsPage} /><Route path="/training" component={TrainingPage} /><Route path="/evaluations" component={EvaluationsPage} /><Route path="/playground" component={PlaygroundPage} /><Route component={NotFound} /></Switch></RoutedErrorBoundary>; }
 function RoutedErrorBoundary({ children }: { children: ReactNode }) { const [location] = useLocation(); return <ErrorBoundary resetKey={location}>{children}</ErrorBoundary>; }
 function ClerkApp() {
   const [, setLocation] = useLocation();
