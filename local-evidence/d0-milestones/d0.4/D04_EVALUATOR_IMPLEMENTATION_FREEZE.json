@@ -1,0 +1,21 @@
+{
+  "canonicalCheckpointHashedDuringFreeze": false,
+  "canonicalCheckpointLoadedDuringFreeze": false,
+  "canonicalCheckpointOpenedDuringFreeze": false,
+  "canonicalModelScoredDuringFreeze": false,
+  "files": {
+    "ml/evaluation/d04_execution_controller.py": {
+      "sha256": "26e2687b19e38559757f15d2a7704d8061a30a46368b20f3cbf854af80d222e4"
+    },
+    "ml/evaluation/d04_final_evaluator.py": {
+      "sha256": "d654d108762e216702da64584b8de5494b8a88139b39ed8cd4316f78a125153a"
+    },
+    "ml/tests/test_d04_final_evaluator.py": {
+      "sha256": "70d7d4f02c7bee9fb9f952a155e6288b8e8b34c2ef960068571d1217ecbd440a"
+    }
+  },
+  "formalExecutionAuthorized": false,
+  "milestone": "D0.4",
+  "status": "implementation-frozen",
+  "trainingExecutedDuringFreeze": false
+}

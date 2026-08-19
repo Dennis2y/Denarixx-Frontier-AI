@@ -1,0 +1,83 @@
+{
+  "artifact_type": "HISTORICAL_EXTRACTION_MAP_FREEZE",
+  "authorization": {
+    "checkpoint_loading_authorized": false,
+    "d04_dataset_creation_authorized": false,
+    "d04_dataset_sealing_authorized": false,
+    "d04_example_creation_authorized": false,
+    "formal_exposure_authorized": false,
+    "historical_registry_mutation_authorized": false,
+    "historical_text_identity_generation_authorized": false,
+    "lifecycle_mutation_authorized": false,
+    "model_evaluation_authorized": false,
+    "training_authorized": false
+  },
+  "extraction_map": {
+    "jsonl_semantic_source_count": 3,
+    "proposal_path": "local-evidence/d0-milestones/d0.4/HISTORICAL_EXTRACTION_MAP_PROPOSAL.json",
+    "proposal_sha256": "44eb654908fbfa5c38c25a818992d74a98cd167e27ad2f50dc2cd80d5fc65fae",
+    "source_count": 5,
+    "txt_provenance_only_source_count": 2
+  },
+  "frozen_semantics": {
+    "comparison_units": [
+      "instruction",
+      "response",
+      "instruction_response_pair"
+    ],
+    "instruction_response_pair": {
+      "instruction_source": "row.instruction",
+      "response_source": "row.response"
+    },
+    "instruction_source": "row.instruction",
+    "response_overlap_rule": "subject-to-frozen-response-overlap-clarification",
+    "response_source": "row.response",
+    "txt_semantic_extraction": false,
+    "txt_treatment": "artifact-provenance-exclusion-only"
+  },
+  "generated_at_utc": "2026-08-14T22:06:58.280247+00:00",
+  "governance": {
+    "authoritative_provenance_registry": {
+      "path": "local-evidence/d0-milestones/d0.4/AUTHORITATIVE_PROVENANCE_REGISTRY.json",
+      "sha256": "05b96428b68570ea90c07eaf379464396ccb5653933fa57c149f6b81a3e9faaa"
+    },
+    "historical_freshness_exclusion_procedure": {
+      "path": "local-evidence/d0-milestones/d0.4/HISTORICAL_FRESHNESS_EXCLUSION_PROCEDURE.json",
+      "sha256": "6a975cfdd2b19ee4d7ac1e7e5ec32a2b34a97ca75967d082acd8b7c822e46157"
+    },
+    "historical_freshness_exclusion_registry": {
+      "modified_by_this_operation": false,
+      "path": "local-evidence/d0-milestones/d0.4/HISTORICAL_FRESHNESS_EXCLUSION_REGISTRY.json",
+      "sha256": "a8c1c32d8cf1fff8b32db321ef582c5d7c5b0fff41190161c1ebeea637984a09"
+    },
+    "response_overlap_clarification": {
+      "path": "local-evidence/d0-milestones/d0.4/RESPONSE_OVERLAP_CLARIFICATION.md",
+      "sha256": "afb71b0d6cb8589e79f6e271b7a4336e35947ce0276c1670b7238cacefe68224"
+    }
+  },
+  "milestone": "D0.4",
+  "next_operation": "design-read-only-historical-text-identity-generation-operation",
+  "ordering_invariant": [
+    "freeze_extraction_map",
+    "design_historical_text_identity_generation_operation",
+    "separately_authorize_historical_text_identity_generation",
+    "generate_historical_text_identities",
+    "construct_replacement_historical_freshness_registry",
+    "freeze_replacement_historical_freshness_registry",
+    "author_real_d04_examples",
+    "run_frozen_preseal_gate",
+    "seal_d04_dataset",
+    "freeze_evaluator_and_execution_controller",
+    "separately_authorize_single_formal_execution",
+    "execute_d04_formal_evaluation",
+    "adjudicate_d04"
+  ],
+  "protected_boundary": {
+    "canonical_checkpoint_loaded": false,
+    "protected_formal_datasets_opened": false,
+    "protected_formal_datasets_parsed": false,
+    "protected_formal_datasets_rehashed": false
+  },
+  "schema_version": "1.0",
+  "status": "frozen-before-historical-text-identity-generation"
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion":1,
+  "recordId":"D1-DATA-TOKENIZER-012-EVIDENCE",
+  "createdAt":"2026-08-19T17:38:00Z",
+  "decision":"PASS",
+  "result":"D1_DATA_TOKENIZER_COMPATIBILITY=PASS",
+  "policy":{"path":"research/d1/d1_tokenizer_compatibility_policy.json","sha256":"e47dfca90c9bdbf9d09b42b387f3f200bd7dc14bfc921cc68211730ce1a87ddf","id":"D1-DATA-TOKENIZER-COMPATIBILITY-POLICY-001"},
+  "predecessors": {
+    "compositionPolicy":{"path":"research/d1/d1_composition_measurement_policy.json","sha256":"df21e7c953d57692a6f9bb14e60242b86c400567463b2d337021d1ea00e13392"},
+    "compositionEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_composition_011.json","sha256":"545402fac939c04125ddf8ea76684d53e389eda1017cc892d76784b7e36c004d"},
+    "contaminationPolicy":{"path":"research/d1/d1_contamination_policy.json","sha256":"fb7acd3c11dbba200dbde1cc6da531727c9a5b411086e80493c69f9710e031f1"},
+    "contaminationEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_contamination_010.json","sha256":"48aff0e20ed473b435313825c6c189fc93ff25c259b58d9d82ae5df322de02da"},
+    "nearDeduplicationPolicy":{"path":"research/d1/d1_near_deduplication_policy.json","sha256":"9cd1e71b54113c645d4bb8751ee8f842637871d42f6c50e6bde56dbc86a38375"},
+    "nearDeduplicatedCandidateManifest":{"path":"research/d1/d1_near_deduplicated_candidate_manifest.json","sha256":"b4c4440a381c1cfd821cf247dd9cf06c0f0bbe986e2a745c49a37a161ae7a97b"},
+    "nearDeduplicationEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_near_deduplication_009.json","sha256":"a1ff0875abd999733686d4deecbb23d0ac4f2597146d3437d9bf52ada17b1829"},
+    "exactDeduplicationPolicy":{"path":"research/d1/d1_deduplication_policy.json","sha256":"2c1418889698cee7d3bb86c8678dcb17932edcc961a7ea1bc3f303a69c2bf3ab"},
+    "deduplicatedCandidateManifest":{"path":"research/d1/d1_deduplicated_candidate_manifest.json","sha256":"1860c3dba641fcf6365fa5e2c61d538267fe370a71195f17c71fd08d78fc99eb"},
+    "exactDeduplicationEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_deduplication_008.json","sha256":"7095be07320926b38e17c767015a3ee39aa43b465e4fb25d2d372326ffba2e62"},
+    "extractionPolicy":{"path":"research/d1/d1_extraction_normalization_policy.json","sha256":"3d427c399ea65a4146469f465fe12af1a564dc43c96a968cd22a8dd425db7777"},
+    "derivedCandidateManifest":{"path":"research/d1/d1_derived_candidate_manifest.json","sha256":"48c3e80d64dcb20c853ee18a0a7b666d14a13389ca21646e97e76aaeb03735b3"},
+    "extractionEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_extraction_007.json","sha256":"3fa70df89ca384aa0fe3ff2c0dd440d61503c444f75a1b08acc967ba9bb8e461"},
+    "rawValidationManifest":{"path":"research/d1/d1_raw_validation_manifest.json","sha256":"a4d0a2f29174381f9a4a22c2c79fa40ca18f444b9560bc289686e04bdb5ddf86"},
+    "rawValidationEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_raw_validation_006.json","sha256":"670b312bbb0b6fa1ca0174e585c6cb464a60e2b75fa68f691d939da1f36fef19"},
+    "rawAcquisitionManifest":{"path":"research/d1/d1_raw_acquisition_manifest.json","sha256":"602d1d25e26e1c057acaaae9896880994a2161afd26828fb94188c3012c9a629"}
+  },
+  "tokenizerIdentity": {
+    "path":"/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+    "sha256":"f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6",
+    "acceptanceAuthority":{"path":"local-evidence/d1-model-gate001-replacement-acceptance/d1_gate001_replacement_tokenizer_acceptance.json","sha256":"addcf47b90be4de18e0e2c7038249d965f1fb312aa1b21990badc7b8ed841be4"},
+    "contract":{"path":"research/d1/d1_tokenizer_contract.json","sha256":"c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"},
+    "vocabularySize":8192,"minimumObservedTokenId":4,"maximumObservedTokenId":8190,"unknownTokenId":3,"unknownTokenOccurrences":0,
+    "specialTokensInjectedDuringCounting":false
+  },
+  "runtime": {
+    "executable":"/Users/dennischarles/Downloads/Denarixx-Frontier-AI/.venv-d1/bin/python","python":"3.13.7","machine":"arm64","tokenizersVersion":"0.21.2","tokenizersFile":"/Users/dennischarles/Downloads/Denarixx-Frontier-AI/.venv-d1/lib/python3.13/site-packages/tokenizers/__init__.py"
+  },
+  "candidateIdentity": {"root":"/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/","TOTAL_DOCUMENTS":6106,"TOTAL_TEXT_BYTES":14406978,"uniqueDocumentHashes":6106,"exactDuplicateHashes":0,"confirmedNearDuplicates":0,"confirmedContamination":0},
+  "validation": {"documentsProcessed":6106,"bytesProcessed":14406978,"repeatEncodeMatches":6106,"exactRoundTrips":6106,"emptyTokenizations":0,"tokenizerExceptions":0,"outOfRangeTokenIds":0,"unknownTokenOccurrences":0,"allDocumentManifestHashesMatched":true},
+  "tokenMeasurements": {
+    "TOTAL_ACCEPTED_TOKENS":8441509,
+    "TOKENS_PER_DOCUMENT_MEAN":1382.494104159843,
+    "TOKENS_PER_DOCUMENT_MEDIAN":22.0,
+    "TOKENS_PER_DOCUMENT_MIN":4,
+    "TOKENS_PER_DOCUMENT_MAX":1141700,
+    "BYTES_PER_TOKEN":1.7066827743712647,
+    "TOKENS_PER_MILLION_BYTES":585931.9699106918,
+    "COMPLETE_2048_TOKEN_SEQUENCES":4121,
+    "REMAINDER_TOKENS":1701
+  },
+  "sourceMeasurements": {
+    "python":{"DOCUMENTS":513,"TEXT_BYTES":13758826,"ACCEPTED_TOKENS":8305117,"BYTES_PER_TOKEN":1.6566685333873081},
+    "gesetze":{"DOCUMENTS":5593,"TEXT_BYTES":648152,"ACCEPTED_TOKENS":136392,"BYTES_PER_TOKEN":4.752126224411989}
+  },
+  "languageTokenMeasurements": {
+    "classificationAuthority":"D1-DATA-COMPOSITION-POLICY-001 reapplied before encoding; token results did not affect classification",
+    "ENGLISH_ACCEPTED_TOKENS":8305117,
+    "GERMAN_ACCEPTED_TOKENS":134032,
+    "ADDITIONAL_LANGUAGE_ACCEPTED_TOKENS":0,
+    "MIXED_LANGUAGE_ACCEPTED_TOKENS":27,
+    "UNKNOWN_LANGUAGE_ACCEPTED_TOKENS":2333
+  },
+  "domainTokenMeasurements": {"CODE_SOFTWARE_DOCUMENTATION_ACCEPTED_TOKENS":8305117,"STRUCTURED_FACTUAL_TEXT_ACCEPTED_TOKENS":136392,"allOtherFrozenDomainCategoriesAcceptedTokens":0},
+  "accountingValidation": {"measurementCanonicalSha256":"2050fa3c8c683d2a4113c45ddafd397de46e7c9b631cd3a97a0a302187790a44","sourceTokenSum":8441509,"languageTokenSum":8441509,"domainTokenSum":8441509,"aggregateTokenAccountingCloses":true,"sourceDocumentAndByteAccountingCloses":true,"languageDocumentAndByteAccountingCloses":true,"domainDocumentAndByteAccountingCloses":true},
+  "scale": {
+    "parameters":26655104,
+    "CURRENT_TOKENS_PER_PARAMETER":{"numerator":8441509,"denominator":26655104,"decimal":0.3166939059776319},
+    "developmentTarget":{"minimum":53310208,"maximum":133275520},
+    "capabilityTarget":{"minimum":266551040,"maximum":533102080},
+    "DEVELOPMENT_MINIMUM_COMPLETION_PERCENT":{"numeratorTokens":8441509,"denominatorTokens":53310208,"decimalPercent":15.834695298881595},
+    "DEVELOPMENT_MAXIMUM_COMPLETION_PERCENT":{"numeratorTokens":8441509,"denominatorTokens":133275520,"decimalPercent":6.333878119552638},
+    "assessment":"MEASURED_SCALE_BELOW_DEVELOPMENT_MINIMUM"
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001":"MEASURED_SCALE_BELOW_DEVELOPMENT_MINIMUM",
+    "D1-DATA-BLOCKER-002":"PASS",
+    "D1-DATA-BLOCKER-003":"PASS",
+    "D1-DATA-BLOCKER-004":"PASS_COMPOSITION_MEASURED_TARGET_DISTRIBUTION_NOT_ACHIEVED",
+    "D1-DATA-BLOCKER-005":"POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006":"PASS",
+    "D1-DATA-BLOCKER-007":"PASS_FOR_NEAR_DEDUPLICATED_CANDIDATE_SCOPE"
+  },
+  "boundaryConfirmation": {"downloadedAnything":false,"heldOpenStaxAccessed":false,"corpusModified":false,"deduplicationOrContaminationRepeated":false,"compositionPolicyModified":false,"tokenizerModifiedOrTrained":false,"splitCreated":false,"protectedFormalEvaluationAccessed":false,"modelInstantiatedOrExecuted":false,"optimizerOrCheckpointCreated":false,"hyperparametersSelected":false,"trainingPerformed":false,"gitOperationPerformed":false,"predecessorAuthoritiesModified":false,"D1_SERIOUS_PRETRAINING_AUTHORIZATION":"WITHHELD"}
+}

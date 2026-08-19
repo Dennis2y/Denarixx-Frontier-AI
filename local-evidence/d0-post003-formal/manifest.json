@@ -1,0 +1,52 @@
+{
+  "acceptance": {
+    "aggregateResponseLoss": "post003 < post002",
+    "exactMatch": "post003 >= post002",
+    "familyLossRequirement": "at_least_4_of_5_post003_no_worse_than_post002",
+    "requiresArchitectureInvariant": true,
+    "requiresCandidateHashInvariant": true,
+    "requiresParameterCountInvariant": true,
+    "requiresTokenizerInvariant": true,
+    "zeroExactMatchInterpretation": "probabilistic_milestone_only"
+  },
+  "baseline": {
+    "path": "local-checkpoints/d0-post002-accepted.pt",
+    "sha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97"
+  },
+  "candidate": {
+    "path": "local-checkpoints/d0-post003-capability-seed42.pt",
+    "sha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06"
+  },
+  "families": [
+    "echo",
+    "binary",
+    "transform",
+    "qa",
+    "semantic"
+  ],
+  "generation": {
+    "method": "greedy",
+    "sampling": false
+  },
+  "metrics": [
+    "aggregate_response_loss",
+    "response_perplexity",
+    "per_example_response_loss",
+    "per_family_response_loss",
+    "greedy_generation",
+    "exact_match",
+    "exact_match_rate",
+    "per_family_exact_match"
+  ],
+  "prohibited": {
+    "checkpointSelection": true,
+    "developmentReuseForTuning": true,
+    "eval001Selection": true,
+    "eval002V4Selection": true,
+    "hyperparameterSearch": true,
+    "retraining": true,
+    "seedSearch": true
+  },
+  "stage": "D0-POST-003-formal",
+  "status": "policy_frozen_before_formal_scoring"
+}

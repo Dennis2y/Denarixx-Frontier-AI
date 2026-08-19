@@ -1,0 +1,19 @@
+{
+  "stage": "D0-POST-006",
+  "status": "pass",
+  "auditType": "final-revised-harness-pre-authorization",
+  "revisedHarnessSha256": "2fc3fe2a6b2d2247fd37aa2c47633f1e7fa68703473ca90b507c7c8b94cdf9e5",
+  "v3SyntheticRehearsalVerified": true,
+  "directCliDisconnected": true,
+  "authorizationBindingVerified": true,
+  "exactlyTwoScoringCallsVerified": true,
+  "realLifecycleExecuted": false,
+  "realFormalDatasetParsed": false,
+  "historicalFormalDatasetOpened": false,
+  "realCheckpointLoaded": false,
+  "realModelScoringExecuted": false,
+  "realFormalExposureStarted": false,
+  "trainingExecuted": false,
+  "newOneTimeExecutionAuthorizationRequired": true,
+  "nextOperation": "freeze-new-one-time-authorization-for-revised-harness"
+}

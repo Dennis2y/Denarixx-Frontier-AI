@@ -1,0 +1,104 @@
+{
+  "architecture": {
+    "attentionHeads": 7,
+    "causal": true,
+    "contextLength": 2048,
+    "embeddingOutputWeightTying": false,
+    "family": "decoder-only-causal-transformer",
+    "ffnHiddenSize": 1792,
+    "ffnMultiplier": 4,
+    "headDimension": 64,
+    "hiddenSize": 448,
+    "layers": 8,
+    "parameterCount": 26655104,
+    "positionEncoding": "rope",
+    "vocabSize": 8192
+  },
+  "contract": {
+    "generation": "D1",
+    "id": "D1-ARCH-003",
+    "purpose": "Define the first capability-scale Denarixx language-model architecture.",
+    "status": "locked"
+  },
+  "generationBoundary": {
+    "D0": {
+      "architectureMutationAllowed": false,
+      "checkpoint": "local-checkpoints/d0-post005-development-seed42-step120.pt",
+      "checkpointMutationAllowed": false,
+      "parameterInheritanceIntoD1": false,
+      "sha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9",
+      "status": "frozen-promoted-baseline",
+      "tokenizerInheritanceIntoD1": false
+    },
+    "D1": {
+      "initialization": "from-scratch",
+      "newModelGeneration": true,
+      "pretrainedCheckpointRequired": false,
+      "pretrainedTokenizerRequired": false,
+      "status": "architecture-locked-not-trained"
+    }
+  },
+  "hardwarePlanningBasis": {
+    "accelerator": "MPS",
+    "activationCheckpointingMayBeRequired": true,
+    "full2048ContextRequiresMemoryValidation": true,
+    "gradientAccumulationExpected": true,
+    "host": "Apple M2",
+    "planningBatchPolicy": "start with batch 1 and measure",
+    "unifiedMemoryGiB": 16
+  },
+  "prohibitions": [
+    "do not mutate promoted D0 checkpoint",
+    "do not train D1 before readiness gates",
+    "do not create D1 checkpoint in ARCH-003",
+    "do not silently reduce locked D1 architecture",
+    "do not substitute pretrained third-party model weights"
+  ],
+  "tokenizer": {
+    "forbidden": [
+      "reuse D0 42-character vocabulary as D1 vocabulary",
+      "modify tokenizer embedded in promoted D0 checkpoint",
+      "download pretrained tokenizer vocabulary"
+    ],
+    "generation": "D1",
+    "ownership": "Denarixx",
+    "pretrainedVocabularyUsed": false,
+    "requiredProperties": [
+      "UTF-8 text support",
+      "deterministic serialization",
+      "deterministic encode for fixed artifact",
+      "deterministic decode for fixed token sequence",
+      "round-trip validation",
+      "explicit special-token contract",
+      "independent artifact from D0 tokenizer"
+    ],
+    "targetVocabularySize": 8192,
+    "type": "byte-level-bpe"
+  },
+  "trainingReadinessGates": [
+    {
+      "id": "D1-GATE-001",
+      "requirement": "D1 tokenizer must be trained, serialized, hashed, and round-trip verified."
+    },
+    {
+      "id": "D1-GATE-002",
+      "requirement": "D1 model implementation must reproduce the locked parameter count."
+    },
+    {
+      "id": "D1-GATE-003",
+      "requirement": "Forward/backward MPS memory smoke tests must pass before corpus-scale training."
+    },
+    {
+      "id": "D1-GATE-004",
+      "requirement": "Disk capacity must be re-measured and sufficient checkpoint/corpus headroom established."
+    },
+    {
+      "id": "D1-GATE-005",
+      "requirement": "Training corpus must be materially larger than the current D0 research corpus and independently versioned/hashed."
+    },
+    {
+      "id": "D1-GATE-006",
+      "requirement": "D1 evaluation contract must exist before full training begins."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "authoritativeProvenanceRegistry": {
+    "path": "local-evidence/d0-milestones/d0.4/AUTHORITATIVE_PROVENANCE_REGISTRY.json",
+    "sha256": "05b96428b68570ea90c07eaf379464396ccb5653933fa57c149f6b81a3e9faaa"
+  },
+  "authorization": {
+    "checkpointLoadingAuthorized": false,
+    "d04DatasetCreationAuthorized": false,
+    "d04DatasetSealingAuthorized": false,
+    "formalExecutionAuthorized": false,
+    "lifecycleMutationAuthorized": false,
+    "modelEvaluationAuthorized": false,
+    "protectedFormalDatasetExposureAuthorized": false,
+    "realD04ExampleCreationAuthorized": false,
+    "trainingAuthorized": false
+  },
+  "canonicalization": {
+    "casefoldForNormalizedComparison": true,
+    "collapseInternalWhitespace": true,
+    "preserveExactOriginalForExactComparison": true,
+    "trimOuterWhitespace": true,
+    "unicodeNormalization": "NFKC"
+  },
+  "comparisonUnits": [
+    "instruction",
+    "response",
+    "instruction_response_pair"
+  ],
+  "createdAtUtc": "2026-08-14T21:54:43.324559+00:00",
+  "d04ConstructionInvariant": {
+    "historicalRegistryMayAuthorizeFormalEvaluation": false,
+    "historicalRegistryMayLoadCanonicalCheckpoint": false,
+    "historicalRegistryMayModifyHistoricalSources": false,
+    "historicalRegistryMayModifyProtectedFormalDatasets": false,
+    "historicalRegistryMayRejectProposedExamples": true,
+    "historicalRegistryMayScoreModels": false
+  },
+  "evidenceType": "historical-freshness-exclusion-procedure",
+  "formalFreshnessBoundary": {
+    "d04DatasetExistsAtFreezeTime": false,
+    "d04DatasetSealedAtFreezeTime": false,
+    "d04ExamplesExistAtFreezeTime": false,
+    "formalExposureStarted": false
+  },
+  "freshnessTests": {
+    "exactInstructionOverlapForbidden": true,
+    "exactInstructionResponsePairOverlapForbidden": true,
+    "normalizedInstructionOverlapForbidden": true,
+    "responseOverlap": {
+      "clarificationArtifact": "local-evidence/d0-milestones/d0.4/RESPONSE_OVERLAP_CLARIFICATION.md",
+      "rule": "Apply the already-frozen D0.4 response-overlap clarification. Do not invent a replacement rule here."
+    }
+  },
+  "historicalRegistryRequirements": {
+    "mustBeCreatedBeforeRealD04Examples": true,
+    "mustBeFrozenBeforeRealD04Examples": true,
+    "mustRecordExactTextIdentity": true,
+    "mustRecordNormalizedTextIdentity": true,
+    "mustRecordSourceArtifactPath": true,
+    "mustRecordSourceArtifactSha256": true,
+    "mustRecordSourceCategory": true
+  },
+  "historicalRowExtractionRule": {
+    "allowedTextPurpose": [
+      "duplicate_prevention",
+      "freshness_exclusion",
+      "contamination_prevention"
+    ],
+    "checkpointLoadingDuringExtraction": false,
+    "forbiddenTextPurpose": [
+      "candidate_selection",
+      "model_tuning",
+      "prompt_tuning_against_model_outputs",
+      "formal_result_optimization"
+    ],
+    "modelScoringDuringExtraction": false,
+    "sourceAuthority": "Only artifacts assigned to inspectable historical classes by the authoritative provenance registry may contribute historical text rows.",
+    "trainingDuringExtraction": false
+  },
+  "inspectableHistoricalClasses": [
+    "d0TrainingMaterial",
+    "d0SftMaterial",
+    "developmentSelectionMaterial",
+    "d0Eval001HistoricalEvidence",
+    "d0Eval002V4HistoricalEvidence"
+  ],
+  "milestone": "D0.4",
+  "nextOperation": "construct-and-freeze-historical-freshness-registry-using-only-authorized-inspectable-historical-material",
+  "orderingInvariant": [
+    "freeze_this_procedure",
+    "construct_historical_freshness_registry",
+    "freeze_historical_freshness_registry",
+    "author_real_d04_examples",
+    "run_frozen_preseal_gate",
+    "seal_d04_dataset",
+    "freeze_evaluator_and_execution_controller",
+    "separately_authorize_single_formal_execution",
+    "execute_d04_formal_evaluation",
+    "adjudicate_d04"
+  ],
+  "protectedDatasetRule": {
+    "copyRows": false,
+    "deriveD04ExamplesFromRows": false,
+    "openContents": false,
+    "parseContents": false,
+    "reuseRows": false,
+    "transformRows": false,
+    "useGovernanceIdentityOnly": true
+  },
+  "protectedFormalDatasets": [
+    "ml/data/d0_post003_formal.jsonl",
+    "ml/data/d0_post006_formal.jsonl",
+    "ml/data/d0_post007_formal.jsonl"
+  ],
+  "protectedProvenanceOnlyClasses": [
+    "post003ProtectedProvenance",
+    "post006ProtectedProvenance",
+    "post007ProtectedProvenance"
+  ],
+  "purpose": "Define the immutable procedure used to construct the D0.4 historical freshness/exclusion registry before any real D0.4 evaluation examples are authored.",
+  "status": "frozen-before-historical-row-extraction"
+}

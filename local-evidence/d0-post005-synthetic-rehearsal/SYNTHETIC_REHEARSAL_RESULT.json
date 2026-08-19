@@ -1,0 +1,18 @@
+{
+  "allFiveFamiliesCovered": true,
+  "baselineExactMatches": 1,
+  "baselinePersistedBeforeCandidate": true,
+  "candidateExactMatches": 3,
+  "candidatePersistedBeforeComparison": true,
+  "failureAfterBaselineCovered": true,
+  "failureEvidencePersisted": true,
+  "overwritePreventionCovered": true,
+  "pathVsRowsRegressionCovered": true,
+  "protectedFormalDatasetRead": false,
+  "realCheckpointScored": false,
+  "realModelLoaded": false,
+  "rerunPreventionCovered": true,
+  "status": "PASS",
+  "syntheticFormalPass": true,
+  "syntheticOnly": true
+}

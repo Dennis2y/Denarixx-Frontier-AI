@@ -1,0 +1,25 @@
+{"family":"literal_response","instruction":"say cedar","response":"cedar"}
+{"family":"literal_response","instruction":"say river","response":"river"}
+{"family":"literal_response","instruction":"say stone","response":"stone"}
+{"family":"literal_response","instruction":"say cloud","response":"cloud"}
+{"family":"literal_response","instruction":"say amber","response":"amber"}
+{"family":"short_completion","instruction":"complete red and","response":"blue"}
+{"family":"short_completion","instruction":"complete sun and","response":"moon"}
+{"family":"short_completion","instruction":"complete land and","response":"sea"}
+{"family":"short_completion","instruction":"complete day and","response":"night"}
+{"family":"short_completion","instruction":"complete north and","response":"south"}
+{"family":"simple_transformation","instruction":"reverse cat","response":"tac"}
+{"family":"simple_transformation","instruction":"reverse dog","response":"god"}
+{"family":"simple_transformation","instruction":"reverse map","response":"pam"}
+{"family":"simple_transformation","instruction":"uppercase east","response":"EAST"}
+{"family":"simple_transformation","instruction":"reverse star","response":"rats"}
+{"family":"constrained_generation","instruction":"two words for rain","response":"soft rain"}
+{"family":"constrained_generation","instruction":"two words for wind","response":"calm wind"}
+{"family":"constrained_generation","instruction":"two words for stone","response":"hard stone"}
+{"family":"constrained_generation","instruction":"two words for sea","response":"deep sea"}
+{"family":"constrained_generation","instruction":"two words for dawn","response":"early dawn"}
+{"family":"basic_instruction_following","instruction":"is ice cold","response":"true"}
+{"family":"basic_instruction_following","instruction":"is fire wet","response":"false"}
+{"family":"basic_instruction_following","instruction":"is snow white","response":"true"}
+{"family":"basic_instruction_following","instruction":"is coal white","response":"false"}
+{"family":"basic_instruction_following","instruction":"is rain wet","response":"true"}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<stdin>", line 45, in <module>
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal_v2.py", line 502, in run_formal_evaluation
+    comparison = compare_results(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal_v2.py", line 169, in compare_results
+    baseline_loss = float(baseline["aggregateResponseLoss"])
+KeyError: 'aggregateResponseLoss'

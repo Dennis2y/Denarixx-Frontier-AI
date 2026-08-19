@@ -1,0 +1,33 @@
+{
+  "baselineCheckpointLoaded": false,
+  "candidateCheckpointLoaded": false,
+  "checkpointIndependentAuthorship": true,
+  "contextLength": 32,
+  "dataset": "local-evidence/d0-post008-reconstructed-proposed-formal-dataset/d0_post008_reconstructed_proposed_formal.jsonl",
+  "datasetSha256": "78ff74ea7103c52cee382cd87879a30bc1f9b65c16a800249c322303fa63d95b",
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "formalExecutionAuthorized": false,
+  "formalExecutionEnabled": false,
+  "formalExposureStarted": false,
+  "maximumRawPairLength": 31,
+  "modelBehaviorInspectedDuringConstruction": false,
+  "modelInferenceExecuted": false,
+  "modelScoringExecuted": false,
+  "originalProposalModified": false,
+  "reconstructionEnvelopeState": "local-evidence/d0-post008-reconstruction-envelope-freeze/RECONSTRUCTION_ENVELOPE_FREEZE_STATE.json",
+  "reconstructionEnvelopeStateSha256": "38df661f6826f2520efe58b08d43a5fb2cb673ad8ac995d66a200e238cdeca65",
+  "rows": 40,
+  "rowsPerFamily": 8,
+  "sealedFormalDatasetCreated": false,
+  "sourceOriginalProposal": "local-evidence/d0-post008-proposed-formal-dataset/d0_post008_proposed_formal.jsonl",
+  "sourceOriginalProposalSha256": "7a0d48d3da619e966b7b0c82f0422b46e77d5169eff30151932eb265694addfb",
+  "stage": "D0-POST-008",
+  "status": "reconstructed-proposal-created",
+  "trainingExecuted": false
+}

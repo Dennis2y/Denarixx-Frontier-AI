@@ -1,0 +1,56 @@
+{
+  "architecture": {
+    "attentionHeads": 7,
+    "contextLength": 2048,
+    "embeddingOutputWeightTying": false,
+    "family": "decoder-only-causal-transformer",
+    "ffnHiddenSize": 1792,
+    "headDimension": 64,
+    "hiddenSize": 448,
+    "layers": 8,
+    "parameterCount": 26655104,
+    "positionEncoding": "rope",
+    "vocabSize": 8192
+  },
+  "authoritativeInputs": {
+    "ml/models/d0.py": "425ab739c3ad0db23855945d5f602bba3104dbffb7c5139881901f25f7d503ca",
+    "research/d1/d1_architecture_contract.json": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+    "research/d1/d1_model_semantic_freeze.json": "f231faf1968bc8f8edbdd868142604ff7626d1d8bb821afe15838d1f5f3f8113",
+    "research/d1/d1_tokenizer_contract.json": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"
+  },
+  "authorizationBoundary": {
+    "checkpointCreationAuthorized": false,
+    "d1Gate002Recorded": true,
+    "d1Gate003Satisfied": false,
+    "formalEvaluationDatasetAccessAuthorized": false,
+    "trainingAuthorized": false
+  },
+  "gate": {
+    "id": "D1-GATE-002",
+    "requirement": "D1 model implementation must reproduce the locked parameter count.",
+    "status": "PASS"
+  },
+  "implementation": {
+    "initialization": "from-scratch",
+    "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a",
+    "source": "ml/models/d1.py",
+    "testSha256": "2a246228f42e4491e85d94c40a778a355513a01132d67188021ee86378da309b",
+    "testSource": "ml/tests/test_d1_model.py",
+    "trainingStarted": false,
+    "weightsCreated": false
+  },
+  "purpose": "d1-gate-002-implementation-freeze",
+  "recordId": "D1-MODEL-012",
+  "schemaVersion": 1,
+  "stage": "D1",
+  "validation": {
+    "boundedCpuForward": "PASS",
+    "d1WeightCheckpointAbsence": "PASS",
+    "fullContext2048MpsPerformed": false,
+    "mpsForwardBackwardPerformed": false,
+    "parameterCountActual": 26655104,
+    "parameterCountDelta": 0,
+    "parameterCountExpected": 26655104,
+    "structuralSemantics": "PASS"
+  }
+}

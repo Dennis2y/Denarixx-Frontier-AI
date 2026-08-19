@@ -1,0 +1,5 @@
+{"family":"echo","instruction":"echo safe","response":"safe"}
+{"family":"binary","instruction":"is same other","response":"false"}
+{"family":"transform","instruction":"add s to code","response":"codes"}
+{"family":"qa","instruction":"opposite true","response":"false"}
+{"family":"semantic","instruction":"data helps ai","response":"true"}

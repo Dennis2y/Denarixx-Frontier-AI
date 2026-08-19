@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-COMPOSITION-011-EVIDENCE",
+  "createdAt": "2026-08-19T17:24:00Z",
+  "decision": "PASS",
+  "result": "D1_DATA_COMPOSITION=PASS",
+  "interpretation": "PASS means aggregate composition was deterministically measured with complete accounting; it does not mean planned distributions were achieved.",
+  "policy": {"path":"research/d1/d1_composition_measurement_policy.json","sha256":"df21e7c953d57692a6f9bb14e60242b86c400567463b2d337021d1ea00e13392","id":"D1-DATA-COMPOSITION-POLICY-001"},
+  "predecessors": {
+    "contaminationPolicy": {"path":"research/d1/d1_contamination_policy.json","sha256":"fb7acd3c11dbba200dbde1cc6da531727c9a5b411086e80493c69f9710e031f1"},
+    "contaminationEvidence": {"path":"local-evidence/d1-data-readiness/d1_data_contamination_010.json","sha256":"48aff0e20ed473b435313825c6c189fc93ff25c259b58d9d82ae5df322de02da"},
+    "nearDeduplicationPolicy": {"path":"research/d1/d1_near_deduplication_policy.json","sha256":"9cd1e71b54113c645d4bb8751ee8f842637871d42f6c50e6bde56dbc86a38375"},
+    "nearDeduplicatedCandidateManifest": {"path":"research/d1/d1_near_deduplicated_candidate_manifest.json","sha256":"b4c4440a381c1cfd821cf247dd9cf06c0f0bbe986e2a745c49a37a161ae7a97b"},
+    "nearDeduplicationEvidence": {"path":"local-evidence/d1-data-readiness/d1_data_near_deduplication_009.json","sha256":"a1ff0875abd999733686d4deecbb23d0ac4f2597146d3437d9bf52ada17b1829"},
+    "exactDeduplicationPolicy": {"path":"research/d1/d1_deduplication_policy.json","sha256":"2c1418889698cee7d3bb86c8678dcb17932edcc961a7ea1bc3f303a69c2bf3ab"},
+    "deduplicatedCandidateManifest": {"path":"research/d1/d1_deduplicated_candidate_manifest.json","sha256":"1860c3dba641fcf6365fa5e2c61d538267fe370a71195f17c71fd08d78fc99eb"},
+    "exactDeduplicationEvidence": {"path":"local-evidence/d1-data-readiness/d1_data_deduplication_008.json","sha256":"7095be07320926b38e17c767015a3ee39aa43b465e4fb25d2d372326ffba2e62"},
+    "extractionPolicy": {"path":"research/d1/d1_extraction_normalization_policy.json","sha256":"3d427c399ea65a4146469f465fe12af1a564dc43c96a968cd22a8dd425db7777"},
+    "derivedCandidateManifest": {"path":"research/d1/d1_derived_candidate_manifest.json","sha256":"48c3e80d64dcb20c853ee18a0a7b666d14a13389ca21646e97e76aaeb03735b3"},
+    "extractionEvidence": {"path":"local-evidence/d1-data-readiness/d1_data_extraction_007.json","sha256":"3fa70df89ca384aa0fe3ff2c0dd440d61503c444f75a1b08acc967ba9bb8e461"},
+    "rawValidationManifest": {"path":"research/d1/d1_raw_validation_manifest.json","sha256":"a4d0a2f29174381f9a4a22c2c79fa40ca18f444b9560bc289686e04bdb5ddf86"},
+    "rawValidationEvidence": {"path":"local-evidence/d1-data-readiness/d1_data_raw_validation_006.json","sha256":"670b312bbb0b6fa1ca0174e585c6cb464a60e2b75fa68f691d939da1f36fef19"},
+    "rawAcquisitionManifest": {"path":"research/d1/d1_raw_acquisition_manifest.json","sha256":"602d1d25e26e1c057acaaae9896880994a2161afd26828fb94188c3012c9a629"}
+  },
+  "input": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/",
+    "TOTAL_DOCUMENTS": 6106,
+    "TOTAL_TEXT_BYTES": 14406978,
+    "documentsRehashedUtf8Nonempty": 6106,
+    "uniqueExactHashes": 6106,
+    "EXACT_DUPLICATES": 0,
+    "CONFIRMED_NEAR_DUPLICATES": 0,
+    "CONFIRMED_CONTAMINATION": 0
+  },
+  "languageComposition": {
+    "classification": "mutually exclusive content-derived categories",
+    "ENGLISH": {"DOCUMENT_COUNT":513,"DOCUMENT_PERCENT":8.401572,"TEXT_BYTES":13758826,"BYTE_PERCENT":95.501125},
+    "GERMAN": {"DOCUMENT_COUNT":5342,"DOCUMENT_PERCENT":87.487717,"TEXT_BYTES":639500,"BYTE_PERCENT":4.438821},
+    "ADDITIONAL_LANGUAGE": {"DOCUMENT_COUNT":0,"DOCUMENT_PERCENT":0.0,"TEXT_BYTES":0,"BYTE_PERCENT":0.0},
+    "MIXED_LANGUAGE": {"DOCUMENT_COUNT":1,"DOCUMENT_PERCENT":0.016377,"TEXT_BYTES":91,"BYTE_PERCENT":0.000632},
+    "UNKNOWN_LANGUAGE": {"DOCUMENT_COUNT":250,"DOCUMENT_PERCENT":4.094333,"TEXT_BYTES":8561,"BYTE_PERCENT":0.059423},
+    "CODE_OR_TECHNICAL_SYNTAX": {"DOCUMENT_COUNT":513,"DOCUMENT_PERCENT":8.401572,"TEXT_BYTES":13758826,"BYTE_PERCENT":95.501125,"accountingRole":"orthogonal flag; not part of language-category sum"}
+  },
+  "domainComposition": {
+    "classification": "mutually exclusive primary domain",
+    "general prose": {"DOCUMENT_COUNT":0,"DOCUMENT_PERCENT":0.0,"TEXT_BYTES":0,"BYTE_PERCENT":0.0},
+    "educational/reference": {"DOCUMENT_COUNT":0,"DOCUMENT_PERCENT":0.0,"TEXT_BYTES":0,"BYTE_PERCENT":0.0},
+    "technical/computing": {"DOCUMENT_COUNT":0,"DOCUMENT_PERCENT":0.0,"TEXT_BYTES":0,"BYTE_PERCENT":0.0},
+    "science": {"DOCUMENT_COUNT":0,"DOCUMENT_PERCENT":0.0,"TEXT_BYTES":0,"BYTE_PERCENT":0.0},
+    "government/public information": {"DOCUMENT_COUNT":0,"DOCUMENT_PERCENT":0.0,"TEXT_BYTES":0,"BYTE_PERCENT":0.0},
+    "multilingual/cross-lingual": {"DOCUMENT_COUNT":0,"DOCUMENT_PERCENT":0.0,"TEXT_BYTES":0,"BYTE_PERCENT":0.0},
+    "code/software documentation": {"DOCUMENT_COUNT":513,"DOCUMENT_PERCENT":8.401572,"TEXT_BYTES":13758826,"BYTE_PERCENT":95.501125},
+    "structured factual text": {"DOCUMENT_COUNT":5593,"DOCUMENT_PERCENT":91.598428,"TEXT_BYTES":648152,"BYTE_PERCENT":4.498875}
+  },
+  "sourceComposition": {
+    "python": {
+      "sourceId":"d1-acq001-python-docs-313","DOCUMENT_COUNT":513,"TEXT_BYTES":13758826,
+      "language":{"ENGLISH":{"documents":513,"documentPercent":100.0,"bytes":13758826,"bytePercent":100.0},"GERMAN":{"documents":0,"documentPercent":0.0,"bytes":0,"bytePercent":0.0},"ADDITIONAL_LANGUAGE":{"documents":0,"documentPercent":0.0,"bytes":0,"bytePercent":0.0},"MIXED_LANGUAGE":{"documents":0,"documentPercent":0.0,"bytes":0,"bytePercent":0.0},"UNKNOWN_LANGUAGE":{"documents":0,"documentPercent":0.0,"bytes":0,"bytePercent":0.0}},
+      "domain":{"code/software documentation":{"documents":513,"documentPercent":100.0,"bytes":13758826,"bytePercent":100.0}},
+      "technicalCode":{"documents":513,"documentPercent":100.0,"bytes":13758826,"bytePercent":100.0}
+    },
+    "gesetze": {
+      "sourceId":"d1-acq001-gesetze-refresh","DOCUMENT_COUNT":5593,"TEXT_BYTES":648152,
+      "language":{"ENGLISH":{"documents":0,"documentPercent":0.0,"bytes":0,"bytePercent":0.0},"GERMAN":{"documents":5342,"documentPercent":95.512247,"bytes":639500,"bytePercent":98.665128},"ADDITIONAL_LANGUAGE":{"documents":0,"documentPercent":0.0,"bytes":0,"bytePercent":0.0},"MIXED_LANGUAGE":{"documents":1,"documentPercent":0.017879,"bytes":91,"bytePercent":0.01404},"UNKNOWN_LANGUAGE":{"documents":250,"documentPercent":4.469873,"bytes":8561,"bytePercent":1.320832}},
+      "domain":{"structured factual text":{"documents":5593,"documentPercent":100.0,"bytes":648152,"bytePercent":100.0}},
+      "technicalCode":{"documents":0,"documentPercent":0.0,"bytes":0,"bytePercent":0.0},
+      "qualification":"Index titles only; linked legal-document bodies were not acquired."
+    }
+  },
+  "plannedVsActualBytePercentagePointDifference": {
+    "languageVsLongTerm":{"ENGLISH":35.501125,"GERMAN":-30.561179,"ADDITIONAL_LANGUAGE":-5.0},
+    "languageVsFirstAcquisition":{"ENGLISH":30.501125,"GERMAN":-25.561179,"ADDITIONAL_LANGUAGE":-5.0},
+    "domainVsLongTerm":{"general prose":-25.0,"educational/reference":-20.0,"technical/computing":-15.0,"science":-12.0,"government/public information":-10.0,"multilingual/cross-lingual":-6.0,"code/software documentation":87.501125,"structured factual text":0.498875},
+    "targetsAchieved": false,
+    "interpretation":"The first tranche is highly concentrated in English Python software documentation by bytes and German legal-index records by document count; it does not satisfy the proposed long-term diversity allocation."
+  },
+  "accountingValidation": {
+    "measurementCanonicalSha256":"dfac72ebbca9c264827cb0a5d356a6e944aab726839cf7c110ea822a0c54d69f",
+    "languageDocumentSum":6106,"languageByteSum":14406978,"domainDocumentSum":6106,"domainByteSum":14406978,
+    "languageAccountingCloses":true,"domainAccountingCloses":true,"sourceAccountingCloses":true,"inputManifestHashesMatch":true
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001":"NEAR_DEDUPLICATED_CANDIDATE_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002":"PASS",
+    "D1-DATA-BLOCKER-003":"PASS",
+    "D1-DATA-BLOCKER-004":"PASS_COMPOSITION_MEASURED_TARGET_DISTRIBUTION_NOT_ACHIEVED",
+    "D1-DATA-BLOCKER-005":"POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006":"NEAR_DEDUPLICATED_CANDIDATE_NOT_TOKENIZER_VALIDATED",
+    "D1-DATA-BLOCKER-007":"PASS_FOR_NEAR_DEDUPLICATED_CANDIDATE_SCOPE"
+  },
+  "boundaryConfirmation": {
+    "candidateCorpusModified":false,"downloadedAnything":false,"heldOpenStaxAccessed":false,"protectedFormalEvaluationAccessed":false,"tokenizerExecuted":false,"ACCEPTED_TOKENS":"NOT_MEASURED","splitCreated":false,"modelExecuted":false,"optimizerOrCheckpointCreated":false,"trainingPerformed":false,"gitOperationPerformed":false,"predecessorAuthoritiesModified":false,"D1_SERIOUS_PRETRAINING_AUTHORIZATION":"WITHHELD"
+  }
+}

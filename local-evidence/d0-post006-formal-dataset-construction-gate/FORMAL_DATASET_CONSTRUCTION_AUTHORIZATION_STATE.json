@@ -1,0 +1,31 @@
+{
+  "stage": "D0-POST-006",
+  "status": "authorized",
+  "authorizationScope": "one-fresh-formal-dataset-construction",
+  "targetDataset": "ml/data/d0_post006_formal.jsonl",
+  "familyCount": 5,
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "examplesPerFamily": 5,
+  "totalExamples": 25,
+  "constructionSeed": 6006,
+  "ordering": "interleaved-five-rounds",
+  "modelBlindConstructionRequired": true,
+  "freshDatasetRequired": true,
+  "historicalFormalDatasetEligible": false,
+  "historicalFormalDatasetMayBeOpened": false,
+  "historicalFormalDerivationAllowed": false,
+  "modelLoadingAuthorized": false,
+  "modelScoringAuthorized": false,
+  "formalEvaluationAuthorized": false,
+  "trainingAuthorized": false,
+  "retrainingAuthorized": false,
+  "formalExposureMarkerAuthorized": false,
+  "formalExposureStartsAtModelScoring": true,
+  "nextOperation": "construct-and-freeze-fresh-formal-dataset"
+}

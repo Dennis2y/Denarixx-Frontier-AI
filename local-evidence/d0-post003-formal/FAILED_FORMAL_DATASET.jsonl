@@ -1,0 +1,25 @@
+{"family":"echo","instruction":"echo calm","response":"calm"}
+{"family":"echo","instruction":"echo blue","response":"blue"}
+{"family":"echo","instruction":"echo river","response":"river"}
+{"family":"echo","instruction":"echo stone","response":"stone"}
+{"family":"echo","instruction":"echo light","response":"light"}
+{"family":"binary","instruction":"is red red","response":"true"}
+{"family":"binary","instruction":"is blue red","response":"false"}
+{"family":"binary","instruction":"is cat cat","response":"true"}
+{"family":"binary","instruction":"is sun moon","response":"false"}
+{"family":"binary","instruction":"is code code","response":"true"}
+{"family":"transform","instruction":"add s to cat","response":"cats"}
+{"family":"transform","instruction":"add s to book","response":"books"}
+{"family":"transform","instruction":"add s to car","response":"cars"}
+{"family":"transform","instruction":"add s to tree","response":"trees"}
+{"family":"transform","instruction":"add s to star","response":"stars"}
+{"family":"qa","instruction":"opposite false","response":"true"}
+{"family":"qa","instruction":"opposite up","response":"down"}
+{"family":"qa","instruction":"opposite hot","response":"cold"}
+{"family":"qa","instruction":"opposite yes","response":"no"}
+{"family":"qa","instruction":"opposite old","response":"new"}
+{"family":"semantic","instruction":"fire is hot","response":"true"}
+{"family":"semantic","instruction":"ice is hot","response":"false"}
+{"family":"semantic","instruction":"water is wet","response":"true"}
+{"family":"semantic","instruction":"stone can fly","response":"false"}
+{"family":"semantic","instruction":"sun gives light","response":"true"}

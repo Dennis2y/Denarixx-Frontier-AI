@@ -1,0 +1,61 @@
+{
+  "artifact_type": "D04_REVISED_PRESEAL_GOVERNANCE_AUTHORIZATION",
+  "authoritative_bindings": {
+    "example_construction_authorization": {
+      "path": "local-evidence/d0-milestones/d0.4/D04_EXAMPLE_CONSTRUCTION_AUTHORIZATION.json",
+      "sha256": "061f7142299b0ff05408cf50856bda81975833f97d1649482f61442d8593abd6"
+    },
+    "historical_registry": {
+      "path": "local-evidence/d0-milestones/d0.4/HISTORICAL_FRESHNESS_EXCLUSION_REGISTRY.json",
+      "sha256": "db45b26752eeaf3123ed86549046000466773b993cf2503c073ebe9132ca15d0"
+    },
+    "preseal_gate": {
+      "path": "local-evidence/d0-milestones/d0.4/d0_4_preseal_gate.py",
+      "sha256": "ac9c6be414e719ba5f20188b45dd679f7eb625dc9f9e7d53aac35ae5a1fb9956"
+    },
+    "response_overlap_clarification": {
+      "path": "local-evidence/d0-milestones/d0.4/RESPONSE_OVERLAP_CLARIFICATION.md",
+      "sha256": "afb71b0d6cb8589e79f6e271b7a4336e35947ce0276c1670b7238cacefe68224"
+    },
+    "revised_preseal_package": {
+      "path": "local-evidence/d0-milestones/d0.4/REVISED_PRESEAL_PACKAGE_FREEZE.json",
+      "sha256": "af6f57835087ca7e7365d087bea58caf57d40fa8b8c6a4477997070f5fb1c486"
+    },
+    "synthetic_test_harness": {
+      "path": "local-evidence/d0-milestones/d0.4/test_d0_4_preseal_gate.py",
+      "sha256": "31aba2d11bcee860647b2052372dc83918fe18309f15beb59885d12c14e56972",
+      "tests_passed": 13,
+      "tests_total": 13
+    }
+  },
+  "authorization": {
+    "canonical_checkpoint_loading": false,
+    "dataset_sealing": false,
+    "fresh_example_construction": true,
+    "historical_dataset_reopen": false,
+    "historical_registry_mutation": false,
+    "lifecycle_mutation": false,
+    "model_scoring": false,
+    "preseal_gate_execution": true,
+    "proposed_dataset_write": true,
+    "protected_formal_dataset_access": false,
+    "training": false
+  },
+  "generated_at_utc": "2026-08-15T04:45:42.626301+00:00",
+  "historical_evidence": {
+    "original_preseal_package_manifest": {
+      "must_remain_immutable": true,
+      "path": "local-evidence/d0-milestones/d0.4/PRESEAL_PACKAGE_MANIFEST.json",
+      "sha256": "7b91cac722044387668c4b81c76a88ab6dc648a185046697583a26af1e5ed503",
+      "superseded_for_gate_identity": true
+    }
+  },
+  "milestone": "D0.4",
+  "next_authorized_operation": "construct exactly 25 fresh proposed D0.4 evaluation examples under the revised pre-seal gate, execute pre-seal validation, and write only a new proposed dataset artifact",
+  "response_reuse_classes": [
+    "forced",
+    "discretionary"
+  ],
+  "schema_version": "1.0",
+  "status": "frozen"
+}

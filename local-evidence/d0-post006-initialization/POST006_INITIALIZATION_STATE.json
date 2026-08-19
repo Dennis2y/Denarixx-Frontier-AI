@@ -1,0 +1,19 @@
+{
+  "stage": "D0-POST-006",
+  "status": "initialized",
+  "authorization": "governance-design-only",
+  "lastFormallyAcceptedBaseline": "local-checkpoints/d0-post003-capability-seed42.pt",
+  "lastFormallyAcceptedBaselineSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "post005DevelopmentCandidate": "local-checkpoints/d0-post005-development-seed42-step120.pt",
+  "post005DevelopmentCandidateSha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9",
+  "post005FormalAcceptance": "unadjudicated",
+  "historicalFormalDataset": "ml/data/d0_post003_formal.jsonl",
+  "historicalFormalDatasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "historicalFormalDatasetEligibleForPost006FormalScoring": false,
+  "trainingAuthorized": false,
+  "developmentEvaluationAuthorized": false,
+  "formalEvaluationAuthorized": false,
+  "formalDatasetConstructionAuthorized": false,
+  "modelScoringAuthorized": false,
+  "nextOperation": "freeze-formal-acceptance-semantics"
+}

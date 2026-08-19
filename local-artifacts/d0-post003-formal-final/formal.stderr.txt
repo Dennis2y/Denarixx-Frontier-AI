@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal_v2.py", line 586, in <module>
+    main()
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal_v2.py", line 544, in main
+    result = run_formal_evaluation(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal_v2.py", line 492, in run_formal_evaluation
+    baseline_result = evaluate_checkpoint(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal_v2.py", line 444, in evaluate_checkpoint
+    return dev_eval.evaluate_checkpoint(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_dev.py", line 189, in evaluate_checkpoint
+    examples = load_instruction_jsonl(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/post_training/sft_data.py", line 34, in load_instruction_jsonl
+    if not path.exists():
+AttributeError: 'str' object has no attribute 'exists'

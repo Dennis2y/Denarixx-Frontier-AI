@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-GATE-006-EVALUATION-CONTRACT-READINESS",
+  "createdAt": "2026-08-19T07:45:29Z",
+  "gate": "D1-GATE-006",
+  "frozenRequirement": "D1 evaluation contract must exist before full training begins.",
+  "decision": "PASS",
+  "predecessorAuthorities": {
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "gate003": {
+      "path": "local-evidence/d1-model-gate003/d1_gate003_mps_2048_readiness.json",
+      "sha256": "f4910b7b79b93073bbbfbab3c97af766555bcde04166f9264cd198bb936c901d"
+    },
+    "gate004": {
+      "path": "local-evidence/d1-model-gate004/d1_gate004_storage_readiness.json",
+      "sha256": "f2ae79c2f3f7ff4d3f430742ec664b6078620340d6ef8f836fc8bdc4780e942e"
+    },
+    "gate005": {
+      "path": "local-evidence/d1-model-gate005/d1_gate005_corpus_readiness.json",
+      "sha256": "585ba25c673de5b73d9e4f518eb986476b57a8709707bb1429cbc9565363b06d"
+    }
+  },
+  "evaluationContract": {
+    "id": "D1-EVAL-001",
+    "generation": "D1",
+    "name": "Denarixx Frontier AI D1 Evaluation Governance Contract",
+    "version": 1,
+    "status": "locked-before-full-training",
+    "path": "research/d1/d1_evaluation_contract.json",
+    "sha256": "bea385450991397979553b04b4975b535456e84aeb3d226f06f3976771db38fe",
+    "authoritativeContractCount": 1,
+    "creationTimestampPresent": false,
+    "observedFileModificationTime": "2026-08-16T18:31:30Z",
+    "predatesFullTraining": true,
+    "architectureIdentityBound": true,
+    "modelIdentityPolicyDefined": true,
+    "tokenizerIdentityPolicyDefined": true,
+    "modifiedByThisGate": false
+  },
+  "contractPropertyAudit": [
+    {
+      "property": "D1 generation/model identity",
+      "status": "PASS",
+      "evidence": "Contract ID/name are D1-specific; architecture identity is hashed and exact future model/checkpoint identity is mandatory."
+    },
+    {
+      "property": "evaluation purpose",
+      "status": "PASS",
+      "evidence": "Defines independent, reproducible and contamination-controlled measurement with claims limited to measured scope."
+    },
+    {
+      "property": "development-vs-formal evaluation separation",
+      "status": "PASS",
+      "evidence": "General/development measurement is non-training and not candidate selection unless separately authorized; formal evaluation has a separate protected dataset, protocol and authorization boundary."
+    },
+    {
+      "property": "protected formal-data boundary",
+      "status": "PASS",
+      "evidence": "Formal construction, access, parsing, scoring and training use are all unauthorized; any future dataset requires separate governance."
+    },
+    {
+      "property": "allowed evaluation categories",
+      "status": "PASS",
+      "evidence": "Concrete capability families/task domains must be selected by the future frozen evaluation protocol before exposure; this contract does not fabricate categories prematurely."
+    },
+    {
+      "property": "prohibited contamination behavior",
+      "status": "PASS",
+      "evidence": "Formal data is prohibited from training, threshold tuning and candidate selection; answer injection and result-conditioned dataset selection are prohibited."
+    },
+    {
+      "property": "metric definitions or metric policy",
+      "status": "PASS",
+      "evidence": "Exact metrics, aggregation and thresholds are explicitly delegated to a future protocol that must freeze before formal results are observed."
+    },
+    {
+      "property": "pass/fail or adjudication policy",
+      "status": "PASS",
+      "evidence": "Future protocol must define completion/adjudication and failure behavior; the contract mandates fail-closed handling for identity, integrity, compatibility, completeness and governance failures."
+    },
+    {
+      "property": "baseline/comparator policy",
+      "status": "PASS",
+      "evidence": "No comparator is mandated at contract level; any future comparator requires protocol definition and D0 may not be reopened to manufacture evidence."
+    },
+    {
+      "property": "reproducibility requirements",
+      "status": "PASS",
+      "evidence": "Model, tokenizer, dataset, protocol, evaluator and raw results must be hashed; execution configuration and deterministic scoring must be preserved."
+    },
+    {
+      "property": "evidence/artifact requirements",
+      "status": "PASS",
+      "evidence": "Requires identities, execution configuration, aggregate/scoped metrics, status and adjudication; existing evidence may not be silently overwritten."
+    },
+    {
+      "property": "authority/freeze/change-control rules",
+      "status": "PASS",
+      "evidence": "Contract is versioned and locked; future protocol must freeze before formal exposure/scoring and formal artifacts must follow D1-STOR-002."
+    },
+    {
+      "property": "contract exists before full training",
+      "status": "PASS",
+      "evidence": "Status is locked-before-full-training; current state records no weights/checkpoint/training and Gate-006 is explicitly bound."
+    },
+    {
+      "property": "formal evaluation data excluded from training",
+      "status": "PASS",
+      "evidence": "Formal evaluation training use is explicitly false and formal data may not be used for training."
+    },
+    {
+      "property": "measured evidence cannot be fabricated or replaced by synthetic harness output",
+      "status": "PASS",
+      "evidence": "Claims are limited to measured scope; checkpoint substitution and benchmark-answer injection are prohibited; raw results and evaluator identity must be hashed; failures cannot be rewritten as success."
+    }
+  ],
+  "formalEvaluationState": {
+    "artifactRoot": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/evaluation",
+    "observedFileCount": 0,
+    "formalDatasetExistsByContract": false,
+    "formalDatasetConstructed": false,
+    "formalDatasetAccessed": false,
+    "formalEvaluationExecuted": false,
+    "formalScoresCreated": false,
+    "formalExamplesInspected": false
+  },
+  "contaminationBoundary": {
+    "trainingAndFormalDataSeparated": true,
+    "formalDataTrainingUseProhibited": true,
+    "formalDataThresholdTuningProhibited": true,
+    "formalDataCandidateSelectionProhibited": true,
+    "benchmarkAnswerInjectionProhibited": true,
+    "preEvaluationContaminationChecksRequired": true
+  },
+  "gate005Qualification": {
+    "seriousPretrainingScaleAssessment": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING",
+    "carriedForwardUnchanged": true,
+    "readinessGatesCompleteDoesNotAutomaticallyMeanSeriousPretrainingAuthorized": true,
+    "trainingAuthorizationRemainsSeparate": true
+  },
+  "authorizationBoundary": {
+    "formalEvaluationDataAccessed": false,
+    "formalEvaluationExecuted": false,
+    "modelInstantiated": false,
+    "modelExecuted": false,
+    "optimizerCreated": false,
+    "trainingStarted": false,
+    "checkpointCreated": false,
+    "hyperparametersSelected": false,
+    "evaluationContractModified": false,
+    "trainingAuthorizedByGate006": false
+  }
+}

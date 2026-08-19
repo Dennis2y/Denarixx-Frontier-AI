@@ -1,0 +1,20 @@
+{"instruction": "State the goal of evaluation.", "response": "Measure model behavior."}
+{"instruction": "Why freeze test data?", "response": "Prevent silent changes."}
+{"instruction": "What does a hash verify?", "response": "Data identity."}
+{"instruction": "Why keep a baseline?", "response": "Compare later models."}
+{"instruction": "What can training loss show?", "response": "Optimization progress."}
+{"instruction": "What should test data avoid?", "response": "Training overlap."}
+{"instruction": "Why record model metadata?", "response": "Support reproducibility."}
+{"instruction": "What does retention protect?", "response": "Prior capability."}
+{"instruction": "Why use held out examples?", "response": "Measure generalization."}
+{"instruction": "What should remain frozen?", "response": "Evaluation data."}
+{"instruction": "Why compare checkpoints?", "response": "Measure model changes."}
+{"instruction": "What should evidence support?", "response": "Research conclusions."}
+{"instruction": "Why test regressions?", "response": "Detect lost capability."}
+{"instruction": "What does a checkpoint store?", "response": "Model state."}
+{"instruction": "Why separate train and test?", "response": "Avoid contamination."}
+{"instruction": "What makes a run repeatable?", "response": "Recorded configuration."}
+{"instruction": "Why preserve tokenizer identity?", "response": "Keep model inputs stable."}
+{"instruction": "What is an experiment?", "response": "A controlled test."}
+{"instruction": "Why measure language loss?", "response": "Track retention."}
+{"instruction": "Why measure response loss?", "response": "Track instruction learning."}

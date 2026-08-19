@@ -1,0 +1,148 @@
+{
+  "acceptanceGates": [
+    {
+      "id": "D1-TOK-GATE-001",
+      "requirement": "Tokenizer corpus manifest is sealed and hashed."
+    },
+    {
+      "id": "D1-TOK-GATE-002",
+      "requirement": "Tokenizer artifact vocabulary size is exactly 8192."
+    },
+    {
+      "id": "D1-TOK-GATE-003",
+      "requirement": "Required special tokens exist exactly once with stable IDs recorded in the tokenizer manifest."
+    },
+    {
+      "id": "D1-TOK-GATE-004",
+      "requirement": "UTF-8/byte coverage round-trip suite passes."
+    },
+    {
+      "id": "D1-TOK-GATE-005",
+      "requirement": "Fixed artifact produces deterministic encode/decode."
+    },
+    {
+      "id": "D1-TOK-GATE-006",
+      "requirement": "Compression/token-count evaluation is performed on held-out representative text."
+    },
+    {
+      "id": "D1-TOK-GATE-007",
+      "requirement": "D0 checkpoint and embedded tokenizer remain byte-identical and untouched."
+    }
+  ],
+  "architectureDependency": {
+    "contextLength": 2048,
+    "contractId": "D1-ARCH-003",
+    "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+    "vocabSize": 8192
+  },
+  "byteCoverage": {
+    "acceptance": [
+      "English round-trip",
+      "German round-trip including umlauts and ß",
+      "accented Latin round-trip",
+      "non-Latin UTF-8 round-trip",
+      "punctuation round-trip",
+      "digits round-trip",
+      "newline and whitespace round-trip",
+      "emoji UTF-8 round-trip"
+    ],
+    "required": true,
+    "requirement": "Tokenizer must retain a byte-level fallback path capable of representing arbitrary valid UTF-8 input without depending on the D0 42-character alphabet."
+  },
+  "contract": {
+    "generation": "D1",
+    "id": "D1-TOK-001",
+    "purpose": "Define tokenizer ownership, corpus requirements, special-token semantics, reproducibility requirements and acceptance gates before D1 tokenizer training.",
+    "status": "locked"
+  },
+  "corpus": {
+    "locationPolicy": {
+      "manifests": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests",
+      "processed": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/processed",
+      "raw": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw"
+    },
+    "minimumPlanningFloor": {
+      "description": "10 MB is a readiness floor for the first D1 tokenizer experiment, not a claim that 10 MB is sufficient for final D1 language-model training.",
+      "utf8Bytes": 10000000
+    },
+    "preferredInitialTarget": {
+      "description": "Aim for at least approximately 100 MB of diverse, clean text for the first serious 8K tokenizer candidate when legally available.",
+      "utf8Bytes": 100000000
+    },
+    "requirements": [
+      "corpus must be Denarixx-controlled or legally usable",
+      "every source must have provenance metadata",
+      "raw corpus must be immutable after manifest sealing",
+      "processed corpus must be independently versioned",
+      "all corpus artifacts used for tokenizer training must be SHA-256 hashed",
+      "duplicate and near-duplicate analysis must occur before final tokenizer corpus sealing",
+      "binary/non-text contamination must be detected",
+      "UTF-8 decoding failures must be reported",
+      "empty documents must be reported",
+      "tokenizer corpus must materially exceed the D0 research corpus",
+      "evaluation text must not be intentionally copied into tokenizer training solely to improve benchmark results"
+    ]
+  },
+  "determinism": {
+    "decodeRoundTripTestsRequired": true,
+    "fixedCorpusManifestRequired": true,
+    "fixedSpecialTokenOrderRequired": true,
+    "fixedTrainerConfigurationRequired": true,
+    "mergeRulesHashRequired": true,
+    "repeatedEncodeMustMatch": true,
+    "serializedArtifactHashRequired": true,
+    "vocabularyHashRequired": true
+  },
+  "prohibitions": [
+    "do not reuse D0 42-character vocabulary as D1 vocabulary",
+    "do not mutate D0 tokenizer",
+    "do not download pretrained tokenizer vocabulary",
+    "do not silently change target vocabulary size",
+    "do not silently change special-token contract",
+    "do not train tokenizer before corpus readiness is measured",
+    "do not train D1 model before tokenizer acceptance gates pass"
+  ],
+  "storageDependency": {
+    "contractId": "D1-STOR-002",
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1",
+    "sha256": "7a29cfd7cb1b19a6b0203ccf9a4e02b543f99ca037f958600811337b7688c124"
+  },
+  "tokenizer": {
+    "artifactIndependence": {
+      "d0TokenizerMutationAllowed": false,
+      "independentFromD0CharacterTokenizer": true
+    },
+    "family": "BPE",
+    "generation": "D1",
+    "normalizationPolicy": "preserve source Unicode text; no lossy ASCII-only normalization",
+    "ownership": "Denarixx",
+    "preTokenization": "byte-level",
+    "pretrainedTokenizerArtifactUsed": false,
+    "pretrainedVocabularyUsed": false,
+    "specialTokens": [
+      {
+        "required": true,
+        "role": "padding",
+        "token": "<|pad|>"
+      },
+      {
+        "required": true,
+        "role": "begin-sequence",
+        "token": "<|bos|>"
+      },
+      {
+        "required": true,
+        "role": "end-sequence",
+        "token": "<|eos|>"
+      },
+      {
+        "required": true,
+        "role": "unknown-fallback",
+        "token": "<|unk|>"
+      }
+    ],
+    "targetVocabularySize": 8192,
+    "textEncoding": "UTF-8",
+    "trainingInitialization": "from-scratch"
+  }
+}

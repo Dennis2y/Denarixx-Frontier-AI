@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "id": "D1-DATA-RAW-001",
+    "acquisitionId": "D1-DATA-RAW-001-20260819T084500Z",
+    "status": "raw-acquisition-partial",
+    "startedAt": "2026-08-19T08:45:00Z",
+    "endedAt": "2026-08-19T16:32:29Z",
+    "purpose": "Record immutable raw-source acquisition outcomes only; no artifact in this manifest is an accepted training corpus."
+  },
+  "predecessorAuthorities": {
+    "acquisitionAuthority": {"path": "research/d1/d1_first_acquisition_authorization.json", "sha256": "a98cdfc80495ac767b379c7d1998f6b59b6e9e3d25b12fb52d3a40a6052aa30d"},
+    "acquisitionScopeEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_acquisition_scope_004.json", "sha256": "60507e66c011de67b34dc868d5a0c58f43b5222a90de85037df04264fba30b6d"},
+    "sourceDesign": {"path": "research/d1/d1_corpus_source_design.json", "sha256": "72d89bbe8746a84a209116ab064ab556eac0460a96e309eb596b027216751582"},
+    "corpusScalePlan": {"path": "research/d1/d1_corpus_scale_plan.json", "sha256": "a81087f63bd8482f09cbfe56bfbcd831dcda03b6b168e58a6f99f3ef778fad03"},
+    "dataReadinessContract": {"path": "research/d1/d1_data_readiness_contract.json", "sha256": "9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953"},
+    "architecture": {"path": "research/d1/d1_architecture_contract.json", "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"},
+    "model": {"path": "ml/models/d1.py", "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"},
+    "acceptedTokenizer": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json", "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"}
+  },
+  "storage": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/",
+    "acquisitionPath": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/",
+    "volumeMounted": true,
+    "hostWritableAtStart": true,
+    "repositoryPayloadBytes": 0,
+    "silentOverwriteOccurred": false
+  },
+  "sources": [
+    {
+      "sourceId": "d1-acq001-python-docs-313",
+      "status": "ACQUIRED",
+      "rawFiles": 1,
+      "rawBytes": 4354570,
+      "sourceManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-python-docs-313/acquisition_manifest.json", "sha256": "23a70eba416aea1ef5a6b52e73067c3a588df7f98caf16ffe5786cbd3439dd9e"},
+      "artifacts": [{"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-python-docs-313/python-3.13-docs-text.zip", "bytes": 4354570, "sha256": "6fcbc8f124b72060166f60f98bd99750de683d284098cecb25ce88247290d1b7", "postAcquisitionHashMatch": "PASS", "trainingReady": false}]
+    },
+    {
+      "sourceId": "d1-acq001-govinfo-uscode",
+      "status": "HELD",
+      "rawFiles": 0,
+      "rawBytes": 0,
+      "sourceManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-govinfo-uscode/acquisition_manifest.json", "sha256": "54f0248fc485df1eb1b22bbbfc740320b810eae0a27719771d725e87b9925e2c"},
+      "reason": "Required title allowlist absent; no request attempted."
+    },
+    {
+      "sourceId": "d1-acq001-openstax-college-algebra",
+      "status": "FAILED",
+      "rawFiles": 1,
+      "rawBytes": 56807291,
+      "eligibleRawFiles": 0,
+      "eligibleRawBytes": 0,
+      "sourceManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-openstax-college-algebra/acquisition_manifest.json", "sha256": "27d379aa33d20e96a677bddd5db6a899ad8c3adb0e7401c03dfb61206ef0e3c9"},
+      "artifacts": [{"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-openstax-college-algebra/CollegeAlgebra-OP.pdf", "bytes": 56807291, "sha256": "74a89e41f7b2db84e18b158a9a5548a2813f1878927e816536d43229c20439d4", "postAcquisitionHashMatch": "PASS", "retainedAsFailedEvidenceOnly": true, "trainingReady": false}],
+      "reason": "56,807,291 response bytes exceeded the 50,000,000-byte source limit; no retry, processing or promotion permitted."
+    },
+    {
+      "sourceId": "d1-acq001-eu-ccby-publications",
+      "status": "HELD",
+      "rawFiles": 0,
+      "rawBytes": 0,
+      "sourceManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-eu-ccby-publications/acquisition_manifest.json", "sha256": "37e05eb44830cabd635027dc2fe468c31fa0619bf069c7584ba7785bfed9b59f"},
+      "reason": "Required publication allowlist absent; no request attempted."
+    },
+    {
+      "sourceId": "d1-acq001-gesetze-refresh",
+      "status": "PARTIAL",
+      "rawFiles": 1,
+      "rawBytes": 1286248,
+      "sourceManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-gesetze-refresh/acquisition_manifest.json", "sha256": "1585b25d2643f45c537c5c31b5707ccbe051f5bc44811e13881e925fe1331e0c"},
+      "artifacts": [{"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-gesetze-refresh/gii-toc.xml", "bytes": 1286248, "sha256": "36ca0cf14f4da6d27644efc8c3e0055042b789916abc9f74f2560823656b3661", "postAcquisitionHashMatch": "PASS", "trainingReady": false}],
+      "reason": "Index acquired; no deterministic authorized selection of depth-one HTTP links under file cap."
+    }
+  ],
+  "totals": {
+    "rawPayloadFilesPhysicallyDownloaded": 3,
+    "rawPayloadBytesPhysicallyDownloaded": 62448109,
+    "eligibleAcquiredOrPartialRawFiles": 2,
+    "eligibleAcquiredOrPartialRawBytes": 5640818,
+    "failedEvidenceRawFiles": 1,
+    "failedEvidenceRawBytes": 56807291,
+    "successfulSourceCount": 1,
+    "partialSourceCount": 1,
+    "heldSourceCount": 2,
+    "failedSourceCount": 1,
+    "heldOrFailedSourceCount": 3,
+    "acceptedTokens": "NOT_MEASURED"
+  },
+  "networkBoundaryResults": {
+    "approvedSourceUrlsRequested": 3,
+    "unapprovedUrlsRequested": 0,
+    "redirectsFollowed": 0,
+    "credentialsOrAuthenticationUsed": false,
+    "cookiesForAuthenticationUsed": false,
+    "robotsOrPaywallBypassUsed": false,
+    "recursiveCrawlingPerformed": false,
+    "substitutionsPerformed": false,
+    "boundedTimeoutsAndRetriesConfigured": true,
+    "globalByteLimitRespected": true,
+    "perSourceLimitsRespectedForSuccessfulOrPartialSources": true,
+    "openStaxPerSourceLimitViolation": true
+  },
+  "immutableVerification": {
+    "allPhysicallyDownloadedArtifactsReRead": true,
+    "allPhysicallyDownloadedArtifactHashesMatched": true,
+    "postAcquisitionHashMatch": "PASS"
+  },
+  "trainingReadinessBoundary": {
+    "rawArtifactsAreTrainingReady": false,
+    "acceptedCorpusCreated": false,
+    "acceptedTokens": "NOT_MEASURED",
+    "tokenizerExecuted": false,
+    "modelExecuted": false,
+    "trainingExecuted": false,
+    "formalEvaluationAccessed": false
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "RAW_ACQUIRED_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "RAW_ACQUIRED_NOT_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "POLICY_DEFINED_NOT_VALIDATED",
+    "D1-DATA-BLOCKER-007": "RAW_ACQUIRED_NOT_VALIDATED"
+  },
+  "authorizationState": {
+    "D1_RAW_ACQUISITION": "PARTIAL",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD",
+    "processingAuthorized": false,
+    "trainingAuthorized": false
+  }
+}

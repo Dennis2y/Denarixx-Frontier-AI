@@ -1,0 +1,30 @@
+{
+  "created": "2026-08-15T17:48:09.067120+00:00",
+  "formalDatasetConstructed": false,
+  "formalDatasetSpecification": {
+    "path": "local-evidence/d0-post008-formal-dataset-specification/FORMAL_DATASET_SPECIFICATION.md",
+    "sha256": "33747eda7c3da0a1d74ac351cc14d60aad8e76df374fe4617416ba5451a75161"
+  },
+  "formalExecutionAuthorized": false,
+  "formalExecutionEnabled": false,
+  "formalExposureStarted": false,
+  "formalRowsCreated": 0,
+  "historicalFormalDatasetsOpened": false,
+  "modelInferenceExecuted": false,
+  "modelScoringExecuted": false,
+  "realCheckpointLoaded": false,
+  "stage": "D0-POST-008",
+  "status": "compatibility-validator-frozen",
+  "syntheticTestSuite": {
+    "path": "ml/tests/test_d0_post008_compatibility.py",
+    "sha256": "c55dd2033621dbcd0dc2638133f583a3ff8757804f4003ea42fb2de3058c4bb8",
+    "testsCollected": 13,
+    "testsFailed": 0,
+    "testsPassed": 13
+  },
+  "trainingExecuted": false,
+  "validator": {
+    "path": "ml/evaluation/d0_post008_compatibility.py",
+    "sha256": "63408b13e1cc832b74d68c7feffae6035194d68adc43978bb6061fd23b19cac7"
+  }
+}

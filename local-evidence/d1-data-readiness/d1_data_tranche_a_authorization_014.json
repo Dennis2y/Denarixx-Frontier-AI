@@ -1,0 +1,36 @@
+{
+  "schemaVersion":1,
+  "recordId":"D1-DATA-TRANCHE-A-AUTH-014-EVIDENCE",
+  "createdAt":"2026-08-19T18:20:00Z",
+  "decision":"PASS",
+  "result":"D1_TRANCHE_A_AUTHORIZATION=PASS",
+  "interpretation":"The authorization gate passed by freezing a fail-closed empty executable allowlist. Acquisition execution remains unauthorized because exact verified sources cannot credibly support the planned capacity.",
+  "authorization":{"path":"research/d1/d1_tranche_a_acquisition_authorization.json","sha256":"3d01bd6581c55980a33198c9560c121646aad01413850e10b9a89ad5a67a2448","id":"D1-DATA-TRANCHE-A-AUTH-001"},
+  "verifiedPredecessors": {
+    "expansionPlan":{"path":"research/d1/d1_second_acquisition_expansion_plan.json","sha256":"db9c4b3b638c602b79f87a25bc1ecbba13a8e3893c3930bb735203eaaa68aade"},
+    "expansionEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_expansion_013.json","sha256":"552bae2c2635419b146c273e600a459a5244ea09516d52fb136c0a7d00f87622"},
+    "tokenizerCompatibilityPolicy":{"path":"research/d1/d1_tokenizer_compatibility_policy.json","sha256":"e47dfca90c9bdbf9d09b42b387f3f200bd7dc14bfc921cc68211730ce1a87ddf"},
+    "tokenizerEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_tokenizer_012.json","sha256":"1a06fb12ccae53cac72275c42a13f1dc9e35dfbda98f3b781e97c9ebee6f0651"},
+    "acceptedTokenizer":{"path":"/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json","sha256":"f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"},
+    "firstAcquisitionAuthorization":{"path":"research/d1/d1_first_acquisition_authorization.json","sha256":"a98cdfc80495ac767b379c7d1998f6b59b6e9e3d25b12fb52d3a40a6052aa30d"},
+    "sourceDesign":{"path":"research/d1/d1_corpus_source_design.json","sha256":"72d89bbe8746a84a209116ab064ab556eac0460a96e309eb596b027216751582"}
+  },
+  "currentState":{"CURRENT_ACCEPTED_TOKENS":8441509,"MODEL_PARAMETERS":26655104,"DEVELOPMENT_MINIMUM":53310208,"REMAINING_TO_DEVELOPMENT_MINIMUM":44868699},
+  "trancheAPlanning":{"GROSS_PLANNING_CAPACITY":16000000,"LOSS_RESERVE_PERCENT":25.0,"CONSERVATIVE_PLANNING_CAPACITY":12000000,"plannedCapacityCountedAsAccepted":false},
+  "sourceDecisions": {
+    "AUTHORIZED_SOURCE_COUNT":0,"HELD_SOURCE_COUNT":6,"REJECTED_SOURCE_COUNT":2,
+    "held":[
+      {"sourceId":"d1-tranche-a-bundestag-plenary-19","status":"HELD_PENDING_SOURCE_VERIFICATION","reason":"Official 51 MB/239-document listing and qualified reuse terms found, but exact immutable archive URL not frozen."},
+      {"sourceId":"d1-tranche-a-bundestag-plenary-18","status":"HELD_PENDING_SOURCE_VERIFICATION","reason":"Official 45 MB listing and qualified reuse terms found, but exact archive URL and exact document count not frozen."},
+      {"sourceId":"d1-tranche-a-govinfo-uscode-2023-title10","status":"HELD_PENDING_SOURCE_VERIFICATION","reason":"Predictable exact XML URL and federal-work basis found; package size and package-specific contrary-notice screening unresolved."},
+      {"sourceId":"d1-tranche-a-govinfo-uscode-2023-title42","status":"HELD_PENDING_SOURCE_VERIFICATION","reason":"Predictable exact XML URL found; size, package notice, and non-positive-law qualification require binding."},
+      {"sourceId":"d1-tranche-a-eu-building-together-en-de-fr","status":"HELD_PENDING_SOURCE_VERIFICATION","reason":"CC BY 4.0 notice and English endpoint found; German/French endpoints, exact sizes, and third-party exclusions not frozen."},
+      {"sourceId":"d1-tranche-a-eu-learning-sustainability-2025","status":"HELD_PENDING_RIGHTS_VERIFICATION","reason":"Publication and language variants found; exact files, per-edition license notices, sizes, and third-party exclusions not frozen."}
+    ],
+    "rejected":[{"sourceId":"d1-tranche-a-python-docs","reason":"Would worsen measured software-documentation concentration."},{"sourceId":"d1-tranche-a-openstax-failed-payload","reason":"Immutable unpromoted RAW-001 failure evidence; inspection and promotion prohibited."}]
+  },
+  "capacityAccounting":{"TOTAL_EXPECTED_RAW_BYTES":0,"TOTAL_MAXIMUM_AUTHORIZED_BYTES":0,"TOTAL_ESTIMATED_GROSS_TOKEN_EQUIVALENT_CAPACITY":0,"CONSERVATIVE_EXPECTED_CAPACITY":0,"TRANCHE_A_CAPACITY_STATUS":"INSUFFICIENT_AUTHORIZED_SOURCES"},
+  "executionState":{"TRANCHE_A_ACQUISITION_EXECUTION_AUTHORIZED":"NO","executableAllowlistEntries":0,"reservedDirectoryCreated":false,"runtimeSourceSubstitutionPermitted":false,"nextRequiredOperation":"Resolve exact endpoint, source-level rights/notices, expected size and document count for a capacity-sufficient portfolio, then freeze a replacement authorization."},
+  "blockerStates":{"D1-DATA-BLOCKER-001":"MEASURED_SCALE_BELOW_DEVELOPMENT_MINIMUM","D1-DATA-BLOCKER-002":"PASS","D1-DATA-BLOCKER-003":"PASS","D1-DATA-BLOCKER-004":"PASS_COMPOSITION_MEASURED_TARGET_DISTRIBUTION_NOT_ACHIEVED","D1-DATA-BLOCKER-005":"DEFERRED_UNTIL_AGGREGATE_DEVELOPMENT_CORPUS_READY","D1-DATA-BLOCKER-006":"PASS","D1-DATA-BLOCKER-007":"PASS_FOR_CURRENT_VALIDATED_CANDIDATE_SCOPE"},
+  "boundaryConfirmation":{"networkMetadataAndRightsPagesInspected":true,"CORPUS_PAYLOAD_BYTES_DOWNLOADED":0,"heldOpenStaxFailurePayloadInspected":false,"protectedFormalEvaluationDatasetsOpened":false,"existingCorpusModified":false,"acceptedTokenizerModifiedOrExecuted":false,"newMaterialTokenized":false,"aggregateOrSplitCreated":false,"modelExecuted":false,"optimizerOrCheckpointCreated":false,"hyperparametersSelected":false,"trainingImplementedOrStarted":false,"gitOperationPerformed":false,"predecessorAuthoritiesModified":false,"D1_SERIOUS_PRETRAINING_AUTHORIZATION":"WITHHELD"}
+}

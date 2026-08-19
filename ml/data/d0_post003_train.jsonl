@@ -1,0 +1,25 @@
+{"family":"echo","instruction":"echo red","response":"red"}
+{"family":"echo","instruction":"echo blue","response":"blue"}
+{"family":"echo","instruction":"echo green","response":"green"}
+{"family":"echo","instruction":"echo fast","response":"fast"}
+{"family":"echo","instruction":"echo slow","response":"slow"}
+{"family":"binary","instruction":"is yes true","response":"true"}
+{"family":"binary","instruction":"is no true","response":"false"}
+{"family":"binary","instruction":"is true true","response":"true"}
+{"family":"binary","instruction":"is false true","response":"false"}
+{"family":"binary","instruction":"is same same","response":"true"}
+{"family":"transform","instruction":"add s to cat","response":"cats"}
+{"family":"transform","instruction":"add s to car","response":"cars"}
+{"family":"transform","instruction":"add s to token","response":"tokens"}
+{"family":"transform","instruction":"add s to model","response":"models"}
+{"family":"transform","instruction":"add s to test","response":"tests"}
+{"family":"qa","instruction":"color of sky","response":"blue"}
+{"family":"qa","instruction":"color of grass","response":"green"}
+{"family":"qa","instruction":"opposite hot","response":"cold"}
+{"family":"qa","instruction":"opposite fast","response":"slow"}
+{"family":"qa","instruction":"opposite yes","response":"no"}
+{"family":"semantic","instruction":"ai uses data","response":"true"}
+{"family":"semantic","instruction":"model uses data","response":"true"}
+{"family":"semantic","instruction":"train a model","response":"learn"}
+{"family":"semantic","instruction":"test a model","response":"check"}
+{"family":"semantic","instruction":"safe means risk","response":"false"}

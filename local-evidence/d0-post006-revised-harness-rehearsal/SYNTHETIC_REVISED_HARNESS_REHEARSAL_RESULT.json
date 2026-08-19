@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "allAuthorizationMutationsRejected": true,
+    "authorizationMutationCount": true,
+    "directCliDisconnected": false,
+    "exactlyTwoRealScoringCallsStatic": true,
+    "frozenAuthorizationAccepted": true,
+    "historicalFormalDatasetOpened": false,
+    "markerBeforeRealRowLoadStatic": true,
+    "realCheckpointLoaded": false,
+    "realFormalDatasetParsed": false,
+    "realFormalExposureStarted": false,
+    "realLifecycleBindingStatic": true,
+    "realLifecycleExecuted": false,
+    "realModelScoringExecuted": false,
+    "syntheticBaselineBeforeCandidate": true,
+    "syntheticBaselinePersisted": true,
+    "syntheticCandidateBeforeComparison": true,
+    "syntheticCandidatePersisted": true,
+    "syntheticExposureCreated": true,
+    "syntheticFinalAdjudicationPersisted": true,
+    "syntheticLifecycleCompleted": true,
+    "syntheticModeRejectsAllRealPaths": true,
+    "syntheticRerunRejected": true,
+    "trainingExecuted": false
+  },
+  "checksPassed": 15,
+  "passed": false,
+  "rehearsalType": "revised-authorization-bound-harness-v2",
+  "revisedHarnessSha256": "2fc3fe2a6b2d2247fd37aa2c47633f1e7fa68703473ca90b507c7c8b94cdf9e5",
+  "stage": "D0-POST-006"
+}

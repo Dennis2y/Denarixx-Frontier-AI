@@ -1,0 +1,25 @@
+{"family":"echo","instruction":"echo calm","response":"calm"}
+{"family":"echo","instruction":"echo clear","response":"clear"}
+{"family":"echo","instruction":"echo data","response":"data"}
+{"family":"echo","instruction":"echo model","response":"model"}
+{"family":"echo","instruction":"echo token","response":"token"}
+{"family":"binary","instruction":"is calm true","response":"false"}
+{"family":"binary","instruction":"is data true","response":"false"}
+{"family":"binary","instruction":"is same true","response":"false"}
+{"family":"binary","instruction":"is model true","response":"false"}
+{"family":"binary","instruction":"is true false","response":"false"}
+{"family":"transform","instruction":"add s to data","response":"datas"}
+{"family":"transform","instruction":"add s to risk","response":"risks"}
+{"family":"transform","instruction":"add s to run","response":"runs"}
+{"family":"transform","instruction":"add s to word","response":"words"}
+{"family":"transform","instruction":"add s to check","response":"checks"}
+{"family":"qa","instruction":"opposite slow","response":"fast"}
+{"family":"qa","instruction":"opposite cold","response":"hot"}
+{"family":"qa","instruction":"opposite no","response":"yes"}
+{"family":"qa","instruction":"color of data","response":"false"}
+{"family":"qa","instruction":"color of model","response":"false"}
+{"family":"semantic","instruction":"ai can learn","response":"true"}
+{"family":"semantic","instruction":"model can learn","response":"true"}
+{"family":"semantic","instruction":"data has value","response":"true"}
+{"family":"semantic","instruction":"risk means safe","response":"false"}
+{"family":"semantic","instruction":"test can check","response":"true"}

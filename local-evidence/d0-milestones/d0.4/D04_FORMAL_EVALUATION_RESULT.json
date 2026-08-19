@@ -1,0 +1,332 @@
+{
+  "checkpoint": "local-checkpoints/d0-post002-accepted.pt",
+  "checkpointSha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97",
+  "dataset": "local-evidence/d0-milestones/d0.4/D04_PROPOSED_DATASET.jsonl",
+  "evaluation": {
+    "exactMatchRate": 0.0,
+    "exactMatches": 0,
+    "examplesEvaluated": 25,
+    "perFamily": {
+      "basic_instruction_following": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples": 5,
+        "family": "basic_instruction_following",
+        "response_loss": 3.0833924258196794,
+        "response_perplexity": 21.83234150784563,
+        "response_tokens": 27
+      },
+      "constrained_generation": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples": 5,
+        "family": "constrained_generation",
+        "response_loss": 3.1288314520143996,
+        "response_perplexity": 22.847265810902226,
+        "response_tokens": 51
+      },
+      "literal_response": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples": 5,
+        "family": "literal_response",
+        "response_loss": 3.112281608581543,
+        "response_perplexity": 22.472258851506,
+        "response_tokens": 30
+      },
+      "short_completion": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples": 5,
+        "family": "short_completion",
+        "response_loss": 3.275117617387038,
+        "response_perplexity": 26.446335846561652,
+        "response_tokens": 26
+      },
+      "simple_transformation": {
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "examples": 5,
+        "family": "simple_transformation",
+        "response_loss": 3.5895604220303623,
+        "response_perplexity": 36.21815172516946,
+        "response_tokens": 22
+      }
+    },
+    "responseLoss": 3.2071399688720703,
+    "responsePerplexity": 24.708318513830203,
+    "responseTokensEvaluated": 156,
+    "results": [
+      {
+        "exact_match": false,
+        "expected_response": "cedar",
+        "family": "literal_response",
+        "generated_response": "ererer",
+        "index": 1,
+        "instruction": "say cedar",
+        "response_loss": 2.9889837900797525,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "river",
+        "family": "literal_response",
+        "generated_response": "ererer",
+        "index": 2,
+        "instruction": "say river",
+        "response_loss": 3.0331589380900064,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "stone",
+        "family": "literal_response",
+        "generated_response": "ererer",
+        "index": 3,
+        "instruction": "say stone",
+        "response_loss": 2.9223550160725913,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "cloud",
+        "family": "literal_response",
+        "generated_response": "enenen",
+        "index": 4,
+        "instruction": "say cloud",
+        "response_loss": 3.478097915649414,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "amber",
+        "family": "literal_response",
+        "generated_response": "ererer",
+        "index": 5,
+        "instruction": "say amber",
+        "response_loss": 3.1388123830159507,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "blue",
+        "family": "short_completion",
+        "generated_response": "enene",
+        "index": 6,
+        "instruction": "complete red and",
+        "response_loss": 3.2995361328125,
+        "response_tokens": 5
+      },
+      {
+        "exact_match": false,
+        "expected_response": "moon",
+        "family": "short_completion",
+        "generated_response": "enene",
+        "index": 7,
+        "instruction": "complete sun and",
+        "response_loss": 3.2519264221191406,
+        "response_tokens": 5
+      },
+      {
+        "exact_match": false,
+        "expected_response": "sea",
+        "family": "short_completion",
+        "generated_response": "enen",
+        "index": 8,
+        "instruction": "complete land and",
+        "response_loss": 2.817133665084839,
+        "response_tokens": 4
+      },
+      {
+        "exact_match": false,
+        "expected_response": "night",
+        "family": "short_completion",
+        "generated_response": "enenen",
+        "index": 9,
+        "instruction": "complete day and",
+        "response_loss": 3.4742472966512046,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "south",
+        "family": "short_completion",
+        "generated_response": "enenen",
+        "index": 10,
+        "instruction": "complete north and",
+        "response_loss": 3.3802878061930337,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "tac",
+        "family": "simple_transformation",
+        "generated_response": "erer",
+        "index": 11,
+        "instruction": "reverse cat",
+        "response_loss": 3.202082633972168,
+        "response_tokens": 4
+      },
+      {
+        "exact_match": false,
+        "expected_response": "god",
+        "family": "simple_transformation",
+        "generated_response": "enen",
+        "index": 12,
+        "instruction": "reverse dog",
+        "response_loss": 3.497471809387207,
+        "response_tokens": 4
+      },
+      {
+        "exact_match": false,
+        "expected_response": "pam",
+        "family": "simple_transformation",
+        "generated_response": "erer",
+        "index": 13,
+        "instruction": "reverse map",
+        "response_loss": 3.6047236919403076,
+        "response_tokens": 4
+      },
+      {
+        "exact_match": false,
+        "expected_response": "EAST",
+        "family": "simple_transformation",
+        "generated_response": "enene",
+        "index": 14,
+        "instruction": "uppercase east",
+        "response_loss": 4.360730743408203,
+        "response_tokens": 5
+      },
+      {
+        "exact_match": false,
+        "expected_response": "rats",
+        "family": "simple_transformation",
+        "generated_response": "enere",
+        "index": 15,
+        "instruction": "reverse star",
+        "response_loss": 3.1899126052856444,
+        "response_tokens": 5
+      },
+      {
+        "exact_match": false,
+        "expected_response": "soft rain",
+        "family": "constrained_generation",
+        "generated_response": "enenenerer",
+        "index": 16,
+        "instruction": "two words for rain",
+        "response_loss": 3.0206268310546873,
+        "response_tokens": 10
+      },
+      {
+        "exact_match": false,
+        "expected_response": "calm wind",
+        "family": "constrained_generation",
+        "generated_response": "enenererer",
+        "index": 17,
+        "instruction": "two words for wind",
+        "response_loss": 3.2406524658203124,
+        "response_tokens": 10
+      },
+      {
+        "exact_match": false,
+        "expected_response": "hard stone",
+        "family": "constrained_generation",
+        "generated_response": "enenenenere",
+        "index": 18,
+        "instruction": "two words for stone",
+        "response_loss": 3.0466894669966265,
+        "response_tokens": 11
+      },
+      {
+        "exact_match": false,
+        "expected_response": "deep sea",
+        "family": "constrained_generation",
+        "generated_response": "enenerere",
+        "index": 19,
+        "instruction": "two words for sea",
+        "response_loss": 3.0434481302897134,
+        "response_tokens": 9
+      },
+      {
+        "exact_match": false,
+        "expected_response": "early dawn",
+        "family": "constrained_generation",
+        "generated_response": "enerererere",
+        "index": 20,
+        "instruction": "two words for dawn",
+        "response_loss": 3.2775448885830967,
+        "response_tokens": 11
+      },
+      {
+        "exact_match": false,
+        "expected_response": "true",
+        "family": "basic_instruction_following",
+        "generated_response": "enene",
+        "index": 21,
+        "instruction": "is ice cold",
+        "response_loss": 3.13311882019043,
+        "response_tokens": 5
+      },
+      {
+        "exact_match": false,
+        "expected_response": "false",
+        "family": "basic_instruction_following",
+        "generated_response": "ererer",
+        "index": 22,
+        "instruction": "is fire wet",
+        "response_loss": 3.043630599975586,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "true",
+        "family": "basic_instruction_following",
+        "generated_response": "erere",
+        "index": 23,
+        "instruction": "is snow white",
+        "response_loss": 3.096713638305664,
+        "response_tokens": 5
+      },
+      {
+        "exact_match": false,
+        "expected_response": "false",
+        "family": "basic_instruction_following",
+        "generated_response": "enener",
+        "index": 24,
+        "instruction": "is coal white",
+        "response_loss": 3.0504353841145835,
+        "response_tokens": 6
+      },
+      {
+        "exact_match": false,
+        "expected_response": "true",
+        "family": "basic_instruction_following",
+        "generated_response": "erere",
+        "index": 25,
+        "instruction": "is rain wet",
+        "response_loss": 3.1076074600219727,
+        "response_tokens": 5
+      }
+    ]
+  },
+  "evaluationType": "canonical-formal",
+  "frozenInputIdentities": {
+    "local-evidence/d0-milestones/d0.4/D04_DATASET_SEAL.json": "c9958d9b14840e7f9cb6e53f278da2f6cd244722a3f23661e6866095a81d3478",
+    "local-evidence/d0-milestones/d0.4/D04_PROPOSED_DATASET.jsonl": "ae97701e409d3836a4097b64e0548f30bdab46c80a0db763c650fc4c8c77b8af",
+    "local-evidence/d0-milestones/d0.4/D04_SEALED_DATASET_MANIFEST.json": "707db5498820462db1a2885fc086be85d93ad01ed27716dbf8fb520fb19ab6f9",
+    "local-evidence/d0-milestones/d0.4/EVALUATION_PROTOCOL.md": "d16170455693e05d414a01e455286362c5df7670c66141551786afaed5c670a5",
+    "local-evidence/d0-milestones/d0.4/INDEPENDENT_EVALUATION_CONTRACT.md": "8da2d419065ee6b482087207dda7cc7f901b5d143395f669f2d04b215380adb0"
+  },
+  "milestone": "D0.4",
+  "modelConfig": {
+    "attention_heads": 4,
+    "context_length": 32,
+    "dropout": 0.0,
+    "hidden_size": 64,
+    "layers": 2,
+    "normalization": "layernorm",
+    "position_encoding": "rope",
+    "vocab_size": 42
+  },
+  "status": "complete"
+}

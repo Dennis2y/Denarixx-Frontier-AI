@@ -1,0 +1,61 @@
+{
+  "acceptedBaseline": {
+    "loadedDuringFreeze": false,
+    "path": "local-checkpoints/d0-post003-capability-seed42.pt",
+    "sha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06"
+  },
+  "adjudicationPolicy": {
+    "path": "local-evidence/d0-post007-formal-adjudication-policy/FORMAL_ADJUDICATION_POLICY.md",
+    "sha256": "3512500d87932411590b7c9014a10a4185e130b515b7e549baa9e6ef723535c4",
+    "statePath": "local-evidence/d0-post007-formal-adjudication-policy/FORMAL_ADJUDICATION_POLICY_STATE.json",
+    "stateSha256": "01f1135ed560823d3d3272e0b997adf1bf5c2649c187dcfe212fc3da744392ba"
+  },
+  "contract": {
+    "candidateSpecificPreprocessingPermitted": false,
+    "comparatorAcceptsAggregatedResultsOnly": true,
+    "datasetLoadedOnceByFutureHarness": true,
+    "formalExecutionAuthorized": false,
+    "formalExposureStarted": false,
+    "sameRowsUsedForBaselineAndCandidate": true,
+    "scorerAcceptsRowsNotDatasetPath": true,
+    "thresholdTuningPermitted": false
+  },
+  "dependencyAdapter": {
+    "path": "ml/evaluation/d0_post007_dependencies.py",
+    "sha256": "5bdd066deb42e55976d3e3bc64eba5453f019ff554db87ea6031d17a35bb4629"
+  },
+  "evidenceType": "scoring-dependency-contract-freeze",
+  "execution": {
+    "checkpointLoadingExecuted": false,
+    "formalComparisonExecuted": false,
+    "modelInferenceExecuted": false,
+    "modelScoringExecuted": false,
+    "trainingExecuted": false
+  },
+  "formalDataset": {
+    "parsedDuringFreeze": false,
+    "path": "ml/data/d0_post007_formal.jsonl",
+    "sha256": "f0f5c88524c4f0b78f4ebbd23548006103aa3e4116cc4a3df34493712b07fb0c"
+  },
+  "retainedCandidate": {
+    "loadedDuringFreeze": false,
+    "path": "local-checkpoints/d0-post005-development-seed42-step120.pt",
+    "sha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9"
+  },
+  "sealedDatasetFreeze": {
+    "path": "local-evidence/d0-post007-sealed-formal-dataset-freeze/SEALED_FORMAL_DATASET_FREEZE.json",
+    "sha256": "9c2ac15424839f15e56391ba8b72e3bcac1a5eb091d7a018fa03db5ad48852a6"
+  },
+  "stage": "D0-POST-007",
+  "status": "frozen-pre-exposure",
+  "syntheticContracts": {
+    "comparator": {
+      "path": "ml/tests/test_d0_post007_comparator.py",
+      "sha256": "40cc95473a61e98d1acbf32a6f705e19c79d58aca38791feb867688eac5495ba"
+    },
+    "dependency": {
+      "path": "ml/tests/test_d0_post007_dependencies.py",
+      "sha256": "b70053099777ca5180f3418b6bdb4d166530556eb4781657163e871d94e71fcc"
+    }
+  }
+}

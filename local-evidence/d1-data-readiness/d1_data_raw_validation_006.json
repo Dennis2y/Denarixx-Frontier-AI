@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-006-RAW-VALIDATION-EVIDENCE",
+  "createdAt": "2026-08-19T16:39:58Z",
+  "decision": "PASS_WITH_QUALIFICATIONS",
+  "acquisitionId": "D1-DATA-RAW-001-20260819T084500Z",
+  "verifiedPredecessors": {
+    "rawAcquisitionManifest": {"path": "research/d1/d1_raw_acquisition_manifest.json", "sha256": "602d1d25e26e1c057acaaae9896880994a2161afd26828fb94188c3012c9a629"},
+    "rawAcquisitionEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_raw_acquisition_005.json", "sha256": "93f173d78fd10b62f192e89e7d262ea48ab3ef4f7b84eaf5e150d18627693895"},
+    "acquisitionAuthority": {"path": "research/d1/d1_first_acquisition_authorization.json", "sha256": "a98cdfc80495ac767b379c7d1998f6b59b6e9e3d25b12fb52d3a40a6052aa30d"},
+    "acquisitionScopeEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_acquisition_scope_004.json", "sha256": "60507e66c011de67b34dc868d5a0c58f43b5222a90de85037df04264fba30b6d"}
+  },
+  "validationAuthority": {
+    "id": "D1-DATA-VALID-001",
+    "path": "research/d1/d1_raw_validation_manifest.json",
+    "sha256": "a4d0a2f29174381f9a4a22c2c79fa40ca18f444b9560bc289686e04bdb5ddf86",
+    "status": "raw-validation-complete-with-qualifications"
+  },
+  "byteAccounting": {
+    "RAW_BYTES_PHYSICALLY_PRESENT": 62448109,
+    "ELIGIBLE_RAW_BYTES": 5640818,
+    "VALIDATED_EXTRACTABLE_BYTES": 15045079,
+    "acceptedTokens": "NOT_MEASURED",
+    "acceptedCorpusBytes": "NOT_MEASURED"
+  },
+  "sourceDecisions": [
+    {"sourceId": "d1-acq001-python-docs-313", "status": "VALID", "container": "ZIP", "rawBytes": 4354570, "prospectiveExtractableFiles": 513, "prospectiveExtractableBytes": 13758831, "integrity": "PASS", "sha256": "6fcbc8f124b72060166f60f98bd99750de683d284098cecb25ce88247290d1b7"},
+    {"sourceId": "d1-acq001-gesetze-refresh", "status": "VALID_WITH_QUALIFICATION", "container": "XML_UTF8", "rawBytes": 1286248, "prospectiveExtractableBytes": 1286248, "items": 6126, "qualification": "complete valid index only; no linked law archives acquired", "sha256": "36ca0cf14f4da6d27644efc8c3e0055042b789916abc9f74f2560823656b3661"},
+    {"sourceId": "d1-acq001-openstax-college-algebra", "status": "HELD", "container": "PDF_1_7", "rawBytes": 56807291, "eligibleBytes": 0, "immutableFailureEvidence": true, "extracted": false, "tokenized": false, "sha256": "74a89e41f7b2db84e18b158a9a5548a2813f1878927e816536d43229c20439d4"},
+    {"sourceId": "d1-acq001-govinfo-uscode", "status": "HELD", "files": 0},
+    {"sourceId": "d1-acq001-eu-ccby-publications", "status": "HELD", "files": 0}
+  ],
+  "validationChecks": {
+    "physicallyDownloadedArtifactRehash": "PASS_3_OF_3",
+    "readabilityAndNonzero": "PASS_3_OF_3",
+    "eligibleMalformedOrTruncated": "NONE_DETECTED",
+    "pythonArchiveCrc": "PASS_513_OF_513_FILES",
+    "pythonUtf8Members": "PASS_513_OF_513_FILES",
+    "pythonUnsafeEncryptedSymlinkBinaryOrZeroMembers": 0,
+    "gesetzeXmlWellFormed": true,
+    "gesetzeCompleteItems": "6126_OF_6126",
+    "obviousErrorOrChallengePayloads": 0,
+    "exactDuplicateRawFiles": 0
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "RAW_VALIDATED_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "RAW_VALIDATED_COMPOSITION_NOT_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "RAW_CONTAINER_VALIDATED_TOKENIZER_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-007": "RAW_ARTIFACT_VALIDATION_PASS_DOCUMENT_VALIDATION_PENDING"
+  },
+  "operationBoundaryConfirmation": {
+    "downloadedAnything": false,
+    "retriedHeldSources": false,
+    "modifiedRawArtifacts": false,
+    "extractedArchiveToFilesystem": false,
+    "createdAcceptedCorpus": false,
+    "performedDeduplication": false,
+    "startedContaminationAnalysis": false,
+    "createdTrainDevelopmentSplit": false,
+    "executedAcceptedTokenizer": false,
+    "modifiedAcceptedTokenizer": false,
+    "instantiatedOrExecutedModel": false,
+    "createdOptimizerOrCheckpoint": false,
+    "startedTraining": false,
+    "accessedFormalEvaluation": false,
+    "modifiedPredecessorAuthorities": false,
+    "modifiedPyprojectOrUvLock": false,
+    "modifiedGitState": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

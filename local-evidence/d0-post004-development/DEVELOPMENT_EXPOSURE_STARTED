@@ -1,0 +1,43 @@
+D0-POST-004 DEVELOPMENT EXPOSURE STARTED
+
+Development dataset:
+ml/data/d0_post004_dev.jsonl
+
+Development dataset SHA256:
+d54abaa83a4bbdcca313c557431fa5005e4490b7103f0f997ccd0c619f5c8a58
+
+Eligible candidates:
+
+step 40
+7525f75bc85c455251d59a54483a433dd5f093b42a0927c890a565afacdfdee5
+
+step 80
+64c2229162f18bb86d66c5f0bd390fc7c1bf8ec61fc82bdc77bc1547f313109b
+
+step 120
+ae927ca3e779a0eda7c8fff025fc7cfd3a41568cb236148f444c75507ef35441
+
+Selector:
+ml/evaluation/d0_post004_dev.py
+
+Selector SHA256:
+b92e53491ea748de5f9423ad9f95ce3cd11092e9a830f8ca12b2708508c3c4cf
+
+Selection-policy adjudication SHA256:
+170ee93671f62fb9f4fbc619258d1ee5fa4777e59a633f1016d05390e00d83c7
+
+This marker permanently records that POST-004 development
+exposure is beginning.
+
+The observed development results must not be used to:
+
+- retrain POST-004
+- modify any candidate
+- modify the development dataset
+- change the selection metrics
+- change the tie-break policy
+- create additional POST-004 candidate checkpoints
+
+The protected POST-003 formal dataset remains sealed.
+
+Formal evaluation remains unauthorized.

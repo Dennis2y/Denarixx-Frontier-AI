@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "design": {
+    "id": "D1-DATA-SOURCE-001",
+    "generation": "D1",
+    "status": "proposed-before-acquisition",
+    "createdAt": "2026-08-19T08:38:25Z",
+    "purpose": "Govern source eligibility, composition, quality, licensing, provenance, contamination prevention, deduplication, partitioning and validation for a future D1 development-scale corpus."
+  },
+  "verifiedPredecessors": {
+    "corpusScalePlan": {"path": "research/d1/d1_corpus_scale_plan.json", "sha256": "a81087f63bd8482f09cbfe56bfbcd831dcda03b6b168e58a6f99f3ef778fad03"},
+    "scaleEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_scale_002.json", "sha256": "251b56dff0c51a6338d834054f07277d544d7be5c921ea918fe9078277331f78"},
+    "dataReadinessContract": {"path": "research/d1/d1_data_readiness_contract.json", "sha256": "9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953"},
+    "readinessClosure": {"path": "research/d1/d1_readiness_closure.json", "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"},
+    "architecture": {"path": "research/d1/d1_architecture_contract.json", "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"},
+    "model": {"path": "ml/models/d1.py", "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"},
+    "acceptedTokenizer": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json", "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"}
+  },
+  "scaleInterpretation": {
+    "developmentTargetMinTokens": 53310208,
+    "developmentTargetMaxTokens": 133275520,
+    "capabilityTargetMinTokens": 266551040,
+    "capabilityTargetMaxTokens": 533102080,
+    "initialConstructionTarget": "DEVELOPMENT_SCALE_ONLY",
+    "immediateAcquisitionAmountImplied": false,
+    "capabilityScaleExpansionRequiresSeparateAuthorization": true,
+    "D1-DATA-BLOCKER-001": "PLANNED_NOT_SATISFIED"
+  },
+  "existingAuthorityInventory": {
+    "authorityPaths": [
+      {"path": "research/d1/d1_data_acquisition_contract.json", "role": "locked acquisition, provenance, licensing, quality and versioning rules"},
+      {"path": "research/d1/d1_data_source_plan.json", "role": "candidate source classes and pre-acquisition approval tiers; not acquisition authority for every document"},
+      {"path": "research/d1/d1_tokenizer_contract.json", "role": "tokenizer-corpus governance and tokenizer acceptance; not model-pretraining approval"},
+      {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_source_registry.json", "role": "registered raw GovData sources and tranche-1 derived-corpus provenance"},
+      {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data007_corpus_manifest.json", "role": "tranche-1 derived-corpus identity and derivation"},
+      {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data009b_source_license_verification.json", "role": "tranche-2 German legal-source provenance and reuse finding"},
+      {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data009s_derived_corpus_construction.json", "role": "tranche-2 construction identity and document boundaries"},
+      {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/manifest.json", "role": "accepted tokenizer construction authority binding its training corpus to tranche 2"}
+    ],
+    "sources": [
+      {
+        "sourceName": "Technologie- und Gründerzentren",
+        "sourceType": "government-open-data/structured CSV",
+        "authorityIdentifier": "GovData dataset 178b200c-4e5b-46bf-a8be-3397728f351e",
+        "license": "DL-DE Zero 2.0",
+        "provenanceStatus": "ACQUIRED_RAW_VERIFIED_REGISTERED",
+        "previousAcquisitionStatus": "ACQUIRED-RAW-VERIFIED",
+        "approximateBytes": 4552,
+        "approximateDocuments": null,
+        "acceptedTokenizerCorpusContribution": false,
+        "futureModelPretrainingEligibility": "CONDITIONAL_AFTER_DOCUMENT_QUALITY_AND_AGGREGATE_POLICY_EXECUTION"
+      },
+      {
+        "sourceName": "Dormagen: Kunstsammlung (Inventargüter)",
+        "sourceType": "government-open-data/structured CSV",
+        "authorityIdentifier": "GovData dataset 2a494fa4-8c6e-45fd-b01d-56e1f7fea4a8",
+        "license": "DL-DE Zero 2.0",
+        "provenanceStatus": "ACQUIRED_RAW_VERIFIED_REGISTERED",
+        "previousAcquisitionStatus": "ACQUIRED-RAW-VERIFIED_AND_DERIVED",
+        "approximateBytes": 2015052,
+        "approximateDocuments": 10089,
+        "documentCountMeaning": "retained unique normalized strings in tranche 1",
+        "acceptedTokenizerCorpusContribution": false,
+        "futureModelPretrainingEligibility": "CONDITIONAL_AFTER_AGGREGATE_POLICY_EXECUTION"
+      },
+      {
+        "sourceName": "Erinnerungsorte der Stadt Gelsenkirchen",
+        "sourceType": "government-open-data/structured JSON",
+        "authorityIdentifier": "GovData dataset 5c75372b-d7e5-48ab-8071-e67cfaaea959",
+        "license": "DL-DE Zero 2.0",
+        "provenanceStatus": "ACQUIRED_RAW_VERIFIED_REGISTERED",
+        "previousAcquisitionStatus": "ACQUIRED-RAW-VERIFIED_AND_DERIVED",
+        "approximateBytes": 177965,
+        "approximateDocuments": 342,
+        "documentCountMeaning": "retained unique normalized strings in tranche 1",
+        "acceptedTokenizerCorpusContribution": false,
+        "futureModelPretrainingEligibility": "CONDITIONAL_AFTER_AGGREGATE_POLICY_EXECUTION"
+      },
+      {
+        "sourceName": "Musenkuss Kulturelle Bildung Köln",
+        "sourceType": "government-open-data/structured JSON",
+        "authorityIdentifier": "GovData dataset 1019f8f2-7b18-4214-83ca-340c34eea14d",
+        "license": "DL-DE Zero 2.0",
+        "provenanceStatus": "ACQUIRED_RAW_VERIFIED_REGISTERED",
+        "previousAcquisitionStatus": "ACQUIRED-RAW-VERIFIED_AND_DERIVED",
+        "approximateBytes": 310571,
+        "approximateDocuments": 639,
+        "documentCountMeaning": "retained unique normalized strings in tranche 1",
+        "acceptedTokenizerCorpusContribution": false,
+        "futureModelPretrainingEligibility": "CONDITIONAL_AFTER_AGGREGATE_POLICY_EXECUTION"
+      },
+      {
+        "sourceName": "Gesetze im Internet — German legal norms",
+        "sourceType": "government-public-information/official legal XML",
+        "urlOrAuthorityIdentifier": "https://www.gesetze-im-internet.de/; D1-T2-CAND-001",
+        "license": "Official-provider free-use/reuse finding for offered German-language legal norms; source qualifications retained",
+        "provenanceStatus": "VERIFIED_OFFICIAL_AND_DERIVED_VERIFIED",
+        "previousAcquisitionStatus": "ACQUIRED_AND_DERIVED",
+        "approximateBytes": 2280040,
+        "approximateDocuments": 126,
+        "acceptedTokenizerCorpusContribution": true,
+        "futureModelPretrainingEligibility": "CONDITIONAL_AFTER_DOMAIN_CAP_DEDUP_CONTAMINATION_SPLIT_AND_FULL_CORPUS_VALIDATION"
+      },
+      {
+        "sourceName": "Wikimedia text dumps",
+        "sourceType": "permissive-open-license candidate",
+        "urlOrAuthorityIdentifier": "d1-src-wikimedia",
+        "license": "CC BY-SA 4.0 / GFDL where applicable",
+        "provenanceStatus": "PLANNED_REVIEW_REQUIRED",
+        "previousAcquisitionStatus": "NOT_ACQUIRED_BY_INSPECTED_AUTHORITIES",
+        "approximateBytes": null,
+        "approximateDocuments": null,
+        "acceptedTokenizerCorpusContribution": false,
+        "futureModelPretrainingEligibility": "REVIEW_REQUIRED_BEFORE_ACQUISITION"
+      },
+      {
+        "sourceName": "Project Gutenberg candidate works",
+        "sourceType": "public-domain candidate",
+        "urlOrAuthorityIdentifier": "d1-src-gutenberg",
+        "license": "work-specific public-domain review plus Project Gutenberg terms",
+        "provenanceStatus": "PLANNED_REVIEW_REQUIRED",
+        "previousAcquisitionStatus": "NOT_ACQUIRED_BY_INSPECTED_AUTHORITIES",
+        "approximateBytes": null,
+        "approximateDocuments": null,
+        "acceptedTokenizerCorpusContribution": false,
+        "futureModelPretrainingEligibility": "WORK_LEVEL_REVIEW_REQUIRED_BEFORE_ACQUISITION"
+      },
+      {
+        "sourceName": "Denarixx-owned original corpus",
+        "sourceType": "owned/explicitly assigned rights candidate",
+        "urlOrAuthorityIdentifier": "d1-src-denarixx-owned",
+        "license": "Denarixx-owned or explicitly assigned rights",
+        "provenanceStatus": "PLANNED_RIGHTS_VERIFICATION_REQUIRED",
+        "previousAcquisitionStatus": "NO_REGISTERED_ACQUISITION_FOUND",
+        "approximateBytes": null,
+        "approximateDocuments": null,
+        "acceptedTokenizerCorpusContribution": false,
+        "futureModelPretrainingEligibility": "ELIGIBLE_AFTER_OWNERSHIP_PRIVACY_AND_SECRET_VERIFICATION"
+      }
+    ]
+  },
+  "sourceEligibilityTaxonomy": [
+    {"class": "PUBLIC-DOMAIN", "eligibility": "preferred when work and jurisdiction status are verified", "requiredProof": ["work identity", "public-domain basis", "jurisdiction/date analysis", "source provenance"], "redistributionPermitted": "only when verified", "modelTrainingPermitted": "only when verified compatible", "attributionRequirements": "preserve source attribution even when not legally required", "retentionRequirements": ["rights evidence", "source snapshot identity", "work-level decision"], "failClosedCondition": "unknown work status, jurisdiction conflict or source terms unresolved"},
+    {"class": "PERMISSIVE-LICENSE", "eligibility": "eligible after exact license and intended-use review", "requiredProof": ["license text/identifier", "provider authority", "version", "training and commercial-use compatibility"], "redistributionPermitted": "as exact license permits", "modelTrainingPermitted": "only after intended-use compatibility is recorded", "attributionRequirements": "fulfill attribution, notice and modification-marking terms", "retentionRequirements": ["license evidence", "notices", "source URI", "modification ledger"], "failClosedCondition": "license ambiguity, incompatible restriction or unmet attribution/share-alike handling"},
+    {"class": "GOVERNMENT-OPEN-DATA", "eligibility": "eligible resource by resource", "requiredProof": ["official provider", "dataset/document identifier", "reuse license or terms", "third-party-content screening"], "redistributionPermitted": "only under recorded resource-specific terms", "modelTrainingPermitted": "only after compatibility and third-party exclusions", "attributionRequirements": "as license requires; provider and resource ID always retained", "retentionRequirements": ["retrieval/version identity", "license evidence", "provider attribution", "special conditions"], "failClosedCondition": "catalog-level license assumed for resource, third-party rights unresolved or special conditions incompatible"},
+    {"class": "OPEN-EDUCATIONAL", "eligibility": "candidate after course/resource-level rights review", "requiredProof": ["publisher/author authority", "exact open license", "embedded media separation", "student/privacy screening"], "redistributionPermitted": "as exact license permits", "modelTrainingPermitted": "only if exact license and intended use permit", "attributionRequirements": "author/title/license/source and modification notices", "retentionRequirements": ["resource version", "rights evidence", "embedded-content exclusions"], "failClosedCondition": "no exact license, NC/ND incompatibility, private student content or embedded third-party rights unresolved"},
+    {"class": "OPEN-SCIENTIFIC", "eligibility": "candidate at article/dataset level", "requiredProof": ["article/dataset license", "publisher/repository identity", "retraction/version status", "supplement rights"], "redistributionPermitted": "as exact license permits", "modelTrainingPermitted": "only after exact intended-use review", "attributionRequirements": "citation and license notices retained", "retentionRequirements": ["DOI/repository ID", "version", "license evidence", "retraction status"], "failClosedCondition": "abstract/index access mistaken for full-text rights, license absent, retracted material unlabelled or sensitive data present"},
+    {"class": "OPEN-SOFTWARE-DOCUMENTATION", "eligibility": "candidate repository/file by repository/file", "requiredProof": ["repository and revision identity", "documentation/code licenses", "generated/vendor separation", "secret scan"], "redistributionPermitted": "as applicable documentation/code licenses permit", "modelTrainingPermitted": "only after license compatibility is recorded", "attributionRequirements": "preserve copyright/license notices and repository identity", "retentionRequirements": ["commit/release identity", "license mapping", "file paths", "notices"], "failClosedCondition": "missing or conflicting licenses, secrets, vendored unknown-rights content or unclear generated artifacts"},
+    {"class": "LICENSE-UNCERTAIN", "eligibility": "ineligible pending documented legal/provenance resolution", "requiredProof": ["affirmative rights resolution"], "redistributionPermitted": false, "modelTrainingPermitted": false, "attributionRequirements": "not applicable while quarantined", "retentionRequirements": ["candidate metadata only; do not retain payload unless separately authorized"], "failClosedCondition": "uncertainty remains"},
+    {"class": "PROHIBITED", "eligibility": "never eligible", "requiredProof": [], "redistributionPermitted": false, "modelTrainingPermitted": false, "attributionRequirements": "not applicable", "retentionRequirements": ["reason-coded rejection record without retaining prohibited payload where unsafe or unlawful"], "examples": ["pirated or paywalled dumps", "private/confidential material", "credentials or secrets", "personal dossiers", "malware payload collections intended for harmful execution", "benchmark answers inserted for score inflation", "unreviewed generated spam"], "failClosedCondition": "any prohibited characteristic detected"}
+  ],
+  "sourceLicensingAndProvenanceRules": {
+    "publicAccessibilityAloneIsSufficient": false,
+    "requiredFields": ["sourceId", "sourceName", "sourceClass", "sourceURLOrOrigin", "retrievedAt", "licenseName", "licenseURLOrEvidence", "rightsStatus", "intendedUseCompatibility", "language", "contentDomain", "acquisitionMethod", "rawArtifactPath", "rawArtifactSHA256", "rawBytes", "documentCount", "processingStatus", "attributionAndNoticeRequirements", "retentionPolicy", "notes"],
+    "rawAndProcessedMustRemainDistinct": true,
+    "documentLevelExceptionsMustBeRepresentable": true,
+    "unknownRightsFailClosed": true
+  },
+  "proposedDevelopmentComposition": {
+    "measurementBasis": "accepted unique tokenizer tokens after all exclusions; categories are mutually exclusive primary-domain assignments",
+    "selectionConstraint": "Every frozen mixture point must total exactly 100%; the planning point below totals 100% and each value lies within its range.",
+    "categories": [
+      {"category": "general_prose", "percentageRange": [22, 28], "planningPointPercent": 25},
+      {"category": "educational_reference", "percentageRange": [17, 23], "planningPointPercent": 20},
+      {"category": "technical_computing", "percentageRange": [12, 18], "planningPointPercent": 15},
+      {"category": "science", "percentageRange": [10, 15], "planningPointPercent": 12},
+      {"category": "government_public_information", "percentageRange": [8, 12], "planningPointPercent": 10},
+      {"category": "multilingual_cross_lingual_material", "percentageRange": [4, 8], "planningPointPercent": 6},
+      {"category": "code_and_software_documentation", "percentageRange": [6, 12], "planningPointPercent": 8},
+      {"category": "structured_factual_text", "percentageRange": [3, 7], "planningPointPercent": 4}
+    ],
+    "planningPointTotalPercent": 100,
+    "benchmarkOptimizationPermitted": false,
+    "achievedClaim": false
+  },
+  "languagePolicy": {
+    "measurementBasis": "accepted natural-language tokens; code is reported separately and excluded from natural-language share denominator",
+    "primaryLanguages": ["English", "German"],
+    "secondaryLanguages": ["French", "Spanish", "Dutch"],
+    "permittedAdditionalLanguages": "Other valid UTF-8 languages only from eligible, quality-controlled sources and within the additional-language cap.",
+    "targetRangesPercent": {"English": [55, 65], "German": [30, 40], "secondaryAndAdditionalCombined": [3, 8]},
+    "planningPointPercent": {"English": 60, "German": 35, "secondaryAndAdditionalCombined": 5},
+    "planningPointTotalPercent": 100,
+    "unknownLanguageHandling": "Quarantine; accept only after deterministic adjudication or label as unknown in measurement. Unknown tokens may not count toward language targets.",
+    "mixedLanguageHandling": "Record span-level shares where feasible, primary language, and mixed flag; count tokens proportionally rather than assigning the whole document to one language.",
+    "codeNaturalLanguageDistinction": "Detect code blocks/files separately; comments and prose are language-labelled, executable syntax counts toward the code category.",
+    "balanceAchievedClaim": false
+  },
+  "documentQualityPolicy": {
+    "defaultBehavior": "FAIL_CLOSED_TO_QUARANTINE_OR_REASON_CODED_REJECTION",
+    "acceptRequirements": ["provenance complete", "rights compatible", "valid supported text decoding", "nonempty substantive content", "document boundary stable", "quality signals within frozen thresholds", "privacy/secret screening passed"],
+    "rules": [
+      {"condition": "empty or whitespace-only", "action": "REJECT"},
+      {"condition": "near-empty or low substantive token count", "action": "QUARANTINE_THEN_REJECT_UNLESS_SOURCE_SPECIFIC_RULE_APPROVES"},
+      {"condition": "malformed or unsupported encoding", "action": "REJECT; no silent replacement decoding"},
+      {"condition": "binary contamination or binary masquerading as text", "action": "REJECT"},
+      {"condition": "excessive boilerplate, navigation-only page, repeated headers/footers or duplicated paragraphs", "action": "QUARANTINE; apply only frozen source-specific removal with before/after evidence, otherwise reject"},
+      {"condition": "machine-generated spam or templated SEO content", "action": "REJECT"},
+      {"condition": "OCR corruption beyond frozen legibility thresholds", "action": "REJECT; no unrecorded repair"},
+      {"condition": "extremely long repeated-character runs or excessive symbol density", "action": "REJECT_OR_QUARANTINE under frozen measurable thresholds"},
+      {"condition": "truncated document", "action": "REJECT unless source truth confirms the fragment is a complete intended record"},
+      {"condition": "low-information list", "action": "REJECT unless classified as useful structured factual text and diversity caps pass"},
+      {"condition": "inappropriate personally sensitive material", "action": "REJECT_AND_MINIMIZE_RETENTION"},
+      {"condition": "secret, token, password, private key or credential leakage", "action": "REJECT_AND_SECURITY_ESCALATE_WITHOUT_PERSISTING_SECRET_IN_EVIDENCE"},
+      {"condition": "source-specific legal restriction or third-party-rights conflict", "action": "REJECT"}
+    ],
+    "thresholdGovernance": "Numeric classifier thresholds and source-specific transformations must be frozen and versioned before execution; failures and overrides require reason codes and cannot be silent."
+  },
+  "deduplicationPolicy": {
+    "executionAuthorized": false,
+    "layers": [
+      {"layer": "exact_document", "concept": "SHA-256 of canonical document bytes; retain one under a frozen provenance/quality precedence rule"},
+      {"layer": "normalized_document", "concept": "SHA-256 after frozen Unicode and whitespace normalization that preserves a reversible link to raw identity"},
+      {"layer": "near_duplicate", "concept": "token or character n-gram MinHash/LSH candidate generation followed by exact similarity adjudication under frozen thresholds"},
+      {"layer": "paragraph_duplicate", "concept": "normalized paragraph fingerprints and frequency/cross-document coverage analysis; remove boilerplate only under recorded rules"},
+      {"layer": "cross_source", "concept": "run all fingerprints across the complete composite manifest, retaining every contributing provenance link"},
+      {"layer": "split_leakage", "concept": "group all exact/near-duplicate families before deterministic partition assignment and verify zero family overlap"}
+    ],
+    "retentionPrecedence": ["clearest compatible rights", "most authoritative provenance", "highest-quality/most complete version", "stable deterministic identity tie-break"],
+    "duplicatePaddingPermitted": false,
+    "D1-DATA-BLOCKER-002": "POLICY_DEFINED_NOT_EXECUTED"
+  },
+  "contaminationPreventionPolicy": {
+    "formalEvaluationExamplesMayBeOpenedDuringCorpusCreation": false,
+    "protectedSideOperation": "An independently authorized evaluator holds protected identities/fingerprints and returns only non-exposing match IDs, aggregate counts and pass/fail outcomes.",
+    "controls": ["hash/identity exclusion where exact protected identities exist", "non-reversible fingerprint comparison in protected environment", "benchmark source and version registry", "exclude answer keys and benchmark-specific solution corpora", "quarantine candidate match families", "bind corpus and protected-registry versions", "record adjudication without exposing protected content"],
+    "developmentEvaluationIsolation": "Development data is selected before training, isolated by document/duplicate family, and never promoted into training after results are observed.",
+    "externalBenchmarkPolicy": "Track known benchmark names, source versions and contamination status without acquiring protected examples; execute comparison only under later authority.",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED"
+  },
+  "trainDevelopmentSplitPolicy": {
+    "splitUnit": "document duplicate-family/group, never token fragments or individual members of a duplicate family",
+    "deterministicAssignment": "Hash frozen split-seed identity plus stable group ID, then map to a partition under versioned logic.",
+    "approximateTrainPercent": 98,
+    "approximateDevelopmentPercent": 2,
+    "sourceFamilyStratificationRequired": true,
+    "stratificationDimensions": ["source family", "primary domain", "language", "document-size band"],
+    "duplicateIsolationRequired": true,
+    "frozenSeedIdentityRequirement": "Seed value and hash must be frozen before assignment; this design does not choose the seed.",
+    "postHocMovementAfterEvaluationPermitted": false,
+    "zeroOverlapVerificationRequired": true,
+    "formalEvaluationDataPermitted": false,
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED"
+  },
+  "tokenizerCompatibilityPolicy": {
+    "tokenizerMustRemainUnchanged": true,
+    "requiredChecks": ["deterministic repeated encode", "no crash on every accepted document", "decode round-trip to tokenizer-defined normalized input where applicable", "special-token IDs and count unchanged", "no corpus text interpreted as control tokens", "per-document and aggregate token count", "bytes per token", "Unicode characters per token", "zero-token document detection", "document-boundary encoding and isolation", "malformed UTF-8 rejection before encode"],
+    "pathologicalExpansion": {"metrics": ["tokens per UTF-8 byte", "tokens per Unicode character", "ratio to language/domain median"], "proposedMaximumRules": ["quarantine any document exceeding 1.0 token per UTF-8 byte", "quarantine any document exceeding four times its language/domain median on both tokens-per-byte and tokens-per-character"], "finalThresholdsMustBeFrozenBeforeExecution": true},
+    "roundTripExceptionPolicy": "Any expected non-identity must be explained by the accepted tokenizer's immutable behavior and versioned; silent lossy normalization is prohibited.",
+    "D1-DATA-BLOCKER-006": "POLICY_DEFINED_NOT_VALIDATED"
+  },
+  "malformedEmptyValidationPolicy": {
+    "scope": "every file and every candidate document before acceptance, then reconcile after all filters",
+    "requiredMetrics": ["totalFiles", "totalDocuments", "emptyCount", "rejectedCount", "malformedCount", "zeroTokenCount", "duplicateCount", "acceptedCount", "bytesAccepted", "bytesRejected", "reasonCodedRejectionDistribution"],
+    "reconciliationRules": ["accepted plus rejected plus quarantined equals total candidate documents", "accepted and rejected byte totals reconcile to decoded candidate bytes with documented container overhead", "each rejected document has one primary and optional secondary reason codes", "no decode, empty, malformed or zero-token failure is silently dropped"],
+    "D1-DATA-BLOCKER-007": "POLICY_DEFINED_NOT_VALIDATED"
+  },
+  "domainMeasurementPolicy": {
+    "method": "Frozen document-level primary domain and optional secondary labels, token-weighted aggregate reporting, unknown/ambiguous categories retained.",
+    "requiredOutputs": ["per-document labels", "classifier or adjudication identity", "unknown counts", "document/byte/token distributions", "exact reconciliation to sealed manifest"],
+    "D1-DATA-BLOCKER-004": "POLICY_DEFINED_NOT_MEASURED"
+  },
+  "blockerMapping": {
+    "D1-DATA-BLOCKER-001": "PLANNED_NOT_SATISFIED",
+    "D1-DATA-BLOCKER-002": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "POLICY_DEFINED_NOT_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "POLICY_DEFINED_NOT_VALIDATED",
+    "D1-DATA-BLOCKER-007": "POLICY_DEFINED_NOT_VALIDATED"
+  },
+  "claimsBoundary": {
+    "policyCompletenessClaimAllowed": true,
+    "corpusConstructedClaimAllowed": false,
+    "compositionAchievedClaimAllowed": false,
+    "qualityOrDedupPassedClaimAllowed": false,
+    "contaminationPassedClaimAllowed": false,
+    "tokenizerCompatibilityPassedClaimAllowed": false,
+    "trainingReadinessClaimAllowed": false
+  },
+  "authorizationBoundary": {
+    "D1_DATA_SOURCE_DESIGN": "PASS",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD",
+    "networkAcquisitionAuthorized": false,
+    "datasetDownloadAuthorized": false,
+    "corpusCreationAuthorized": false,
+    "corpusModificationAuthorized": false,
+    "tokenizerExecutionAuthorized": false,
+    "tokenizerModificationAuthorized": false,
+    "modelExecutionAuthorized": false,
+    "trainingAuthorized": false,
+    "formalEvaluationAccessAuthorized": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-READINESS-CLOSURE-001-EVIDENCE",
+  "createdAt": "2026-08-19T08:00:36Z",
+  "closure": {
+    "id": "D1-READINESS-CLOSURE-001",
+    "path": "research/d1/d1_readiness_closure.json",
+    "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"
+  },
+  "verifiedAuthorities": {
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "gate001": {
+      "path": "local-evidence/d1-model-gate001-replacement-acceptance/d1_gate001_replacement_tokenizer_acceptance.json",
+      "sha256": "addcf47b90be4de18e0e2c7038249d965f1fb312aa1b21990badc7b8ed841be4"
+    },
+    "gate002": {
+      "path": "local-evidence/d1-model-gate002/d1_gate002_implementation_freeze.json",
+      "sha256": "b4580b80198b6b56909785f614b0ba9a9346b4bfa90b2805fb96171225d6052e"
+    },
+    "gate003": {
+      "path": "local-evidence/d1-model-gate003/d1_gate003_mps_2048_readiness.json",
+      "sha256": "f4910b7b79b93073bbbfbab3c97af766555bcde04166f9264cd198bb936c901d"
+    },
+    "gate004": {
+      "path": "local-evidence/d1-model-gate004/d1_gate004_storage_readiness.json",
+      "sha256": "f2ae79c2f3f7ff4d3f430742ec664b6078620340d6ef8f836fc8bdc4780e942e"
+    },
+    "gate005": {
+      "path": "local-evidence/d1-model-gate005/d1_gate005_corpus_readiness.json",
+      "sha256": "585ba25c673de5b73d9e4f518eb986476b57a8709707bb1429cbc9565363b06d"
+    },
+    "evaluationContract": {
+      "path": "research/d1/d1_evaluation_contract.json",
+      "sha256": "bea385450991397979553b04b4975b535456e84aeb3d226f06f3976771db38fe"
+    },
+    "gate006": {
+      "path": "local-evidence/d1-model-gate006/d1_gate006_evaluation_contract_readiness.json",
+      "sha256": "7ec3317ac7da0e1c65df862fd2c6011d1cffeb4cb1fd5406e35bb21a3f13cd78"
+    }
+  },
+  "adjudication": {
+    "allSixGateAuthoritiesVerified": true,
+    "D1_ARCHITECTURE_READINESS_GATES_COMPLETE": "PASS",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD",
+    "seriousPretrainingScaleAssessment": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING",
+    "unresolvedBlockerCount": 7
+  },
+  "boundaryConfirmation": {
+    "trainingExecuted": false,
+    "modelExecuted": false,
+    "optimizerCreated": false,
+    "hyperparametersSelected": false,
+    "checkpointCreated": false,
+    "corpusModified": false,
+    "tokenizerModified": false,
+    "formalEvaluationDataAccessed": false,
+    "predecessorEvidenceModified": false,
+    "gitStateModified": false,
+    "seriousPretrainingAuthorized": false
+  }
+}

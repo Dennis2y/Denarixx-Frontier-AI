@@ -1,0 +1,15 @@
+{"family":"echo","instruction":"echo amber","response":"amber"}
+{"family":"echo","instruction":"echo field","response":"field"}
+{"family":"echo","instruction":"echo sound","response":"sound"}
+{"family":"boolean","instruction":"is coal white","response":"false"}
+{"family":"boolean","instruction":"is milk white","response":"true"}
+{"family":"boolean","instruction":"is flame hot","response":"true"}
+{"family":"suffix_s","instruction":"add s to desk","response":"desks"}
+{"family":"suffix_s","instruction":"add s to lamp","response":"lamps"}
+{"family":"suffix_s","instruction":"add s to door","response":"doors"}
+{"family":"opposite","instruction":"opposite high","response":"low"}
+{"family":"opposite","instruction":"opposite young","response":"old"}
+{"family":"opposite","instruction":"opposite empty","response":"full"}
+{"family":"semantic","instruction":"people can read","response":"true"}
+{"family":"semantic","instruction":"tables can speak","response":"false"}
+{"family":"semantic","instruction":"rain can fall","response":"true"}

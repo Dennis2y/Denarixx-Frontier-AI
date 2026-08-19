@@ -1,0 +1,27 @@
+{
+  "stage": "D0-POST-006",
+  "status": "frozen",
+  "datasetCreated": false,
+  "datasetConstructionAuthorized": false,
+  "modelScoringAuthorized": false,
+  "trainingAuthorized": false,
+  "formalEvaluationAuthorized": false,
+  "historicalFormalDatasetEligible": false,
+  "familyCount": 5,
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "examplesPerFamily": 5,
+  "totalExamples": 25,
+  "constructionSeed": 6006,
+  "ordering": "interleaved-five-rounds",
+  "modelBlindConstruction": true,
+  "freshDatasetRequired": true,
+  "historicalFormalDerivationAllowed": false,
+  "formalExposureStartsAtModelScoring": true,
+  "nextOperation": "synthetic-formal-dataset-pipeline-rehearsal"
+}

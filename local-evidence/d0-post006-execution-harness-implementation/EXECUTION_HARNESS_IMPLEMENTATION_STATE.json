@@ -1,0 +1,19 @@
+{
+  "stage": "D0-POST-006",
+  "status": "implemented-not-authorized",
+  "harness": "ml/evaluation/d0_post006_execution_harness.py",
+  "realExecutionEnabled": false,
+  "realFormalDatasetParsed": false,
+  "historicalFormalDatasetOpened": false,
+  "realCheckpointLoaded": false,
+  "realModelScoringExecuted": false,
+  "realFormalExposureStarted": false,
+  "directExecutionFailsClosed": true,
+  "syntheticLifecycleImplemented": true,
+  "syntheticLifecycleExecutedByThisStep": false,
+  "trainingAuthorized": false,
+  "modelScoringAuthorized": false,
+  "formalExecutionAuthorized": false,
+  "formalExposureMarkerAuthorized": false,
+  "nextOperation": "synthetic-end-to-end-harness-rehearsal"
+}

@@ -1,0 +1,19 @@
+{
+  "activationPackageDisarmed": true,
+  "activationPackageVerified": true,
+  "authorizationBoundaryPrepared": true,
+  "formalAuthorizationCreated": false,
+  "formalDatasetParsed": false,
+  "formalExecutionAuthorized": false,
+  "formalResultDirectoryExists": false,
+  "nextBoundary": "separate-one-time-formal-execution-authorization",
+  "post007FormalExposure": false,
+  "readinessFrozen": true,
+  "realCheckpointLoaded": false,
+  "realFormalComparisonExecuted": false,
+  "realFormalExecutionEnabled": false,
+  "realModelScoringExecuted": false,
+  "stage": "D0-POST-007",
+  "status": "go-ready",
+  "syntheticRehearsalPassed": true
+}

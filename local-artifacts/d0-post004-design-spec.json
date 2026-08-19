@@ -1,0 +1,109 @@
+{
+  "architecturePolicy": {
+    "changeArchitecture": false,
+    "changeContextLength": false,
+    "changeInstructionFormat": false,
+    "changeTokenizer": false,
+    "changeVocabulary": false,
+    "reason": "POST-004 is intended to test whether additional controlled optimization can unlock generation before introducing architectural confounders."
+  },
+  "baseCheckpoint": "local-checkpoints/d0-post003-capability-seed42.pt",
+  "baseCheckpointSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "dataPolicy": {
+    "developmentStrategy": "Use a separate POST-004 development split for candidate selection. Formal POST-003 data must remain unseen by the optimization and candidate-selection process.",
+    "formalDatasetRemainsSealed": true,
+    "post003FormalDatasetUsedForDevelopment": false,
+    "post003FormalDatasetUsedForTraining": false,
+    "trainingStrategy": "Use a POST-004 training dataset derived independently from the sealed formal examples, balanced across the same capability families and response-character patterns."
+  },
+  "decodingPolicy": {
+    "beamSearch": false,
+    "forcedLength": false,
+    "formalDecoder": "greedy",
+    "reason": "POST-004 must improve the model rather than conceal generation weakness with decoding heuristics.",
+    "responseConstraint": false,
+    "temperature": null
+  },
+  "developmentSelection": {
+    "minimumCondition": "Selected candidate must demonstrate non-zero exact generation on development examples.",
+    "primaryMetric": "exactMatchCount",
+    "secondaryMetric": "aggregateResponseLoss",
+    "tertiaryMetric": "familyCoverage",
+    "tieBreak": "Prefer more families with exact matches, then lower aggregate response loss, then earlier training step."
+  },
+  "diagnosis": {
+    "aggregateResponseLoss": 2.9665195067151844,
+    "aggregateResponsePerplexity": 19.424196024852314,
+    "formalExamples": 25,
+    "observations": [
+      "Correct response characters are sometimes near the top of the distribution but frequently do not win greedy decoding.",
+      "Failure is not restricted to the first response token; teacher-forced probes reveal weak internal response transitions.",
+      "Some later response transitions are already correctly ranked first, demonstrating partial sequence learning.",
+      "The model remains highly uncertain across the 42-character vocabulary.",
+      "The newline response terminator is represented during supervised training and generation."
+    ],
+    "post003ExactMatches": 0,
+    "representativeRanks": {
+      "echo_calm_first_c": 3,
+      "echo_data_first_d": 10,
+      "false_first_f": 14,
+      "hot_first_h": 33,
+      "hot_third_t_given_ho": 35,
+      "runs_first_r": 11,
+      "true_first_t": 1,
+      "true_second_r_given_t": 2,
+      "true_third_u_given_tr": 10
+    },
+    "universalGreedyOutput": "te"
+  },
+  "executionState": {
+    "formalEvaluationAuthorized": false,
+    "trainingAuthorized": false
+  },
+  "formalEvaluationPolicy": {
+    "aggregateLossRegressionTolerancePercent": 2.0,
+    "baseline": "accepted POST-003 checkpoint",
+    "familyLossRegressionTolerancePercent": 5.0,
+    "maximumCandidatesEvaluated": 1,
+    "requiredForPass": [
+      "POST-004 candidate exact-match count must be strictly greater than POST-003 baseline exact matches.",
+      "POST-004 candidate must achieve at least one formal exact match.",
+      "No capability family may exceed the predefined loss-regression tolerance.",
+      "Aggregate response loss must remain within the predefined retention tolerance relative to the accepted POST-003 checkpoint."
+    ]
+  },
+  "plannedOptimization": {
+    "candidateSteps": [
+      40,
+      80,
+      120
+    ],
+    "gradientClipNorm": 1.0,
+    "learningRate": 0.0001,
+    "lmGeneratorSeed": 43,
+    "objective": "L_response + 0.25 * L_lm",
+    "optimizer": "AdamW",
+    "optimizerStateResumed": false,
+    "retentionWeight": 0.25,
+    "seed": 42,
+    "selectionPolicy": "Train one deterministic trajectory from the accepted POST-003 checkpoint and snapshot at predeclared steps 40, 80, and 120. Development evaluation may select exactly one candidate for a single formal evaluation.",
+    "sftGeneratorSeed": 42,
+    "weightDecay": 0.01
+  },
+  "primaryGoal": "Convert POST-003 partial response-token learning into measurable autoregressive generation capability while preserving the accepted POST-003 formal-loss gain.",
+  "protectedFormalDataset": "ml/data/d0_post003_formal.jsonl",
+  "protectedFormalDatasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "rollbackPolicy": {
+    "acceptedCheckpointNeverOverwritten": true,
+    "onFailure": "Retain POST-003 as accepted checkpoint and design POST-005 only after analyzing POST-004 diagnostics.",
+    "rejectCandidateIf": [
+      "formal exact matches remain zero",
+      "aggregate response loss regresses by more than 2 percent",
+      "any family response loss regresses by more than 5 percent",
+      "checkpoint identity or architecture changes"
+    ]
+  },
+  "stage": "D0-POST-004",
+  "status": "DESIGN_FROZEN_NOT_EXECUTED",
+  "trainingHypothesis": "POST-003's 20-step mixed-objective run produced measurable loss improvement and partial response-transition learning, but provided insufficient optimization exposure for stable autoregressive sequence generation."
+}

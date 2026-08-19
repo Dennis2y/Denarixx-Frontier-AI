@@ -1,0 +1,20 @@
+{
+  "datasetParsingDuringSealing": false,
+  "enabledSingleUseSealerSha256": "2a2b0b755b15be2a1cb725fa088db1738a4984fd8195653b6dc1c1cbd5450c14",
+  "evidenceType": "formal-dataset-exact-byte-seal",
+  "exactByteIdentityVerified": true,
+  "formalDataset": "ml/data/d0_post007_formal.jsonl",
+  "formalDatasetSha256": "f0f5c88524c4f0b78f4ebbd23548006103aa3e4116cc4a3df34493712b07fb0c",
+  "formalExecutionAuthorizedBySeal": false,
+  "formalExposureStarted": false,
+  "frozenDisabledSealerSha256": "f86fd71cde9ed398fa7f738e805e0a26db1bda32b64f69a7baec20a803713731",
+  "modelInferenceDuringSealing": false,
+  "modelLoadingDuringSealing": false,
+  "modelScoringDuringSealing": false,
+  "sealingAuthorizationSha256": "db827dae86763f11ec77ef3bb21527af1661a1fa2bed9e9fae72ae20d55b886b",
+  "sealingCountExecuted": 1,
+  "stage": "D0-POST-007",
+  "status": "sealed",
+  "validatedProposedDataset": "local-work/d0-post007-proposed-dataset/PROPOSED_ROWS.jsonl",
+  "validatedProposedDatasetSha256": "f0f5c88524c4f0b78f4ebbd23548006103aa3e4116cc4a3df34493712b07fb0c"
+}

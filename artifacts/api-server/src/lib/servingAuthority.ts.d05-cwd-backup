@@ -1,0 +1,176 @@
+import { createHash } from "node:crypto";
+import { createReadStream } from "node:fs";
+import { readFile, stat } from "node:fs/promises";
+import path from "node:path";
+
+const DEFAULT_ACCEPTANCE_PATH =
+  "local-evidence/d0-post003-acceptance/ACCEPTANCE.json";
+
+const ALLOWED_CHECKPOINT_ROOT = "local-checkpoints";
+
+interface AcceptanceMetadata {
+  acceptedCheckpoint: string;
+  acceptedCheckpointSha256: string;
+  status: string;
+  decision: string;
+}
+
+export interface ServingAuthority {
+  checkpointPath: string;
+  checkpointAbsolutePath: string;
+  checkpointSha256: string;
+  acceptancePath: string;
+}
+
+function isAcceptanceMetadata(value: unknown): value is AcceptanceMetadata {
+  if (typeof value !== "object" || value === null) {
+    return false;
+  }
+
+  const record = value as Record<string, unknown>;
+
+  return (
+    typeof record.acceptedCheckpoint === "string" &&
+    record.acceptedCheckpoint.length > 0 &&
+    typeof record.acceptedCheckpointSha256 === "string" &&
+    /^[a-f0-9]{64}$/.test(record.acceptedCheckpointSha256) &&
+    typeof record.status === "string" &&
+    typeof record.decision === "string"
+  );
+}
+
+async function sha256File(filePath: string): Promise<string> {
+  return await new Promise<string>((resolve, reject) => {
+    const hash = createHash("sha256");
+    const stream = createReadStream(filePath);
+
+    stream.on("error", reject);
+    stream.on("data", (chunk) => {
+      hash.update(chunk);
+    });
+    stream.on("end", () => {
+      resolve(hash.digest("hex"));
+    });
+  });
+}
+
+function resolveCheckpointPath(
+  repositoryRoot: string,
+  checkpointPath: string,
+): string {
+  if (path.isAbsolute(checkpointPath)) {
+    throw new Error(
+      "Serving authority rejected: checkpoint path must be repository-relative.",
+    );
+  }
+
+  const allowedRoot = path.resolve(repositoryRoot, ALLOWED_CHECKPOINT_ROOT);
+  const resolvedCheckpoint = path.resolve(repositoryRoot, checkpointPath);
+  const relativeToAllowedRoot = path.relative(
+    allowedRoot,
+    resolvedCheckpoint,
+  );
+
+  if (
+    relativeToAllowedRoot === "" ||
+    relativeToAllowedRoot.startsWith(`..${path.sep}`) ||
+    relativeToAllowedRoot === ".." ||
+    path.isAbsolute(relativeToAllowedRoot)
+  ) {
+    throw new Error(
+      "Serving authority rejected: checkpoint is outside local-checkpoints.",
+    );
+  }
+
+  return resolvedCheckpoint;
+}
+
+export async function resolveServingAuthority(
+  repositoryRoot = process.cwd(),
+  acceptanceRelativePath = DEFAULT_ACCEPTANCE_PATH,
+): Promise<ServingAuthority> {
+  if (path.isAbsolute(acceptanceRelativePath)) {
+    throw new Error(
+      "Serving authority rejected: acceptance path must be repository-relative.",
+    );
+  }
+
+  const acceptanceAbsolutePath = path.resolve(
+    repositoryRoot,
+    acceptanceRelativePath,
+  );
+
+  let rawAcceptance: string;
+
+  try {
+    rawAcceptance = await readFile(acceptanceAbsolutePath, "utf8");
+  } catch {
+    throw new Error(
+      `Serving authority unavailable: cannot read ${acceptanceRelativePath}.`,
+    );
+  }
+
+  let parsed: unknown;
+
+  try {
+    parsed = JSON.parse(rawAcceptance);
+  } catch {
+    throw new Error(
+      `Serving authority rejected: ${acceptanceRelativePath} is not valid JSON.`,
+    );
+  }
+
+  if (!isAcceptanceMetadata(parsed)) {
+    throw new Error(
+      "Serving authority rejected: acceptance metadata is malformed.",
+    );
+  }
+
+  if (parsed.status !== "ACCEPTED") {
+    throw new Error(
+      `Serving authority rejected: acceptance status is ${parsed.status}.`,
+    );
+  }
+
+  if (parsed.decision !== "FORMAL_PASS") {
+    throw new Error(
+      `Serving authority rejected: acceptance decision is ${parsed.decision}.`,
+    );
+  }
+
+  const checkpointAbsolutePath = resolveCheckpointPath(
+    repositoryRoot,
+    parsed.acceptedCheckpoint,
+  );
+
+  let checkpointStat;
+
+  try {
+    checkpointStat = await stat(checkpointAbsolutePath);
+  } catch {
+    throw new Error(
+      `Serving authority unavailable: checkpoint ${parsed.acceptedCheckpoint} does not exist.`,
+    );
+  }
+
+  if (!checkpointStat.isFile()) {
+    throw new Error(
+      `Serving authority rejected: checkpoint ${parsed.acceptedCheckpoint} is not a regular file.`,
+    );
+  }
+
+  const actualSha256 = await sha256File(checkpointAbsolutePath);
+
+  if (actualSha256 !== parsed.acceptedCheckpointSha256) {
+    throw new Error(
+      "Serving authority rejected: checkpoint SHA-256 does not match acceptance metadata.",
+    );
+  }
+
+  return {
+    checkpointPath: parsed.acceptedCheckpoint,
+    checkpointAbsolutePath,
+    checkpointSha256: actualSha256,
+    acceptancePath: acceptanceRelativePath,
+  };
+}

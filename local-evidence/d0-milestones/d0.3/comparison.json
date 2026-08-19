@@ -1,0 +1,67 @@
+{
+  "milestone": "D0.3",
+  "status": "complete",
+  "objective": "Train a custom tokenizer.",
+  "tokenizer": {
+    "name": "denarixx-d0-bpe",
+    "type": "BPE",
+    "trainedBy": "Denarixx",
+    "pretrainedVocabularyUsed": false,
+    "requestedVocabSize": 64,
+    "actualVocabSize": 64,
+    "specialTokens": [
+      "<pad>",
+      "<unk>",
+      "<bos>",
+      "<eos>"
+    ]
+  },
+  "dataset": {
+    "path": "ml/data/d0_research_corpus.txt",
+    "sha256": "936b53855c5fa65cc408fb0b29108966445215a474ccfcce7ae7fe9f41fcc072",
+    "characters": 66416,
+    "utf8Bytes": 66416,
+    "lines": 867
+  },
+  "customTokenizerMetrics": {
+    "characters": 66416,
+    "words": 8957,
+    "tokens": 52236,
+    "tokensPerCharacter": 0.786497229583233,
+    "tokensPerWord": 5.831863347102825,
+    "charactersPerToken": 1.2714602955815912
+  },
+  "characterBaselineMetrics": {
+    "characters": 66416,
+    "words": 8957,
+    "tokens": 66416,
+    "tokensPerCharacter": 1.0,
+    "tokensPerWord": 7.414982695098805,
+    "charactersPerToken": 1.0
+  },
+  "comparison": {
+    "baselineTokenCount": 66416,
+    "customTokenCount": 52236,
+    "tokenCountReduction": 14180,
+    "tokenCountReductionFraction": 0.21350277041676705
+  },
+  "roundTripVerified": true,
+  "compatibility": {
+    "integratedIntoD0Model": false,
+    "existingD0CheckpointsCompatible": false,
+    "reason": "D0.3 intentionally trains and evaluates the tokenizer independently. Existing D0 checkpoints retain their original character-tokenizer vocabulary."
+  },
+  "environment": {
+    "pythonVersion": "3.13.5",
+    "pythonImplementation": "CPython",
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "tokenizersVersion": "0.21.2"
+  },
+  "limitations": [
+    "The D0.3 corpus is a tiny local development corpus.",
+    "Compression results are pipeline-validation results, not production tokenizer benchmarks.",
+    "Multilingual efficiency is not established by this corpus.",
+    "The tokenizer is not yet integrated into D0 model training or inference."
+  ],
+  "createdAt": "2026-08-14T20:35:43.908722+00:00"
+}

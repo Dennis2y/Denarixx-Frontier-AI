@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-GATE-003-MPS-1024-READINESS",
+  "createdAt": "2026-08-19T07:05:59Z",
+  "status": "PASS",
+  "boundary": {
+    "batchSize": 1,
+    "sequenceLength": 1024,
+    "dtype": "torch.float32",
+    "optimizerCreated": false,
+    "optimizerStepPerformed": false,
+    "parameterUpdatePerformed": false,
+    "trainingStarted": false,
+    "checkpointCreated": false,
+    "sourceModified": false,
+    "tokenizerModified": false,
+    "corpusModified": false,
+    "formalEvaluationAccessed": false,
+    "continuedToContext2048": false
+  },
+  "authoritativeArtifacts": {
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256Before": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a",
+      "sha256After": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256Before": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+      "sha256After": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256Before": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6",
+      "sha256After": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    }
+  },
+  "runtime": {
+    "device": "mps",
+    "torchVersion": "2.2.2",
+    "mpsBuilt": true,
+    "mpsAvailable": true
+  },
+  "validation": {
+    "parameterCount": 26655104,
+    "inputShape": [1, 1024],
+    "targetShape": [1, 1024],
+    "logitsShape": [1, 1024, 8192],
+    "logitsFinite": true,
+    "loss": 9.176151275634766,
+    "lossFinite": true,
+    "forwardDurationSeconds": 0.29478379199281335,
+    "backwardDurationSeconds": 0.301765791955404,
+    "trainableParameterTensors": 132,
+    "gradientsPresent": 132,
+    "gradientsFinite": 132,
+    "allTrainableGradientsPresent": true,
+    "allTrainableGradientsFinite": true
+  },
+  "mpsAllocatorBytes": {
+    "baseline": {
+      "current": 0,
+      "driver": 393216
+    },
+    "afterModel": {
+      "current": 144369152,
+      "driver": 1107705856
+    },
+    "afterForward": {
+      "current": 953370112,
+      "driver": 1202356224
+    },
+    "afterLoss": {
+      "current": 986925056,
+      "driver": 1202356224
+    },
+    "afterBackward": {
+      "current": 436731904,
+      "driver": 1259044864
+    },
+    "afterCleanup": {
+      "current": 0,
+      "driver": 69959680
+    }
+  },
+  "frozenAuthorityPreservation": {
+    "path": "local-evidence/d1-model-gate003/d1_gate003_mps_memory_freeze.json",
+    "modified": false,
+    "sha256After": "0a2a755f57a2924767db632426791eef68d4355bde206eecee35ae4175782f52"
+  }
+}

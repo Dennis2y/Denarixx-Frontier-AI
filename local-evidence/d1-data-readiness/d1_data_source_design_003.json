@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-SOURCE-001-EVIDENCE",
+  "createdAt": "2026-08-19T08:38:25Z",
+  "decision": "PASS",
+  "verifiedPredecessors": {
+    "corpusScalePlan": {"path": "research/d1/d1_corpus_scale_plan.json", "sha256": "a81087f63bd8482f09cbfe56bfbcd831dcda03b6b168e58a6f99f3ef778fad03"},
+    "scaleEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_scale_002.json", "sha256": "251b56dff0c51a6338d834054f07277d544d7be5c921ea918fe9078277331f78"},
+    "dataReadinessContract": {"path": "research/d1/d1_data_readiness_contract.json", "sha256": "9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953"},
+    "readinessClosure": {"path": "research/d1/d1_readiness_closure.json", "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"},
+    "architecture": {"path": "research/d1/d1_architecture_contract.json", "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"},
+    "model": {"path": "ml/models/d1.py", "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"},
+    "acceptedTokenizer": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json", "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"}
+  },
+  "sourceDesign": {
+    "id": "D1-DATA-SOURCE-001",
+    "path": "research/d1/d1_corpus_source_design.json",
+    "sha256": "72d89bbe8746a84a209116ab064ab556eac0460a96e309eb596b027216751582",
+    "status": "proposed-before-acquisition"
+  },
+  "scaleInterpretation": {
+    "developmentTargetTokens": {"minimum": 53310208, "maximum": 133275520},
+    "capabilityTargetTokens": {"minimum": 266551040, "maximum": 533102080},
+    "initialConstructionTarget": "DEVELOPMENT_SCALE_ONLY",
+    "capabilityAcquisitionAuthorized": false
+  },
+  "sourceInventorySummary": {
+    "registeredRawGovDataSources": 4,
+    "registeredRawGovDataBytes": 2508140,
+    "tranche1Derived": {"bytes": 624043, "records": 11070, "language": "de", "acceptedTokenizerCorpusContribution": false},
+    "tranche2Derived": {"bytes": 2280040, "documents": 126, "language": "de", "acceptedTokenizerCorpusContribution": true},
+    "existingCandidateClassesObserved": ["government-open-data", "permissive-open-license", "public-domain", "denarixx-owned", "research-dataset", "web-crawl"],
+    "unacquiredNamedCandidatesObserved": ["Wikimedia text dumps", "Project Gutenberg candidate works", "Denarixx-owned original corpus"],
+    "futureModelEligibilityAutomaticallyGranted": false
+  },
+  "proposedCompositionPlanningPointPercent": {
+    "general_prose": 25,
+    "educational_reference": 20,
+    "technical_computing": 15,
+    "science": 12,
+    "government_public_information": 10,
+    "multilingual_cross_lingual_material": 6,
+    "code_and_software_documentation": 8,
+    "structured_factual_text": 4,
+    "total": 100
+  },
+  "languagePlanningPointPercent": {
+    "English": 60,
+    "German": 35,
+    "secondaryAndAdditionalCombined": 5,
+    "total": 100,
+    "achievedClaim": false
+  },
+  "policiesCreated": [
+    "source eligibility and source-specific licensing/provenance",
+    "development corpus domain composition",
+    "language and mixed-language handling",
+    "document acceptance/rejection and fail-closed quality",
+    "exact, normalized, near, paragraph, cross-source and split deduplication",
+    "protected non-exposing contamination prevention",
+    "deterministic duplicate-family train/development splitting",
+    "immutable accepted-tokenizer compatibility validation",
+    "corpus-wide malformed/empty validation and count reconciliation",
+    "domain/language measurement"
+  ],
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "PLANNED_NOT_SATISFIED",
+    "D1-DATA-BLOCKER-002": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "POLICY_DEFINED_NOT_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "POLICY_DEFINED_NOT_VALIDATED",
+    "D1-DATA-BLOCKER-007": "POLICY_DEFINED_NOT_VALIDATED"
+  },
+  "authorizationState": {
+    "D1_DATA_SOURCE_DESIGN": "PASS",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD",
+    "dataAcquisitionAuthorized": false,
+    "corpusCreationAuthorized": false,
+    "corpusModificationAuthorized": false,
+    "tokenizerExecutionAuthorized": false,
+    "tokenizerModificationAuthorized": false,
+    "modelExecutionAuthorized": false,
+    "trainingAuthorized": false,
+    "formalEvaluationAccessAuthorized": false
+  },
+  "operationBoundaryConfirmation": {
+    "networkAccessPerformed": false,
+    "dataAcquired": false,
+    "corpusCreated": false,
+    "corpusModified": false,
+    "newDataTokenized": false,
+    "tokenizerExecuted": false,
+    "tokenizerModified": false,
+    "modelInstantiated": false,
+    "modelExecuted": false,
+    "optimizerCreated": false,
+    "trainingStarted": false,
+    "formalEvaluationAccessed": false,
+    "predecessorAuthorityModified": false,
+    "pyprojectModified": false,
+    "uvLockModified": false,
+    "gitStateModified": false
+  }
+}

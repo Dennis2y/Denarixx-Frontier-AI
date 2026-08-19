@@ -1,0 +1,80 @@
+{
+  "architecture": {
+    "attentionHeads": 7,
+    "contextLength": 2048,
+    "family": "decoder-only-causal-transformer",
+    "ffnHiddenSize": 1792,
+    "headDimension": 64,
+    "hiddenSize": 448,
+    "layers": 8,
+    "parameterCount": 26655104,
+    "positionEncoding": "rope",
+    "vocabSize": 8192
+  },
+  "authoritativeInputs": {
+    "local-evidence/d1-model-gate002/d1_gate002_implementation_freeze.json": "b4580b80198b6b56909785f614b0ba9a9346b4bfa90b2805fb96171225d6052e",
+    "ml/models/d0.py": "425ab739c3ad0db23855945d5f602bba3104dbffb7c5139881901f25f7d503ca",
+    "ml/models/d1.py": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a",
+    "ml/tests/test_d1_model.py": "2a246228f42e4491e85d94c40a778a355513a01132d67188021ee86378da309b",
+    "research/d1/d1_architecture_contract.json": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+    "research/d1/d1_model_semantic_freeze.json": "f231faf1968bc8f8edbdd868142604ff7626d1d8bb821afe15838d1f5f3f8113",
+    "research/d1/d1_tokenizer_contract.json": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"
+  },
+  "authorizationBoundary": {
+    "checkpointCreationAuthorized": false,
+    "d1Gate002Satisfied": true,
+    "d1Gate003Recorded": true,
+    "formalEvaluationDatasetAccessAuthorized": false,
+    "trainingAuthorized": false
+  },
+  "gate": {
+    "id": "D1-GATE-003",
+    "requirement": "Forward/backward MPS memory smoke tests must pass before corpus-scale training.",
+    "status": "PASS"
+  },
+  "purpose": "d1-gate-003-mps-memory-validation-freeze",
+  "recordId": "D1-MODEL-017",
+  "runtime": {
+    "device": "mps",
+    "machine": "arm64",
+    "pythonExecutable": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+    "pythonVersion": "3.10.0",
+    "torchVersion": "2.2.2"
+  },
+  "schemaVersion": 1,
+  "stage": "D1",
+  "validation": {
+    "batchSize": 1,
+    "checkpointCreated": false,
+    "currentAllocatedBytes": 338771456,
+    "d1WeightCheckpointAbsence": "PASS",
+    "driverAllocatedBytes": 3442196480,
+    "elapsedSeconds": 3.6938020839588717,
+    "finiteGradients": 132,
+    "finiteLogits": true,
+    "finiteLoss": true,
+    "formalEvaluationAccessed": false,
+    "fullContextForwardBackward": "PASS",
+    "gradientTensors": 132,
+    "inputShape": [
+      1,
+      2048
+    ],
+    "lockedContextReached": true,
+    "logitsDtype": "torch.float32",
+    "logitsShape": [
+      1,
+      2048,
+      8192
+    ],
+    "loss": 9.175679206848145,
+    "optimizerCreated": false,
+    "optimizerStepPerformed": false,
+    "postTestAllocatedBytes": 0,
+    "postTestDriverBytes": 393216,
+    "postTestMemoryRelease": "PASS",
+    "sequenceLength": 2048,
+    "sourceStep": "D1-MODEL-016",
+    "trainingStarted": false
+  }
+}

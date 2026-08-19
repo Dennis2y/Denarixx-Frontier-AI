@@ -1,0 +1,31 @@
+{
+  "aggregateResponseLossRule": "candidate_strictly_lower_than_baseline",
+  "allFiveFamiliesRetentionRequired": true,
+  "candidateSpecificNormalizationPermitted": false,
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "formalExecutionAuthorized": false,
+  "formalExposureAuthorized": false,
+  "formalPassRequiresAllConditions": true,
+  "maximumPerFamilyLossRegressionFraction": 0.05,
+  "minimumCandidateExactMatches": 1,
+  "policyType": "formal-adjudication-policy",
+  "provenance": "POST-006 frozen acceptance semantics",
+  "sourceBindings": {
+    "local-evidence/d0-post006-formal-evaluator-contract/FORMAL_EVALUATOR_CONTRACT.md": "7750da4dc809b4a87d1918485fcf2a074e87cba90fab727522320023ee8c74e9",
+    "local-evidence/d0-post006-formal-evaluator-contract/FORMAL_EVALUATOR_CONTRACT_STATE.json": "b1437abea400643ce76f0781b7c1f5d6e681dc562582c0116d65f48e82209f6b",
+    "local-evidence/d0-post006-formal-policy/FORMAL_ACCEPTANCE_POLICY.md": "c54a6526483099a36d42fd6e570cfa9cee1cc5b4c8861d2c8fb4327788d86d2c",
+    "local-evidence/d0-post006-formal-policy/FORMAL_POLICY_STATE.json": "601f29b73a50ea252098d1ca84d8b680cb9f974407f4fddec58dd560f810efa8",
+    "ml/evaluation/d0_post006_formal.py": "37f54a6ec2725d8df34c0331780c723f841a1d471364091406159b3915121e89"
+  },
+  "stage": "D0-POST-007",
+  "status": "frozen-pre-exposure",
+  "strictExactMatchImprovementRequired": true,
+  "thresholdTuningPermitted": false,
+  "zeroBaselineFamilyLossRule": "candidate_must_equal_zero"
+}

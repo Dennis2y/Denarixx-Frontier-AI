@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-GATE-003-MPS-FULL-CONTEXT-2048-READINESS",
+  "createdAt": "2026-08-19T07:25:45Z",
+  "decision": "PASS",
+  "runtime": {
+    "sysExecutable": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/.venv-d1/bin/python",
+    "pythonVersion": "3.13.7",
+    "torchVersion": "2.13.0",
+    "torchFile": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/.venv-d1/lib/python3.13/site-packages/torch/__init__.py",
+    "machine": "arm64",
+    "mpsBuilt": true,
+    "mpsAvailable": true,
+    "recommendedMaxMemoryBytes": 12713115648
+  },
+  "authoritativeArtifacts": {
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256Before": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+      "sha256After": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256Before": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a",
+      "sha256After": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256Before": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6",
+      "sha256After": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "predecessor1024Evidence": {
+      "path": "local-evidence/d1-model-gate003/d1_gate003_mps_1024_readiness.json",
+      "sha256Before": "b939a0739e643147d62bd25d93f6968457c459869cb47bde9842778d21257972",
+      "sha256After": "b939a0739e643147d62bd25d93f6968457c459869cb47bde9842778d21257972"
+    }
+  },
+  "lockedArchitecture": {
+    "contract": "D1-ARCH-003",
+    "parameterCount": 26655104,
+    "vocabSize": 8192,
+    "contextLength": 2048,
+    "hiddenSize": 448,
+    "layers": 8,
+    "attentionHeads": 7,
+    "headDimension": 64,
+    "ffnHiddenSize": 1792,
+    "positionEncoding": "rope"
+  },
+  "execution": {
+    "constructedParameterCount": 26655104,
+    "batchSize": 1,
+    "sequenceLength": 2048,
+    "precision": "torch.float32",
+    "inputShape": [1, 2048],
+    "targetShape": [1, 2048],
+    "expectedLogitsShape": [1, 2048, 8192],
+    "logitsShape": [1, 2048, 8192],
+    "logitsDtype": "torch.float32",
+    "logitsDevice": "mps:0",
+    "logitsFinite": true,
+    "loss": 9.155557632446289,
+    "lossFinite": true,
+    "forwardSeconds": 0.680750083993189,
+    "backwardSeconds": 0.4926860829582438
+  },
+  "mpsAllocatorBytes": {
+    "baseline": {
+      "current": 0,
+      "driver": 393216
+    },
+    "afterModelTransfer": {
+      "current": 144369152,
+      "driver": 1107705856
+    },
+    "afterForward": {
+      "current": 1661969920,
+      "driver": 2181431296
+    },
+    "afterLoss": {
+      "current": 1729079552,
+      "driver": 2183790592
+    },
+    "afterBackward": {
+      "current": 340868608,
+      "driver": 2276114432
+    },
+    "afterCleanup": {
+      "current": 0,
+      "driver": 69861376
+    }
+  },
+  "gradientIntegrity": {
+    "trainableParameterTensors": 132,
+    "gradientPresentCount": 132,
+    "gradientMissingCount": 0,
+    "gradientFiniteCount": 132,
+    "gradientNonfiniteCount": 0
+  },
+  "boundaryConfirmation": {
+    "syntheticTokenIdsOnly": true,
+    "optimizerCreated": false,
+    "optimizerStepPerformed": false,
+    "parameterUpdatePerformed": false,
+    "trainingStarted": false,
+    "checkpointCreated": false,
+    "formalEvaluationAccessed": false,
+    "sourceModified": false,
+    "tokenizerModified": false,
+    "corpusModified": false,
+    "predecessorEvidenceModified": false
+  }
+}

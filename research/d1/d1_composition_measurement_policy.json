@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "authority": {
+    "id": "D1-DATA-COMPOSITION-POLICY-001",
+    "gate": "D1-DATA-COMPOSITION-011",
+    "status": "FROZEN_BEFORE_MEASUREMENT",
+    "createdAt": "2026-08-19T17:22:00Z"
+  },
+  "input": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/",
+    "expectedDocuments": 6106,
+    "expectedTextBytes": 14406978,
+    "expectedExactDuplicateHashes": 0,
+    "expectedConfirmedNearDuplicates": 0,
+    "expectedConfirmedContamination": 0
+  },
+  "accounting": {
+    "documentRule": "Every document listed by each frozen near-deduplicated source manifest is classified exactly once for language and exactly once for primary domain.",
+    "byteRule": "Text bytes are exact on-disk UTF-8 byte lengths; no decoding-dependent character count substitutes for bytes.",
+    "percentRule": "Percentages are count or byte subtotal divided by the corresponding full-corpus or source total and rounded to six decimal places only for reporting.",
+    "technicalFlagRule": "CODE_OR_TECHNICAL_SYNTAX is orthogonal to mutually exclusive language and primary-domain categories and therefore is not included in their reconciliation sums."
+  },
+  "languageClassification": {
+    "classificationType": "content-derived; frozen source language labels are reported as lineage priors but do not force a result",
+    "normalization": "NFKC plus casefold",
+    "tokens": "Unicode alphabetic runs of at least two characters",
+    "englishMarkers": ["the","and","or","of","to","in","is","are","for","with","from","this","that","as","by","be","can","will","when","if","not","use","using","used","python","module","class","function","method","object","returns","return","value","values","argument","arguments","example","see","version","new","added","changed","deprecated","exception","default"],
+    "germanMarkers": ["der","die","das","und","oder","von","zu","zur","zum","im","in","ist","sind","für","mit","auf","aus","durch","über","bei","nach","des","den","dem","ein","eine","einer","eines","einem","einen","gesetz","gesetze","verordnung","bekanntmachung","ordnung","regelung","änderung","fassung","bund","bundes","recht","abkommen","übereinkommen"],
+    "additionalLanguageMarkers": {
+      "fr": ["le","la","les","des","une","pour","avec","dans","est","sont","par","sur"],
+      "es": ["el","la","los","las","una","para","con","del","por","que","es","son"],
+      "it": ["il","lo","la","gli","le","una","per","con","del","che","è","sono"],
+      "nl": ["de","het","een","van","voor","met","dat","zijn","op","door"],
+      "otherScript": "Cyrillic, Greek, Arabic, Hebrew, Han, Hiragana, Katakana, or Hangul alphabetic tokens"
+    },
+    "score": "Marker occurrences are counted. German tokens containing ä, ö, ü or ß add one German evidence point. German tokens ending gesetz, verordnung, ung, keit, heit or schaft add one German evidence point. Non-Latin-script alphabetic tokens count as additional-language evidence.",
+    "confidenceThresholds": {
+      "minimumPrimaryEvidence": 3,
+      "minimumMixedEvidencePerLanguage": 3,
+      "singleLanguageLeadRatio": 2.0,
+      "mixedMinorityToMajorityRatio": 0.5,
+      "additionalNonLatinTokenRatio": 0.2
+    },
+    "decisionOrder": [
+      "MIXED_LANGUAGE when two or more language evidence scores are each at least 3 and the second-highest/highest ratio is at least 0.5",
+      "ADDITIONAL_LANGUAGE when additional evidence is at least 3 and either it leads the next score by 2x or non-Latin tokens are at least 20% of alphabetic tokens",
+      "ENGLISH when English evidence is at least 3 and leads every other score by at least 2x",
+      "GERMAN when German evidence is at least 3 and leads every other score by at least 2x",
+      "UNKNOWN_LANGUAGE otherwise"
+    ],
+    "mutuallyExclusiveCategories": ["ENGLISH","GERMAN","ADDITIONAL_LANGUAGE","MIXED_LANGUAGE","UNKNOWN_LANGUAGE"],
+    "ambiguityRule": "Ties, weak evidence, or insufficient lead remain MIXED or UNKNOWN; source expectations do not break ties."
+  },
+  "technicalCodeClassification": {
+    "classificationType": "source-derived plus content-derived",
+    "sourceRule": "All d1-acq001-python-docs-313 documents qualify because the frozen extraction lineage identifies them as software documentation.",
+    "contentRule": "Any other document qualifies only if at least two distinct syntax indicators occur: Python prompt >>>, def/class/import/from statements, paired braces/brackets, assignment/operator lines, traceback, or a fenced code block.",
+    "aggregation": "One orthogonal flag per document; bytes count the full flagged document."
+  },
+  "domainClassification": {
+    "classificationType": "mutually exclusive primary domain; source-derived when lineage is unambiguous, content-derived fallback otherwise",
+    "taxonomy": ["general prose","educational/reference","technical/computing","science","government/public information","multilingual/cross-lingual","code/software documentation","structured factual text"],
+    "sourceRules": {
+      "d1-acq001-python-docs-313": "code/software documentation",
+      "d1-acq001-gesetze-refresh": "structured factual text"
+    },
+    "sourceRuleRationale": "Python members are software documentation with preserved code examples. Gesetze records contain index titles only; linked legal bodies were not acquired, so classifying them as government prose would overstate their content.",
+    "contentFallbackOrder": ["multilingual/cross-lingual if language=MIXED_LANGUAGE","code/software documentation if technical/code flag is true","science if deterministic science terminology dominates","government/public information if government/legal prose dominates","technical/computing if computing terminology dominates without documentation lineage","educational/reference if instructional/reference terminology dominates","structured factual text if record-like fragments dominate","general prose otherwise"],
+    "ambiguityRule": "Known-source rules take precedence. Unknown-source content ties fail closed rather than being assigned arbitrarily."
+  },
+  "plannedComparisons": {
+    "longTermLanguagePercent": {"ENGLISH":60,"GERMAN":35,"ADDITIONAL_LANGUAGE":5},
+    "firstAcquisitionLanguagePercent": {"ENGLISH":65,"GERMAN":30,"ADDITIONAL_LANGUAGE":5},
+    "longTermDomainPercent": {"general prose":25,"educational/reference":20,"technical/computing":15,"science":12,"government/public information":10,"multilingual/cross-lingual":6,"code/software documentation":8,"structured factual text":4},
+    "comparisonBasis": "actual byte percentages; MIXED and UNKNOWN are reported separately and are not redistributed into planned buckets"
+  },
+  "failClosed": ["predecessor hash mismatch","input document or byte mismatch","manifest/document hash mismatch","UTF-8 failure","duplicate exact document hash","unclassified language document","unclassified primary domain document","language accounting mismatch","domain accounting mismatch","policy modification after measurement","protected formal access required","input modification required"],
+  "boundaries": {"corpusModification":false,"tokenizerExecution":false,"acceptedTokenCounting":false,"splitCreation":false,"formalEvaluationAccess":false,"modelExecution":false,"training":false,"D1_SERIOUS_PRETRAINING_AUTHORIZATION":"WITHHELD"}
+}

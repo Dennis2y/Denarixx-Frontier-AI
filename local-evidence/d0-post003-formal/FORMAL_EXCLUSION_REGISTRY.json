@@ -1,0 +1,521 @@
+{
+  "candidateScored": false,
+  "purpose": "Forbidden-example registry for construction of the untouched D0-POST-003 formal dataset.",
+  "sources": {
+    "eval001": {
+      "examples": 6,
+      "path": "ml/data/d0_eval001_instructions.jsonl",
+      "rows": [
+        {
+          "instruction": "say research",
+          "response": "research"
+        },
+        {
+          "instruction": "say evidence",
+          "response": "evidence"
+        },
+        {
+          "instruction": "say reliable",
+          "response": "reliable"
+        },
+        {
+          "instruction": "say careful",
+          "response": "careful"
+        },
+        {
+          "instruction": "say compare",
+          "response": "compare"
+        },
+        {
+          "instruction": "say improve",
+          "response": "improve"
+        }
+      ],
+      "sha256": "78896135affacc51fd22d5cf8e0e68798d69f32b415220b9c137f2855be21bd5"
+    },
+    "eval002": {
+      "examples": 20,
+      "path": "ml/data/d0_eval002_instructions.jsonl",
+      "rows": [
+        {
+          "instruction": "State the goal of evaluation.",
+          "response": "Measure model behavior."
+        },
+        {
+          "instruction": "Why freeze test data?",
+          "response": "Prevent silent changes."
+        },
+        {
+          "instruction": "What does a hash verify?",
+          "response": "Data identity."
+        },
+        {
+          "instruction": "Why keep a baseline?",
+          "response": "Compare later models."
+        },
+        {
+          "instruction": "What can training loss show?",
+          "response": "Optimization progress."
+        },
+        {
+          "instruction": "What should test data avoid?",
+          "response": "Training overlap."
+        },
+        {
+          "instruction": "Why record model metadata?",
+          "response": "Support reproducibility."
+        },
+        {
+          "instruction": "What does retention protect?",
+          "response": "Prior capability."
+        },
+        {
+          "instruction": "Why use held out examples?",
+          "response": "Measure generalization."
+        },
+        {
+          "instruction": "What should remain frozen?",
+          "response": "Evaluation data."
+        },
+        {
+          "instruction": "Why compare checkpoints?",
+          "response": "Measure model changes."
+        },
+        {
+          "instruction": "What should evidence support?",
+          "response": "Research conclusions."
+        },
+        {
+          "instruction": "Why test regressions?",
+          "response": "Detect lost capability."
+        },
+        {
+          "instruction": "What does a checkpoint store?",
+          "response": "Model state."
+        },
+        {
+          "instruction": "Why separate train and test?",
+          "response": "Avoid contamination."
+        },
+        {
+          "instruction": "What makes a run repeatable?",
+          "response": "Recorded configuration."
+        },
+        {
+          "instruction": "Why preserve tokenizer identity?",
+          "response": "Keep model inputs stable."
+        },
+        {
+          "instruction": "What is an experiment?",
+          "response": "A controlled test."
+        },
+        {
+          "instruction": "Why measure language loss?",
+          "response": "Track retention."
+        },
+        {
+          "instruction": "Why measure response loss?",
+          "response": "Track instruction learning."
+        }
+      ],
+      "sha256": "56e2038aa976c82b5f06ae55446a8cf8eae86dfb481329d415fd6b7a4e5064d0"
+    },
+    "eval002_v2": {
+      "examples": 20,
+      "path": "ml/data/d0_eval002_v2_instructions.jsonl",
+      "rows": [
+        {
+          "instruction": "state the goal of evaluation.",
+          "response": "measure model behavior."
+        },
+        {
+          "instruction": "why freeze test data",
+          "response": "prevent silent changes."
+        },
+        {
+          "instruction": "what does a hash verify",
+          "response": "data identity."
+        },
+        {
+          "instruction": "why keep a baseline",
+          "response": "compare later models."
+        },
+        {
+          "instruction": "what can training loss show",
+          "response": "optimization progress."
+        },
+        {
+          "instruction": "what should test data avoid",
+          "response": "training overlap."
+        },
+        {
+          "instruction": "why record model metadata",
+          "response": "support reproducibility."
+        },
+        {
+          "instruction": "what does retention protect",
+          "response": "prior capability."
+        },
+        {
+          "instruction": "why use held out examples",
+          "response": "measure generalization."
+        },
+        {
+          "instruction": "what should remain frozen",
+          "response": "evaluation data."
+        },
+        {
+          "instruction": "why compare checkpoints",
+          "response": "measure model changes."
+        },
+        {
+          "instruction": "what should evidence support",
+          "response": "research conclusions."
+        },
+        {
+          "instruction": "why test regressions",
+          "response": "detect lost capability."
+        },
+        {
+          "instruction": "what does a checkpoint store",
+          "response": "model state."
+        },
+        {
+          "instruction": "why separate train and test",
+          "response": "avoid contamination."
+        },
+        {
+          "instruction": "what makes a run repeatable",
+          "response": "recorded configuration."
+        },
+        {
+          "instruction": "why preserve tokenizer identity",
+          "response": "keep model inputs stable."
+        },
+        {
+          "instruction": "what is an experiment",
+          "response": "a controlled test."
+        },
+        {
+          "instruction": "why measure language loss",
+          "response": "track retention."
+        },
+        {
+          "instruction": "why measure response loss",
+          "response": "track instruction learning."
+        }
+      ],
+      "sha256": "38393229e403e1e0da1b54ec22a297e60ba561865d370f4e493c86536b3c41d9"
+    },
+    "eval002_v3": {
+      "examples": 20,
+      "path": "ml/data/d0_eval002_v3_instructions.jsonl",
+      "rows": [
+        {
+          "instruction": "say baseline",
+          "response": "compare models"
+        },
+        {
+          "instruction": "say frozen",
+          "response": "keep data fixed"
+        },
+        {
+          "instruction": "say hash",
+          "response": "check identity"
+        },
+        {
+          "instruction": "say test",
+          "response": "measure behavior"
+        },
+        {
+          "instruction": "say train",
+          "response": "fit the model"
+        },
+        {
+          "instruction": "say evidence",
+          "response": "support a claim"
+        },
+        {
+          "instruction": "say retention",
+          "response": "keep ability"
+        },
+        {
+          "instruction": "say held out",
+          "response": "test new data"
+        },
+        {
+          "instruction": "say metadata",
+          "response": "record the run"
+        },
+        {
+          "instruction": "say regression",
+          "response": "find lost skill"
+        },
+        {
+          "instruction": "say checkpoint",
+          "response": "store model state"
+        },
+        {
+          "instruction": "say repeat",
+          "response": "use same setup"
+        },
+        {
+          "instruction": "say tokenizer",
+          "response": "map text tokens"
+        },
+        {
+          "instruction": "say experiment",
+          "response": "controlled test"
+        },
+        {
+          "instruction": "say language",
+          "response": "measure retention"
+        },
+        {
+          "instruction": "say response",
+          "response": "measure learning"
+        },
+        {
+          "instruction": "say compare",
+          "response": "check changes"
+        },
+        {
+          "instruction": "say separate",
+          "response": "avoid overlap"
+        },
+        {
+          "instruction": "say metric",
+          "response": "measure a result"
+        },
+        {
+          "instruction": "say validate",
+          "response": "check the result"
+        }
+      ],
+      "sha256": "657054c0db400011988b274673b0be99c87120b716cb4567a4031b5eb5042b1f"
+    },
+    "eval002_v4": {
+      "examples": 20,
+      "path": "ml/data/d0_eval002_v4_instructions.jsonl",
+      "rows": [
+        {
+          "instruction": "say base",
+          "response": "compare"
+        },
+        {
+          "instruction": "say frozen",
+          "response": "fixed data"
+        },
+        {
+          "instruction": "say hash",
+          "response": "data identity"
+        },
+        {
+          "instruction": "say audit",
+          "response": "check model"
+        },
+        {
+          "instruction": "say learn",
+          "response": "fit model"
+        },
+        {
+          "instruction": "say proof",
+          "response": "show claim"
+        },
+        {
+          "instruction": "say retain",
+          "response": "keep skill"
+        },
+        {
+          "instruction": "say held",
+          "response": "new data"
+        },
+        {
+          "instruction": "say meta",
+          "response": "record run"
+        },
+        {
+          "instruction": "say regress",
+          "response": "lost skill"
+        },
+        {
+          "instruction": "say state",
+          "response": "model state"
+        },
+        {
+          "instruction": "say repeat",
+          "response": "same setup"
+        },
+        {
+          "instruction": "say tokens",
+          "response": "map text"
+        },
+        {
+          "instruction": "say trial",
+          "response": "fair test"
+        },
+        {
+          "instruction": "say lm",
+          "response": "track skill"
+        },
+        {
+          "instruction": "say reply",
+          "response": "track learn"
+        },
+        {
+          "instruction": "say compare",
+          "response": "find shift"
+        },
+        {
+          "instruction": "say split",
+          "response": "avoid match"
+        },
+        {
+          "instruction": "say metric",
+          "response": "measure"
+        },
+        {
+          "instruction": "say valid",
+          "response": "check result"
+        }
+      ],
+      "sha256": "f4016c10c1b493a8ba5e2bc71d9435436e703aec64f4bd1890e262d1865c1f2e"
+    },
+    "post003_dev": {
+      "examples": 5,
+      "path": "ml/data/d0_post003_dev.jsonl",
+      "rows": [
+        {
+          "instruction": "echo safe",
+          "response": "safe"
+        },
+        {
+          "instruction": "is same other",
+          "response": "false"
+        },
+        {
+          "instruction": "add s to code",
+          "response": "codes"
+        },
+        {
+          "instruction": "opposite true",
+          "response": "false"
+        },
+        {
+          "instruction": "data helps ai",
+          "response": "true"
+        }
+      ],
+      "sha256": "dc7beefa2615b664438c445f5b13f6a579ddd2fff55b91420e7fc29e9c47c45b"
+    },
+    "post003_train": {
+      "examples": 25,
+      "path": "ml/data/d0_post003_train.jsonl",
+      "rows": [
+        {
+          "instruction": "echo red",
+          "response": "red"
+        },
+        {
+          "instruction": "echo blue",
+          "response": "blue"
+        },
+        {
+          "instruction": "echo green",
+          "response": "green"
+        },
+        {
+          "instruction": "echo fast",
+          "response": "fast"
+        },
+        {
+          "instruction": "echo slow",
+          "response": "slow"
+        },
+        {
+          "instruction": "is yes true",
+          "response": "true"
+        },
+        {
+          "instruction": "is no true",
+          "response": "false"
+        },
+        {
+          "instruction": "is true true",
+          "response": "true"
+        },
+        {
+          "instruction": "is false true",
+          "response": "false"
+        },
+        {
+          "instruction": "is same same",
+          "response": "true"
+        },
+        {
+          "instruction": "add s to cat",
+          "response": "cats"
+        },
+        {
+          "instruction": "add s to car",
+          "response": "cars"
+        },
+        {
+          "instruction": "add s to token",
+          "response": "tokens"
+        },
+        {
+          "instruction": "add s to model",
+          "response": "models"
+        },
+        {
+          "instruction": "add s to test",
+          "response": "tests"
+        },
+        {
+          "instruction": "color of sky",
+          "response": "blue"
+        },
+        {
+          "instruction": "color of grass",
+          "response": "green"
+        },
+        {
+          "instruction": "opposite hot",
+          "response": "cold"
+        },
+        {
+          "instruction": "opposite fast",
+          "response": "slow"
+        },
+        {
+          "instruction": "opposite yes",
+          "response": "no"
+        },
+        {
+          "instruction": "ai uses data",
+          "response": "true"
+        },
+        {
+          "instruction": "model uses data",
+          "response": "true"
+        },
+        {
+          "instruction": "train a model",
+          "response": "learn"
+        },
+        {
+          "instruction": "test a model",
+          "response": "check"
+        },
+        {
+          "instruction": "safe means risk",
+          "response": "false"
+        }
+      ],
+      "sha256": "0ccc376954deba3c013789cde803cf230ee894bb91a7d2afd5105f2d0ee481a2"
+    }
+  },
+  "uniqueInstructionCount": 109,
+  "uniquePairCount": 116
+}

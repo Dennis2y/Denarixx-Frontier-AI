@@ -1,0 +1,36 @@
+{
+  "acceptedCheckpoint": "local-checkpoints/d0-post003-capability-seed42.pt",
+  "acceptedCheckpointSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "architecture": {
+    "attentionHeads": 4,
+    "contextLength": 32,
+    "dropout": 0.0,
+    "hiddenSize": 64,
+    "layers": 2,
+    "parameterCount": 102784,
+    "vocabSize": 42
+  },
+  "baselineCheckpoint": "local-checkpoints/d0-post002-accepted.pt",
+  "baselineCheckpointSha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97",
+  "createdAtUtc": "2026-08-14T13:27:07.816767+00:00",
+  "decision": "FORMAL_PASS",
+  "formalDataset": "ml/data/d0_post003_formal.jsonl",
+  "formalDatasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "formalResult": "local-artifacts/d0-post003-formal-adapter-recovery/formal-result.json",
+  "formalResultSha256": "da062249400e49a5f0680c4fec8959f3b4f08029cf5ccfca717f9b1b171635c7",
+  "metrics": {
+    "baselineAggregateResponseLoss": 3.1551351272802557,
+    "baselineExactMatches": 0,
+    "baselineResponsePerplexity": 23.456206450675545,
+    "candidateAggregateResponseLoss": 2.9665195067151844,
+    "candidateExactMatches": 0,
+    "candidateResponsePerplexity": 19.424196024852314,
+    "familiesNoWorse": 5,
+    "formalPass": true
+  },
+  "nextStage": "D0-POST-004",
+  "nextStagePrimaryGoal": "Improve generation/exact-match capability while preserving D0-POST-003 formal loss gains.",
+  "recoveryMode": "runtime-schema-adapter",
+  "stage": "D0-POST-003",
+  "status": "ACCEPTED"
+}

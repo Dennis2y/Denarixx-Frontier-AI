@@ -1,0 +1,12 @@
+{
+  "candidateStep": 120,
+  "checkpointPath": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/local-checkpoints/d0-post005-development-seed42.pt",
+  "parameterCounts": {
+    "totalParameters": 102784,
+    "trainableParameters": 102784
+  },
+  "retentionWeight": 0.25,
+  "runId": "d0-post005-development-seed42",
+  "status": "complete",
+  "stepsExecuted": 120
+}

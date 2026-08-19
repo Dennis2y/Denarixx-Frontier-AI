@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "authority": {"id":"D1-DATA-TOKENIZER-COMPATIBILITY-POLICY-001","gate":"D1-DATA-TOKENIZER-012","status":"FROZEN_BEFORE_TOKENIZATION","createdAt":"2026-08-19T17:35:00Z"},
+  "tokenizer": {
+    "path":"/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+    "sha256":"f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6",
+    "acceptanceAuthority":{"path":"local-evidence/d1-model-gate001-replacement-acceptance/d1_gate001_replacement_tokenizer_acceptance.json","sha256":"addcf47b90be4de18e0e2c7038249d965f1fb312aa1b21990badc7b8ed841be4"},
+    "contract":{"path":"research/d1/d1_tokenizer_contract.json","sha256":"c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"},
+    "vocabularySize":8192,
+    "specialTokenIds":{"<|pad|>":0,"<|bos|>":1,"<|eos|>":2,"<|unk|>":3}
+  },
+  "input": {"root":"/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/","documents":6106,"textBytes":14406978,"exactDuplicateHashes":0,"confirmedNearDuplicates":0,"confirmedContamination":0},
+  "traversal": "Load the two frozen near-deduplicated source manifests in lexicographic sourceId order; within each, traverse document records in lexicographic stableDocumentId order. Resolve only each record's outputPath.",
+  "documentValidation": {
+    "utf8":"Read bytes and decode strict UTF-8.",
+    "empty":"Any zero-byte, empty-text, or zero-token nonempty document fails closed.",
+    "manifest":"On-disk byte length and SHA-256 must equal the source-manifest record; stable IDs and content hashes must remain unique.",
+    "encode":"Tokenizer.encode(text, add_special_tokens=false); extract ids without truncation or padding.",
+    "structural":"IDs must be integers, sequence length must be positive, and every ID must be in [0,8191].",
+    "determinism":"Encode every document twice in the same runtime; ID sequences must be identical.",
+    "roundTrip":"Decode the first ID sequence with skip_special_tokens=false and require exact Unicode string equality to the decoded source text. This is required because the locked contract and acceptance seal specify lossless byte-level UTF-8 round trip.",
+    "unknown":"Count occurrences of token ID 3. Any unknown-token occurrence fails closed because the accepted byte-fallback authority reports unknown fallback absent for representative valid UTF-8 and complete lossless round trip is required."
+  },
+  "specialTokenPolicy": "Do not inject BOS, EOS, PAD, document-boundary, or any other special token. Literal special-token-looking source text is processed according to the serialized tokenizer. Token count is therefore the exact length returned by encode with add_special_tokens=false.",
+  "accounting": {
+    "tokenDefinition":"One accepted token is one integer ID in the validated per-document encoding; aggregate accepted tokens are the sum of all 6,106 independent document lengths. No cross-document merge and no separator tokens are counted.",
+    "mean":"TOTAL_ACCEPTED_TOKENS / 6106.",
+    "median":"For 6,106 sorted per-document counts, arithmetic mean of one-based positions 3,053 and 3,054.",
+    "bytesPerToken":"14,406,978 / TOTAL_ACCEPTED_TOKENS.",
+    "tokensPerMillionBytes":"TOTAL_ACCEPTED_TOKENS * 1,000,000 / 14,406,978.",
+    "sequenceCapacity":"Euclidean divmod(TOTAL_ACCEPTED_TOKENS, 2048); no sequence files are created.",
+    "source":"Sum document token counts by frozen sourceId.",
+    "language":"Before encoding each document, reapply the unchanged D1-DATA-COMPOSITION-POLICY-001 language algorithm; token results cannot influence classification.",
+    "domain":"Use unchanged D1-DATA-COMPOSITION-POLICY-001 source rules: Python=code/software documentation; Gesetze=structured factual text.",
+    "reconciliation":"Aggregate, source, language, and domain token subtotals must each equal TOTAL_ACCEPTED_TOKENS. Document and byte subtotals must also reconcile."
+  },
+  "compositionAuthority":{"policy":{"path":"research/d1/d1_composition_measurement_policy.json","sha256":"df21e7c953d57692a6f9bb14e60242b86c400567463b2d337021d1ea00e13392"},"evidence":{"path":"local-evidence/d1-data-readiness/d1_data_composition_011.json","sha256":"545402fac939c04125ddf8ea76684d53e389eda1017cc892d76784b7e36c004d"}},
+  "scaleComparison": {
+    "parameters":26655104,
+    "developmentTarget":{"minimum":53310208,"maximum":133275520},
+    "capabilityTarget":{"minimum":266551040,"maximum":533102080},
+    "tokensPerParameter":"TOTAL_ACCEPTED_TOKENS / 26,655,104",
+    "developmentMinimumCompletionPercent":"100 * TOTAL_ACCEPTED_TOKENS / 53,310,208",
+    "developmentMaximumCompletionPercent":"100 * TOTAL_ACCEPTED_TOKENS / 133,275,520"
+  },
+  "runtime":"Use exactly /Users/dennischarles/Downloads/Denarixx-Frontier-AI/.venv-d1/bin/python and record Python, machine, tokenizers version and module path.",
+  "determinism":"Single-process CPU tokenization; serialized accepted tokenizer only; no sampling, parallel map, truncation, padding, cache mutation, tokenizer mutation, or corpus mutation.",
+  "failClosed":["predecessor mismatch","tokenizer or contract mismatch","candidate accounting mismatch","UTF-8 or manifest mismatch","tokenizer exception","empty encoding","noninteger or out-of-range ID","repeat encoding mismatch","round-trip mismatch","unknown token occurrence","source/language/domain/aggregate accounting mismatch","protected formal access required"],
+  "boundaries":{"corpusModification":false,"tokenizerModificationOrTraining":false,"splitCreation":false,"formalEvaluationAccess":false,"modelExecution":false,"optimizerOrCheckpointCreation":false,"training":false,"D1_SERIOUS_PRETRAINING_AUTHORIZATION":"WITHHELD"}
+}

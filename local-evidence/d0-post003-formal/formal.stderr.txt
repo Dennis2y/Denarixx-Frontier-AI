@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal.py", line 564, in <module>
+    main()
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal.py", line 522, in main
+    result = run_formal_evaluation(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal.py", line 465, in run_formal_evaluation
+    architecture = assert_model_identity_invariants(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal.py", line 389, in assert_model_identity_invariants
+    baseline = verify_checkpoint_invariants(
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post003_formal.py", line 282, in verify_checkpoint_invariants
+    raise RuntimeError(
+RuntimeError: Parameter count changed: 107520

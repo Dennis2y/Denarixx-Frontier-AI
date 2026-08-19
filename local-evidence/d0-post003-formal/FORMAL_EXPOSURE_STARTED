@@ -1,0 +1,24 @@
+D0-POST-003 FORMAL EXPOSURE STARTED
+
+Candidate:
+local-checkpoints/d0-post003-capability-seed42.pt
+
+Candidate SHA-256:
+3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06
+
+Formal dataset:
+ml/data/d0_post003_formal.jsonl
+
+Formal dataset SHA-256:
+28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115
+
+Evaluator:
+ml/evaluation/d0_post003_formal.py
+
+Evaluator SHA-256:
+df9a2a98162e384971b9609173b593475391306e761b93cef151d919df3099fc
+
+This marker records the irreversible start of the
+one-time POST-003 formal evaluation.
+
+Do not delete this marker to repeat scoring.

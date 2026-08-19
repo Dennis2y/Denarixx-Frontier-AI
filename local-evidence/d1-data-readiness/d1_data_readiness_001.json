@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-READINESS-001-EVIDENCE",
+  "createdAt": "2026-08-19T08:21:44Z",
+  "decision": "PASS",
+  "verifiedPredecessors": {
+    "readinessClosure": {
+      "path": "research/d1/d1_readiness_closure.json",
+      "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"
+    },
+    "readinessClosureEvidence": {
+      "path": "local-evidence/d1-readiness-closure/d1_readiness_closure_001.json",
+      "sha256": "e671d752758deb14762a3f1ef6aea5e36c754a76493497e26bc6bd27f516b665"
+    },
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "evaluationContract": {
+      "path": "research/d1/d1_evaluation_contract.json",
+      "sha256": "bea385450991397979553b04b4975b535456e84aeb3d226f06f3976771db38fe"
+    }
+  },
+  "dataReadinessContract": {
+    "id": "D1-DATA-READINESS-001",
+    "path": "research/d1/d1_data_readiness_contract.json",
+    "sha256": "9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953",
+    "status": "locked-before-serious-corpus-expansion"
+  },
+  "currentCorpusMeasurements": {
+    "parameterCount": 26655104,
+    "contextLength": 2048,
+    "acceptedTokens": 464086,
+    "tokensPerParameter": 0.01741077431174157,
+    "parametersPerToken": 57.43569941778033,
+    "seriousPretrainingScaleAssessment": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING"
+  },
+  "blockerStatuses": [
+    {
+      "id": "D1-DATA-BLOCKER-001",
+      "name": "CORPUS SCALE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "D1-DATA-BLOCKER-002",
+      "name": "COMPOSITE CORPUS DEDUPLICATION",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "D1-DATA-BLOCKER-003",
+      "name": "CONTAMINATION ANALYSIS",
+      "status": "MISSING"
+    },
+    {
+      "id": "D1-DATA-BLOCKER-004",
+      "name": "AGGREGATE LANGUAGE/DOMAIN MEASUREMENT",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "D1-DATA-BLOCKER-005",
+      "name": "TRAIN/DEVELOPMENT SPLIT",
+      "status": "MISSING"
+    },
+    {
+      "id": "D1-DATA-BLOCKER-006",
+      "name": "FULL TOKENIZER/CORPUS COMPATIBILITY",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "D1-DATA-BLOCKER-007",
+      "name": "MALFORMED/EMPTY DOCUMENT VALIDATION",
+      "status": "PARTIAL"
+    }
+  ],
+  "corpusScaleTarget": {
+    "status": "REQUIRES_PLANNING",
+    "seriousPretrainingTargetInventedByThisOperation": false,
+    "datasetsDownloaded": false,
+    "corpusExpanded": false
+  },
+  "protectedEvaluationBoundary": {
+    "evaluationContract": "D1-EVAL-001",
+    "formalEvaluationFilesCurrentlyPresent": 0,
+    "formalEvaluationExamplesAccessed": false,
+    "formalEvaluationExamplesCreated": false,
+    "formalEvaluationExecuted": false,
+    "formalScoresCreated": false,
+    "formalDataTrainingUseAuthorized": false
+  },
+  "authorizationState": {
+    "D1_DATA_READINESS_CONTRACT": "PASS",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD",
+    "corpusAcquisitionAuthorized": false,
+    "corpusExpansionAuthorized": false,
+    "trainingAuthorized": false,
+    "modelExecuted": false,
+    "optimizerCreated": false,
+    "hyperparametersSelected": false,
+    "checkpointCreated": false
+  },
+  "unchangedAuthorityDeclaration": {
+    "architectureModified": false,
+    "modelModified": false,
+    "tokenizerModified": false,
+    "corpusModified": false,
+    "evaluationContractModified": false,
+    "readinessClosureModified": false,
+    "predecessorEvidenceModified": false,
+    "pyprojectModified": false,
+    "uvLockModified": false,
+    "gitStateModified": false
+  }
+}

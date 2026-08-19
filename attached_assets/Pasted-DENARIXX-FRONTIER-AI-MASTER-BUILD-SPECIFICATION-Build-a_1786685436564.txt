@@ -1,0 +1,252 @@
+DENARIXX FRONTIER AI — MASTER BUILD SPECIFICATION
+
+Build a serious, production-oriented AI research and model-engineering system for:
+
+Company: Denarixx Digital Solutions
+Research Organization: Denarixx AI Research
+Platform: Denarixx Frontier AI
+Initial Research Program: Denarixx D0
+Future Foundation Model: Denarixx D1
+
+This must NOT be a chatbot clone, OpenAI wrapper, fake AI dashboard, benchmark mockup, or generic SaaS application.
+
+The long-term research objective is exceptionally ambitious:
+
+Develop Denarixx-owned foundation-model technology capable of eventually competing with and, where objectively demonstrated, surpassing leading frontier AI systems across reasoning, mathematics, coding, science, factuality, multilingual intelligence, multimodal understanding, long-context tasks, agents, tool use, memory, reliability, latency, cost efficiency and computational efficiency.
+
+Do NOT claim that this objective has already been achieved.
+
+Every performance claim must eventually be demonstrated through reproducible evaluations.
+
+The immediate objective is different:
+
+Build the real engineering and experimentation foundation required for Denarixx to independently create, train, evaluate, serve and improve its own neural language models.
+
+1. NON-NEGOTIABLE PRINCIPLE
+
+The system must produce REAL experiments.
+
+Do not create decorative pages pretending models are training.
+
+Do not generate random:
+
+training loss
+benchmark results
+GPU utilization
+token throughput
+model scores
+model capabilities
+training progress
+
+Demo information may exist only when clearly labelled:
+
+DEMO / SIMULATED DATA
+
+Real experiment results must come from actual executable training or evaluation jobs.
+
+2. TWO-LAYER ARCHITECTURE
+
+Separate the project into:
+
+CONTROL PLANE
+
+Can run on Replit.
+
+Responsible for:
+
+authentication
+research dashboard
+model registry
+dataset registry
+experiments
+training job management
+evaluations
+benchmark comparison
+artifact metadata
+research records
+compute orchestration
+API management
+monitoring
+ML RESEARCH ENGINE
+
+Python-based and portable.
+
+Responsible for:
+
+dataset processing
+tokenizer training
+model implementation
+pretraining
+checkpointing
+post-training
+inference
+evaluation
+architecture experiments
+
+The ML engine must NOT depend on Replit.
+
+It must later run on:
+
+local computers
+individual GPUs
+cloud GPUs
+multi-GPU machines
+distributed clusters
+Denarixx-owned infrastructure
+3. MONOREPO STRUCTURE
+
+Create a maintainable structure similar to:
+
+denarixx-frontier-ai/
+
+apps/
+  web/
+  api/
+
+ml/
+  core/
+  models/
+  architectures/
+  attention/
+  memory/
+  routing/
+  tokenizers/
+  data/
+  training/
+  post_training/
+  inference/
+  evaluation/
+  agents/
+  multimodal/
+  safety/
+  optimization/
+
+research/
+  experiments/
+  hypotheses/
+  reports/
+
+infrastructure/
+  compute/
+  storage/
+  containers/
+
+benchmarks/
+
+tests/
+
+docs/
+
+Do not create giant monolithic source files.
+
+4. TECHNOLOGY STACK
+Control Plane
+
+Frontend:
+
+React
+TypeScript
+Vite
+Tailwind CSS
+shadcn/ui
+TanStack Query
+React Hook Form
+Zod
+Recharts
+
+Backend:
+
+Node.js
+TypeScript
+Express
+PostgreSQL
+Drizzle ORM
+Zod
+ML Engine
+
+Use:
+
+Python
+PyTorch
+
+Design optional integration points for:
+
+CUDA
+Hugging Face ecosystem
+safetensors
+distributed training
+optimized attention kernels
+high-performance inference engines
+
+Do not make optional GPU libraries mandatory for CPU development.
+
+5. BUILD A REAL DENARIXX MODEL IMPLEMENTATION
+
+Implement Denarixx’s first experimental neural language-model family.
+
+Call it:
+
+Denarixx D0
+
+D0 is an experimental research model.
+
+It is NOT a frontier model.
+
+Its purpose is to prove that Denarixx owns and controls the complete model-development lifecycle.
+
+Implement the architecture directly in PyTorch.
+
+The implementation must include configurable:
+
+token embeddings
+positional representation
+transformer blocks
+causal self-attention
+normalization
+feed-forward layers
+residual connections
+output projection
+vocabulary size
+hidden dimension
+number of layers
+number of attention heads
+context length
+dropout
+initialization
+
+Do not merely download another organization’s pretrained model and rename it Denarixx D0.
+
+Using open-source libraries as engineering dependencies is acceptable.
+
+The D0 weights must be capable of being initialized and trained by Denarixx.
+
+6. CONFIGURATION-DRIVEN MODEL CREATION
+
+Model architecture must be configurable.
+
+Example concept:
+
+model_family: denarixx-d0
+layers: configurable
+hidden_size: configurable
+attention_heads: configurable
+context_length: configurable
+vocab_size: configurable
+architecture_variant: configurable
+
+Researchers must be able to create multiple D0 variants without rewriting the training system.
+
+7. DENARIXX ARCHITECTURE LAB
+
+This is critical.
+
+Do not assume that simply scaling a standard transformer will eventually defeat frontier models.
+
+Create an experimental architecture framework.
+
+Researchers must be able to swap components.
+
+Support experimentation interfaces for:
+
+attention mechanisms
+positional repres...

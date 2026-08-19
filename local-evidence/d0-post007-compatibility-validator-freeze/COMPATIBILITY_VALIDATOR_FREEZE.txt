@@ -1,0 +1,39 @@
+D0-POST-007 COMPATIBILITY VALIDATOR FREEZE
+
+stage=D0-POST-007
+status=PRE-FORMAL
+
+compatibilityValidator=ml/evaluation/d0_post007_compatibility.py
+compatibilityValidatorSha256=7c7846f9b4a4391b2c74d29cab3e019d24f678f7a874d231e6072a4fdc1b9c84
+
+syntheticTest=ml/tests/test_d0_post007_compatibility.py
+syntheticTestSha256=da1edfe267ef4ae1d0342943c123cfa366a3ce6659a5ed06bc2dfe4a1b73bfdf
+
+recoveryPolicy=local-evidence/d0-post007-recovery-policy/RECOVERY_POLICY.md
+recoveryPolicySha256=f4c75fff853f89c8ce336d873f9faff524a73713e2dc0ae4ee3b831a5d77afe6
+
+constructionPolicy=local-evidence/d0-post007-formal-dataset-policy/FORMAL_DATASET_CONSTRUCTION_POLICY.md
+constructionPolicySha256=4d52aad4bc744f3d029a0ef3dd4584932ec68bc7fcb532e85fd39c7dc94eba6e
+
+acceptedBaseline=local-checkpoints/d0-post003-capability-seed42.pt
+acceptedBaselineSha256=3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06
+
+characterTokenizerModule=tokenizers.char
+
+syntheticValidDatasetAccepted=true
+syntheticInvalidDatasetCasesRejected=9
+modelInferenceExecuted=false
+modelLossComputed=false
+candidateCheckpointLoaded=false
+
+post007FormalDatasetCreated=false
+post007FormalRowsParsed=0
+post007FormalExposure=false
+
+RULES:
+- Validator identity is frozen before real dataset construction.
+- Real POST-007 rows must pass this exact validator.
+- Validator must not be modified to accommodate proposed rows.
+- Unsupported rows must be rejected or replaced before sealing.
+- No model feedback may be used for formal-row construction.
+- POST-006 exposed rows must not be reused.

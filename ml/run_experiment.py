@@ -98,6 +98,31 @@ def generate(
     return tokenizer.decode(input_tokens[0].detach().cpu().tolist())
 
 
+def advance_scheduler(
+    optimizer: torch.optim.Optimizer,
+    scheduler: torch.optim.lr_scheduler.CosineAnnealingLR,
+) -> float:
+    """
+    Advance the D0 cosine schedule without allowing a completed cosine
+    cycle to rebound during checkpoint continuation.
+
+    Before T_max, preserve PyTorch CosineAnnealingLR behavior exactly.
+    At or beyond T_max, hold every optimizer parameter group at eta_min.
+    """
+
+    if scheduler.last_epoch >= scheduler.T_max:
+        eta_min = float(scheduler.eta_min)
+
+        for group in optimizer.param_groups:
+            group["lr"] = eta_min
+
+        return eta_min
+
+    scheduler.step()
+
+    return float(scheduler.get_last_lr()[0])
+
+
 def run(
     max_steps: int,
     seed: int,
@@ -264,7 +289,10 @@ def run(
         )
 
         optimizer.step()
-        scheduler.step()
+        learning_rate_used = advance_scheduler(
+            optimizer,
+            scheduler,
+        )
 
         elapsed = max(
             time.perf_counter() - step_started,
@@ -274,9 +302,7 @@ def run(
         metric = {
             "step": step,
             "trainingLoss": float(loss.item()),
-            "learningRate": float(
-                scheduler.get_last_lr()[0]
-            ),
+            "learningRate": learning_rate_used,
             "tokensProcessedThisRun": int(
                 (step - start_step) * inputs.numel()
             ),

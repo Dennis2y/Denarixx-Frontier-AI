@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "gate": "D1-DATA-SOURCE-RESOLUTION-015",
+  "performedAt": "2026-08-19",
+  "result": "PASS",
+  "decision": "D1_TRANCHE_A_SOURCE_RESOLUTION_PASS",
+  "authority": {
+    "path": "research/d1/d1_tranche_a_source_resolution.json",
+    "sha256": "ce4e162615ac107cd1a66235518632064a039a2a168193d67329f710f7f65cd6"
+  },
+  "verifiedPredecessors": [
+    {"path": "research/d1/d1_tranche_a_acquisition_authorization.json", "sha256": "3d01bd6581c55980a33198c9560c121646aad01413850e10b9a89ad5a67a2448", "match": true},
+    {"path": "local-evidence/d1-data-readiness/d1_data_tranche_a_authorization_014.json", "sha256": "7b44fd6e207203ab4ffc3dca5e07a8e4443a96017ae40f560bc425cb7d494a29", "match": true},
+    {"path": "research/d1/d1_second_acquisition_expansion_plan.json", "sha256": "db9c4b3b638c602b79f87a25bc1ecbba13a8e3893c3930bb735203eaaa68aade", "match": true},
+    {"path": "local-evidence/d1-data-readiness/d1_data_expansion_013.json", "sha256": "552bae2c2635419b146c273e600a459a5244ea09516d52fb136c0a7d00f87622", "match": true},
+    {"path": "research/d1/d1_tokenizer_compatibility_policy.json", "sha256": "e47dfca90c9bdbf9d09b42b387f3f200bd7dc14bfc921cc68211730ce1a87ddf", "match": true},
+    {"path": "local-evidence/d1-data-readiness/d1_data_tokenizer_012.json", "sha256": "1a06fb12ccae53cac72275c42a13f1dc9e35dfbda98f3b781e97c9ebee6f0651", "match": true},
+    {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json", "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6", "match": true}
+  ],
+  "sourceDecisions": [
+    {"sourceId": "d1-tranche-a-bundestag-plenary-19", "status": "STILL_HELD", "blockers": ["exact stable archive endpoint", "independently bound byte ceiling"]},
+    {"sourceId": "d1-tranche-a-bundestag-plenary-18", "status": "STILL_HELD", "blockers": ["exact stable archive endpoint", "exact document count", "independently bound byte ceiling"]},
+    {"sourceId": "d1-tranche-a-govinfo-uscode-2023-title10", "status": "STILL_HELD", "blockers": ["candidate endpoint redirects to GovInfo error", "package-specific notices", "byte and document bounds"]},
+    {"sourceId": "d1-tranche-a-govinfo-uscode-2023-title42", "status": "STILL_HELD", "blockers": ["candidate endpoint redirects to GovInfo error", "package-specific notices", "byte and document bounds"]},
+    {"sourceId": "d1-tranche-a-eu-building-together-en-de-fr", "status": "STILL_HELD", "blockers": ["German/French exact endpoints", "artifact byte bounds", "edition-level third-party review"]},
+    {"sourceId": "d1-tranche-a-eu-learning-sustainability-2025", "status": "STILL_HELD", "blockers": ["exact PDF endpoints", "file sizes", "edition-level license notices"]}
+  ],
+  "counts": {"resolvedEligible": 0, "stillHeld": 6, "rejected": 0},
+  "capacity": {
+    "resolvedExpectedRawBytes": 0,
+    "resolvedMaximumAuthorizedBytes": 0,
+    "resolvedEstimatedTokenEquivalentCapacity": 0,
+    "lossReservePercent": 25.0,
+    "conservativeResolvedTokenCapacity": 0,
+    "status": "INSUFFICIENT_FOR_AUTHORIZATION_REVIEW"
+  },
+  "boundary": {
+    "metadataOnly": true,
+    "corpusPayloadBytesDownloaded": 0,
+    "TRANCHE_A_ACQUISITION_EXECUTION_AUTHORIZED": "NO",
+    "tokenizerExecuted": false,
+    "modelOrTrainingExecuted": false,
+    "formalEvaluationDataAccessed": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

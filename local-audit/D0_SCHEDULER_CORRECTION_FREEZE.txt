@@ -1,0 +1,98 @@
+DENARIXX FRONTIER AI
+D0 SCHEDULER CORRECTION FREEZE RECORD
+=====================================
+
+STATUS
+------
+D0.1: COMPLETE / FROZEN
+D0.2: COMPLETE / FROZEN
+Scheduler defect: CONFIRMED
+Scheduler correction: COMPLETE / FROZEN
+Scheduler regression verification: PASS — 4/4
+Scheduler freeze audit: PASS
+D0.3: NOT BEGUN
+
+AUTHORITATIVE POST-CORRECTION IDENTITIES
+----------------------------------------
+ml/run_experiment.py
+195f937c71b27f6c735bef62ce288e93eb75d25cdd3f7b0d5e1797a6583160a7
+
+ml/tests/test_d0_scheduler_resume.py
+5d2d38d59894de4cac9e37087de4a10ff4c0278c50162c9b326cb8c5debb9d95
+
+FROZEN D0.2 CHECKPOINT IDENTITIES
+---------------------------------
+local-checkpoints/d0.2/d0-2-base-step4.pt
+462701114d5d515cf5f22aeb558ed279f989117cfb7411395c7fcc4d737195ee
+
+local-checkpoints/d0.2/d0-2-resumed-step8.pt
+de984dd046c5fc78eb5deb70f7955255597aa637845e24e290ef0798caed5bbe
+
+PRE-CORRECTION BACKUP IDENTITIES
+--------------------------------
+ml/run_experiment.py.before-scheduler-correction
+68937e14201a90954753938bc35b1a67a8cc5f87a2882ea31cbe04aa10c8ccd3
+
+ml/tests/test_d0_scheduler_resume.py.before-production-test
+c5a1485e24e5a9f6b7086741c10c7e9818a8e0ea55cacd2c11899c188065fb0a
+
+CORRECTION CONTRACT
+-------------------
+Fresh run:
+Preserve existing CosineAnnealingLR behavior.
+
+Resume before restored T_max:
+Preserve restored scheduler behavior.
+
+Resume at or beyond restored T_max:
+Hold optimizer learning rate at eta_min.
+Do not allow CosineAnnealingLR rebound.
+
+PRODUCTION IMPLEMENTATION
+-------------------------
+advance_scheduler() is the authoritative scheduler advancement policy.
+
+Before T_max:
+scheduler.step() executes normally.
+
+At/past T_max:
+optimizer parameter-group learning rates are held at eta_min.
+
+The training metric records the effective learning rate returned by
+advance_scheduler().
+
+VERIFICATION
+------------
+Post-patch scheduler regression specification:
+4 passed.
+
+Freeze audit:
+PASS.
+
+Protected D0.2 checkpoints:
+UNCHANGED.
+
+Formal dataset:
+NOT OPENED.
+
+Formal evaluation:
+NOT RUN.
+
+D0.2:
+NOT RERUN.
+
+POST-007:
+NOT RERUN.
+
+FREEZE RULE
+-----------
+Do not modify:
+  ml/run_experiment.py
+  ml/tests/test_d0_scheduler_resume.py
+
+Do not modify or replace:
+  local-checkpoints/d0.2/d0-2-base-step4.pt
+  local-checkpoints/d0.2/d0-2-resumed-step8.pt
+
+Any future scheduler-policy change requires a new explicitly authorized
+research gate and must not silently alter this frozen D0 record.

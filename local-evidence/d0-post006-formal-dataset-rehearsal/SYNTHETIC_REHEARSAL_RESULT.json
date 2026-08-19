@@ -1,0 +1,22 @@
+{
+  "stage": "D0-POST-006",
+  "rehearsalType": "synthetic-only",
+  "passed": true,
+  "seed": 6006,
+  "syntheticRows": 25,
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "modelLoaded": false,
+  "modelScoringExecuted": false,
+  "realFormalDatasetCreated": false,
+  "historicalFormalDatasetOpened": false,
+  "formalExposureStarted": false,
+  "determinismVerified": true,
+  "negativeTestsVerified": 8,
+  "syntheticFixtureSha256": "e9dcfc6c111ae259e0f9fe6aba76b6ae2f99b68fc708b4e46891aa4fe950e914"
+}

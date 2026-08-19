@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "closureId": "D1-READINESS-CLOSURE-001",
+  "createdAt": "2026-08-19T08:00:36Z",
+  "generation": "D1",
+  "gateChain": [
+    {
+      "gate": "D1-GATE-001",
+      "requirement": "D1 tokenizer must be trained, serialized, hashed, and round-trip verified.",
+      "authority": "local-evidence/d1-model-gate001-replacement-acceptance/d1_gate001_replacement_tokenizer_acceptance.json",
+      "authoritySha256": "addcf47b90be4de18e0e2c7038249d965f1fb312aa1b21990badc7b8ed841be4",
+      "decision": "PASS"
+    },
+    {
+      "gate": "D1-GATE-002",
+      "requirement": "D1 model implementation must reproduce the locked parameter count.",
+      "authority": "local-evidence/d1-model-gate002/d1_gate002_implementation_freeze.json",
+      "authoritySha256": "b4580b80198b6b56909785f614b0ba9a9346b4bfa90b2805fb96171225d6052e",
+      "decision": "PASS"
+    },
+    {
+      "gate": "D1-GATE-003",
+      "requirement": "Forward/backward MPS memory smoke tests must pass before corpus-scale training.",
+      "authority": "local-evidence/d1-model-gate003/d1_gate003_mps_2048_readiness.json",
+      "authoritySha256": "f4910b7b79b93073bbbfbab3c97af766555bcde04166f9264cd198bb936c901d",
+      "decision": "PASS"
+    },
+    {
+      "gate": "D1-GATE-004",
+      "requirement": "Disk capacity must be re-measured and sufficient checkpoint/corpus headroom established.",
+      "authority": "local-evidence/d1-model-gate004/d1_gate004_storage_readiness.json",
+      "authoritySha256": "f2ae79c2f3f7ff4d3f430742ec664b6078620340d6ef8f836fc8bdc4780e942e",
+      "decision": "PASS"
+    },
+    {
+      "gate": "D1-GATE-005",
+      "requirement": "Training corpus must be materially larger than the current D0 research corpus and independently versioned/hashed.",
+      "authority": "local-evidence/d1-model-gate005/d1_gate005_corpus_readiness.json",
+      "authoritySha256": "585ba25c673de5b73d9e4f518eb986476b57a8709707bb1429cbc9565363b06d",
+      "decision": "PASS",
+      "seriousPretrainingQualification": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING"
+    },
+    {
+      "gate": "D1-GATE-006",
+      "requirement": "D1 evaluation contract must exist before full training begins.",
+      "authority": "local-evidence/d1-model-gate006/d1_gate006_evaluation_contract_readiness.json",
+      "authoritySha256": "7ec3317ac7da0e1c65df862fd2c6011d1cffeb4cb1fd5406e35bb21a3f13cd78",
+      "evaluationContract": "research/d1/d1_evaluation_contract.json",
+      "evaluationContractId": "D1-EVAL-001",
+      "evaluationContractSha256": "bea385450991397979553b04b4975b535456e84aeb3d226f06f3976771db38fe",
+      "decision": "PASS"
+    }
+  ],
+  "lockedIdentity": {
+    "generation": "D1",
+    "architecture": "decoder-only causal transformer",
+    "architectureContract": "D1-ARCH-003",
+    "architectureContractSha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+    "modelSource": "ml/models/d1.py",
+    "modelSourceSha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a",
+    "acceptedTokenizerSha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6",
+    "parameters": 26655104,
+    "vocabSize": 8192,
+    "contextLength": 2048,
+    "hiddenSize": 448,
+    "layers": 8,
+    "attentionHeads": 7,
+    "headDimension": 64,
+    "ffnHiddenSize": 1792,
+    "positionEncoding": "rope",
+    "initialization": "from-scratch"
+  },
+  "executionReadiness": {
+    "fullLocked2048MpsForwardBackward": "PASS",
+    "trainableParameterTensors": 132,
+    "gradientPresentCount": 132,
+    "gradientFiniteCount": 132,
+    "optimizerCreated": false,
+    "parameterUpdatePerformed": false,
+    "trainingStarted": false,
+    "checkpointCreated": false
+  },
+  "storageReadiness": {
+    "decision": "PASS",
+    "primaryStorage": "/Volumes/DenarixxSSD",
+    "atomicCheckpointCoexistenceValidated": true,
+    "checkpointAndCorpusHeadroomValidated": true
+  },
+  "dataReadinessQualification": {
+    "acceptedTokenCount": 464086,
+    "parameterCount": 26655104,
+    "tokensPerParameter": 0.01741077431174157,
+    "parametersPerToken": 57.43569941778033,
+    "complete2048Sequences": 226,
+    "seriousPretrainingScaleAssessment": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING",
+    "deduplication": "PARTIAL",
+    "languageDomainMeasurement": "PARTIAL",
+    "tokenizerCorpusCompatibilityEvidence": "PARTIAL",
+    "malformedEmptyDocumentValidation": "PARTIAL",
+    "contaminationResult": "MISSING",
+    "trainDevelopmentSplit": "MISSING"
+  },
+  "evaluationReadiness": {
+    "contractId": "D1-EVAL-001",
+    "contractPath": "research/d1/d1_evaluation_contract.json",
+    "contractSha256": "bea385450991397979553b04b4975b535456e84aeb3d226f06f3976771db38fe",
+    "contractStatus": "locked-before-full-training",
+    "formalEvaluationDatasetAccessed": false,
+    "formalEvaluationExecuted": false
+  },
+  "decisions": {
+    "D1_ARCHITECTURE_READINESS_GATES_COMPLETE": "PASS",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD",
+    "decisionsAreIndependent": true,
+    "readinessGateCompletionDoesNotAuthorizeSeriousPretraining": true
+  },
+  "unresolvedBlockers": [
+    {
+      "blocker": "corpus scale",
+      "status": "BLOCKING",
+      "finding": "The accepted 464,086-token measurement is not adequate for serious 26.7M-parameter pretraining."
+    },
+    {
+      "blocker": "deduplication completeness",
+      "status": "BLOCKING",
+      "finding": "Composite-corpus deduplication evidence is partial."
+    },
+    {
+      "blocker": "contamination analysis",
+      "status": "BLOCKING",
+      "finding": "No completed contamination result is established."
+    },
+    {
+      "blocker": "language/domain composition measurement",
+      "status": "BLOCKING",
+      "finding": "Source descriptions exist, but aggregate measured composition is incomplete."
+    },
+    {
+      "blocker": "train/development split",
+      "status": "BLOCKING",
+      "finding": "No accepted train/development split policy or artifact exists."
+    },
+    {
+      "blocker": "tokenizer/corpus compatibility verification",
+      "status": "BLOCKING",
+      "finding": "Accepted tokenizer evidence is bound to tranche 2; full composite verification remains partial."
+    },
+    {
+      "blocker": "malformed/empty document validation",
+      "status": "BLOCKING",
+      "finding": "Tranche-2 validation passes, but aggregate composite coverage remains partial."
+    }
+  ],
+  "nextPhaseBoundary": {
+    "seriousPretrainingAuthorized": false,
+    "trainingRunnerImplementationAuthorized": false,
+    "optimizerCreationAuthorized": false,
+    "hyperparameterSelectionAuthorized": false,
+    "checkpointCreationAuthorized": false,
+    "corpusExpansionAuthorizedByClosure": false,
+    "formalEvaluationAccessAuthorized": false,
+    "requiredNextDecision": "Resolve data-readiness blockers under separate authorization before any serious-pretraining authorization decision."
+  }
+}

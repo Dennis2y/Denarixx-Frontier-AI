@@ -1,0 +1,44 @@
+{
+  "aggregateResponseLoss": 3.1551351272802557,
+  "checkpoint": "local-checkpoints/d0-post002-accepted.pt",
+  "checkpointSha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97",
+  "dataset": "ml/data/d0_post003_formal.jsonl",
+  "datasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "exactMatchRate": 0.0,
+  "exactMatches": 0,
+  "examples": 25,
+  "perFamily": {
+    "binary": {
+      "exactMatches": 0,
+      "responseLoss": 3.0512725830078127,
+      "responsePerplexity": 21.142232556119097,
+      "responseTokens": 30
+    },
+    "echo": {
+      "exactMatches": 0,
+      "responseLoss": 3.1140951429094588,
+      "responsePerplexity": 22.51305004129063,
+      "responseTokens": 28
+    },
+    "qa": {
+      "exactMatches": 0,
+      "responseLoss": 3.1408118438720702,
+      "responsePerplexity": 23.12263120728264,
+      "responseTokens": 25
+    },
+    "semantic": {
+      "exactMatches": 0,
+      "responseLoss": 3.0979922734774075,
+      "responsePerplexity": 22.153428575571173,
+      "responseTokens": 26
+    },
+    "transform": {
+      "exactMatches": 0,
+      "responseLoss": 3.3587615331014,
+      "responsePerplexity": 28.753558488623817,
+      "responseTokens": 30
+    }
+  },
+  "responsePerplexity": 23.456206450675545,
+  "responseTokens": 139
+}

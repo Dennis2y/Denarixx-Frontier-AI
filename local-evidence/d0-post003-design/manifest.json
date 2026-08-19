@@ -1,0 +1,70 @@
+{
+  "architecture": {
+    "attentionHeads": 4,
+    "contextLength": 32,
+    "dropout": 0.0,
+    "hiddenSize": 64,
+    "layers": 2,
+    "normalization": "layernorm",
+    "parameterCount": 102784,
+    "positionEncoding": "rope",
+    "vocabSize": 42
+  },
+  "baseCheckpoint": {
+    "path": "local-checkpoints/d0-post002-accepted.pt",
+    "resumeOptimizerState": false,
+    "sha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97"
+  },
+  "candidateDataset": {
+    "examples": 30,
+    "path": "ml/data/d0_post003_capabilities.jsonl",
+    "sha256": "af597165dba3f3c76672004759aa2fcc899f32b0eccd7737bebdaa94651242fe"
+  },
+  "candidateSelection": {
+    "authorizedTrainingRuns": 1,
+    "bestDevCheckpointSelection": false,
+    "candidateStep": 20,
+    "checkpointAveraging": false,
+    "earlyStopping": false,
+    "hyperparameterSearch": false,
+    "seedSearch": false
+  },
+  "development": {
+    "examples": 5,
+    "path": "ml/data/d0_post003_dev.jsonl",
+    "sha256": "dc7beefa2615b664438c445f5b13f6a579ddd2fff55b91420e7fc29e9c47c45b",
+    "usedForGradientOptimization": false
+  },
+  "historicalEvaluationPolicy": {
+    "eval001UsedForSelection": false,
+    "eval002V4UsedForSelection": false
+  },
+  "lmRetention": {
+    "path": "ml/data/d0_research_corpus.txt",
+    "sha256": "936b53855c5fa65cc408fb0b29108966445215a474ccfcce7ae7fe9f41fcc072"
+  },
+  "optimization": {
+    "gradientClipNorm": 1.0,
+    "learningRate": 0.0001,
+    "lmBatchSize": 4,
+    "lmGeneratorSeed": 43,
+    "maxSteps": 20,
+    "objective": "L_response + 0.25 * L_lm",
+    "optimizer": "AdamW",
+    "retentionWeight": 0.25,
+    "scheduler": null,
+    "seed": 42,
+    "sftBatchSize": 4,
+    "sftGeneratorSeed": 42,
+    "warmupSteps": 0,
+    "weightDecay": 0.01
+  },
+  "stage": "D0-POST-003",
+  "status": "optimization_policy_frozen",
+  "train": {
+    "examples": 25,
+    "internalResplitAllowed": false,
+    "path": "ml/data/d0_post003_train.jsonl",
+    "sha256": "0ccc376954deba3c013789cde803cf230ee894bb91a7d2afd5105f2d0ee481a2"
+  }
+}

@@ -1,0 +1,330 @@
+"""
+Denarixx Frontier AI — D0.4 pre-seal evaluation gate.
+
+This module validates proposed D0.4 evaluation rows BEFORE
+dataset sealing.
+
+It performs no model scoring.
+
+It does not contain a D0.4 dataset.
+
+It does not authorize D0.4 evaluation.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Iterable, Mapping, Sequence
+
+
+FAMILIES = (
+    "literal_response",
+    "short_completion",
+    "simple_transformation",
+    "constrained_generation",
+    "basic_instruction_following",
+)
+
+EXPECTED_PER_FAMILY = 5
+EXPECTED_TOTAL = 25
+
+
+class PresealValidationError(ValueError):
+    """Raised when proposed D0.4 rows violate the frozen protocol."""
+
+
+@dataclass(frozen=True)
+class CompatibilityContract:
+    tokenizer: object
+    context_length: int
+
+
+def normalize_for_overlap(text: str) -> str:
+    """
+    Conservative deterministic normalization for exact-overlap audits.
+
+    This normalization is ONLY for provenance/freshness comparison.
+    It is not generation exact-match normalization.
+    """
+
+    return " ".join(text.strip().split())
+
+
+def validate_structure(
+    rows: Sequence[Mapping[str, object]],
+    *,
+    require_final_counts: bool = True,
+) -> None:
+    """
+    Validate D0.4 row schema and frozen family distribution.
+
+    During construction, require_final_counts=False may be used for
+    partial proposed sets.
+
+    Final sealing requires require_final_counts=True.
+    """
+
+    if require_final_counts and len(rows) != EXPECTED_TOTAL:
+        raise PresealValidationError(
+            f"D0.4 requires exactly {EXPECTED_TOTAL} rows; "
+            f"got {len(rows)}"
+        )
+
+    allowed_keys = {"instruction", "response", "family"}
+    family_counts = {family: 0 for family in FAMILIES}
+
+    seen_instructions: set[str] = set()
+    seen_pairs: set[tuple[str, str]] = set()
+
+    for index, row in enumerate(rows, start=1):
+        if set(row.keys()) != allowed_keys:
+            raise PresealValidationError(
+                f"row {index} must contain exactly "
+                "instruction, response, family"
+            )
+
+        instruction = row["instruction"]
+        response = row["response"]
+        family = row["family"]
+
+        if not isinstance(instruction, str) or not instruction:
+            raise PresealValidationError(
+                f"row {index} instruction must be a non-empty string"
+            )
+
+        if not isinstance(response, str) or not response:
+            raise PresealValidationError(
+                f"row {index} response must be a non-empty string"
+            )
+
+        if not isinstance(family, str) or family not in FAMILIES:
+            raise PresealValidationError(
+                f"row {index} has invalid family: {family!r}"
+            )
+
+        normalized_instruction = normalize_for_overlap(instruction)
+        normalized_response = normalize_for_overlap(response)
+
+        if not normalized_instruction:
+            raise PresealValidationError(
+                f"row {index} normalized instruction is empty"
+            )
+
+        if not normalized_response:
+            raise PresealValidationError(
+                f"row {index} normalized response is empty"
+            )
+
+        if normalized_instruction in seen_instructions:
+            raise PresealValidationError(
+                f"duplicate normalized instruction at row {index}"
+            )
+
+        pair = (
+            normalized_instruction,
+            normalized_response,
+        )
+
+        if pair in seen_pairs:
+            raise PresealValidationError(
+                f"duplicate normalized instruction-response pair "
+                f"at row {index}"
+            )
+
+        seen_instructions.add(normalized_instruction)
+        seen_pairs.add(pair)
+        family_counts[family] += 1
+
+    if require_final_counts:
+        for family, count in family_counts.items():
+            if count != EXPECTED_PER_FAMILY:
+                raise PresealValidationError(
+                    f"{family} requires exactly "
+                    f"{EXPECTED_PER_FAMILY} rows; got {count}"
+                )
+
+
+def validate_freshness(
+    rows: Sequence[Mapping[str, object]],
+    historical_rows: Iterable[Mapping[str, str]],
+) -> None:
+    """
+    Reject prohibited exact normalized overlap with historical material
+    supplied by the caller.
+
+    This function deliberately accepts historical rows in memory.
+    It does not know or open protected formal dataset paths.
+    """
+
+    historical_instructions: set[str] = set()
+    historical_pairs: set[tuple[str, str]] = set()
+
+    for row in historical_rows:
+        instruction = normalize_for_overlap(row["instruction"])
+        response = normalize_for_overlap(row["response"])
+
+        historical_instructions.add(instruction)
+        historical_pairs.add((instruction, response))
+
+    for index, row in enumerate(rows, start=1):
+        instruction = normalize_for_overlap(
+            str(row["instruction"])
+        )
+        response = normalize_for_overlap(
+            str(row["response"])
+        )
+
+        if instruction in historical_instructions:
+            raise PresealValidationError(
+                f"row {index} instruction overlaps historical material"
+            )
+
+        if (instruction, response) in historical_pairs:
+            raise PresealValidationError(
+                f"row {index} pair overlaps historical material"
+            )
+
+
+def validate_tokenizer_coverage(
+    text: str,
+    tokenizer: object,
+    *,
+    label: str,
+) -> list[int]:
+    """
+    Require the exact tokenizer to encode the text without repair.
+    """
+
+    try:
+        ids = tokenizer.encode(text)
+    except Exception as exc:
+        raise PresealValidationError(
+            f"{label} tokenizer coverage failed: {exc}"
+        ) from exc
+
+    if not isinstance(ids, list):
+        ids = list(ids)
+
+    if not ids:
+        raise PresealValidationError(
+            f"{label} encoded to zero tokens"
+        )
+
+    return ids
+
+
+def format_instruction(instruction: str) -> str:
+    """
+    Frozen D0.4 pre-seal prompt formatting.
+
+    The final evaluator must use this same formatting contract unless
+    a later governance artifact explicitly freezes an equivalent
+    established backend before dataset sealing.
+    """
+
+    return instruction
+
+
+def validate_compatibility(
+    rows: Sequence[Mapping[str, object]],
+    contract: CompatibilityContract,
+) -> dict[str, object]:
+    """
+    Validate tokenizer coverage and context compatibility.
+
+    No loss is computed.
+    No generation is performed.
+    """
+
+    if contract.context_length < 2:
+        raise PresealValidationError(
+            "canonical context length is invalid"
+        )
+
+    row_reports = []
+
+    for index, row in enumerate(rows, start=1):
+        instruction = str(row["instruction"])
+        response = str(row["response"])
+
+        prompt = format_instruction(instruction)
+
+        prompt_ids = validate_tokenizer_coverage(
+            prompt,
+            contract.tokenizer,
+            label=f"row {index} instruction",
+        )
+
+        response_ids = validate_tokenizer_coverage(
+            response,
+            contract.tokenizer,
+            label=f"row {index} response",
+        )
+
+        total = len(prompt_ids) + len(response_ids)
+
+        if total > contract.context_length:
+            raise PresealValidationError(
+                f"row {index} exceeds context length: "
+                f"{total} > {contract.context_length}"
+            )
+
+        if len(response_ids) < 1:
+            raise PresealValidationError(
+                f"row {index} has no supervised response tokens"
+            )
+
+        row_reports.append(
+            {
+                "row": index,
+                "promptTokens": len(prompt_ids),
+                "responseTokens": len(response_ids),
+                "totalTokens": total,
+                "compatible": True,
+            }
+        )
+
+    return {
+        "rowsValidated": len(rows),
+        "contextLength": contract.context_length,
+        "allCompatible": True,
+        "lossComputed": False,
+        "generationExecuted": False,
+        "rows": row_reports,
+    }
+
+
+def validate_preseal_candidate(
+    rows: Sequence[Mapping[str, object]],
+    *,
+    historical_rows: Iterable[Mapping[str, str]],
+    contract: CompatibilityContract,
+    require_final_counts: bool = True,
+) -> dict[str, object]:
+    """
+    Execute the complete D0.4 pre-seal validation pipeline.
+    """
+
+    validate_structure(
+        rows,
+        require_final_counts=require_final_counts,
+    )
+
+    validate_freshness(
+        rows,
+        historical_rows,
+    )
+
+    compatibility = validate_compatibility(
+        rows,
+        contract,
+    )
+
+    return {
+        "status": "pass",
+        "structureValid": True,
+        "freshnessValid": True,
+        "compatibility": compatibility,
+        "datasetSealed": False,
+        "modelScored": False,
+    }

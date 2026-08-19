@@ -1,11 +1,9 @@
 import { Router, type IRouter, type RequestHandler } from "express";
 import { spawn } from "node:child_process";
 import path from "node:path";
-import { eq, desc } from "drizzle-orm";
 import { RunInferenceBody, RunInferenceResponse } from "@workspace/api-zod";
-import { db, trainingRunsTable } from "@workspace/db";
 import { getAuth } from "@clerk/express";
-import { seedResearchData } from "./research";
+import { resolveServingAuthority } from "../lib/servingAuthority";
 
 const router: IRouter = Router();
 
@@ -18,21 +16,26 @@ const requireResearchRole: RequestHandler = (req, res, next) => {
   next();
 };
 
+router.get("/auth-status", (req, res) => {
+  const auth = getAuth(req);
+
+  res.json({
+    authenticated: auth.isAuthenticated === true,
+    authStateAvailable: auth !== undefined && auth !== null,
+  });
+});
+
 router.post("/inference", requireResearchRole, async (req, res, next) => {
   try {
-    await seedResearchData();
     const input = RunInferenceBody.parse(req.body);
-    const [run] = await db.select().from(trainingRunsTable).where(eq(trainingRunsTable.status, "complete")).orderBy(desc(trainingRunsTable.completedAt)).limit(1);
-    if (!run?.checkpointPath) {
-      res.status(409).json({ error: "Run a complete D0 experiment before inference." });
-      return;
-    }
-    const python = path.join(process.cwd(), ".pythonlibs", "bin", "python");
+    const servingAuthority = await resolveServingAuthority();
+    const repositoryRoot = path.resolve(process.cwd(), "../..");
+    const python = path.join(repositoryRoot, ".pythonlibs", "bin", "python");
     const command = process.env.PYTHON_BIN || python;
-    const script = path.resolve(process.cwd(), "ml", "run_inference.py");
-    const child = spawn(command, [script, "--checkpoint", run.checkpointPath, "--prompt", input.prompt, "--max-tokens", String(input.maxTokens ?? 24), "--temperature", String(input.temperature ?? 0.8)], {
-      cwd: process.cwd(),
-      env: { ...process.env, PYTHONPATH: path.resolve(process.cwd(), "ml") },
+    const script = path.join(repositoryRoot, "ml", "run_inference.py");
+    const child = spawn(command, [script, "--checkpoint", servingAuthority.checkpointAbsolutePath, "--prompt", input.prompt, "--max-tokens", String(input.maxTokens ?? 24), "--temperature", String(input.temperature ?? 0.8)], {
+      cwd: repositoryRoot,
+      env: { ...process.env, PYTHONPATH: path.join(repositoryRoot, "ml") },
     });
     let output = "";
     child.stdout.on("data", (chunk: Buffer) => {
@@ -50,7 +53,7 @@ router.post("/inference", requireResearchRole, async (req, res, next) => {
         }
         res.json(RunInferenceResponse.parse({
           model: "denarixx-d0-baseline",
-          checkpoint: run.checkpointPath,
+          checkpoint: servingAuthority.checkpointPath,
           prompt: input.prompt,
           output: payload.output,
           measured: true,

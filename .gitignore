@@ -60,3 +60,6 @@ research/reports/*.json
 local-backups/
 ml/**/__pycache__/
 *.pyc
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,72 @@
+{
+  "architecture": {
+    "contextLength": 2048,
+    "parameterCount": 26655104,
+    "vocabSize": 8192
+  },
+  "authoritativeInputs": {
+    "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/d1_storage_policy.json": "7a29cfd7cb1b19a6b0203ccf9a4e02b543f99ca037f958600811337b7688c124",
+    "local-evidence/d1-model-gate002/d1_gate002_implementation_freeze.json": "b4580b80198b6b56909785f614b0ba9a9346b4bfa90b2805fb96171225d6052e",
+    "local-evidence/d1-model-gate003/d1_gate003_mps_memory_freeze.json": "0a2a755f57a2924767db632426791eef68d4355bde206eecee35ae4175782f52",
+    "ml/models/d0.py": "425ab739c3ad0db23855945d5f602bba3104dbffb7c5139881901f25f7d503ca",
+    "ml/models/d1.py": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a",
+    "ml/tests/test_d1_model.py": "2a246228f42e4491e85d94c40a778a355513a01132d67188021ee86378da309b",
+    "research/d1/d1_architecture_contract.json": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+    "research/d1/d1_data_acquisition_contract.json": "61f0db2623c8fbc016364394a367a6de9b66aceee3820b40fb16a2461bd61913",
+    "research/d1/d1_model_semantic_freeze.json": "f231faf1968bc8f8edbdd868142604ff7626d1d8bb821afe15838d1f5f3f8113",
+    "research/d1/d1_tokenizer_contract.json": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"
+  },
+  "authorizationBoundary": {
+    "checkpointCreationAuthorized": false,
+    "d1Gate002Satisfied": true,
+    "d1Gate003Satisfied": true,
+    "d1Gate004Recorded": true,
+    "formalEvaluationDatasetAccessAuthorized": false,
+    "trainingAuthorized": false,
+    "trainingCorpusAcquisitionAuthorized": false
+  },
+  "capacityMeasurement": {
+    "freeBytes": 1963779227648,
+    "freeGiB": 1828.9119262695312,
+    "freePercentage": 98.17967467222137,
+    "freeTiB": 1.7860468029975891,
+    "totalBytes": 2000189177856,
+    "usedBytes": 36409950208,
+    "volume": "/Volumes/DenarixxSSD"
+  },
+  "gate": {
+    "id": "D1-GATE-004",
+    "requirement": "Disk capacity must be re-measured and sufficient checkpoint/corpus headroom established.",
+    "status": "PASS"
+  },
+  "headroomPlanning": {
+    "checkpointReserveBytes": 10662041600,
+    "combinedReserveBytes": 547532953600,
+    "conservativeCheckpointEnvelopeBytes": 533102080,
+    "fp32ParameterBytes": 106620416,
+    "note": "The 500 GiB corpus value is a storage stress scenario only and does not define or authorize the D1 training corpus.",
+    "remainingAfterReserveBytes": 1416246274048,
+    "retainedCheckpointPlanningCount": 20,
+    "status": "PASS",
+    "stressCorpusReserveBytes": 536870912000,
+    "stressCorpusReserveGiB": 500
+  },
+  "purpose": "d1-gate-004-storage-headroom-freeze",
+  "recordId": "D1-MODEL-020",
+  "schemaVersion": 1,
+  "stage": "D1",
+  "storageContract": {
+    "bindingStatus": "PASS",
+    "id": "D1-STOR-002",
+    "policyPath": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/d1_storage_policy.json",
+    "policySha256": "7a29cfd7cb1b19a6b0203ccf9a4e02b543f99ca037f958600811337b7688c124",
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1"
+  },
+  "validation": {
+    "d1WeightCheckpointAbsence": "PASS",
+    "requiredDirectoriesPresent": true,
+    "sourceStep": "D1-MODEL-019",
+    "storageContractBinding": "PASS",
+    "storageHeadroom": "PASS"
+  }
+}

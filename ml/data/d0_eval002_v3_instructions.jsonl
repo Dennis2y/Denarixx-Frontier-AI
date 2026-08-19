@@ -1,0 +1,20 @@
+{"instruction":"say baseline","response":"compare models"}
+{"instruction":"say frozen","response":"keep data fixed"}
+{"instruction":"say hash","response":"check identity"}
+{"instruction":"say test","response":"measure behavior"}
+{"instruction":"say train","response":"fit the model"}
+{"instruction":"say evidence","response":"support a claim"}
+{"instruction":"say retention","response":"keep ability"}
+{"instruction":"say held out","response":"test new data"}
+{"instruction":"say metadata","response":"record the run"}
+{"instruction":"say regression","response":"find lost skill"}
+{"instruction":"say checkpoint","response":"store model state"}
+{"instruction":"say repeat","response":"use same setup"}
+{"instruction":"say tokenizer","response":"map text tokens"}
+{"instruction":"say experiment","response":"controlled test"}
+{"instruction":"say language","response":"measure retention"}
+{"instruction":"say response","response":"measure learning"}
+{"instruction":"say compare","response":"check changes"}
+{"instruction":"say separate","response":"avoid overlap"}
+{"instruction":"say metric","response":"measure a result"}
+{"instruction":"say validate","response":"check the result"}

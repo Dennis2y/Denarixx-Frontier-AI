@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "plan": {
+    "id": "D1-DATA-SCALE-001",
+    "generation": "D1",
+    "status": "proposed-before-corpus-acquisition",
+    "createdAt": "2026-08-19T08:28:01Z",
+    "purpose": "Provide an evidence-based, staged corpus-scale proposal for the locked D1 model without authorizing acquisition, expansion, hyperparameter selection or training."
+  },
+  "authoritativeInputs": {
+    "dataReadinessContract": {
+      "path": "research/d1/d1_data_readiness_contract.json",
+      "sha256": "9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953"
+    },
+    "dataReadinessEvidence": {
+      "path": "local-evidence/d1-data-readiness/d1_data_readiness_001.json",
+      "sha256": "9752a28876a13bcc9ab18e6d4eb0c4191cf8fd2badfc891a47ac525449de5a9b"
+    },
+    "readinessClosure": {
+      "path": "research/d1/d1_readiness_closure.json",
+      "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"
+    },
+    "architecture": {
+      "id": "D1-ARCH-003",
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "dataAcquisitionContract": {
+      "path": "research/d1/d1_data_acquisition_contract.json",
+      "sha256": "61f0db2623c8fbc016364394a367a6de9b66aceee3820b40fb16a2461bd61913"
+    }
+  },
+  "currentMeasuredScale": {
+    "parameterCount": 26655104,
+    "contextLength": 2048,
+    "vocabularySize": 8192,
+    "acceptedTokens": 464086,
+    "acceptedBytes": 2280040,
+    "observedBytesPerToken": 4.912968717005038,
+    "tokensPerParameter": 0.01741077431174157,
+    "parametersPerToken": 57.43569941778033,
+    "fullContextSequencesFloor": 226,
+    "seriousPretrainingScaleAssessment": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING"
+  },
+  "existingAuthorityAssessment": {
+    "authoritativeSeriousPretrainingTokenTargetExists": false,
+    "modelTrainingCorpusStatus": "not-yet-locked",
+    "tokenizerDevelopmentFloorBytes": 10000000,
+    "seriousTokenizerPlanningTargetBytes": 100000000,
+    "storageStressCaseBytes": 536870912000,
+    "interpretation": "The byte targets govern tokenizer corpus planning and the 500 GiB value is a storage-readiness stress case; none is authority for D1 model-pretraining scale."
+  },
+  "externalEvidence": [
+    {
+      "citation": "Hoffmann et al. (2022), Training Compute-Optimal Large Language Models",
+      "url": "https://arxiv.org/abs/2203.15556",
+      "primaryFindingUsed": "Under a fixed compute budget, model parameters and training tokens should scale approximately together; the reported Chinchilla result supplies an empirical compute-optimal reference near 20 training tokens per parameter.",
+      "applicability": "REFERENCE_ONLY",
+      "limitations": "The experiments cover materially larger models, different hardware and training regimes. The approximate 20:1 exposure ratio is not adopted as a binding D1 target and does not determine unique-corpus size, data quality, passes or hyperparameters."
+    },
+    {
+      "citation": "Muennighoff et al. (2023), Scaling Data-Constrained Language Models",
+      "url": "https://arxiv.org/abs/2305.16264",
+      "primaryFindingUsed": "Repeated data can retain value for a limited number of epochs under data constraints, but returns diminish as repetition increases and unique data remains preferable per unit of compute.",
+      "applicability": "METHODOLOGY_REFERENCE_ONLY",
+      "limitations": "D1-DATA-002 does not select epochs, repeat counts or exposure-token budgets; duplication cannot be used to satisfy the unique accepted-token scale target."
+    },
+    {
+      "citation": "Eldan and Li (2023), TinyStories: How Small Can Language Models Be and Still Speak Coherent English?",
+      "url": "https://arxiv.org/abs/2305.07759",
+      "primaryFindingUsed": "Small language models can learn coherent behavior from highly curated, deliberately simplified data distributions.",
+      "applicability": "QUALITY_AND_SCOPE_REFERENCE_ONLY",
+      "limitations": "The synthetic constrained-domain result does not establish broad capability, general-language adequacy or a transferable token target for D1."
+    }
+  ],
+  "referenceExposureTable": [
+    {"tokensPerParameter": 1, "tokens": 26655104, "multipleOfCurrentTokens": 57.43569941778033, "fullContextSequencesFloor": 13015, "approximateBytesAtObservedDensity": 130955692},
+    {"tokensPerParameter": 2, "tokens": 53310208, "multipleOfCurrentTokens": 114.87139883556065, "fullContextSequencesFloor": 26030, "approximateBytesAtObservedDensity": 261911384},
+    {"tokensPerParameter": 5, "tokens": 133275520, "multipleOfCurrentTokens": 287.1784970889016, "fullContextSequencesFloor": 65075, "approximateBytesAtObservedDensity": 654778461},
+    {"tokensPerParameter": 10, "tokens": 266551040, "multipleOfCurrentTokens": 574.3569941778032, "fullContextSequencesFloor": 130151, "approximateBytesAtObservedDensity": 1309556921},
+    {"tokensPerParameter": 20, "tokens": 533102080, "multipleOfCurrentTokens": 1148.7139883556065, "fullContextSequencesFloor": 260303, "approximateBytesAtObservedDensity": 2619113842},
+    {"tokensPerParameter": 30, "tokens": 799653120, "multipleOfCurrentTokens": 1723.0709825334097, "fullContextSequencesFloor": 390455, "approximateBytesAtObservedDensity": 3928670763},
+    {"tokensPerParameter": 40, "tokens": 1066204160, "multipleOfCurrentTokens": 2297.427976711213, "fullContextSequencesFloor": 520607, "approximateBytesAtObservedDensity": 5238227684}
+  ],
+  "scaleClasses": [
+    {
+      "class": "D1-SCALE-SMOKE",
+      "uniqueAcceptedTokenRange": {"minimumInclusive": 464086, "maximumExclusive": 53310208},
+      "purpose": "Pipeline correctness only.",
+      "claimsAllowed": ["pipeline and mechanical correctness evidence"],
+      "claimsProhibited": ["serious-pretraining adequacy", "general capability", "production readiness"],
+      "minimumEvidenceBeforeEntry": ["authorized smoke protocol", "valid tokenizer-bound corpus sample", "runtime and architecture identity verification"],
+      "seriousPretrainingAuthorizationRequired": false
+    },
+    {
+      "class": "D1-SCALE-DEVELOPMENT",
+      "uniqueAcceptedTokenRange": {"minimumInclusive": 53310208, "maximumInclusive": 133275520},
+      "tokensPerParameterRange": {"minimumInclusive": 2, "maximumInclusive": 5},
+      "purpose": "Measurable learning and trainer/checkpoint validation; not general-capability claims.",
+      "claimsAllowed": ["measured development learning", "trainer and checkpoint validation", "development-only evaluation"],
+      "claimsProhibited": ["general capability", "frontier capability", "production readiness", "formal-evaluation claims"],
+      "minimumEvidenceBeforeEntry": ["frozen development corpus target", "quality and provenance evidence", "deduplicated sealed manifest", "authorized development training plan"],
+      "seriousPretrainingAuthorizationRequired": false,
+      "status": "PROPOSED_FOR_FREEZE"
+    },
+    {
+      "class": "D1-SCALE-CAPABILITY",
+      "uniqueAcceptedTokenRange": {"minimumInclusive": 266551040, "maximumInclusive": 533102080},
+      "tokensPerParameterRange": {"minimumInclusive": 10, "maximumInclusive": 20},
+      "purpose": "First serious D1 capability-training attempt.",
+      "claimsAllowed": ["capability evidence within an authorized evaluation boundary after training"],
+      "claimsProhibited": ["frontier-model status by scale alone", "production safety", "capability claims without evaluation"],
+      "minimumEvidenceBeforeEntry": ["all D1 data blockers passed", "frozen capability corpus target", "sealed quality-adjusted manifest", "successful development-tier learning evidence", "measured throughput and cost", "separate serious-pretraining authorization"],
+      "seriousPretrainingAuthorizationRequired": true,
+      "status": "PROPOSED_FOR_FREEZE"
+    },
+    {
+      "class": "D1-SCALE-EXPANSION",
+      "uniqueAcceptedTokenRange": {"minimumExclusive": 533102080, "referenceMaximum": 1066204160},
+      "tokensPerParameterRange": {"minimumExclusive": 20, "referenceMaximum": 40},
+      "purpose": "Later scale-up after empirical evidence.",
+      "claimsAllowed": ["incremental scaling findings supported by measured evidence"],
+      "claimsProhibited": ["automatic compute optimality", "automatic capability gains", "authorization inferred from prior tiers"],
+      "minimumEvidenceBeforeEntry": ["completed capability-tier analysis", "new scaling rationale", "measured marginal value", "separately frozen corpus and training authority"],
+      "seriousPretrainingAuthorizationRequired": true
+    }
+  ],
+  "proposal": {
+    "developmentTarget": {
+      "status": "PROPOSED_FOR_FREEZE",
+      "minimumUniqueAcceptedTokens": 53310208,
+      "preferredPlanningCeilingUniqueAcceptedTokens": 133275520,
+      "minimumTokensPerParameter": 2,
+      "ceilingTokensPerParameter": 5,
+      "minimumMultipleOfCurrent": 114.87139883556065,
+      "ceilingMultipleOfCurrent": 287.1784970889016,
+      "approximateRawTextBytesRangeAtCurrentDensity": {"minimum": 261911384, "maximum": 654778461},
+      "rationale": "Large enough to move beyond the 0.017-token-per-parameter smoke corpus while remaining a staged evidence tier appropriate for measured M2/MPS feasibility."
+    },
+    "capabilityTarget": {
+      "status": "PROPOSED_FOR_FREEZE",
+      "minimumUniqueAcceptedTokens": 266551040,
+      "preferredPlanningCeilingUniqueAcceptedTokens": 533102080,
+      "minimumTokensPerParameter": 10,
+      "ceilingTokensPerParameter": 20,
+      "minimumMultipleOfCurrent": 574.3569941778032,
+      "ceilingMultipleOfCurrent": 1148.7139883556065,
+      "approximateRawTextBytesRangeAtCurrentDensity": {"minimum": 1309556921, "maximum": 2619113842},
+      "rationale": "Provides a serious staged band below and up to the widely cited compute-optimal reference without blindly binding D1 to it; the final target must be selected only after quality, usable-token and measured compute evidence exists."
+    },
+    "uniqueVersusExposureTokens": {
+      "targetMetric": "UNIQUE_QUALITY_ADJUSTED_ACCEPTED_TOKENS",
+      "trainingExposureTargetSelected": false,
+      "corpusPassesSelected": false,
+      "passesRepresented": "NOT_APPLICABLE",
+      "rule": "Repeated or duplicated tokens do not satisfy either proposed unique-token target. Any future exposure-token or pass decision requires separate training-policy authority."
+    }
+  },
+  "freezePrerequisites": [
+    "Resolve or explicitly condition the target on D1-DATA-BLOCKER-002 through D1-DATA-BLOCKER-007 quality exclusions.",
+    "Measure quality-adjusted usable tokens with the unchanged accepted tokenizer and reconcile them to a sealed manifest.",
+    "Measure D1 training throughput and cost in a separately authorized non-formal development operation before choosing a final capability target within the band.",
+    "Version and SHA-256-bind the selected target, input evidence, manifest and token-count evidence.",
+    "Require separate authorization for acquisition, corpus expansion, hyperparameter selection and training."
+  ],
+  "decision": {
+    "D1-DATA-BLOCKER-001-PLANNING": "PASS",
+    "CORPUS_SCALE_TARGET_STATUS": "PROPOSED_FOR_FREEZE",
+    "D1-DATA-BLOCKER-001": "PLANNED_NOT_SATISFIED",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  },
+  "authorizationBoundary": {
+    "corpusAcquisitionAuthorized": false,
+    "corpusExpansionAuthorized": false,
+    "datasetDownloadAuthorized": false,
+    "corpusModificationAuthorized": false,
+    "tokenizerModificationAuthorized": false,
+    "modelExecutionAuthorized": false,
+    "optimizerCreationAuthorized": false,
+    "hyperparameterSelectionAuthorized": false,
+    "trainerImplementationAuthorized": false,
+    "checkpointCreationAuthorized": false,
+    "trainingAuthorized": false,
+    "formalEvaluationAccessAuthorized": false
+  }
+}

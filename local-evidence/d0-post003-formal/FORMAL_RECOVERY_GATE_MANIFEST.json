@@ -1,0 +1,40 @@
+{
+  "stage": "D0-POST-003-formal-recovery",
+  "status": "ready_for_one_controlled_recovery_scoring_attempt",
+  "originalFormalExposureConsumed": true,
+  "originalFormalMetricsObserved": false,
+  "baseline": {
+    "path": "local-checkpoints/d0-post002-accepted.pt",
+    "sha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97"
+  },
+  "candidate": {
+    "path": "local-checkpoints/d0-post003-capability-seed42.pt",
+    "sha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06"
+  },
+  "formalDataset": {
+    "path": "ml/data/d0_post003_formal.jsonl",
+    "sha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+    "exposed": true,
+    "unchanged": true
+  },
+  "originalEvaluator": {
+    "path": "ml/evaluation/d0_post003_formal.py",
+    "sha256": "df9a2a98162e384971b9609173b593475391306e761b93cef151d919df3099fc",
+    "status": "preserved_defective"
+  },
+  "recoveryEvaluator": {
+    "path": "ml/evaluation/d0_post003_formal_v2.py",
+    "sha256": "b5feace0a1fcd837cedff530d7384c3a237328b4cd274d4ca5aee2541ebf0bfa"
+  },
+  "recoveryTests": {
+    "path": "ml/tests/test_d0_post003_formal_v2.py",
+    "sha256": "c5568db6102f81770f3a7942cf6600fdb58f030bb4c3bcffe56ab91624b31893"
+  },
+  "recoveryGate": {
+    "path": "local-evidence/d0-post003-formal/FORMAL_RECOVERY_SCORING_GATE.md",
+    "sha256": "e56ca4cd879ca532420a803502bee6394e0e9168691557d0b8bb5f2dacf14495"
+  },
+  "canonicalParameterCount": 102784,
+  "recoveryScoringPerformed": false,
+  "formalAcceptanceDecided": false
+}

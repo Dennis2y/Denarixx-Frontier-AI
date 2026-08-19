@@ -1,0 +1,225 @@
+"""
+Synthetic tests for the D0.4 pre-seal gate.
+
+No real D0.4 dataset is present in this file.
+No real checkpoint is loaded.
+No model scoring occurs.
+"""
+
+import importlib.util
+from pathlib import Path
+
+
+HERE = Path(__file__).resolve().parent
+MODULE = HERE / "d0_4_preseal_gate.py"
+
+spec = importlib.util.spec_from_file_location(
+    "d0_4_preseal_gate",
+    MODULE,
+)
+
+gate = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(gate)
+
+
+class SyntheticTokenizer:
+    """
+    Tiny synthetic tokenizer used only to test gate mechanics.
+    """
+
+    alphabet = set("abcdefghijklmnopqrstuvwxyz ")
+
+    def encode(self, text):
+        ids = []
+
+        for char in text:
+            if char not in self.alphabet:
+                raise ValueError(
+                    f"unsupported synthetic character: {char!r}"
+                )
+            ids.append(ord(char))
+
+        return ids
+
+
+def contract():
+    return gate.CompatibilityContract(
+        tokenizer=SyntheticTokenizer(),
+        context_length=32,
+    )
+
+
+def test_partial_valid_rows_pass():
+    rows = [
+        {
+            "instruction": "say cat",
+            "response": "cat",
+            "family": "literal_response",
+        },
+        {
+            "instruction": "say dog",
+            "response": "dog",
+            "family": "short_completion",
+        },
+    ]
+
+    result = gate.validate_preseal_candidate(
+        rows,
+        historical_rows=[],
+        contract=contract(),
+        require_final_counts=False,
+    )
+
+    assert result["status"] == "pass"
+    assert result["modelScored"] is False
+
+
+def test_bad_character_fails():
+    rows = [
+        {
+            "instruction": "say cat?",
+            "response": "cat",
+            "family": "literal_response",
+        }
+    ]
+
+    try:
+        gate.validate_preseal_candidate(
+            rows,
+            historical_rows=[],
+            contract=contract(),
+            require_final_counts=False,
+        )
+    except gate.PresealValidationError:
+        return
+
+    raise AssertionError(
+        "unsupported tokenizer character was not rejected"
+    )
+
+
+def test_context_overflow_fails():
+    rows = [
+        {
+            "instruction": "abcdefghijklmnopqrstuvwxy",
+            "response": "abcdefghij",
+            "family": "literal_response",
+        }
+    ]
+
+    try:
+        gate.validate_preseal_candidate(
+            rows,
+            historical_rows=[],
+            contract=contract(),
+            require_final_counts=False,
+        )
+    except gate.PresealValidationError:
+        return
+
+    raise AssertionError(
+        "context overflow was not rejected"
+    )
+
+
+def test_historical_instruction_overlap_fails():
+    rows = [
+        {
+            "instruction": "say cat",
+            "response": "cat",
+            "family": "literal_response",
+        }
+    ]
+
+    historical = [
+        {
+            "instruction": "say cat",
+            "response": "other",
+        }
+    ]
+
+    try:
+        gate.validate_preseal_candidate(
+            rows,
+            historical_rows=historical,
+            contract=contract(),
+            require_final_counts=False,
+        )
+    except gate.PresealValidationError:
+        return
+
+    raise AssertionError(
+        "historical instruction overlap was not rejected"
+    )
+
+
+def test_duplicate_instruction_fails():
+    rows = [
+        {
+            "instruction": "say cat",
+            "response": "cat",
+            "family": "literal_response",
+        },
+        {
+            "instruction": "say  cat",
+            "response": "dog",
+            "family": "short_completion",
+        },
+    ]
+
+    try:
+        gate.validate_structure(
+            rows,
+            require_final_counts=False,
+        )
+    except gate.PresealValidationError:
+        return
+
+    raise AssertionError(
+        "normalized duplicate instruction was not rejected"
+    )
+
+
+def test_final_family_counts_fail_when_incomplete():
+    rows = [
+        {
+            "instruction": "say cat",
+            "response": "cat",
+            "family": "literal_response",
+        }
+    ]
+
+    try:
+        gate.validate_structure(
+            rows,
+            require_final_counts=True,
+        )
+    except gate.PresealValidationError:
+        return
+
+    raise AssertionError(
+        "incomplete final dataset was not rejected"
+    )
+
+
+def run_all():
+    tests = [
+        test_partial_valid_rows_pass,
+        test_bad_character_fails,
+        test_context_overflow_fails,
+        test_historical_instruction_overlap_fails,
+        test_duplicate_instruction_fails,
+        test_final_family_counts_fail_when_incomplete,
+    ]
+
+    for test in tests:
+        test()
+        print(f"PASS: {test.__name__}")
+
+    print()
+    print(f"Synthetic tests passed: {len(tests)}/{len(tests)}")
+
+
+if __name__ == "__main__":
+    run_all()

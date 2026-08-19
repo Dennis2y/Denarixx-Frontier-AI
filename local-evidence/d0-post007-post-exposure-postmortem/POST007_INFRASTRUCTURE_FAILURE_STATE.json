@@ -1,0 +1,19 @@
+{
+  "baselineResultPersisted": false,
+  "baselineScoringReturned": true,
+  "candidateFailed": null,
+  "candidatePassed": null,
+  "candidateResultPersisted": false,
+  "candidateScoringExecuted": false,
+  "classification": "evaluation-infrastructure-defect",
+  "failureType": "FileExistsError",
+  "finalAdjudicationProduced": false,
+  "formalComparisonExecuted": false,
+  "formalExposureStarted": true,
+  "oneTimeExecutionConsumed": true,
+  "post007DatasetReusableForAdjudication": false,
+  "rerunAuthorized": false,
+  "rootCause": "FORMAL_EXPOSURE_STARTED creation caused FORMAL_RESULT_DIR to exist before a later mkdir(exist_ok=False)",
+  "stage": "D0-POST-007",
+  "status": "infrastructure-invalidated-after-formal-exposure"
+}

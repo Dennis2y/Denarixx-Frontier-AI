@@ -1,0 +1,10 @@
+milestone=D0.2
+requirement=Demonstrate checkpoint and resume.
+baseRun=d0-2-base-step4
+baseMaxSteps=4
+resumeRun=d0-2-resumed-step8
+resumeMaxSteps=8
+seed=42
+formalDatasetUsed=false
+post007Used=false
+existingResearchCheckpointUsed=false

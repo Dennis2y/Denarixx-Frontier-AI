@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "authority": {
+    "id": "D1-DATA-DERIVED-001",
+    "gate": "D1-DATA-007",
+    "status": "DERIVED_CANDIDATE_TEXT_CORPUS_CREATED_NOT_ACCEPTED",
+    "createdAt": "2026-08-19T16:45:32Z",
+    "acquisitionId": "D1-DATA-RAW-001-20260819T084500Z"
+  },
+  "predecessors": {
+    "rawAcquisitionManifest": {"path": "research/d1/d1_raw_acquisition_manifest.json", "sha256": "602d1d25e26e1c057acaaae9896880994a2161afd26828fb94188c3012c9a629"},
+    "rawValidationManifest": {"path": "research/d1/d1_raw_validation_manifest.json", "sha256": "a4d0a2f29174381f9a4a22c2c79fa40ca18f444b9560bc289686e04bdb5ddf86"},
+    "rawValidationEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_raw_validation_006.json", "sha256": "670b312bbb0b6fa1ca0174e585c6cb464a60e2b75fa68f691d939da1f36fef19"},
+    "normalizationPolicy": {"path": "research/d1/d1_extraction_normalization_policy.json", "sha256": "3d427c399ea65a4146469f465fe12af1a564dc43c96a968cd22a8dd425db7777", "id": "D1-DATA-EXTRACT-001", "version": "D1-NORM-001"}
+  },
+  "derivedRoot": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/D1-DATA-DERIVED-001-20260819T164352Z/",
+  "externalManifests": {
+    "master": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/D1-DATA-DERIVED-001-20260819T164352Z/derived_candidate_manifest.json", "sha256": "43b87fb3d5127447d24dade3b03cb4cf2b7dc9ca19a77b9dd6de4c6a15d13e4f"},
+    "python": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/D1-DATA-DERIVED-001-20260819T164352Z/python-docs/derived_document_manifest.json", "sha256": "f830177ab0672ccba5b667e1a7a09e3191a7975fa74adef98b0591d23eb13d6a"},
+    "gesetze": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/D1-DATA-DERIVED-001-20260819T164352Z/gesetze-index/derived_document_manifest.json", "sha256": "b8aef14bd9881540a8a796c3afe7622308508affa592af5d4fb2c7c93fff743c"}
+  },
+  "totals": {
+    "RAW_BYTES_PHYSICALLY_PRESENT": 62448109,
+    "ELIGIBLE_RAW_BYTES": 5640818,
+    "VALIDATED_EXTRACTABLE_BYTES": 15045079,
+    "DERIVED_DOCUMENT_COUNT": 6553,
+    "DERIVED_TEXT_BYTES": 14443111,
+    "REJECTED_DOCUMENT_COUNT": 86,
+    "EXACT_DUPLICATE_DOCUMENT_COUNT": 392,
+    "exactDuplicateDefinition": "excess documents beyond the first member of each equal-SHA-256 group within one source",
+    "exactDuplicateGroupCount": 76,
+    "exactDuplicateParticipatingDocumentCount": 468,
+    "ACCEPTED_TOKENS": "NOT_MEASURED"
+  },
+  "sourceResults": [
+    {"sourceId": "d1-acq001-python-docs-313", "candidateRecords": 513, "derivedDocuments": 513, "derivedTextBytes": 13758826, "rejectedDocuments": 0, "exactDuplicateExcessDocuments": 0, "language": "en", "domain": "technical_computing_and_software_documentation", "validation": "PASS_513_OF_513"},
+    {"sourceId": "d1-acq001-gesetze-refresh", "candidateRecords": 6126, "derivedDocuments": 6040, "derivedTextBytes": 684285, "rejectedDocuments": 86, "rejectionReason": "BELOW_USEFUL_TEXT_THRESHOLD", "exactDuplicateGroups": 76, "exactDuplicateParticipatingDocuments": 468, "exactDuplicateExcessDocuments": 392, "language": "de", "domain": "government_public_information_index", "validation": "PASS_6040_OF_6040_DERIVED", "LEGAL_DOCUMENT_BODIES_ACQUIRED": "NO"}
+  ],
+  "gesetzeAccounting": {
+    "INDEX_RECORDS_VALIDATED": 6126,
+    "INDEX_RECORDS_DERIVED": 6040,
+    "INDEX_RECORDS_REJECTED": 86,
+    "LEGAL_DOCUMENT_BODIES_ACQUIRED": "NO"
+  },
+  "preliminaryComposition": {
+    "basis": "derived UTF-8 bytes with deterministic authority-assigned source/language/domain labels",
+    "byLanguagePercent": {"English": 95.26220493631877, "German": 4.737795063681225},
+    "byDomainPercent": {"technicalComputingAndSoftwareDocumentation": 95.26220493631877, "governmentPublicInformationIndex": 4.737795063681225},
+    "longRunTargetAchievedClaim": false,
+    "acceptedCorpusCompositionClaim": false
+  },
+  "verification": {
+    "derivedFilesReRead": 6553,
+    "derivedFileHashesMatched": 6553,
+    "utf8Valid": 6553,
+    "nonEmpty": 6553,
+    "usefulThresholdPassed": 6553,
+    "maximumSizePassed": 6553,
+    "normalizationInvariantPassed": 6553,
+    "manifestCountsAndBytesReconciled": true,
+    "allChecksPass": true
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "DERIVED_CANDIDATE_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002": "EXACT_DOCUMENT_DUPLICATES_MEASURED_NOT_DEDUPLICATED",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "PRELIMINARY_SOURCE_LANGUAGE_COMPOSITION_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "DERIVED_NOT_TOKENIZER_VALIDATED",
+    "D1-DATA-BLOCKER-007": "PASS_FOR_DERIVED_CANDIDATE_SCOPE"
+  },
+  "boundary": {
+    "acceptedCorpusCreated": false,
+    "exactDuplicatesRemoved": false,
+    "crossSourceOrNearDeduplicationPerformed": false,
+    "contaminationAnalysisPerformed": false,
+    "acceptedTokenizerExecuted": false,
+    "trainDevelopmentSplitCreated": false,
+    "openStaxContentInspectedOrExtracted": false,
+    "modelOrTrainingExecuted": false,
+    "formalEvaluationAccessed": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

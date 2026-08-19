@@ -1,0 +1,33 @@
+✓ valid synthetic fixture accepted
+✓ deterministic seed 6006 reproduced identical result
+✓ synthetic digest: e9dcfc6c111ae259e0f9fe6aba76b6ae2f99b68fc708b4e46891aa4fe950e914
+✓ negative test passed: wrong row count
+✓ negative test passed: invalid family
+✓ negative test passed: invalid interleaved ordering
+✓ negative test passed: duplicate instruction
+✓ negative test passed: boolean class imbalance
+✓ negative test passed: world_fact class imbalance
+✓ negative test passed: extra schema field
+✓ negative test passed: empty response
+{
+  "stage": "D0-POST-006",
+  "rehearsalType": "synthetic-only",
+  "passed": true,
+  "seed": 6006,
+  "syntheticRows": 25,
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "modelLoaded": false,
+  "modelScoringExecuted": false,
+  "realFormalDatasetCreated": false,
+  "historicalFormalDatasetOpened": false,
+  "formalExposureStarted": false,
+  "determinismVerified": true,
+  "negativeTestsVerified": 8,
+  "syntheticFixtureSha256": "e9dcfc6c111ae259e0f9fe6aba76b6ae2f99b68fc708b4e46891aa4fe950e914"
+}

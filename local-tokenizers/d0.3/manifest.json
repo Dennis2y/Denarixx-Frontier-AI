@@ -1,0 +1,17 @@
+{
+  "milestone": "D0.3",
+  "artifacts": {
+    "tokenizer": {
+      "path": "local-tokenizers/d0.3/tokenizer.json",
+      "sha256": "6ade05dc6de84b3b201645d96365ea716d08f1fbbb6e903c30516969bba041bb"
+    },
+    "vocabulary": {
+      "path": "local-tokenizers/d0.3/vocabulary.json",
+      "sha256": "14590814cc3b9b5a40e90760fe680da01477d27a2522388d577fbdfc1312b529"
+    },
+    "comparison": {
+      "path": "local-tokenizers/d0.3/comparison.json",
+      "sha256": "145d5f2c0530b246c991855e7a56acfbded568ec9b5de145fbacb68975161907"
+    }
+  }
+}

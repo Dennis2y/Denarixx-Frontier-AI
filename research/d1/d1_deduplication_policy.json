@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "id": "D1-DATA-DEDUP-001",
+    "gate": "D1-DATA-DEDUP-008",
+    "version": "D1-EXACT-DEDUP-001",
+    "status": "frozen-before-output",
+    "createdAt": "2026-08-19T16:54:50Z",
+    "scope": "Exact SHA-256 document deduplication of D1-DATA-DERIVED-001 only."
+  },
+  "predecessors": {
+    "extractionNormalizationPolicy": {"path": "research/d1/d1_extraction_normalization_policy.json", "sha256": "3d427c399ea65a4146469f465fe12af1a564dc43c96a968cd22a8dd425db7777"},
+    "derivedCandidateManifest": {"path": "research/d1/d1_derived_candidate_manifest.json", "sha256": "48c3e80d64dcb20c853ee18a0a7b666d14a13389ca21646e97e76aaeb03735b3"},
+    "extractionEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_extraction_007.json", "sha256": "3fa70df89ca384aa0fe3ff2c0dd440d61503c444f75a1b08acc967ba9bb8e461"}
+  },
+  "input": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/D1-DATA-DERIVED-001-20260819T164352Z/",
+    "masterManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/D1-DATA-DERIVED-001-20260819T164352Z/derived_candidate_manifest.json", "sha256": "43b87fb3d5127447d24dade3b03cb4cf2b7dc9ca19a77b9dd6de4c6a15d13e4f"},
+    "requiredDocumentCount": 6553,
+    "requiredTextBytes": 14443111
+  },
+  "identityAndGrouping": {
+    "contentIdentity": "SHA-256 of existing normalized UTF-8 document bytes, recomputed before grouping",
+    "groupKey": "content SHA-256",
+    "duplicateGroupDefinition": "two or more input documents with the same recomputed content SHA-256",
+    "withinAndCrossSourceMeasurementRequired": true
+  },
+  "survivorSelection": {
+    "existingFrozenSourceQualityPrecedenceFound": false,
+    "method": "Sort each duplicate group's members lexicographically by the tuple (sourceId, stableDocumentId); retain the first member.",
+    "tieBehavior": "Stable document IDs must be unique; collision fails closed.",
+    "semanticQualityRankingUsed": false,
+    "excludedMemberReason": "EXACT_DUPLICATE_NON_SURVIVOR"
+  },
+  "output": {
+    "rootNamespace": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/deduplicated/",
+    "newImmutableRunRequired": true,
+    "status": "DEDUPLICATED_CANDIDATE_NOT_ACCEPTED",
+    "writeBehavior": "Write exact byte copies of survivor documents under source-specific document directories using stableDocumentId.txt filenames.",
+    "overwritePermitted": false,
+    "inputMutationPermitted": false
+  },
+  "requiredValidation": [
+    "every survivor is readable strict UTF-8 and nonempty",
+    "every survivor hash matches its recomputed input hash",
+    "no output content SHA-256 occurs more than once",
+    "input count equals survivors plus excluded excess duplicates",
+    "input bytes equal output bytes plus excluded duplicate bytes",
+    "per-source counts and bytes reconcile",
+    "all output manifests reproduce"
+  ],
+  "nearDuplicateBoundary": {
+    "nearDuplicateDetectionOrRemovalPermitted": false,
+    "NEAR_DUPLICATION_STATUS": "NOT_YET_EXECUTED",
+    "nearDuplicateAnalysisStillRequired": true,
+    "reason": "The locked D1 data-readiness blocker explicitly requires policy-governed near-duplicate measurement and adjudication in addition to exact deduplication."
+  },
+  "prohibitions": {
+    "download": true,
+    "rawOrDerivedInputMutation": true,
+    "openStaxAccess": true,
+    "tokenizerExecution": true,
+    "acceptedTokenMeasurement": true,
+    "contaminationAnalysis": true,
+    "trainDevelopmentSplit": true,
+    "modelOrTrainingExecution": true,
+    "formalEvaluationAccess": true,
+    "acceptedCorpusDeclaration": true
+  },
+  "authorization": {
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

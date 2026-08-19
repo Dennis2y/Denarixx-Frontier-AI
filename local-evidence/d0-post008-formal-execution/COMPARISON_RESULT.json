@@ -1,0 +1,45 @@
+{
+  "aggregateResponseLossDelta": -0.2983581518410614,
+  "baselineAggregateResponseLoss": 3.071181792558007,
+  "baselineCheckpointSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "baselineExactMatches": 0,
+  "candidateAggregateResponseLoss": 2.7728236407169455,
+  "candidateCheckpointSha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9",
+  "candidateExactMatches": 2,
+  "exactMatchDelta": 2,
+  "formalPass": null,
+  "perFamilyComparison": {
+    "boolean": {
+      "baselineExactMatches": 0,
+      "baselineResponseLoss": 2.7593341090462427,
+      "candidateExactMatches": 2,
+      "candidateResponseLoss": 1.8815526312047786
+    },
+    "echo": {
+      "baselineExactMatches": 0,
+      "baselineResponseLoss": 3.0650451908940854,
+      "candidateExactMatches": 0,
+      "candidateResponseLoss": 2.8806908234306006
+    },
+    "opposite": {
+      "baselineExactMatches": 0,
+      "baselineResponseLoss": 3.3225200176239014,
+      "candidateExactMatches": 0,
+      "candidateResponseLoss": 2.915010857582092
+    },
+    "plural": {
+      "baselineExactMatches": 0,
+      "baselineResponseLoss": 3.0668082698698966,
+      "candidateExactMatches": 0,
+      "candidateResponseLoss": 3.0312114530994045
+    },
+    "world_fact": {
+      "baselineExactMatches": 0,
+      "baselineResponseLoss": 3.174138162194229,
+      "candidateExactMatches": 0,
+      "candidateResponseLoss": 3.0788358595313094
+    }
+  },
+  "stage": "D0-POST-008",
+  "status": "comparison-complete-adjudication-not-frozen"
+}

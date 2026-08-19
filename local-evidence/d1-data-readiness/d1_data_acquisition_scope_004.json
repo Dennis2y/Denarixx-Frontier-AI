@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-ACQ-001-EVIDENCE",
+  "createdAt": "2026-08-19T08:43:08Z",
+  "decision": "PASS",
+  "verifiedPredecessors": {
+    "sourceDesign": {"path": "research/d1/d1_corpus_source_design.json", "sha256": "72d89bbe8746a84a209116ab064ab556eac0460a96e309eb596b027216751582"},
+    "sourceDesignEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_source_design_003.json", "sha256": "1155bfb585dba90fa5576a9e240973e5b47e7b6e69b6d9f5f66325988bd703c0"},
+    "corpusScalePlan": {"path": "research/d1/d1_corpus_scale_plan.json", "sha256": "a81087f63bd8482f09cbfe56bfbcd831dcda03b6b168e58a6f99f3ef778fad03"},
+    "dataReadinessContract": {"path": "research/d1/d1_data_readiness_contract.json", "sha256": "9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953"},
+    "readinessClosure": {"path": "research/d1/d1_readiness_closure.json", "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"},
+    "architecture": {"path": "research/d1/d1_architecture_contract.json", "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"},
+    "model": {"path": "ml/models/d1.py", "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"},
+    "acceptedTokenizer": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json", "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"}
+  },
+  "acquisitionAuthority": {
+    "id": "D1-DATA-ACQ-001",
+    "path": "research/d1/d1_first_acquisition_authorization.json",
+    "sha256": "a98cdfc80495ac767b379c7d1998f6b59b6e9e3d25b12fb52d3a40a6052aa30d",
+    "status": "AUTHORIZED-FOR-SEPARATE-BOUNDED-ACQUISITION"
+  },
+  "selectionSummary": {
+    "selectedSourceCount": 5,
+    "heldSourceCount": 4,
+    "rejectedSourceCount": 1,
+    "selectedSources": ["Python 3.13 plain-text documentation", "GovInfo 2023 U.S. Code bounded title subset", "OpenStax College Algebra specifically verified CC BY 4.0 edition", "individually verified CC BY 4.0 EU publications", "one later official Gesetze im Internet snapshot"],
+    "plannedAcceptedTokenEquivalentRange": {"minimum": 5000000, "maximum": 10000000},
+    "planningMidpointTokens": 6200000,
+    "actualAcceptedTokensEstablished": false
+  },
+  "proposedDomainAllocationPercent": {
+    "general_prose": 10,
+    "educational_reference": 20,
+    "technical_computing": 20,
+    "science": 15,
+    "government_public_information": 20,
+    "multilingual_cross_lingual_material": 5,
+    "code_and_software_documentation": 8,
+    "structured_factual_text": 2,
+    "total": 100,
+    "achievedClaim": false
+  },
+  "proposedLanguageAllocationPercent": {"English": 65, "German": 30, "additionalLanguagesCombined": 5, "total": 100, "achievedClaim": false},
+  "storageAvailability": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/",
+    "volumeMounted": true,
+    "volumeHostWritable": true,
+    "rawRootExists": true,
+    "rawRootHostWritable": true,
+    "availableCapacityApproximate": "1.8 TiB",
+    "verificationMethod": "read-only mount/df and unsandboxed test -w checks; no probe file created"
+  },
+  "networkPolicySummary": {
+    "httpsAndAllowlistedEndpointsOnly": true,
+    "unapprovedRedirectsRejected": true,
+    "authenticationPermitted": false,
+    "arbitraryCrawlingPermitted": false,
+    "maximumConcurrentRequests": 2,
+    "maximumRequestRatePerSecond": 1,
+    "maximumRetriesPerRequest": 2,
+    "connectTimeoutSeconds": 10,
+    "readTimeoutSeconds": 60,
+    "maximumTotalRawBytes": 216000000,
+    "perSourceLimitsRequired": true,
+    "failClosedOnLimitOrScopeMismatch": true
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "ACQUISITION_PLANNED_NOT_SATISFIED",
+    "D1-DATA-BLOCKER-002": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "POLICY_DEFINED_NOT_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "POLICY_DEFINED_NOT_VALIDATED",
+    "D1-DATA-BLOCKER-007": "POLICY_DEFINED_NOT_VALIDATED"
+  },
+  "authorizationState": {
+    "D1_FIRST_ACQUISITION_SCOPE": "PASS",
+    "separateBoundedRawAcquisitionAuthorized": true,
+    "acquisitionExecutedByThisGate": false,
+    "bulkAcquisitionAuthorized": false,
+    "corpusConstructionAuthorized": false,
+    "tokenizerExecutionAuthorized": false,
+    "modelExecutionAuthorized": false,
+    "trainingAuthorized": false,
+    "formalEvaluationAccessAuthorized": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  },
+  "operationBoundaryConfirmation": {
+    "publicMetadataAndLicensePagesInspected": true,
+    "corpusPayloadDownloaded": false,
+    "corpusConstructed": false,
+    "corpusModified": false,
+    "tokenizerExecuted": false,
+    "tokenizerModified": false,
+    "modelInstantiated": false,
+    "modelExecuted": false,
+    "optimizerCreated": false,
+    "trainingStarted": false,
+    "formalEvaluationAccessed": false,
+    "predecessorAuthorityModified": false,
+    "pyprojectModified": false,
+    "uvLockModified": false,
+    "gitStateModified": false
+  }
+}

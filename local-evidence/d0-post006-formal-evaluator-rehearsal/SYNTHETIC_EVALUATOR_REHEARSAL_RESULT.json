@@ -1,0 +1,15 @@
+{
+  "stage": "D0-POST-006",
+  "rehearsalType": "synthetic-only",
+  "passed": true,
+  "realCheckpointLoaded": false,
+  "realModelScoringExecuted": false,
+  "sealedFormalRowsParsed": false,
+  "historicalFormalDatasetOpened": false,
+  "realFormalExposureStarted": false,
+  "baselinePersistenceVerified": true,
+  "candidatePersistenceVerified": true,
+  "failurePersistenceVerified": true,
+  "rerunPreventionVerified": true,
+  "overwritePreventionVerified": true
+}

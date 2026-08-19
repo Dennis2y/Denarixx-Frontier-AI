@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "contract": {
+    "id": "D1-DATA-READINESS-001",
+    "generation": "D1",
+    "status": "locked-before-serious-corpus-expansion",
+    "createdAt": "2026-08-19T08:21:44Z",
+    "purpose": "Define the evidence required to resolve all known D1 data blockers before corpus expansion or serious-pretraining authorization."
+  },
+  "authoritativeInputs": {
+    "readinessClosure": {
+      "id": "D1-READINESS-CLOSURE-001",
+      "path": "research/d1/d1_readiness_closure.json",
+      "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"
+    },
+    "readinessClosureEvidence": {
+      "path": "local-evidence/d1-readiness-closure/d1_readiness_closure_001.json",
+      "sha256": "e671d752758deb14762a3f1ef6aea5e36c754a76493497e26bc6bd27f516b665"
+    },
+    "architecture": {
+      "id": "D1-ARCH-003",
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "evaluationContract": {
+      "id": "D1-EVAL-001",
+      "path": "research/d1/d1_evaluation_contract.json",
+      "sha256": "bea385450991397979553b04b4975b535456e84aeb3d226f06f3976771db38fe"
+    },
+    "dataAcquisitionContract": {
+      "id": "D1-DATA-001",
+      "path": "research/d1/d1_data_acquisition_contract.json",
+      "sha256": "61f0db2623c8fbc016364394a367a6de9b66aceee3820b40fb16a2461bd61913"
+    }
+  },
+  "currentState": {
+    "parameterCount": 26655104,
+    "contextLength": 2048,
+    "acceptedTokens": 464086,
+    "tokensPerParameter": 0.01741077431174157,
+    "parametersPerToken": 57.43569941778033,
+    "seriousPretrainingScaleAssessment": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  },
+  "corpusScaleTarget": {
+    "status": "REQUIRES_PLANNING",
+    "authoritativeSeriousPretrainingTokenTargetExists": false,
+    "existingAuthorityFinding": "research/d1/d1_data_acquisition_contract.json states that the final model-training token budget is not yet locked and must use corpus quality, tokenizer statistics, compute throughput and measured MPS training cost.",
+    "nonApplicableExistingValues": {
+      "tokenizerDevelopmentFloorBytes": 10000000,
+      "seriousTokenizerPlanningTargetBytes": 100000000,
+      "reason": "These are tokenizer corpus planning values, not serious D1 model-pretraining targets."
+    },
+    "requiredNextDecision": "A separately authorized, evidence-based scale-planning decision must establish and hash a serious-pretraining corpus target before acquisition or expansion."
+  },
+  "blockers": [
+    {
+      "id": "D1-DATA-BLOCKER-001",
+      "name": "CORPUS SCALE",
+      "purpose": "Establish an evidence-based corpus scale sufficient for the intended serious-pretraining objective.",
+      "currentState": "UNRESOLVED",
+      "requiredEvidence": ["locked scale-planning authority", "current accepted-token measurement", "tokenizer statistics", "quality-adjusted usable-token estimate", "measured compute/throughput basis", "documented rationale relating corpus scale to the locked 26,655,104-parameter model"],
+      "completionCondition": "A separately authorized, versioned and SHA-256-hashed planning artifact defines a measurable minimum accepted-token target and the sealed corpus manifest demonstrates that target without duplication-based padding.",
+      "prohibitedShortcuts": ["adopting the tokenizer-development byte targets as model-pretraining targets", "inventing a token target without evidence", "counting duplicated or rejected content toward the target", "authorizing training from relative D0 scale alone"],
+      "artifactRequirements": ["scale-planning decision", "sealed aggregate corpus manifest", "accepted-token-count evidence"],
+      "hashingVersioningRequirements": "All planning inputs, tokenizer identity and corpus/token-count artifacts must be versioned and SHA-256 bound.",
+      "dependencies": ["accepted D1 tokenizer", "D1-ARCH-003", "quality results from blockers 002-007"],
+      "passSemantics": "PASS only when the locked target exists and the final accepted corpus meets it after all quality exclusions.",
+      "failClosedSemantics": "FAIL_CLOSED if no target authority exists, inputs mismatch, usable tokens are below target, or scale is inflated by prohibited content."
+    },
+    {
+      "id": "D1-DATA-BLOCKER-002",
+      "name": "COMPOSITE CORPUS DEDUPLICATION",
+      "purpose": "Measure and resolve exact and policy-governed near duplication across the complete composite corpus.",
+      "currentState": "PARTIAL",
+      "requiredEvidence": ["whole-corpus exact duplicate report", "cross-source duplicate report", "near-duplicate measurement", "documented keep/remove policy", "post-dedup counts and hashes"],
+      "completionCondition": "Every retained document participates in a reproducible whole-corpus duplicate analysis; exact duplicates are resolved under a frozen rule and near-duplicate handling is measured and adjudicated.",
+      "prohibitedShortcuts": ["checking tranches independently only", "silently deleting near duplicates", "counting duplicate text toward scale", "unrecorded semantic normalization"],
+      "artifactRequirements": ["dedup policy", "raw duplicate findings", "retention decisions", "post-dedup manifest"],
+      "hashingVersioningRequirements": "Dedup implementation/configuration, input manifest, findings and output manifest require version and SHA-256 identity.",
+      "dependencies": ["document boundaries", "source identity", "blocker 007 validation"],
+      "passSemantics": "PASS only after reproducible aggregate exact-dedup completion and explicit near-duplicate adjudication.",
+      "failClosedSemantics": "FAIL_CLOSED on incomplete coverage, identity mismatch, missing retention decisions or unverifiable output."
+    },
+    {
+      "id": "D1-DATA-BLOCKER-003",
+      "name": "CONTAMINATION ANALYSIS",
+      "purpose": "Demonstrate that training/development material does not contain protected formal evaluation content or prohibited benchmark-answer injections.",
+      "currentState": "MISSING",
+      "requiredEvidence": ["approved contamination protocol", "non-exposing protected-data comparison mechanism", "aggregate findings", "adjudication of detected matches", "formal-boundary compliance record"],
+      "completionCondition": "A frozen protocol completes across the sealed corpus and records pass/fail findings without exposing protected examples or using formal results to shape training data.",
+      "prohibitedShortcuts": ["opening protected examples during corpus construction", "copying benchmark answers", "using formal scores for corpus selection", "declaring no contamination without measurement", "substituting synthetic rehearsal for measured findings"],
+      "artifactRequirements": ["contamination protocol", "hashed evaluator identity", "aggregate non-exposing result", "adjudication record"],
+      "hashingVersioningRequirements": "Protocol, corpus, protected-set authority, evaluator and results must be independently versioned and SHA-256 bound.",
+      "dependencies": ["D1-EVAL-001", "sealed corpus identity", "blocker 005 split"],
+      "passSemantics": "PASS only when an authorized contamination analysis completes and every finding is resolved under the frozen policy.",
+      "failClosedSemantics": "FAIL_CLOSED on protected-data exposure, incomplete coverage, unresolved matches, identity mismatch or missing measured evidence."
+    },
+    {
+      "id": "D1-DATA-BLOCKER-004",
+      "name": "AGGREGATE LANGUAGE/DOMAIN MEASUREMENT",
+      "purpose": "Measure the language and domain/category composition of the complete accepted corpus.",
+      "currentState": "PARTIAL",
+      "requiredEvidence": ["classification policy", "per-document language labels", "per-document domain/category labels", "unknown/ambiguous counts", "aggregate byte/document/token distributions"],
+      "completionCondition": "All accepted documents are classified or explicitly marked unknown using a frozen method and aggregate distributions reconcile exactly with the corpus manifest.",
+      "prohibitedShortcuts": ["inferring aggregate composition from source names", "dropping unknown classifications", "claiming multilingual capability from tokenizer coverage", "reporting percentages that do not reconcile"],
+      "artifactRequirements": ["classification policy", "document-level classification artifact", "aggregate composition report"],
+      "hashingVersioningRequirements": "Classifier/method identity, input corpus, document labels and aggregate report require version and SHA-256 identity.",
+      "dependencies": ["document boundaries", "final source registry", "blocker 007 validation"],
+      "passSemantics": "PASS only when complete measured aggregate language/domain composition reconciles with the sealed corpus.",
+      "failClosedSemantics": "FAIL_CLOSED on incomplete coverage, unreported unknowns, non-reconciling totals or identity mismatch."
+    },
+    {
+      "id": "D1-DATA-BLOCKER-005",
+      "name": "TRAIN/DEVELOPMENT SPLIT",
+      "purpose": "Create a deterministic, leakage-controlled separation between training and development evaluation material.",
+      "currentState": "MISSING",
+      "requiredEvidence": ["split policy", "stable document-level assignment", "group/source leakage controls", "split counts and hashes", "zero-overlap verification"],
+      "completionCondition": "Every accepted document is assigned exactly once using a frozen deterministic policy; train/development identities are independently hashed and zero overlap is verified.",
+      "prohibitedShortcuts": ["random unseeded splitting", "splitting duplicate groups across partitions", "using protected formal data as development data", "changing the split after observing model results"],
+      "artifactRequirements": ["split policy", "train manifest", "development manifest", "overlap/leakage report"],
+      "hashingVersioningRequirements": "Policy, assignments, partition manifests and overlap results require version and SHA-256 identity.",
+      "dependencies": ["blocker 002 deduplication", "blocker 003 contamination boundary", "document identity"],
+      "passSemantics": "PASS only with deterministic complete assignment, independent manifests and zero prohibited overlap.",
+      "failClosedSemantics": "FAIL_CLOSED on unassigned/multiply assigned documents, leakage, post-result mutation or identity mismatch."
+    },
+    {
+      "id": "D1-DATA-BLOCKER-006",
+      "name": "FULL TOKENIZER/CORPUS COMPATIBILITY",
+      "purpose": "Verify the accepted tokenizer against every accepted corpus partition without retraining or mutation.",
+      "currentState": "PARTIAL",
+      "requiredEvidence": ["exact accepted-tokenizer identity", "complete corpus coverage", "encode/decode and unknown-token policy results", "aggregate token count", "per-partition counts", "context-window accounting"],
+      "completionCondition": "The unchanged accepted tokenizer processes every retained document under a frozen procedure; failures/unknown behavior are adjudicated and aggregate accepted-token counts reconcile with all partitions.",
+      "prohibitedShortcuts": ["retraining or reserializing the tokenizer", "testing tranche 2 only", "silently replacing unsupported text", "excluding failed documents without governance", "accessing formal evaluation data"],
+      "artifactRequirements": ["compatibility protocol", "tokenizer identity", "per-document/partition result", "aggregate token-count evidence"],
+      "hashingVersioningRequirements": "Tokenizer, corpus partitions, procedure and results require version and SHA-256 binding.",
+      "dependencies": ["blocker 002 post-dedup corpus", "blocker 005 split", "blocker 007 valid-document set"],
+      "passSemantics": "PASS only when full accepted-corpus coverage succeeds and all counts reconcile under the immutable tokenizer.",
+      "failClosedSemantics": "FAIL_CLOSED on incomplete coverage, tokenizer mutation, unsupported-content concealment, count mismatch or identity mismatch."
+    },
+    {
+      "id": "D1-DATA-BLOCKER-007",
+      "name": "MALFORMED/EMPTY DOCUMENT VALIDATION",
+      "purpose": "Validate every candidate document for decoding, structural integrity, emptiness and unusable content before acceptance.",
+      "currentState": "PARTIAL",
+      "requiredEvidence": ["validation policy", "complete document inventory", "UTF-8/decode findings", "empty and malformed counts", "exclusion reasons", "post-filter manifest reconciliation"],
+      "completionCondition": "Every document in the composite corpus is validated; all malformed, undecodable, empty or unusable documents are explicitly counted and adjudicated, and retained totals reconcile with the sealed manifest.",
+      "prohibitedShortcuts": ["validating only one tranche", "silently ignoring decode errors", "retaining empty documents", "unrecorded repair or normalization", "dropping failures without provenance"],
+      "artifactRequirements": ["validation policy", "per-document validation result", "exclusion ledger", "post-filter manifest"],
+      "hashingVersioningRequirements": "Validator/configuration, source inventory, findings, exclusion ledger and output manifest require version and SHA-256 identity.",
+      "dependencies": ["source/provenance registry", "document boundaries"],
+      "passSemantics": "PASS only when validation covers every document and all totals and exclusions reconcile reproducibly.",
+      "failClosedSemantics": "FAIL_CLOSED on incomplete inventory, unrecorded failures, unresolved malformed content or identity mismatch."
+    }
+  ],
+  "requiredCorpusGovernanceFields": [
+    "source/provenance",
+    "licensing/use rights",
+    "immutable source identity where feasible",
+    "acquisition date/version",
+    "document boundaries",
+    "language classification",
+    "domain/category classification",
+    "duplicate detection",
+    "contamination-control status",
+    "malformed/empty filtering",
+    "tokenizer compatibility",
+    "train/development assignment",
+    "final immutable corpus manifest",
+    "aggregate byte count",
+    "aggregate document count",
+    "aggregate accepted token count",
+    "SHA-256 identities"
+  ],
+  "protectedEvaluationBoundary": {
+    "evaluationContract": "D1-EVAL-001",
+    "formalEvaluationFilesCurrentlyPresent": 0,
+    "formalEvaluationExamplesMayEnterTraining": false,
+    "formalScoresMayBeUsedForProtectedDataTuning": false,
+    "copiedBenchmarkAnswersPermitted": false,
+    "protectedFormalExamplesMayBeExposedDuringCorpusConstruction": false,
+    "formalEvaluationDataCreationAuthorized": false,
+    "formalEvaluationDataAccessAuthorized": false
+  },
+  "authorizationBoundary": {
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD",
+    "corpusAcquisitionAuthorized": false,
+    "corpusExpansionAuthorized": false,
+    "datasetDownloadAuthorized": false,
+    "existingCorpusModificationAuthorized": false,
+    "tokenizerTrainingOrModificationAuthorized": false,
+    "modelExecutionAuthorized": false,
+    "optimizerCreationAuthorized": false,
+    "hyperparameterSelectionAuthorized": false,
+    "trainerImplementationAuthorized": false,
+    "checkpointCreationAuthorized": false,
+    "trainingAuthorized": false,
+    "formalEvaluationAccessAuthorized": false
+  },
+  "contractSemantics": {
+    "allSevenBlockersMustPassBeforeSeriousPretrainingAuthorizationCanBeConsidered": true,
+    "blockerPassDoesNotIndividuallyAuthorizeTraining": true,
+    "authorizationRequiresSeparatePostBlockerAdjudication": true,
+    "unresolvedOrMismatchedEvidenceFailsClosed": true,
+    "existingAuthoritiesMayNotBeSilentlyModifiedOrReplaced": true
+  }
+}

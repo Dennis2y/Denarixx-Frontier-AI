@@ -121,17 +121,49 @@ router.post("/training-runs", requireResearchRole, async (req, res, next) => {
 });
 
 function runTrainingProcess(runId: string, maxSteps: number, seed: number, resumeCheckpointPath?: string) {
-  const python = path.join(process.cwd(), ".pythonlibs", "bin", "python");
-  const command = process.env.PYTHON_BIN || python;
+  const command = process.env.PYTHON_BIN || "python3";
   const script = path.resolve(process.cwd(), "ml", "run_experiment.py");
   const checkpointDir = path.resolve(process.cwd(), "artifacts", "api-server", "data", "checkpoints");
   const args = [script, "--max-steps", String(maxSteps), "--seed", String(seed), "--checkpoint-dir", checkpointDir, "--run-id", runId];
   if (resumeCheckpointPath) args.push("--resume-checkpoint", resumeCheckpointPath);
+
   const child = spawn(command, args, {
     cwd: process.cwd(),
     env: { ...process.env, PYTHONPATH: path.resolve(process.cwd(), "ml") },
   });
+
   let output = "";
+  let spawnFailed = false;
+
+  child.on("spawn", () => {
+    void db
+      .update(trainingRunsTable)
+      .set({
+        status: "running",
+        device: "pending",
+        error: null,
+      })
+      .where(eq(trainingRunsTable.id, runId))
+      .catch((error) => {
+        console.error("Unable to mark training run as running", error);
+      });
+  });
+
+  child.on("error", (error) => {
+    spawnFailed = true;
+
+    void db
+      .update(trainingRunsTable)
+      .set({
+        status: "failed",
+        error: `Unable to start Python training process: ${error.message}`,
+        completedAt: new Date(),
+      })
+      .where(eq(trainingRunsTable.id, runId))
+      .catch((persistError) => {
+        console.error("Unable to persist training spawn failure", persistError);
+      });
+  });
   child.stdout.on("data", (chunk: Buffer) => {
     output += chunk.toString();
   });
@@ -139,6 +171,10 @@ function runTrainingProcess(runId: string, maxSteps: number, seed: number, resum
     output += chunk.toString();
   });
   child.on("close", async (code) => {
+    if (spawnFailed) {
+      return;
+    }
+
     try {
       const payload = JSON.parse(output.trim().split("\n").at(-1) ?? "{}") as {
         status: string;
@@ -162,7 +198,11 @@ function runTrainingProcess(runId: string, maxSteps: number, seed: number, resum
         };
       };
       if (code !== 0 || payload.status !== "complete") {
-        await db.update(trainingRunsTable).set({ status: "failed", error: payload.error ?? `training process exited with ${code}` }).where(eq(trainingRunsTable.id, runId));
+        await db.update(trainingRunsTable).set({
+          status: "failed",
+          error: payload.error ?? `training process exited with ${code}`,
+          completedAt: new Date(),
+        }).where(eq(trainingRunsTable.id, runId));
         return;
       }
       await db.update(trainingRunsTable).set({
@@ -204,7 +244,11 @@ function runTrainingProcess(runId: string, maxSteps: number, seed: number, resum
         });
       }
     } catch (error) {
-      await db.update(trainingRunsTable).set({ status: "failed", error: error instanceof Error ? error.message : "Unable to persist training result" }).where(eq(trainingRunsTable.id, runId));
+      await db.update(trainingRunsTable).set({
+        status: "failed",
+        error: error instanceof Error ? error.message : "Unable to persist training result",
+        completedAt: new Date(),
+      }).where(eq(trainingRunsTable.id, runId));
     }
   });
 }

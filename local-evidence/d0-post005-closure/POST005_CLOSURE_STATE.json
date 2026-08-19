@@ -1,0 +1,18 @@
+{
+  "stage": "D0-POST-005",
+  "status": "closed",
+  "trainingStatus": "closed",
+  "developmentEvaluationStatus": "complete",
+  "developmentSelectionPass": true,
+  "selectedCandidateStep": 120,
+  "selectedCheckpoint": "local-checkpoints/d0-post005-development-seed42-step120.pt",
+  "selectedCheckpointSha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9",
+  "formalEvaluationExecuted": false,
+  "formalAcceptanceStatus": "unadjudicated",
+  "post005FormalExposure": false,
+  "protectedHistoricalFormalDataset": "ml/data/d0_post003_formal.jsonl",
+  "protectedHistoricalFormalDatasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "protectedHistoricalFormalDatasetRescoredByPost005": false,
+  "retrainingAuthorized": false,
+  "nextRecommendedStage": "D0-POST-006"
+}

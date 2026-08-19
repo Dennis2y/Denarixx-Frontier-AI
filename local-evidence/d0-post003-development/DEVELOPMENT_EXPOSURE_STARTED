@@ -1,0 +1,30 @@
+D0-POST-003 development exposure started.
+
+Candidate:
+local-checkpoints/d0-post003-capability-seed42.pt
+
+Candidate SHA-256:
+3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06
+
+Baseline:
+local-checkpoints/d0-post002-accepted.pt
+
+Baseline SHA-256:
+31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97
+
+Development dataset:
+ml/data/d0_post003_dev.jsonl
+
+Development SHA-256:
+dc7beefa2615b664438c445f5b13f6a579ddd2fff55b91420e7fc29e9c47c45b
+
+Evaluator:
+ml/evaluation/d0_post003_dev.py
+
+Evaluator SHA-256:
+a6a0018596a7de18bec74145c761cec79cbb88146d57b4366acce4c2e567530b
+
+This marker means the frozen POST-003 development
+set has been authorized for its one predeclared scoring.
+
+Do not delete this marker to rerun development scoring.

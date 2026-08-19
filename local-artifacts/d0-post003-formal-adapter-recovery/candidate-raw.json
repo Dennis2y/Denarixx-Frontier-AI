@@ -1,0 +1,265 @@
+{
+  "checkpoint": "local-checkpoints/d0-post003-capability-seed42.pt",
+  "checkpointSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "dataset": "ml/data/d0_post003_formal.jsonl",
+  "datasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "exactMatchRate": 0.0,
+  "exactMatches": 0,
+  "examples": 25,
+  "modelName": "denarixx-d0-post003",
+  "responseLoss": 2.9665195067151844,
+  "responsePerplexity": 19.424196024852314,
+  "responseTokens": 139,
+  "results": [
+    {
+      "exactMatch": false,
+      "expected": "calm",
+      "family": null,
+      "generated": "te",
+      "index": 1,
+      "instruction": "echo calm",
+      "responseLoss": 3.268189239501953,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "clear",
+      "family": null,
+      "generated": "te",
+      "index": 2,
+      "instruction": "echo clear",
+      "responseLoss": 2.8937861124674478,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "data",
+      "family": null,
+      "generated": "te",
+      "index": 3,
+      "instruction": "echo data",
+      "responseLoss": 3.119146537780762,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "model",
+      "family": null,
+      "generated": "te",
+      "index": 4,
+      "instruction": "echo model",
+      "responseLoss": 3.0524139404296875,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "token",
+      "family": null,
+      "generated": "te",
+      "index": 5,
+      "instruction": "echo token",
+      "responseLoss": 2.9145803451538086,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 6,
+      "instruction": "is calm true",
+      "responseLoss": 2.838639577229818,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 7,
+      "instruction": "is data true",
+      "responseLoss": 2.8488356272379556,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 8,
+      "instruction": "is same true",
+      "responseLoss": 2.8402531941731772,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 9,
+      "instruction": "is model true",
+      "responseLoss": 2.8436352411905923,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 10,
+      "instruction": "is true false",
+      "responseLoss": 2.8489325841267905,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "datas",
+      "family": null,
+      "generated": "te",
+      "index": 11,
+      "instruction": "add s to data",
+      "responseLoss": 2.974329630533854,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "risks",
+      "family": null,
+      "generated": "te",
+      "index": 12,
+      "instruction": "add s to risk",
+      "responseLoss": 3.3227462768554688,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "runs",
+      "family": null,
+      "generated": "te",
+      "index": 13,
+      "instruction": "add s to run",
+      "responseLoss": 3.270386505126953,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "words",
+      "family": null,
+      "generated": "te",
+      "index": 14,
+      "instruction": "add s to word",
+      "responseLoss": 3.4217586517333984,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "checks",
+      "family": null,
+      "generated": "te",
+      "index": 15,
+      "instruction": "add s to check",
+      "responseLoss": 3.099846976143973,
+      "responseTokens": 7
+    },
+    {
+      "exactMatch": false,
+      "expected": "fast",
+      "family": null,
+      "generated": "te",
+      "index": 16,
+      "instruction": "opposite slow",
+      "responseLoss": 3.060830307006836,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "hot",
+      "family": null,
+      "generated": "te",
+      "index": 17,
+      "instruction": "opposite cold",
+      "responseLoss": 3.5773777961730957,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "yes",
+      "family": null,
+      "generated": "te",
+      "index": 18,
+      "instruction": "opposite no",
+      "responseLoss": 2.8685245513916016,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 19,
+      "instruction": "color of data",
+      "responseLoss": 2.861034393310547,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 20,
+      "instruction": "color of model",
+      "responseLoss": 2.8681459426879883,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "te",
+      "index": 21,
+      "instruction": "ai can learn",
+      "responseLoss": 2.6481096267700197,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "te",
+      "index": 22,
+      "instruction": "model can learn",
+      "responseLoss": 2.6462871551513674,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "te",
+      "index": 23,
+      "instruction": "data has value",
+      "responseLoss": 2.652564811706543,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "te",
+      "index": 24,
+      "instruction": "risk means safe",
+      "responseLoss": 2.8457520802815757,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "te",
+      "index": 25,
+      "instruction": "test can check",
+      "responseLoss": 2.6574081420898437,
+      "responseTokens": 5
+    }
+  ]
+}

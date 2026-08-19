@@ -1,0 +1,6 @@
+{
+  "error": "instruction text contains characters absent from pretrained tokenizer: ':'",
+  "errorType": "ValueError",
+  "stage": "D0-POST-006",
+  "status": "failed-after-formal-exposure"
+}

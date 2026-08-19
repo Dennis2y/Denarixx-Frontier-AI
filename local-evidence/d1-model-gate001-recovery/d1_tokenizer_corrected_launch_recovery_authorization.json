@@ -1,0 +1,132 @@
+{
+  "authority": {
+    "corpus": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/d1-tranche2-derived-corpus.txt",
+      "sha256": "a3b6448712bc71b66392f9738e5a793efd979ab552a6a9f21b897fd55d415c7e"
+    },
+    "corpusVerification": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data009t_derived_corpus_verification.json",
+      "sha256": "58b5e65f786d90a7d3a11ff87bbac1554594891e163eb2736695dcfeb2c11e2e"
+    },
+    "d0Tokenizer": {
+      "path": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/local-tokenizers/d0.3/tokenizer.json",
+      "sha256": "6ade05dc6de84b3b201645d96365ea716d08f1fbbb6e903c30516969bba041bb"
+    },
+    "d1ArchitectureContract": {
+      "path": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "d1TokenizerContract": {
+      "path": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/research/d1/d1_tokenizer_contract.json",
+      "sha256": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"
+    },
+    "originalReplacementAuthorization": {
+      "path": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/local-evidence/d1-model-gate001-recovery/d1_tokenizer_replacement_authorization.json",
+      "sha256": "a54d2f39993b03d5ac0b55fcfd12e6d332cad1acd99c9e54bf3ddd675f22b4aa"
+    },
+    "rejectedManifest": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192/manifest.json",
+      "sha256": "fd5e5ae645b590f8fa2cf755099fcc5519703fa4916531fb21b1ff8b09460a8f"
+    },
+    "rejectedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192/tokenizer.json",
+      "sha256": "77603e443c560adb4edc6d7e7e834fccc8aa8c5fd9974cea2f97f004d2e5bd5d"
+    },
+    "rejectedVocabulary": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192/vocabulary.json",
+      "sha256": "f90861d605cc41a2722423bc570f9fc24520d1d76a41d44b1455aa26f6d9e734"
+    }
+  },
+  "authorization": {
+    "generation": "D1",
+    "id": "D1-TOK-REPLACEMENT-RECOVERY-AUTH-001",
+    "purpose": "Authorize exactly one corrected replacement-tokenizer construction launch after D1-MODEL-041 created the destination but failed before tokenizer construction.",
+    "status": "authorized-not-executed"
+  },
+  "destination": {
+    "deleteAuthorized": false,
+    "mustAlreadyExist": true,
+    "mustBeEmptyBeforeRecoveryExecution": true,
+    "overwriteExistingArtifactsAuthorized": false,
+    "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1",
+    "recreateAuthorized": false,
+    "renameAuthorized": false,
+    "requiredDescendantCount": 0,
+    "requiredRegularFileCount": 0
+  },
+  "documentBoundary": {
+    "ordinaryCorpusTextRequired": true,
+    "specialTokenAuthorized": false,
+    "text": "<DENARIXX_DOCUMENT_BOUNDARY>"
+  },
+  "executionBoundary": {
+    "checkpointCreationAuthorized": false,
+    "d0MutationAuthorized": false,
+    "d1Gate001AutomaticallyAccepted": false,
+    "d1ModelTrainingAuthorized": false,
+    "exactlyOneCorrectedConstructionLaunchAuthorized": true,
+    "formalEvaluationDatasetAccessAuthorized": false,
+    "originalAuthorizationMutationAuthorized": false,
+    "originalContractMutationAuthorized": false,
+    "pythonStdinMarkerRequired": true,
+    "rejectedTokenizerMutationAuthorized": false,
+    "requiredPythonStdinMarker": "-"
+  },
+  "failedLaunch": {
+    "artifactOutputsCreated": false,
+    "classification": "launcher-defect-before-tokenizer-construction",
+    "destinationCreated": true,
+    "failedInvocation": "python CORPUS_PATH ... <<'PY'",
+    "gate": "D1-MODEL-041",
+    "requiredInvocation": "python - CORPUS_PATH ... <<'PY'",
+    "rootCause": "missing-python-stdin-script-marker",
+    "tokenizerConstructorReached": false,
+    "tokenizerSerializationReached": false,
+    "tokenizerTrainingReached": false,
+    "trainerReached": false
+  },
+  "postConstruction": {
+    "d1TrainingRequiresLaterGateAcceptance": true,
+    "separateAcceptanceGateRequired": true,
+    "stopAfterConstruction": true
+  },
+  "trainer": {
+    "byteFallback": false,
+    "decoder": "ByteLevel",
+    "encoding": "UTF-8",
+    "family": "BPE",
+    "initialAlphabet": "ByteLevel.alphabet()",
+    "initialization": "from-scratch",
+    "minFrequency": 2,
+    "normalization": null,
+    "preTokenizer": {
+      "addPrefixSpace": false,
+      "type": "ByteLevel",
+      "useRegex": true
+    },
+    "specialTokens": [
+      {
+        "id": 0,
+        "role": "padding",
+        "token": "<|pad|>"
+      },
+      {
+        "id": 1,
+        "role": "begin-sequence",
+        "token": "<|bos|>"
+      },
+      {
+        "id": 2,
+        "role": "end-sequence",
+        "token": "<|eos|>"
+      },
+      {
+        "id": 3,
+        "role": "unknown-fallback",
+        "token": "<|unk|>"
+      }
+    ],
+    "unknownToken": "<|unk|>",
+    "vocabSize": 8192
+  }
+}

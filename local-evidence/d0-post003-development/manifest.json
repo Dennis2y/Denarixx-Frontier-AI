@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "path": "local-checkpoints/d0-post002-accepted.pt",
+    "sha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97"
+  },
+  "candidate": {
+    "path": "local-checkpoints/d0-post003-capability-seed42.pt",
+    "sha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06"
+  },
+  "development": {
+    "examples": 5,
+    "families": [
+      "echo",
+      "binary",
+      "transform",
+      "qa",
+      "semantic"
+    ],
+    "path": "ml/data/d0_post003_dev.jsonl",
+    "sha256": "dc7beefa2615b664438c445f5b13f6a579ddd2fff55b91420e7fc29e9c47c45b"
+  },
+  "formalAcceptance": false,
+  "generation": {
+    "method": "greedy",
+    "sampling": false
+  },
+  "historicalEvaluationsAllowed": false,
+  "metrics": [
+    "per_example_response_loss",
+    "aggregate_response_loss",
+    "response_perplexity",
+    "greedy_generation",
+    "exact_match",
+    "exact_match_rate",
+    "per_family_result"
+  ],
+  "passRule": {
+    "exactMatchCount": "post003 >= post002",
+    "requiresBoth": true,
+    "responseLoss": "post003 < post002"
+  },
+  "stage": "D0-POST-003-development",
+  "status": "policy_frozen_before_scoring"
+}

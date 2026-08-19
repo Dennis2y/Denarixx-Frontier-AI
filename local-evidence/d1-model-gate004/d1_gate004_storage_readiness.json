@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-GATE-004-STORAGE-READINESS",
+  "createdAt": "2026-08-19T07:28:53Z",
+  "gate": "D1-GATE-004",
+  "decision": "PASS",
+  "authoritativeArtifacts": {
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "gate003FullContextEvidence": {
+      "path": "local-evidence/d1-model-gate003/d1_gate003_mps_2048_readiness.json",
+      "sha256": "f4910b7b79b93073bbbfbab3c97af766555bcde04166f9264cd198bb936c901d"
+    },
+    "storagePolicy": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/d1_storage_policy.json",
+      "sha256": "7a29cfd7cb1b19a6b0203ccf9a4e02b543f99ca037f958600811337b7688c124"
+    },
+    "priorStorageFreeze": {
+      "path": "local-evidence/d1-model-gate004/d1_gate004_storage_headroom_freeze.json",
+      "sha256": "99ea90fd521ae37ad4c2fe40ed32ec82e60794f298265bbf1080040db79cf556",
+      "modified": false
+    }
+  },
+  "storageTargets": {
+    "primary": "/Volumes/DenarixxSSD",
+    "d1Root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1",
+    "repositoryComparison": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI"
+  },
+  "capacityMeasurements": {
+    "repositoryFilesystem": {
+      "totalBytes": 245107195904,
+      "freeBytes": 1680015360,
+      "freeGiB": 1.56463623046875
+    },
+    "denarixxSSD": {
+      "present": true,
+      "totalBytes": 2000189177856,
+      "freeBytes": 1963770867712,
+      "freeGiB": 1828.904140472412
+    }
+  },
+  "corpusMetadata": {
+    "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/d1-tranche2-derived-corpus.txt",
+    "bytes": 2280040,
+    "sha256": "a3b6448712bc71b66392f9738e5a793efd979ab552a6a9f21b897fd55d415c7e",
+    "acceptedTokenCount": 464086,
+    "tokenCountSource": "existing verified D1 state; corpus was not retokenized by Gate-004"
+  },
+  "checkpointComponents": {
+    "parameterCount": 26655104,
+    "bytesPerFP32Value": 4,
+    "fp32WeightsBytes": 106620416,
+    "fp32GradientsBytes": 106620416,
+    "adamWFirstMomentBytes": 106620416,
+    "adamWSecondMomentBytes": 106620416,
+    "weightsPlusAdamWBytes": 319861248,
+    "trainingStateWeightsGradientsAdamWBytes": 426481664
+  },
+  "checkpointPlanningEstimates": {
+    "fp32WeightsOnlyBytes": 106620416,
+    "fp32WeightsPlusAdamWBytes": 319861248,
+    "metadataOverheadAssumptionPercent": 25,
+    "metadataOverheadBytes": 79965312,
+    "conservativeFullCheckpointBytes": 399826560,
+    "atomicReplacementOldPlusNewBytes": 799653120,
+    "exactSerializationClaimed": false
+  },
+  "planningAssumptions": {
+    "corpusStressReserveBytes": 536870912000,
+    "corpusStressReserveGiB": 500,
+    "corpusStressReserveSource": "preserved from the existing D1-GATE-004 frozen storage authority; it is a stress scenario, not a selected corpus policy",
+    "auxiliaryReserveBytes": 10737418240,
+    "auxiliaryReserveGiB": 10,
+    "auxiliaryReservePurpose": "tokenizer, manifests/evidence, training logs/reports and miscellaneous non-checkpoint artifacts",
+    "safetyMarginPercent": 20,
+    "safetyMarginBasis": "applied to retained checkpoints, one temporary atomic checkpoint, corpus stress reserve and auxiliary reserve",
+    "retentionPolicySelected": false,
+    "referenceCountsOnly": true
+  },
+  "retentionReference": [
+    {
+      "checkpoints": 1,
+      "retainedCheckpointBytes": 399826560,
+      "atomicTemporaryCheckpointBytes": 399826560,
+      "requiredWithReservesAndSafetyBytes": 658089580032,
+      "requiredGiB": 612.8936820030212,
+      "fitsDenarixxSSD": true
+    },
+    {
+      "checkpoints": 2,
+      "retainedCheckpointBytes": 799653120,
+      "atomicTemporaryCheckpointBytes": 399826560,
+      "requiredWithReservesAndSafetyBytes": 658569371904,
+      "requiredGiB": 613.3405230045319,
+      "fitsDenarixxSSD": true
+    },
+    {
+      "checkpoints": 3,
+      "retainedCheckpointBytes": 1199479680,
+      "atomicTemporaryCheckpointBytes": 399826560,
+      "requiredWithReservesAndSafetyBytes": 659049163776,
+      "requiredGiB": 613.7873640060425,
+      "fitsDenarixxSSD": true
+    },
+    {
+      "checkpoints": 5,
+      "retainedCheckpointBytes": 1999132800,
+      "atomicTemporaryCheckpointBytes": 399826560,
+      "requiredWithReservesAndSafetyBytes": 660008747520,
+      "requiredGiB": 614.6810460090637,
+      "fitsDenarixxSSD": true
+    },
+    {
+      "checkpoints": 10,
+      "retainedCheckpointBytes": 3998265600,
+      "atomicTemporaryCheckpointBytes": 399826560,
+      "requiredWithReservesAndSafetyBytes": 662407706880,
+      "requiredGiB": 616.9152510166168,
+      "fitsDenarixxSSD": true
+    }
+  ],
+  "inheritedTwentyCheckpointStressCheck": {
+    "checkpoints": 20,
+    "requiredWithReservesAndSafetyBytes": 667205625600,
+    "requiredGiB": 621.383661031723,
+    "freeBytesAfterReserve": 1296565242112,
+    "fitsDenarixxSSD": true,
+    "includesOneAtomicTemporaryCheckpoint": true
+  },
+  "safetyBoundary": {
+    "primaryStorageHasComfortableHeadroom": true,
+    "atomicCheckpointCanCoexist": true,
+    "repositoryFilesystemSuitableAsPrimaryCheckpointTarget": false,
+    "formalEvaluationDataAccessed": false,
+    "trainingExecuted": false,
+    "optimizerCreated": false,
+    "modelWeightsCreated": false,
+    "checkpointCreated": false,
+    "protectedArtifactsModified": false,
+    "trainingPrecisionPolicySelected": false,
+    "trainingHyperparametersSelected": false
+  }
+}

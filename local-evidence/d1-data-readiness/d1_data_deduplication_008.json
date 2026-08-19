@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-DEDUP-008-EVIDENCE",
+  "createdAt": "2026-08-19T16:56:38Z",
+  "decision": "PASS",
+  "predecessors": {
+    "extractionNormalizationPolicy": {"path": "research/d1/d1_extraction_normalization_policy.json", "sha256": "3d427c399ea65a4146469f465fe12af1a564dc43c96a968cd22a8dd425db7777"},
+    "derivedCandidateManifest": {"path": "research/d1/d1_derived_candidate_manifest.json", "sha256": "48c3e80d64dcb20c853ee18a0a7b666d14a13389ca21646e97e76aaeb03735b3"},
+    "extractionEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_extraction_007.json", "sha256": "3fa70df89ca384aa0fe3ff2c0dd440d61503c444f75a1b08acc967ba9bb8e461"}
+  },
+  "createdAuthorities": {
+    "deduplicationPolicy": {"path": "research/d1/d1_deduplication_policy.json", "sha256": "2c1418889698cee7d3bb86c8678dcb17932edcc961a7ea1bc3f303a69c2bf3ab", "id": "D1-DATA-DEDUP-001"},
+    "deduplicatedCandidateManifest": {"path": "research/d1/d1_deduplicated_candidate_manifest.json", "sha256": "1860c3dba641fcf6365fa5e2c61d538267fe370a71195f17c71fd08d78fc99eb", "id": "D1-DATA-DEDUPLICATED-001"}
+  },
+  "outputRoot": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/deduplicated/D1-DATA-DEDUPLICATED-001-20260819T165450Z/",
+  "externalArtifacts": {
+    "masterManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/deduplicated/D1-DATA-DEDUPLICATED-001-20260819T165450Z/deduplicated_candidate_manifest.json", "sha256": "e02191a153c390e0a31d679fd517c8c2d8327733a3e6dcb248cae8177735ce2e"},
+    "duplicateGroupReport": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/deduplicated/D1-DATA-DEDUPLICATED-001-20260819T165450Z/exact_duplicate_groups.json", "sha256": "c68fee7aec296574296dbb2d1a61522d82e3f91abf8d0740759e9df637034188"},
+    "pythonManifest": {"sha256": "ca780452563c0c942f5ffeb1416f17b9bdcfec627e27ddae0be8fc44005b87dc"},
+    "gesetzeManifest": {"sha256": "c2889eb07a06d4f74d19f7941ba9782e048aa2f203a966b0168fb38db53e27ca"}
+  },
+  "measurements": {
+    "INPUT_DOCUMENT_COUNT": 6553,
+    "INPUT_TEXT_BYTES": 14443111,
+    "EXACT_DUPLICATE_GROUP_COUNT": 76,
+    "EXCESS_EXACT_DUPLICATE_COUNT": 392,
+    "CROSS_SOURCE_DUPLICATE_GROUP_COUNT": 0,
+    "WITHIN_SOURCE_DUPLICATE_GROUP_COUNT": 76,
+    "DEDUPLICATED_DOCUMENT_COUNT": 6161,
+    "DEDUPLICATED_TEXT_BYTES": 14414174,
+    "DOCUMENTS_REMOVED_BY_EXACT_DEDUP": 392,
+    "BYTES_REMOVED_BY_EXACT_DEDUP": 28937,
+    "ACCEPTED_TOKENS": "NOT_MEASURED"
+  },
+  "perSource": {
+    "python": {"beforeDocuments": 513, "beforeBytes": 13758826, "afterDocuments": 513, "afterBytes": 13758826, "removedDocuments": 0, "removedBytes": 0},
+    "gesetze": {"beforeDocuments": 6040, "beforeBytes": 684285, "afterDocuments": 5648, "afterBytes": 655348, "removedDocuments": 392, "removedBytes": 28937}
+  },
+  "independentValidation": {
+    "inputDocumentsRehashed": 6553,
+    "inputChanged": false,
+    "outputDocumentsRehashed": 6161,
+    "outputUtf8ValidAndNonempty": 6161,
+    "outputUniqueHashes": 6161,
+    "duplicateHashesRemaining": 0,
+    "documentAccountingCloses": true,
+    "byteAccountingCloses": true,
+    "sourceAccountingCloses": true,
+    "allChecksPass": true
+  },
+  "nearDuplication": {
+    "NEAR_DUPLICATION_STATUS": "NOT_YET_EXECUTED",
+    "analysisStillRequired": true
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "DEDUPLICATED_CANDIDATE_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002": "EXACT_DEDUP_PASS_NEAR_DEDUP_PENDING",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "PRELIMINARY_SOURCE_LANGUAGE_COMPOSITION_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "DEDUPLICATED_CANDIDATE_NOT_TOKENIZER_VALIDATED",
+    "D1-DATA-BLOCKER-007": "PASS_FOR_DEDUPLICATED_CANDIDATE_SCOPE"
+  },
+  "operationBoundaryConfirmation": {
+    "downloadedAnything": false,
+    "accessedOpenStax": false,
+    "modifiedRawArtifacts": false,
+    "modifiedDerivedInput": false,
+    "createdAcceptedCorpus": false,
+    "performedNearOrSemanticDeduplication": false,
+    "performedContaminationAnalysis": false,
+    "executedTokenizer": false,
+    "measuredAcceptedTokens": false,
+    "createdSplit": false,
+    "instantiatedOrTrainedModel": false,
+    "createdOptimizerOrCheckpoint": false,
+    "accessedFormalEvaluation": false,
+    "modifiedGitState": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

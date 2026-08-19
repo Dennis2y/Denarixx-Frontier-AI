@@ -1,0 +1,22 @@
+{
+  "astDuplicateResultDirMkdirFalseCalls": 0,
+  "checkpointLoaded": false,
+  "formalDatasetCreated": false,
+  "formalDatasetOpened": false,
+  "formalExecutionAuthorized": false,
+  "formalExposureStarted": false,
+  "harness": "ml/evaluation/d0_post008_execution_harness.py",
+  "harnessSha256": "f5268a25b034b4c69d980ae372ed5c632546b50725723feea73f0eeab572ea59",
+  "modelInferenceExecuted": false,
+  "modelScoringExecuted": false,
+  "nextOperation": "fully-synthetic-post008-end-to-end-rehearsal",
+  "post007FileExistsRegressionPassed": true,
+  "realFormalExecutionEnabled": false,
+  "stage": "D0-POST-008",
+  "status": "frozen-synthetically-validated",
+  "test": "ml/tests/test_d0_post008_execution_harness.py",
+  "testSha256": "d18ed744452428a816b049448fcdad493929d92447e1a6a6119a1198be9d42f0",
+  "testsFailed": 0,
+  "testsPassed": 12,
+  "trainingExecuted": false
+}

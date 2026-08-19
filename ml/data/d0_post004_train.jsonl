@@ -1,0 +1,40 @@
+{"family":"echo","instruction":"echo stone","response":"stone"}
+{"family":"echo","instruction":"echo river","response":"river"}
+{"family":"echo","instruction":"echo green","response":"green"}
+{"family":"echo","instruction":"echo light","response":"light"}
+{"family":"echo","instruction":"echo music","response":"music"}
+{"family":"echo","instruction":"echo cloud","response":"cloud"}
+{"family":"echo","instruction":"echo bread","response":"bread"}
+{"family":"echo","instruction":"echo plant","response":"plant"}
+{"family":"boolean","instruction":"is fire cold","response":"false"}
+{"family":"boolean","instruction":"is ice cold","response":"true"}
+{"family":"boolean","instruction":"is water dry","response":"false"}
+{"family":"boolean","instruction":"is snow cold","response":"true"}
+{"family":"boolean","instruction":"is night bright","response":"false"}
+{"family":"boolean","instruction":"is sun bright","response":"true"}
+{"family":"boolean","instruction":"is stone soft","response":"false"}
+{"family":"boolean","instruction":"is silk soft","response":"true"}
+{"family":"suffix_s","instruction":"add s to cat","response":"cats"}
+{"family":"suffix_s","instruction":"add s to book","response":"books"}
+{"family":"suffix_s","instruction":"add s to car","response":"cars"}
+{"family":"suffix_s","instruction":"add s to tree","response":"trees"}
+{"family":"suffix_s","instruction":"add s to cup","response":"cups"}
+{"family":"suffix_s","instruction":"add s to star","response":"stars"}
+{"family":"suffix_s","instruction":"add s to bird","response":"birds"}
+{"family":"suffix_s","instruction":"add s to road","response":"roads"}
+{"family":"opposite","instruction":"opposite up","response":"down"}
+{"family":"opposite","instruction":"opposite dark","response":"light"}
+{"family":"opposite","instruction":"opposite fast","response":"slow"}
+{"family":"opposite","instruction":"opposite old","response":"new"}
+{"family":"opposite","instruction":"opposite tall","response":"short"}
+{"family":"opposite","instruction":"opposite open","response":"closed"}
+{"family":"opposite","instruction":"opposite wet","response":"dry"}
+{"family":"opposite","instruction":"opposite hard","response":"soft"}
+{"family":"semantic","instruction":"birds can fly","response":"true"}
+{"family":"semantic","instruction":"fish can walk","response":"false"}
+{"family":"semantic","instruction":"water can freeze","response":"true"}
+{"family":"semantic","instruction":"rocks can eat","response":"false"}
+{"family":"semantic","instruction":"humans can learn","response":"true"}
+{"family":"semantic","instruction":"cars can sleep","response":"false"}
+{"family":"semantic","instruction":"plants can grow","response":"true"}
+{"family":"semantic","instruction":"chairs can think","response":"false"}

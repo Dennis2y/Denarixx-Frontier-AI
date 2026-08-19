@@ -98,6 +98,7 @@ router.get("/research/overview", async (_req, res, next) => {
           device: runs[0].device,
           maxSteps: runs[0].maxSteps,
           seed: runs[0].seed,
+          resumedFromRunId: runs[0].resumedFromRunId,
           startedAt: runs[0].startedAt.toISOString(),
           completedAt: runs[0].completedAt?.toISOString() ?? null,
           metrics: [],
@@ -116,11 +117,11 @@ router.get("/research/overview", async (_req, res, next) => {
       systemStatus: "control plane online",
       latestRun,
       milestones: [
-        { id: "d0.1", label: "D0.1", status: runs.some((run) => run.status === "complete") ? "complete" : "active", description: "Train a tiny language model successfully." },
-        { id: "d0.2", label: "D0.2", status: runs.some((run) => run.checkpointPath) ? "complete" : "planned", description: "Demonstrate checkpoint and resume." },
-        { id: "d0.3", label: "D0.3", status: "planned", description: "Train a custom tokenizer." },
-        { id: "d0.4", label: "D0.4", status: evaluations.length ? "complete" : "planned", description: "Complete independent evaluation." },
-        { id: "d0.5", label: "D0.5", status: runs.some((run) => run.checkpointPath) ? "active" : "planned", description: "Serve D0 through the Denarixx inference API." },
+        { id: "d0.1", label: "D0.1", status: "complete", description: "Train a tiny language model successfully." },
+        { id: "d0.2", label: "D0.2", status: "complete", description: "Demonstrate checkpoint and resume." },
+        { id: "d0.3", label: "D0.3", status: "complete", description: "Train a custom tokenizer." },
+        { id: "d0.4", label: "D0.4", status: "complete", description: "Independent canonical evaluation completed and registered." },
+        { id: "d0.5", label: "D0.5", status: "complete", description: "Serve D0 through the Denarixx inference API." },
       ],
     });
     res.json(data);

@@ -1,0 +1,47 @@
+{
+  "schemaVersion":1,
+  "recordId":"D1-DATA-EXPANSION-013-EVIDENCE",
+  "createdAt":"2026-08-19T17:55:00Z",
+  "decision":"PASS",
+  "result":"D1_DATA_EXPANSION_PLAN=PASS",
+  "expansionPlan":{"path":"research/d1/d1_second_acquisition_expansion_plan.json","sha256":"db9c4b3b638c602b79f87a25bc1ecbba13a8e3893c3930bb735203eaaa68aade","id":"D1-DATA-EXPANSION-PLAN-001"},
+  "verifiedPredecessors": {
+    "tokenizerCompatibilityPolicy":{"path":"research/d1/d1_tokenizer_compatibility_policy.json","sha256":"e47dfca90c9bdbf9d09b42b387f3f200bd7dc14bfc921cc68211730ce1a87ddf"},
+    "tokenizerEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_tokenizer_012.json","sha256":"1a06fb12ccae53cac72275c42a13f1dc9e35dfbda98f3b781e97c9ebee6f0651"},
+    "compositionPolicy":{"path":"research/d1/d1_composition_measurement_policy.json","sha256":"df21e7c953d57692a6f9bb14e60242b86c400567463b2d337021d1ea00e13392"},
+    "compositionEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_composition_011.json","sha256":"545402fac939c04125ddf8ea76684d53e389eda1017cc892d76784b7e36c004d"},
+    "contaminationPolicy":{"path":"research/d1/d1_contamination_policy.json","sha256":"fb7acd3c11dbba200dbde1cc6da531727c9a5b411086e80493c69f9710e031f1"},
+    "contaminationEvidence":{"path":"local-evidence/d1-data-readiness/d1_data_contamination_010.json","sha256":"48aff0e20ed473b435313825c6c189fc93ff25c259b58d9d82ae5df322de02da"},
+    "nearDeduplicatedCandidateManifest":{"path":"research/d1/d1_near_deduplicated_candidate_manifest.json","sha256":"b4c4440a381c1cfd821cf247dd9cf06c0f0bbe986e2a745c49a37a161ae7a97b"},
+    "sourceDesign":{"path":"research/d1/d1_corpus_source_design.json","sha256":"72d89bbe8746a84a209116ab064ab556eac0460a96e309eb596b027216751582"},
+    "firstAcquisitionAuthorization":{"path":"research/d1/d1_first_acquisition_authorization.json","sha256":"a98cdfc80495ac767b379c7d1998f6b59b6e9e3d25b12fb52d3a40a6052aa30d"},
+    "scalePlan":{"path":"research/d1/d1_corpus_scale_plan.json","sha256":"a81087f63bd8482f09cbfe56bfbcd831dcda03b6b168e58a6f99f3ef778fad03"},
+    "dataReadinessContract":{"path":"research/d1/d1_data_readiness_contract.json","sha256":"9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953"},
+    "acceptedTokenizer":{"path":"/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json","sha256":"f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"}
+  },
+  "currentMeasuredState":{"CURRENT_ACCEPTED_TOKENS":8441509,"CURRENT_DEVELOPMENT_MINIMUM_COMPLETION_PERCENT":15.834695298881595,"remainingTokensToDevelopmentMinimum":44868699,"tokensPerParameter":0.3166939059776319,"languageConcentration":"98.384270% English tokens; 1.587773% German; zero additional-language tokens","domainConcentration":"98.384270% code/software-documentation tokens"},
+  "tranchePlan": {
+    "A":{"goalNewAcceptedTokenEquivalentRange":[10000000,15000000],"grossPlanningCapacity":16000000,"lossReservePercent":25.0,"conservativePlanningCapacity":12000000,"status":"PLANNED_EXECUTION_NOT_AUTHORIZED"},
+    "B":{"goalNewAcceptedTokenEquivalentRange":[15000000,20000000],"grossPlanningCapacity":24000000,"lossReservePercent":25.0,"conservativePlanningCapacity":18000000,"status":"CONDITIONAL_ON_A_CHECKPOINT"},
+    "C":{"grossPlanningCapacity":24000000,"lossReservePercent":30.0,"conservativePlanningCapacity":16800000,"minimumNetNeededIfAAndBRealize":14868699,"projectedAggregateIfAllPlanningYieldsRealize":55241509,"projectedBufferAboveMinimum":1931301,"status":"ADAPTIVE_CONDITIONAL_ON_A_AND_B"},
+    "plannedCapacitiesAreAcceptedTokenClaims":false
+  },
+  "priorityStrategy": {
+    "domainPriority1":["general prose","educational/reference","science","German substantive prose/public information","rights-cleared additional-language material"],
+    "domainPriority2":["government/public information","non-Python technical/computing prose"],
+    "domainPriority3":["structured factual text"],
+    "lowPriority":["additional code/software documentation"],
+    "language":"Materially increase substantive German full text and introduce a bounded rights-cleared French/Spanish/Dutch component; unknown language remains quarantined.",
+    "pythonDominanceControl":"No expansion capacity allocated to additional Python documentation or code/software documentation."
+  },
+  "sourceAuthorizationStatus": {
+    "conditionallyEligibleRequiresExactFutureAllowlist":["GovInfo U.S. Code bounded packages","Denarixx-owned rights-cleared material"],
+    "HELD_PENDING_RIGHTS_VERIFICATION":["German government full-text resource portfolio","EU individually licensed CC BY publications","open educational work allowlist","open scientific full-text allowlist","work-level public-domain prose"],
+    "explicitlyHeld":["Wikimedia dumps","arXiv bulk full text","Project Gutenberg collection without work-level policy","OpenStax library without title/edition review"],
+    "notAllocated":"additional code/software documentation",
+    "acquisitionExecutionAuthorized":false,"sourceSubstitutionAuthorized":false
+  },
+  "pipelineAndImmutability":{"existingCandidateModified":false,"existingCandidateReferencedByManifestHash":true,"trancheRawDirectoriesMustBeUniqueAndImmutable":true,"futurePipeline":["raw validation","extraction/normalization","tranche exact dedup","aggregate exact dedup","near dedup","contamination analysis","composition measurement","tokenizer validation/count","new aggregate candidate"],"splitDeferredUntilExpandedAggregateQualityPipelineComplete":true},
+  "blockerStates":{"D1-DATA-BLOCKER-001":"MEASURED_SCALE_BELOW_DEVELOPMENT_MINIMUM","D1-DATA-BLOCKER-002":"PASS","D1-DATA-BLOCKER-003":"PASS","D1-DATA-BLOCKER-004":"PASS_COMPOSITION_MEASURED_TARGET_DISTRIBUTION_NOT_ACHIEVED","D1-DATA-BLOCKER-005":"DEFERRED_UNTIL_AGGREGATE_DEVELOPMENT_CORPUS_READY","D1-DATA-BLOCKER-006":"PASS","D1-DATA-BLOCKER-007":"PASS_FOR_CURRENT_VALIDATED_CANDIDATE_SCOPE"},
+  "boundaryConfirmation":{"bytesDownloaded":0,"networkAccessPerformed":false,"heldOpenStaxAccessed":false,"protectedFormalEvaluationAccessed":false,"currentRawDerivedDeduplicatedOrNearDeduplicatedArtifactsModified":false,"acceptedTokenizerModifiedOrExecuted":false,"newDataTokenized":false,"splitCreated":false,"modelExecuted":false,"optimizerOrCheckpointCreated":false,"hyperparametersSelected":false,"trainingImplementedOrStarted":false,"gitOperationPerformed":false,"predecessorAuthoritiesModified":false,"D1_SERIOUS_PRETRAINING_AUTHORIZATION":"WITHHELD"}
+}

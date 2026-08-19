@@ -1,0 +1,265 @@
+{
+  "checkpoint": "local-checkpoints/d0-post002-accepted.pt",
+  "checkpointSha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97",
+  "dataset": "ml/data/d0_post003_formal.jsonl",
+  "datasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "exactMatchRate": 0.0,
+  "exactMatches": 0,
+  "examples": 25,
+  "modelName": "denarixx-d0-mixed-post-training",
+  "responseLoss": 3.1551351272802557,
+  "responsePerplexity": 23.456206450675545,
+  "responseTokens": 139,
+  "results": [
+    {
+      "exactMatch": false,
+      "expected": "calm",
+      "family": null,
+      "generated": "enenenenenenenerererer",
+      "index": 1,
+      "instruction": "echo calm",
+      "responseLoss": 3.3840927124023437,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "clear",
+      "family": null,
+      "generated": "enenenenerererererere",
+      "index": 2,
+      "instruction": "echo clear",
+      "responseLoss": 3.046261469523112,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "data",
+      "family": null,
+      "generated": "enenererererererererer",
+      "index": 3,
+      "instruction": "echo data",
+      "responseLoss": 3.0567081451416014,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "model",
+      "family": null,
+      "generated": "enenenenenenenenenere",
+      "index": 4,
+      "instruction": "echo model",
+      "responseLoss": 3.074904759724935,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "token",
+      "family": null,
+      "generated": "enererererererererere",
+      "index": 5,
+      "instruction": "echo token",
+      "responseLoss": 3.043943723042806,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "enenenenererererere",
+      "index": 6,
+      "instruction": "is calm true",
+      "responseLoss": 3.050593058268229,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "ererererererererere",
+      "index": 7,
+      "instruction": "is data true",
+      "responseLoss": 3.0523608525594077,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "ererererererererere",
+      "index": 8,
+      "instruction": "is same true",
+      "responseLoss": 3.048268953959147,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "enenenenenerererer",
+      "index": 9,
+      "instruction": "is model true",
+      "responseLoss": 3.0534350077311196,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "enenererererererer",
+      "index": 10,
+      "instruction": "is true false",
+      "responseLoss": 3.0517050425211587,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "datas",
+      "family": null,
+      "generated": "enenenenenerererer",
+      "index": 11,
+      "instruction": "add s to data",
+      "responseLoss": 3.0875984827677407,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "risks",
+      "family": null,
+      "generated": "enenenenenerererer",
+      "index": 12,
+      "instruction": "add s to risk",
+      "responseLoss": 3.459646224975586,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "runs",
+      "family": null,
+      "generated": "enenenenenerererere",
+      "index": 13,
+      "instruction": "add s to run",
+      "responseLoss": 3.4219806671142576,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "words",
+      "family": null,
+      "generated": "enenenenenerererer",
+      "index": 14,
+      "instruction": "add s to word",
+      "responseLoss": 3.524923006693522,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "checks",
+      "family": null,
+      "generated": "enenenererererere",
+      "index": 15,
+      "instruction": "add s to check",
+      "responseLoss": 3.31713376726423,
+      "responseTokens": 7
+    },
+    {
+      "exactMatch": false,
+      "expected": "fast",
+      "family": null,
+      "generated": "enenenenenenenerer",
+      "index": 16,
+      "instruction": "opposite slow",
+      "responseLoss": 3.1696086883544923,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "hot",
+      "family": null,
+      "generated": "enenenenenenenenen",
+      "index": 17,
+      "instruction": "opposite cold",
+      "responseLoss": 3.504828453063965,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "yes",
+      "family": null,
+      "generated": "enenenenenenerererer",
+      "index": 18,
+      "instruction": "opposite no",
+      "responseLoss": 2.976137638092041,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "enenenenenenenenen",
+      "index": 19,
+      "instruction": "color of data",
+      "responseLoss": 3.061039606730143,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "enenenenenenenene",
+      "index": 20,
+      "instruction": "color of model",
+      "responseLoss": 3.063691775004069,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "enenererererererere",
+      "index": 21,
+      "instruction": "ai can learn",
+      "responseLoss": 3.124269485473633,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "enenenenenenenen",
+      "index": 22,
+      "instruction": "model can learn",
+      "responseLoss": 3.1201316833496096,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "enenerererererere",
+      "index": 23,
+      "instruction": "data has value",
+      "responseLoss": 3.1050310134887695,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": null,
+      "generated": "erererererererer",
+      "index": 24,
+      "instruction": "risk means safe",
+      "responseLoss": 3.0487238566080728,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": null,
+      "generated": "erererererererere",
+      "index": 25,
+      "instruction": "test can check",
+      "responseLoss": 3.1016590118408205,
+      "responseTokens": 5
+    }
+  ]
+}

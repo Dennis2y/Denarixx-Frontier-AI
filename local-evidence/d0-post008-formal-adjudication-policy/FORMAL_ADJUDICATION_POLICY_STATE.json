@@ -1,0 +1,36 @@
+{
+  "aggregateResponseLossRule": "candidate_strictly_lower_than_baseline",
+  "allFiveFamiliesRetentionRequired": true,
+  "candidateSpecificNormalizationPermitted": false,
+  "createdAt": "2026-08-15T17:41:30.116361+00:00",
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "formalDatasetConstructed": false,
+  "formalDatasetOpened": false,
+  "formalExecutionAuthorized": false,
+  "formalExecutionEnabled": false,
+  "formalExposureStarted": false,
+  "formalPassRequiresAllConditions": true,
+  "maximumPerFamilyLossRegressionFraction": 0.05,
+  "minimumCandidateExactMatches": 1,
+  "policyType": "formal-adjudication-policy",
+  "provenance": "carry-forward-established-pre-exposure-capability-standard",
+  "sourceBindings": {
+    "local-evidence/d0-post007-formal-adjudication-policy/FORMAL_ADJUDICATION_POLICY.md": "3512500d87932411590b7c9014a10a4185e130b515b7e549baa9e6ef723535c4",
+    "local-evidence/d0-post008-dependency-adapter-freeze/DEPENDENCY_ADAPTER_FREEZE.md": "267d6e9f7445dc3f05116dc5807e9406b40c14113facadaf369f8ada668bae55",
+    "local-evidence/d0-post008-formal-dataset-contract/FORMAL_DATASET_CONTRACT.md": "cd3416070b52968e4354192e58afd3b1e778d9c9827c1850a2ce22ec2ed09443",
+    "local-evidence/d0-post008-scoring-interface-specification/SCORING_INTERFACE_SPECIFICATION.md": "d9eabba38dbcaea09e5f69972f7d39da6412f8018858227549fc87a26770066b",
+    "ml/evaluation/d0_post008_dependencies.py": "50fd911f8e29286999d65af6e390be049e5729c31f808b298d3809373b21d128"
+  },
+  "stage": "D0-POST-008",
+  "status": "frozen-pre-dataset-pre-exposure",
+  "strictExactMatchImprovementRequired": true,
+  "thresholdTuningPermitted": false,
+  "trainingAuthorized": false,
+  "zeroBaselineFamilyLossRule": "candidate_must_equal_zero"
+}

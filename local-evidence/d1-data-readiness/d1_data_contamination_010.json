@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-CONTAMINATION-010-EVIDENCE",
+  "createdAt": "2026-08-19T17:14:04Z",
+  "decision": "PASS",
+  "result": "D1_DATA_CONTAMINATION=PASS",
+  "predecessors": {
+    "nearDeduplicationPolicy": {"path":"research/d1/d1_near_deduplication_policy.json","sha256":"9cd1e71b54113c645d4bb8751ee8f842637871d42f6c50e6bde56dbc86a38375"},
+    "nearDeduplicatedCandidateManifest": {"path":"research/d1/d1_near_deduplicated_candidate_manifest.json","sha256":"b4c4440a381c1cfd821cf247dd9cf06c0f0bbe986e2a745c49a37a161ae7a97b"},
+    "nearDeduplicationEvidence": {"path":"local-evidence/d1-data-readiness/d1_data_near_deduplication_009.json","sha256":"a1ff0875abd999733686d4deecbb23d0ac4f2597146d3437d9bf52ada17b1829"}
+  },
+  "createdAuthorities": {
+    "contaminationPolicy": {"path":"research/d1/d1_contamination_policy.json","sha256":"fb7acd3c11dbba200dbde1cc6da531727c9a5b411086e80493c69f9710e031f1","id":"D1-DATA-CONTAMINATION-POLICY-001"},
+    "contaminationCleanCandidateManifest": "NOT_CREATED_NO_REMEDIATION_REQUIRED"
+  },
+  "input": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/",
+    "documentsRehashedUtf8Nonempty": 6106,
+    "INPUT_DOCUMENT_COUNT": 6106,
+    "INPUT_TEXT_BYTES": 14406978,
+    "uniqueExactHashes": 6106,
+    "EXACT_DUPLICATE_HASHES": 0,
+    "manifestAccountingCloses": true,
+    "perSource": {
+      "d1-acq001-python-docs-313": {"documents":513,"bytes":13758826,"manifestSha256":"650fbc6a3c334b6f4d81f329fcfc4c7871d1222979bc6394aa262c1c1df2c2fd"},
+      "d1-acq001-gesetze-refresh": {"documents":5593,"bytes":648152,"manifestSha256":"62e8102d9aa6d24463223931cc46f1d369a75466dd51af28c60a79b8863ecc7e"}
+    }
+  },
+  "comparisonAuthority": {
+    "resolution": "18 artifacts explicitly classified NON_PROTECTED_HISTORICAL by the frozen D0.4 historical freshness exclusion registry",
+    "registryPath": "local-evidence/d0-milestones/d0.4/HISTORICAL_FRESHNESS_EXCLUSION_REGISTRY.json",
+    "registrySha256": "db45b26752eeaf3123ed86549046000466773b993cf2503c073ebe9132ca15d0",
+    "provenanceRegistryPath": "local-evidence/d0-milestones/d0.4/AUTHORITATIVE_PROVENANCE_REGISTRY.json",
+    "provenanceRegistrySha256": "05b96428b68570ea90c07eaf379464396ccb5653933fa57c149f6b81a3e9faaa",
+    "AUTHORIZED_REFERENCE_SOURCE_COUNT": 18,
+    "AUTHORIZED_REFERENCE_RECORD_COUNT": 1684,
+    "allAuthorizedSourceHashesMatchedRegistry": true
+  },
+  "analysis": {
+    "analysisCanonicalSha256": "4856b7c0831f48a426e191bd8009d022aefc0b51a83dc56303d9ba010775db87",
+    "CANDIDATE_DOCUMENTS_SCANNED": 6106,
+    "EXACT_CONTAMINATION_MATCH_COUNT": 0,
+    "NORMALIZED_EXACT_MATCH_COUNT": 0,
+    "LONG_CONTIGUOUS_MATCH_COUNT": 0,
+    "HIGH_OVERLAP_MATCH_COUNT": 0,
+    "CONTAMINATION_GROUP_COUNT": 0,
+    "CANDIDATE_DOCUMENTS_FLAGGED": 0,
+    "BYTES_FLAGGED": 0,
+    "CROSS_SOURCE_MATCH_COUNT": 0,
+    "SHORT_GENERIC_MATCHES_IGNORED": 0,
+    "confirmedFindings": []
+  },
+  "remediation": {
+    "required": false,
+    "outputCandidateCreated": false,
+    "reason": "No deterministic contamination findings; policy forbids unnecessary output creation.",
+    "OUTPUT_DOCUMENT_COUNT": "NOT_APPLICABLE_NO_OUTPUT_CREATED",
+    "OUTPUT_TEXT_BYTES": "NOT_APPLICABLE_NO_OUTPUT_CREATED",
+    "DOCUMENTS_REMOVED_FOR_CONTAMINATION": 0,
+    "BYTES_REMOVED_FOR_CONTAMINATION": 0
+  },
+  "protectedBoundary": {
+    "protectedFormalDatasetsOpened": false,
+    "protectedFormalDatasetsDecoded": false,
+    "protectedFormalDatasetsParsed": false,
+    "protectedFormalDatasetsHashedAnew": false,
+    "protectedPathsUsedForComparison": [],
+    "protectedGovernanceIdentityOnly": ["ml/data/d0_post003_formal.jsonl","ml/data/d0_post006_formal.jsonl","ml/data/d0_post007_formal.jsonl"],
+    "d1FormalEvaluationMaterialAccessed": false
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "NEAR_DEDUPLICATED_CANDIDATE_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002": "PASS",
+    "D1-DATA-BLOCKER-003": "PASS",
+    "D1-DATA-BLOCKER-004": "PRELIMINARY_SOURCE_LANGUAGE_COMPOSITION_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "NEAR_DEDUPLICATED_CANDIDATE_NOT_TOKENIZER_VALIDATED",
+    "D1-DATA-BLOCKER-007": "PASS_FOR_NEAR_DEDUPLICATED_CANDIDATE_SCOPE"
+  },
+  "operationBoundaryConfirmation": {
+    "inputCorpusModified": false,
+    "downloadedAnything": false,
+    "accessedHeldOpenStax": false,
+    "createdAcceptedCorpus": false,
+    "executedTokenizer": false,
+    "ACCEPTED_TOKENS": "NOT_MEASURED",
+    "createdSplit": false,
+    "instantiatedOrTrainedModel": false,
+    "createdOptimizerWeightsOrCheckpoint": false,
+    "modifiedGitState": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

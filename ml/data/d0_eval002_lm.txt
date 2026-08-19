@@ -1,0 +1,40 @@
+Reliable systems preserve evidence before changing behavior.
+A careful experiment separates observation from conclusion.
+Stable evaluation requires data that training has never seen.
+A model should improve useful behavior without forgetting prior knowledge.
+Scientific comparisons require identical measurement conditions.
+Reproducible experiments record configuration data and model identity.
+A checkpoint is evidence only when its origin can be reconstructed.
+Training loss alone cannot establish generalization.
+Independent evaluation reduces the risk of selecting accidental improvements.
+A useful language model must retain structure while learning new objectives.
+Model development benefits from explicit hypotheses and rejection criteria.
+Evaluation contamination can make weak systems appear stronger than they are.
+Deterministic measurements make unexpected changes easier to investigate.
+A controlled baseline provides context for every later experiment.
+Architecture changes and training changes should not be confused.
+A research pipeline should detect silent changes to important datasets.
+Generalization matters more than memorizing a small collection of examples.
+Retention objectives can reduce forgetting during instruction adaptation.
+An experimental checkpoint should not become canonical without evidence.
+Small models are useful for validating research infrastructure cheaply.
+A frozen benchmark must remain unchanged after its identity is recorded.
+Good experiments measure both intended gains and unwanted regressions.
+Independent test data should influence conclusions but never training.
+Parameter counts help verify that an experiment preserved architecture.
+A tokenizer is part of the model contract and must remain reproducible.
+Research artifacts should contain enough metadata to explain their origin.
+Repeated tuning against one benchmark weakens its value as an independent test.
+A secondary benchmark provides another view of model behavior.
+Evidence should be recorded before researchers decide whether they like a result.
+A model comparison is meaningful only when evaluation procedures are consistent.
+Language retention and instruction adaptation can create competing objectives.
+A mixed objective attempts to balance new behavior with existing capability.
+Validation examples must remain separate from optimization examples.
+Hash identities help prove that evaluation inputs did not silently change.
+Research conclusions should distinguish measured facts from speculation.
+A successful experiment can still require replication before acceptance.
+Evaluation suites should contain enough variation to expose brittle behavior.
+Model quality cannot be summarized by a single metric.
+Loss measurements are useful even when exact generation remains imperfect.
+Every promoted checkpoint should have a documented chain of evidence.

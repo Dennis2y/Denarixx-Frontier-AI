@@ -1,0 +1,182 @@
+{
+  "contract": {
+    "id": "D1-EVAL-001",
+    "name": "Denarixx Frontier AI D1 Evaluation Governance Contract",
+    "version": 1,
+    "status": "locked-before-full-training",
+    "purpose": "Define the independent D1 evaluation governance boundary required by D1-GATE-006 before full D1 training begins."
+  },
+  "gateBinding": {
+    "gate": "D1-GATE-006",
+    "requirement": "D1 evaluation contract must exist before full training begins.",
+    "predecessorGate": "D1-GATE-005"
+  },
+  "authoritativeInputs": {
+    "research/d1/d1_architecture_contract.json": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+    "research/d1/d1_data_acquisition_contract.json": "61f0db2623c8fbc016364394a367a6de9b66aceee3820b40fb16a2461bd61913",
+    "research/d1/d1_tokenizer_contract.json": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c",
+    "research/d1/d1_model_semantic_freeze.json": "f231faf1968bc8f8edbdd868142604ff7626d1d8bb821afe15838d1f5f3f8113",
+    "local-evidence/d1-model-gate005/d1_model_024_gate005_adjudication.json": "fef41842bbd23a41bcb2f5fe42e4d01b91d6a1ad8e260938df28669f2ed70571",
+    "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/d1_storage_policy.json": "7a29cfd7cb1b19a6b0203ccf9a4e02b543f99ca037f958600811337b7688c124"
+  },
+  "evaluationPurpose": {
+    "primary": "Provide an independent, reproducible and contamination-controlled measurement framework for future D1 model evaluation.",
+    "evaluationIsMeasurementNotTraining": true,
+    "evaluationIsNotCandidateSelectionUnlessSeparatelyAuthorized": true,
+    "claimsLimitedToMeasuredScope": true
+  },
+  "independencePolicy": {
+    "trainingAndFormalEvaluationDataMustRemainLogicallySeparated": true,
+    "formalEvaluationDataMayNotBeUsedForTraining": true,
+    "formalEvaluationDataMayNotBeUsedForThresholdTuning": true,
+    "formalEvaluationDataMayNotBeUsedForCandidateSelection": true,
+    "benchmarkAnswerInjectionForScoreInflationProhibited": true,
+    "evaluationContaminationChecksRequiredBeforeModelEvaluation": true,
+    "evaluationResultsMayNotRetroactivelyAlterEvaluatedTrainingRun": true
+  },
+  "formalEvaluationDatasetBoundary": {
+    "formalDatasetExistsByThisContract": false,
+    "formalDatasetConstructionAuthorizedByThisContract": false,
+    "formalDatasetAccessAuthorizedByThisContract": false,
+    "formalDatasetParsingAuthorizedByThisContract": false,
+    "formalDatasetScoringAuthorizedByThisContract": false,
+    "formalDatasetTrainingUseAuthorized": false,
+    "futureDatasetRequiresSeparateGovernance": true,
+    "futureDatasetMustBeIndependentlyVersionedAndHashed": true,
+    "futureDatasetMustHaveProvenance": true,
+    "futureDatasetMustPassContaminationControls": true
+  },
+  "modelIdentityPolicy": {
+    "evaluationRequiresExactModelIdentity": true,
+    "evaluationRequiresModelArtifactSha256": true,
+    "evaluationRequiresArchitectureIdentity": true,
+    "modelIdentityNotYetBoundBecauseD1WeightsDoNotYetExist": true,
+    "evaluationMustNotSilentlySubstituteAnotherCheckpoint": true
+  },
+  "tokenizerIdentityPolicy": {
+    "evaluationRequiresExactTokenizerIdentity": true,
+    "evaluationRequiresTokenizerArtifactSha256": true,
+    "tokenizerModificationForEvaluationProhibited": true,
+    "sealedD1TokenizerMustRemainUnmodified": true,
+    "d0TokenizerMustRemainUnmodified": true
+  },
+  "futureProtocolRequirements": {
+    "separateEvaluationProtocolRequiredBeforeFormalEvaluation": true,
+    "protocolMustFreezeBeforeFormalDatasetExposureOrScoring": true,
+    "protocolMustDefine": [
+      "evaluation objectives",
+      "evaluated capability families or task domains",
+      "dataset construction and provenance rules",
+      "dataset size and schema",
+      "tokenizer compatibility requirements",
+      "context-length compatibility requirements",
+      "evaluation metrics",
+      "metric aggregation rules",
+      "generation and scoring determinism",
+      "evaluator identity requirements",
+      "evidence persistence requirements",
+      "failure behavior",
+      "repeatability or one-time execution semantics",
+      "completion and adjudication semantics",
+      "claim boundaries"
+    ],
+    "metricThresholdsMustNotBeChosenAfterObservingFormalResults": true,
+    "datasetContentMustNotBeSelectedUsingFormalModelPerformance": true
+  },
+  "metricGovernance": {
+    "metricsDefinedByThisContract": false,
+    "metricThresholdsDefinedByThisContract": false,
+    "reason": "Exact D1 evaluation metrics and any thresholds belong to the future frozen evaluation protocol and must be selected before formal results are observed."
+  },
+  "baselineComparatorPolicy": {
+    "comparatorRequiredByThisContract": false,
+    "futureComparatorUseRequiresProtocolDefinition": true,
+    "d0MustNotBeReopenedOrModifiedToCreateComparatorEvidence": true
+  },
+  "reproducibilityRequirements": {
+    "evaluatedModelIdentityMustBeHashed": true,
+    "tokenizerIdentityMustBeHashed": true,
+    "formalDatasetIdentityMustBeHashed": true,
+    "evaluationProtocolIdentityMustBeHashed": true,
+    "evaluatorIdentityMustBeHashed": true,
+    "rawResultArtifactMustBeHashed": true,
+    "executionConfigurationMustBePersisted": true,
+    "deterministicScoringRequiredWhereDefinedByProtocol": true
+  },
+  "evidenceRequirements": {
+    "futureExecutionEvidenceMustPreserve": [
+      "evaluation contract identity",
+      "evaluation protocol identity",
+      "model/checkpoint identity",
+      "tokenizer identity",
+      "formal dataset identity",
+      "evaluator identity",
+      "execution configuration",
+      "aggregate metrics",
+      "required scoped metrics",
+      "execution status",
+      "adjudication result"
+    ],
+    "existingEvidenceMustNotBeSilentlyOverwritten": true
+  },
+  "storagePolicy": {
+    "storageContract": "D1-STOR-002",
+    "evaluationArtifactRoot": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/evaluation",
+    "formalEvaluationArtifactsMustFollowStorageContract": true
+  },
+  "failurePolicy": {
+    "failClosedOnIdentityMismatch": true,
+    "failClosedOnDatasetIntegrityFailure": true,
+    "failClosedOnTokenizerCompatibilityFailure": true,
+    "failClosedOnContextCompatibilityFailure": true,
+    "failClosedOnIncompleteRequiredMetrics": true,
+    "failClosedOnGovernanceViolation": true,
+    "failureEvidenceMustNotBeRewrittenAsSuccess": true
+  },
+  "d0Isolation": {
+    "d0ModificationAuthorized": false,
+    "d0CheckpointModificationAuthorized": false,
+    "d0TokenizerModificationAuthorized": false,
+    "historicalD0FormalDatasetReuseAuthorized": false,
+    "d0EvaluationRerunAuthorized": false
+  },
+  "authorizationBoundary": {
+    "evaluationContractCreationAuthorized": true,
+    "evaluationProtocolDesignAuthorizedAfterContractFreeze": true,
+    "formalEvaluationDatasetConstructionAuthorized": false,
+    "formalEvaluationDatasetAccessAuthorized": false,
+    "formalEvaluationExecutionAuthorized": false,
+    "d1TrainingAuthorized": false,
+    "d1WeightsCreationAuthorized": false,
+    "d1CheckpointCreationAuthorized": false,
+    "tokenizerModificationAuthorized": false,
+    "tokenizerTrainingAuthorized": false,
+    "additionalTrainingCorpusAcquisitionAuthorized": false,
+    "additionalTrainingCorpusConstructionAuthorized": false,
+    "d0ModificationAuthorized": false
+  },
+  "gateSemantics": {
+    "contractExistenceCanSatisfyGate006Requirement": true,
+    "gate006PassDoesNotByItselfAuthorizeTraining": true,
+    "gate006PassDoesNotAuthorizeWeightCreation": true,
+    "gate006PassDoesNotAuthorizeCheckpointCreation": true,
+    "gate006PassDoesNotAuthorizeFormalEvaluation": true,
+    "gate006PassDoesNotAuthorizeFormalDatasetAccess": true,
+    "separateTrainingAuthorizationRequiredAfterReadinessAdjudication": true
+  },
+  "currentState": {
+    "d1TrainingStarted": false,
+    "d1WeightsExist": false,
+    "d1CheckpointExists": false,
+    "formalD1EvaluationDatasetConstructed": false,
+    "formalD1EvaluationDatasetAccessed": false,
+    "formalD1EvaluationExecuted": false
+  },
+  "nextRequiredOperation": {
+    "operation": "D1-GATE-006 contract existence and semantic adjudication",
+    "mayInspectThisContract": true,
+    "mayHashThisContract": true,
+    "mayAccessFormalEvaluationDataset": false,
+    "mayStartTraining": false
+  }
+}

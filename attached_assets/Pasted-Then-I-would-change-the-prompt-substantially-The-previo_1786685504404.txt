@@ -1,0 +1,1431 @@
+Then I would change the prompt substantially. The previous prompt was mainly an AI research management platform. This one should tell Replit to build the actual executable research foundation while being explicit that beating frontier models is the long-term objective, not a fake claim for version 1.
+
+Replit cannot make a GPT-beating model merely from a prompt. What it can build is the first serious software and experimentation stack from which we train, measure, reject bad ideas, and scale successful ones.
+
+DENARIXX FRONTIER AI — MASTER BUILD SPECIFICATION
+
+Build a serious, production-oriented AI research and model-engineering system for:
+
+Company: Denarixx Digital Solutions
+Research Organization: Denarixx AI Research
+Platform: Denarixx Frontier AI
+Initial Research Program: Denarixx D0
+Future Foundation Model: Denarixx D1
+
+This must NOT be a chatbot clone, OpenAI wrapper, fake AI dashboard, benchmark mockup, or generic SaaS application.
+
+The long-term research objective is exceptionally ambitious:
+
+Develop Denarixx-owned foundation-model technology capable of eventually competing with and, where objectively demonstrated, surpassing leading frontier AI systems across reasoning, mathematics, coding, science, factuality, multilingual intelligence, multimodal understanding, long-context tasks, agents, tool use, memory, reliability, latency, cost efficiency and computational efficiency.
+
+Do NOT claim that this objective has already been achieved.
+
+Every performance claim must eventually be demonstrated through reproducible evaluations.
+
+The immediate objective is different:
+
+Build the real engineering and experimentation foundation required for Denarixx to independently create, train, evaluate, serve and improve its own neural language models.
+
+⸻
+
+1. NON-NEGOTIABLE PRINCIPLE
+
+The system must produce REAL experiments.
+
+Do not create decorative pages pretending models are training.
+
+Do not generate random:
+
+* training loss
+* benchmark results
+* GPU utilization
+* token throughput
+* model scores
+* model capabilities
+* training progress
+
+Demo information may exist only when clearly labelled:
+
+DEMO / SIMULATED DATA
+
+Real experiment results must come from actual executable training or evaluation jobs.
+
+⸻
+
+2. TWO-LAYER ARCHITECTURE
+
+Separate the project into:
+
+CONTROL PLANE
+
+Can run on Replit.
+
+Responsible for:
+
+* authentication
+* research dashboard
+* model registry
+* dataset registry
+* experiments
+* training job management
+* evaluations
+* benchmark comparison
+* artifact metadata
+* research records
+* compute orchestration
+* API management
+* monitoring
+
+ML RESEARCH ENGINE
+
+Python-based and portable.
+
+Responsible for:
+
+* dataset processing
+* tokenizer training
+* model implementation
+* pretraining
+* checkpointing
+* post-training
+* inference
+* evaluation
+* architecture experiments
+
+The ML engine must NOT depend on Replit.
+
+It must later run on:
+
+* local computers
+* individual GPUs
+* cloud GPUs
+* multi-GPU machines
+* distributed clusters
+* Denarixx-owned infrastructure
+
+⸻
+
+3. MONOREPO STRUCTURE
+
+Create a maintainable structure similar to:
+
+denarixx-frontier-ai/
+apps/
+  web/
+  api/
+ml/
+  core/
+  models/
+  architectures/
+  attention/
+  memory/
+  routing/
+  tokenizers/
+  data/
+  training/
+  post_training/
+  inference/
+  evaluation/
+  agents/
+  multimodal/
+  safety/
+  optimization/
+research/
+  experiments/
+  hypotheses/
+  reports/
+infrastructure/
+  compute/
+  storage/
+  containers/
+benchmarks/
+tests/
+docs/
+
+Do not create giant monolithic source files.
+
+⸻
+
+4. TECHNOLOGY STACK
+
+Control Plane
+
+Frontend:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui
+* TanStack Query
+* React Hook Form
+* Zod
+* Recharts
+
+Backend:
+
+* Node.js
+* TypeScript
+* Express
+* PostgreSQL
+* Drizzle ORM
+* Zod
+
+ML Engine
+
+Use:
+
+* Python
+* PyTorch
+
+Design optional integration points for:
+
+* CUDA
+* Hugging Face ecosystem
+* safetensors
+* distributed training
+* optimized attention kernels
+* high-performance inference engines
+
+Do not make optional GPU libraries mandatory for CPU development.
+
+⸻
+
+5. BUILD A REAL DENARIXX MODEL IMPLEMENTATION
+
+Implement Denarixx’s first experimental neural language-model family.
+
+Call it:
+
+Denarixx D0
+
+D0 is an experimental research model.
+
+It is NOT a frontier model.
+
+Its purpose is to prove that Denarixx owns and controls the complete model-development lifecycle.
+
+Implement the architecture directly in PyTorch.
+
+The implementation must include configurable:
+
+* token embeddings
+* positional representation
+* transformer blocks
+* causal self-attention
+* normalization
+* feed-forward layers
+* residual connections
+* output projection
+* vocabulary size
+* hidden dimension
+* number of layers
+* number of attention heads
+* context length
+* dropout
+* initialization
+
+Do not merely download another organization’s pretrained model and rename it Denarixx D0.
+
+Using open-source libraries as engineering dependencies is acceptable.
+
+The D0 weights must be capable of being initialized and trained by Denarixx.
+
+⸻
+
+6. CONFIGURATION-DRIVEN MODEL CREATION
+
+Model architecture must be configurable.
+
+Example concept:
+
+model_family: denarixx-d0
+layers: configurable
+hidden_size: configurable
+attention_heads: configurable
+context_length: configurable
+vocab_size: configurable
+architecture_variant: configurable
+
+Researchers must be able to create multiple D0 variants without rewriting the training system.
+
+⸻
+
+7. DENARIXX ARCHITECTURE LAB
+
+This is critical.
+
+Do not assume that simply scaling a standard transformer will eventually defeat frontier models.
+
+Create an experimental architecture framework.
+
+Researchers must be able to swap components.
+
+Support experimentation interfaces for:
+
+* attention mechanisms
+* positional representations
+* normalization
+* activation functions
+* feed-forward architectures
+* sparse computation
+* Mixture-of-Experts
+* routing
+* memory modules
+* recurrent/state mechanisms
+* adaptive computation
+* tokenization strategies
+
+Standard implementations should provide baselines.
+
+Experimental implementations must remain clearly identified as experimental.
+
+⸻
+
+8. BASELINE VS EXPERIMENTAL MODELS
+
+Create a scientific experiment structure.
+
+Example:
+
+D0-Baseline
+D0-Attention-A
+D0-Attention-B
+D0-Memory-A
+D0-Routing-A
+D0-MoE-A
+D0-Reasoning-A
+
+Every experiment must compare against a baseline.
+
+Record:
+
+* hypothesis
+* architecture
+* parameter count
+* active parameters
+* dataset
+* token budget
+* compute budget
+* training configuration
+* seed
+* hardware
+* training time
+* validation loss
+* benchmark results
+* inference speed
+* memory consumption
+* conclusion
+
+⸻
+
+9. INTELLIGENCE-PER-COMPUTE RESEARCH
+
+Create first-class metrics for:
+
+Capability per parameter
+
+Capability per training FLOP
+
+Capability per inference FLOP
+
+Capability per euro
+
+Capability per watt where measurable
+
+Capability per second of latency
+
+The research objective must not simply be:
+
+Build the largest model possible.
+
+It should investigate:
+
+How much useful intelligence can Denarixx produce from a given amount of computation?
+
+⸻
+
+10. DATA ENGINE
+
+Build a real dataset pipeline.
+
+Stages:
+
+RAW
+↓
+INGESTION
+↓
+PROVENANCE VALIDATION
+↓
+LICENSE/PERMISSION CHECK
+↓
+FORMAT NORMALIZATION
+↓
+LANGUAGE IDENTIFICATION
+↓
+QUALITY ANALYSIS
+↓
+DEDUPLICATION
+↓
+SAFETY PROCESSING
+↓
+CONTAMINATION ANALYSIS
+↓
+TOKENIZATION
+↓
+DATASET VERSION
+↓
+TRAINING READY
+
+Every dataset must have provenance.
+
+Track:
+
+* source
+* license
+* permissions
+* acquisition date
+* language
+* domain
+* size
+* document count
+* token count
+* processing history
+* dataset version
+* quality metrics
+
+Do not indiscriminately scrape copyrighted material.
+
+⸻
+
+11. DATA QUALITY RESEARCH
+
+Create extensible interfaces for:
+
+* exact deduplication
+* approximate deduplication
+* language detection
+* quality scoring
+* document filtering
+* repetition detection
+* malformed text detection
+* benchmark contamination detection
+* domain classification
+
+Produce dataset-quality reports.
+
+⸻
+
+12. TOKENIZER LAB
+
+Implement tokenizer experimentation.
+
+Researchers should be able to:
+
+* train a tokenizer
+* version it
+* evaluate compression
+* evaluate multilingual efficiency
+* inspect vocabulary
+* calculate tokens per character
+* calculate tokens per word
+* compare tokenizers
+
+Track tokenizer/model compatibility.
+
+⸻
+
+13. REAL PRETRAINING ENGINE
+
+Implement an executable pretraining pipeline.
+
+It must support:
+
+* dataset loading
+* tokenization
+* batching
+* causal language modelling
+* optimizer configuration
+* learning-rate scheduling
+* gradient accumulation
+* gradient clipping
+* checkpointing
+* validation
+* deterministic seeds where possible
+* resume-from-checkpoint
+* structured metrics
+* failure recovery
+
+Start CPU-compatible for tiny tests.
+
+Automatically use GPU acceleration when supported.
+
+⸻
+
+14. TRAINING METRICS
+
+Record actual:
+
+* step
+* epoch where applicable
+* training loss
+* validation loss
+* learning rate
+* gradient norm
+* tokens processed
+* tokens/second
+* elapsed time
+* memory usage where available
+
+Persist metrics so the control plane can visualize them.
+
+⸻
+
+15. CHECKPOINT SYSTEM
+
+Implement proper checkpoints.
+
+Store:
+
+* model weights
+* optimizer state
+* scheduler state
+* training step
+* model configuration
+* tokenizer reference
+* dataset reference
+* source-code/research version where available
+
+Support:
+
+resume training
+
+and
+
+load for inference.
+
+⸻
+
+16. POST-TRAINING FRAMEWORK
+
+Create modular infrastructure for future:
+
+* supervised fine-tuning
+* instruction tuning
+* preference optimization
+* reasoning-oriented training
+* tool-use training
+* agent training
+* safety training
+
+Do not fake RL or preference learning.
+
+Implement only functionality that can be executed correctly.
+
+⸻
+
+17. REASONING RESEARCH LAB
+
+Create a dedicated reasoning research framework.
+
+Research dimensions should include:
+
+* decomposition
+* planning
+* verification
+* self-correction
+* uncertainty estimation
+* tool-assisted reasoning
+* mathematical reasoning
+* code reasoning
+* causal reasoning
+
+Evaluation must measure whether a technique actually improves final-task accuracy.
+
+Do not assume that generating longer internal reasoning automatically means greater intelligence.
+
+⸻
+
+18. VERIFICATION SYSTEM
+
+Create architecture for external answer verification.
+
+Possible verifier classes:
+
+* mathematical verifier
+* code execution verifier
+* structured-output verifier
+* factual evidence verifier
+* constraint verifier
+
+Keep model generation and verification conceptually separate.
+
+⸻
+
+19. MEMORY RESEARCH
+
+Create modular experimental memory interfaces.
+
+Support research into:
+
+* working memory
+* semantic memory
+* episodic memory
+* retrieval memory
+* compressed memory
+* persistent authorized memory
+
+Measure:
+
+* retrieval accuracy
+* usefulness
+* latency
+* storage requirements
+* hallucination impact
+
+Privacy and deletion controls must be considered for persistent user information.
+
+⸻
+
+20. MIXTURE-OF-EXPERTS LAB
+
+Create experimental infrastructure for sparse/MoE research.
+
+Allow future experimentation with:
+
+* expert layers
+* routers
+* top-k routing
+* expert capacity
+* load balancing
+* routing metrics
+
+Record:
+
+* total parameters
+* active parameters
+* expert utilization
+* routing distribution
+* load-balance metrics
+
+Do not enable enormous configurations by default.
+
+⸻
+
+21. ADAPTIVE COMPUTATION RESEARCH
+
+Design experimental interfaces where different tasks may consume different amounts of computation.
+
+Track:
+
+* task difficulty
+* computation used
+* latency
+* accuracy
+
+The goal is to investigate whether Denarixx can spend additional compute only when necessary.
+
+⸻
+
+22. MULTIMODAL ARCHITECTURE FOUNDATION
+
+Do NOT attempt a massive multimodal model immediately.
+
+Create extensible interfaces for future:
+
+* text
+* images
+* audio
+* video
+* documents
+* sensor information
+
+Keep modality encoders modular.
+
+D0 should initially prioritize text.
+
+⸻
+
+23. AGENT ARCHITECTURE
+
+Create an agent research framework separate from the base model.
+
+Architecture:
+
+USER TASK
+↓
+PLANNER
+↓
+MODEL
+↓
+TOOL SELECTION
+↓
+EXECUTION
+↓
+OBSERVATION
+↓
+VERIFICATION
+↓
+CONTINUE / CORRECT / FINISH
+
+Tools must use explicit permissions.
+
+Do not expose unrestricted system access.
+
+⸻
+
+24. WORLD-MODEL RESEARCH INTERFACE
+
+Create a research module for future experiments involving:
+
+* state representation
+* temporal prediction
+* cause/effect
+* environment modelling
+* action consequences
+
+Do not claim that D0 possesses a world model.
+
+Build interfaces and experiment definitions first.
+
+⸻
+
+25. EVALUATION ENGINE
+
+Build an independent evaluation framework.
+
+Evaluation categories:
+
+* reasoning
+* mathematics
+* coding
+* science
+* factuality
+* instruction following
+* multilingual performance
+* long context
+* robustness
+* tool use
+* agents
+* safety
+* latency
+* throughput
+* memory
+* computational efficiency
+
+Each evaluation must store:
+
+* benchmark
+* benchmark version
+* model
+* model checkpoint
+* dataset
+* configuration
+* hardware
+* date
+* score
+* raw results
+* evaluator version
+
+⸻
+
+26. PREVENT BENCHMARK CHEATING
+
+Implement contamination tracking.
+
+Never optimize solely for leaderboard numbers.
+
+Separate:
+
+* development evaluations
+* validation evaluations
+* final held-out evaluations
+
+Record benchmark exposure.
+
+⸻
+
+27. FRONTIER COMPARISON SYSTEM
+
+Build a model-comparison framework capable of storing independently sourced results for external models.
+
+External models might eventually include leading systems from major AI laboratories.
+
+Every result must identify its source as:
+
+* Denarixx measured
+* Independent third-party
+* Vendor reported
+
+Never fabricate competitor results.
+
+Never display:
+
+Denarixx beats GPT
+
+unless comparable, reproducible evidence actually supports that statement.
+
+⸻
+
+28. DENARIXX FRONTIER SCORECARD
+
+Create a composite research dashboard covering:
+
+* reasoning
+* mathematics
+* coding
+* science
+* factuality
+* multilingual
+* long context
+* multimodal
+* agents
+* safety
+* latency
+* throughput
+* inference cost
+* training efficiency
+* memory efficiency
+
+Do not collapse everything into one misleading score.
+
+Show individual dimensions.
+
+⸻
+
+29. COMPUTE ABSTRACTION
+
+Create:
+
+ComputeProvider
+
+with future adapters for:
+
+* Local
+* SSH-managed GPU servers
+* RunPod
+* Lambda
+* CoreWeave
+* AWS
+* Google Cloud
+* Azure
+* Denarixx infrastructure
+
+Replit should orchestrate.
+
+External compute should train.
+
+⸻
+
+30. STORAGE ABSTRACTION
+
+Create:
+
+ArtifactStorageProvider
+
+for:
+
+* local development
+* object storage
+* cloud storage
+* future Denarixx storage
+
+Large checkpoints must not live inside PostgreSQL.
+
+⸻
+
+31. MODEL SERVING
+
+Create an inference service.
+
+Support:
+
+* checkpoint loading
+* tokenization
+* generation
+* streaming
+* configurable decoding
+* latency measurement
+* token throughput
+* resource measurement where possible
+
+Expose versioned internal APIs.
+
+⸻
+
+32. MODEL PROVIDER ABSTRACTION
+
+Create:
+
+ModelProvider
+
+Denarixx models must be first-class providers.
+
+External providers may be connected for legitimate comparison and product use.
+
+Never architect Denarixx as permanently dependent on an external model API.
+
+⸻
+
+33. DENARIXX AI PLAYGROUND
+
+Build a serious playground.
+
+Show:
+
+* selected model
+* exact model version
+* checkpoint
+* prompt
+* output
+* generation settings
+* tokens generated
+* latency
+* tokens/second
+* tool activity
+* verifier result where applicable
+
+Allow side-by-side experiments.
+
+⸻
+
+34. RESEARCH EXPERIMENT SYSTEM
+
+Every architecture idea must become an experiment.
+
+Required fields:
+
+* Research question
+* Hypothesis
+* Baseline
+* Experimental variant
+* Dataset
+* Compute budget
+* Training budget
+* Evaluation suite
+* Expected outcome
+* Actual outcome
+* Statistical information where appropriate
+* Conclusion
+
+Possible conclusions:
+
+* SUCCESS
+* PARTIAL
+* NO IMPROVEMENT
+* REGRESSION
+* INCONCLUSIVE
+
+Failed experiments must remain recorded.
+
+Do not delete negative results merely because they look bad.
+
+⸻
+
+35. REPRODUCIBILITY
+
+Capture:
+
+* random seeds
+* configuration
+* software versions
+* model version
+* dataset version
+* tokenizer version
+* hardware
+* training command
+* evaluation command
+
+A researcher should be able to reproduce an experiment where practical.
+
+⸻
+
+36. RESEARCH KNOWLEDGE BASE
+
+Create structured research records for:
+
+* hypotheses
+* experiments
+* findings
+* architecture decisions
+* papers
+* implementation notes
+* negative results
+* open questions
+
+Make them searchable and taggable.
+
+⸻
+
+37. CONTROL-PLANE DATABASE
+
+Implement normalized PostgreSQL schemas for at least:
+
+users
+roles
+user_roles
+models
+model_versions
+model_configs
+datasets
+dataset_versions
+dataset_sources
+tokenizers
+training_runs
+training_metrics
+checkpoints
+experiments
+experiment_runs
+evaluations
+evaluation_runs
+evaluation_results
+compute_providers
+compute_clusters
+compute_nodes
+compute_jobs
+artifacts
+research_notes
+research_hypotheses
+agents
+agent_tools
+api_keys
+api_usage
+audit_logs
+
+Use:
+
+* foreign keys
+* indexes
+* migrations
+* timestamps
+* constraints
+
+⸻
+
+38. SECURITY
+
+Implement:
+
+* secure authentication
+* password hashing
+* RBAC
+* server-side authorization
+* rate limiting
+* secure headers
+* environment validation
+* secret management
+* input validation
+* audit logging
+* API-key hashing
+* protected research endpoints
+
+Roles:
+
+* Owner
+* Research Admin
+* Researcher
+* ML Engineer
+* Evaluator
+* Viewer
+
+Never rely only on frontend permissions.
+
+⸻
+
+39. RESEARCH DASHBOARD
+
+Create a professional dashboard showing real system state.
+
+Sections:
+
+* Models
+* Datasets
+* Tokenizers
+* Experiments
+* Training
+* Evaluations
+* Compute
+* Checkpoints
+* Artifacts
+* Agents
+* Memory Research
+* Architecture Lab
+* Research
+* API
+* Monitoring
+
+⸻
+
+40. D0 MILESTONE SYSTEM
+
+Create this program:
+
+DENARIXX D0
+
+D0.1
+
+Train a tiny language model successfully.
+
+D0.2
+
+Demonstrate checkpoint/resume.
+
+D0.3
+
+Train a custom tokenizer.
+
+D0.4
+
+Complete independent evaluation.
+
+D0.5
+
+Serve D0 through the Denarixx inference API.
+
+D0.6
+
+Compare architecture variants.
+
+D0.7
+
+Run first memory experiment.
+
+D0.8
+
+Run first sparse/MoE experiment.
+
+D0.9
+
+Run first reasoning-training experiment.
+
+D0.10
+
+Produce a reproducible D0 technical report.
+
+Only mark milestones complete after corresponding artifacts exist.
+
+⸻
+
+41. AUTOMATED RESEARCH PIPELINE
+
+Design toward:
+
+HYPOTHESIS
+↓
+EXPERIMENT CONFIG
+↓
+TRAIN
+↓
+EVALUATE
+↓
+COMPARE WITH BASELINE
+↓
+GENERATE REPORT
+↓
+HUMAN REVIEW
+↓
+ACCEPT / REJECT
+↓
+NEXT EXPERIMENT
+
+Human researchers remain responsible for important research decisions.
+
+Do not implement uncontrolled recursive self-modification.
+
+⸻
+
+42. SCALING GATES
+
+Do NOT scale a model merely because training completed.
+
+Before increasing model size, evaluate:
+
+* validation improvement
+* benchmark improvement
+* compute efficiency
+* inference efficiency
+* stability
+* data quality
+* scaling behavior
+
+The system should encourage:
+
+experiment first → prove improvement → then scale
+
+rather than:
+
+spend more compute → hope for intelligence
+
+⸻
+
+43. LONG-TERM MODEL ROADMAP
+
+Represent this roadmap without pretending future models exist:
+
+D0
+Experimental Research
+↓
+D1
+First Serious Denarixx Foundation Model
+↓
+D2
+Advanced Reasoning + Coding + Multilingual
+↓
+D3
+Native Multimodal Intelligence
+↓
+D4
+Agents + Memory + World Modelling
+↓
+DENARIXX FRONTIER
+Frontier-competitive research program
+
+Future names represent research targets, not completed products.
+
+⸻
+
+44. DENARIXX RESEARCH PRINCIPLES
+
+Encode these principles into project documentation:
+
+Principle 1
+
+Evidence over marketing.
+
+Principle 2
+
+Never fabricate benchmarks.
+
+Principle 3
+
+Efficiency matters alongside raw capability.
+
+Principle 4
+
+Failed experiments are useful information.
+
+Principle 5
+
+Reproducibility matters.
+
+Principle 6
+
+Data quality matters more than raw data volume alone.
+
+Principle 7
+
+Scale successful ideas, not assumptions.
+
+Principle 8
+
+Separate models from agents, memory, tools and verification so each can improve independently.
+
+Principle 9
+
+Security and safety are engineering requirements.
+
+Principle 10
+
+Denarixx must eventually own meaningful core AI technology rather than merely rebranding external models.
+
+⸻
+
+45. DO NOT DO THESE THINGS
+
+Do NOT:
+
+* build only a frontend
+* build only dashboards
+* create fake training animations
+* fabricate model results
+* fabricate GPU telemetry
+* rename an existing model Denarixx
+* claim D0 is frontier AI
+* hard-code OpenAI as the intelligence layer
+* indiscriminately scrape copyrighted datasets
+* expose unrestricted shell execution
+* commit secrets
+* store plaintext passwords
+* store plaintext API keys
+* create giant unmaintainable files
+* optimize solely for benchmarks
+* automatically scale expensive jobs without explicit authorization
+
+⸻
+
+46. FIRST IMPLEMENTATION — BUILD THIS NOW
+
+Do NOT attempt the entire future roadmap simultaneously.
+
+Implement the first real vertical slice:
+
+Dataset
+   ↓
+Tokenizer
+   ↓
+D0 Model
+   ↓
+Training
+   ↓
+Checkpoint
+   ↓
+Evaluation
+   ↓
+Inference
+   ↓
+API
+   ↓
+Research Dashboard
+
+The first implementation must include:
+
+1. Monorepo structure
+2. PostgreSQL schema
+3. Authentication
+4. RBAC
+5. D0 PyTorch model
+6. Tiny legal/local development dataset support
+7. Tokenizer pipeline
+8. CPU-compatible D0 training
+9. Checkpoint saving/loading
+10. Validation
+11. Basic evaluation
+12. D0 inference
+13. Model registry
+14. Experiment registry
+15. Training-run tracking
+16. Evaluation tracking
+17. Research dashboard
+18. Compute-provider abstraction
+19. Artifact-storage abstraction
+20. Audit logging
+
+⸻
+
+47. PROVE THAT IT WORKS
+
+After implementation, run a tiny end-to-end development experiment.
+
+It must:
+
+Load development dataset
+↓
+Train/tokenize data
+↓
+Initialize D0
+↓
+Train D0
+↓
+Record REAL loss
+↓
+Save checkpoint
+↓
+Reload checkpoint
+↓
+Run evaluation
+↓
+Generate sample inference
+↓
+Persist results
+↓
+Display results in dashboard
+
+The purpose is pipeline validation, NOT model quality.
+
+Clearly label tiny-development-model output as experimental.
+
+⸻
+
+48. TEST EVERYTHING
+
+Run:
+
+* TypeScript type checking
+* Python tests
+* backend tests
+* database migration checks
+* production frontend build
+* model initialization test
+* tokenizer test
+* training smoke test
+* checkpoint save/load test
+* inference test
+* evaluation test
+* authentication test
+* RBAC test
+
+Fix failures rather than merely reporting them.
+
+⸻
+
+49. FINAL IMPLEMENTATION REPORT
+
+After completing the first build, provide:
+
+Architecture
+
+What was implemented.
+
+Repository Structure
+
+Major directories and responsibilities.
+
+D0
+
+Exact model architecture implemented.
+
+Training
+
+What actually ran.
+
+Dataset
+
+What development data was used and its provenance.
+
+Results
+
+Actual training/evaluation results only.
+
+Security
+
+Implemented controls.
+
+Tests
+
+Exact checks executed and their status.
+
+Limitations
+
+Be explicit.
+
+Next Research Step
+
+Recommend the SINGLE highest-value next experiment.
+
+Do not recommend scaling D0 dramatically until the complete D0 pipeline has been verified.
+
+⸻
+
+FINAL DIRECTIVE
+
+This project exists to pursue frontier AI through engineering and scientific research.
+
+Do not optimize for making Denarixx look powerful.
+
+Optimize for making Denarixx become technically capable.
+
+A beautiful dashboard with no original model is failure.
+
+A renamed external model is failure.
+
+Fake benchmarks are failure.
+
+A tiny Denarixx model that is genuinely implemented, trained, checkpointed, evaluated and served by our own pipeline is success for this first phase.
+
+Build the foundation correctly.
+
+Then we will improve the intelligence.
+
+This is the prompt I’d use instead. The key difference is that we’re demanding an actual PyTorch D0 implementation and an end-to-end training pipeline—not just pages saying “Training” and “Models.”
+
+And I would not give Replit another giant prompt immediately after this. Once it finishes, bring me its implementation report and the build/test output. We should inspect whether D0 genuinely trained, whether the checkpoint reloads, and whether the displayed metrics are real before moving to the next research phase.

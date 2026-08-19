@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-DATA-002-EVIDENCE",
+  "createdAt": "2026-08-19T08:28:01Z",
+  "decision": "PASS",
+  "verifiedPredecessors": {
+    "dataReadinessContract": {
+      "path": "research/d1/d1_data_readiness_contract.json",
+      "sha256": "9327fbc4c23d9608c452ab4cb40cc579d19c4f237aef57ee87a721163527c953"
+    },
+    "dataReadinessEvidence": {
+      "path": "local-evidence/d1-data-readiness/d1_data_readiness_001.json",
+      "sha256": "9752a28876a13bcc9ab18e6d4eb0c4191cf8fd2badfc891a47ac525449de5a9b"
+    },
+    "readinessClosure": {
+      "path": "research/d1/d1_readiness_closure.json",
+      "sha256": "2407705c43a9f4cb216548927c0c69929527b1ea3eac93b9ce83b0e7636f3e13"
+    },
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    }
+  },
+  "scalePlan": {
+    "id": "D1-DATA-SCALE-001",
+    "path": "research/d1/d1_corpus_scale_plan.json",
+    "sha256": "a81087f63bd8482f09cbfe56bfbcd831dcda03b6b168e58a6f99f3ef778fad03",
+    "status": "proposed-before-corpus-acquisition"
+  },
+  "measuredBasis": {
+    "parameterCount": 26655104,
+    "contextLength": 2048,
+    "acceptedTokens": 464086,
+    "acceptedBytes": 2280040,
+    "tokensPerParameter": 0.01741077431174157,
+    "seriousPretrainingScaleAssessment": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING"
+  },
+  "proposalSummary": {
+    "developmentUniqueAcceptedTokens": {"minimum": 53310208, "planningCeiling": 133275520},
+    "developmentTokensPerParameter": {"minimum": 2, "ceiling": 5},
+    "capabilityUniqueAcceptedTokens": {"minimum": 266551040, "planningCeiling": 533102080},
+    "capabilityTokensPerParameter": {"minimum": 10, "ceiling": 20},
+    "trainingExposureTargetSelected": false,
+    "corpusPassesSelected": false,
+    "duplicatePaddingPermitted": false
+  },
+  "referenceScaleCalculations": [
+    {"tokensPerParameter": 1, "tokens": 26655104, "multipleOfCurrentTokens": 57.43569941778033, "fullContextSequencesFloor": 13015},
+    {"tokensPerParameter": 2, "tokens": 53310208, "multipleOfCurrentTokens": 114.87139883556065, "fullContextSequencesFloor": 26030},
+    {"tokensPerParameter": 5, "tokens": 133275520, "multipleOfCurrentTokens": 287.1784970889016, "fullContextSequencesFloor": 65075},
+    {"tokensPerParameter": 10, "tokens": 266551040, "multipleOfCurrentTokens": 574.3569941778032, "fullContextSequencesFloor": 130151},
+    {"tokensPerParameter": 20, "tokens": 533102080, "multipleOfCurrentTokens": 1148.7139883556065, "fullContextSequencesFloor": 260303},
+    {"tokensPerParameter": 30, "tokens": 799653120, "multipleOfCurrentTokens": 1723.0709825334097, "fullContextSequencesFloor": 390455},
+    {"tokensPerParameter": 40, "tokens": 1066204160, "multipleOfCurrentTokens": 2297.427976711213, "fullContextSequencesFloor": 520607}
+  ],
+  "resourceEstimates": {
+    "observedBytesPerToken": 4.912968717005038,
+    "development": {
+      "uniqueAcceptedTokens": {"minimum": 53310208, "planningCeiling": 133275520},
+      "approximateBytes": {"minimum": 261911384, "maximum": 654778461},
+      "fullContextSequencesFloor": {"minimum": 26030, "maximum": 65075},
+      "multipleOfCurrent": {"minimum": 114.87139883556065, "maximum": 287.1784970889016}
+    },
+    "capability": {
+      "uniqueAcceptedTokens": {"minimum": 266551040, "planningCeiling": 533102080},
+      "approximateBytes": {"minimum": 1309556921, "maximum": 2619113842},
+      "fullContextSequencesFloor": {"minimum": 130151, "maximum": 260303},
+      "multipleOfCurrent": {"minimum": 574.3569941778032, "maximum": 1148.7139883556065}
+    },
+    "selectedCorpusPasses": "NOT_APPLICABLE_NO_EXPOSURE_COUNT_SELECTED"
+  },
+  "status": {
+    "D1-DATA-BLOCKER-001-PLANNING": "PASS",
+    "CORPUS_SCALE_TARGET_STATUS": "PROPOSED_FOR_FREEZE",
+    "D1-DATA-BLOCKER-001": "PLANNED_NOT_SATISFIED",
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  },
+  "operationBoundary": {
+    "datasetsDownloaded": false,
+    "corpusAcquired": false,
+    "corpusExpanded": false,
+    "corpusModified": false,
+    "tokenizerModified": false,
+    "modelExecuted": false,
+    "optimizerCreated": false,
+    "hyperparametersSelected": false,
+    "trainerImplemented": false,
+    "checkpointCreated": false,
+    "trainingStarted": false,
+    "formalEvaluationAccessed": false
+  },
+  "unchangedAuthorityDeclaration": {
+    "architectureModified": false,
+    "modelModified": false,
+    "tokenizerModified": false,
+    "corpusModified": false,
+    "dataReadinessContractModified": false,
+    "dataReadinessEvidenceModified": false,
+    "readinessClosureModified": false,
+    "pyprojectModified": false,
+    "uvLockModified": false,
+    "gitStateModified": false
+  }
+}

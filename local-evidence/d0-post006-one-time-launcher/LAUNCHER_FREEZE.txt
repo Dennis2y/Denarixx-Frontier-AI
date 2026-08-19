@@ -1,0 +1,31 @@
+D0-POST-006 ONE-TIME LAUNCHER FREEZE
+
+launcher:
+  path: ml/evaluation/d0_post006_one_time_launcher.py
+  sha256: 873b9bf4cea932467b70e405fbd45a544cfe6ef147635e7f59e068cbbf040e04
+
+dependencyAdapter:
+  sha256: d3e34b57fcc48dc8c3f31b37195ca5c89d69bd7b2bcf67a44466c8b5e5631dce
+
+executionHarness:
+  sha256: 2fc3fe2a6b2d2247fd37aa2c47633f1e7fa68703473ca90b507c7c8b94cdf9e5
+
+formalComparator:
+  sha256: 37f54a6ec2725d8df34c0331780c723f841a1d471364091406159b3915121e89
+
+validation:
+  sourceIdentitiesVerified: YES
+  sealedDatasetIdentityVerifiedByHashOnly: YES
+  baselineIdentityVerifiedByHashOnly: YES
+  candidateIdentityVerifiedByHashOnly: YES
+  formalRowsParsed: NO
+  checkpointLoaded: NO
+  modelScoringExecuted: NO
+  realFormalExposure: ZERO
+
+commandLineState:
+  dryValidateAvailable: YES
+  realExecutionCLIUnlocked: NO
+
+IMPORTANT:
+  This freeze does NOT authorize or execute formal scoring.

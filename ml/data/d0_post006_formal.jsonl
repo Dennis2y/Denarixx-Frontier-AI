@@ -1,0 +1,25 @@
+{"family":"echo","instruction":"Repeat exactly this word: meadow","response":"meadow"}
+{"family":"boolean","instruction":"Is 8 greater than 3? Answer true or false.","response":"true"}
+{"family":"plural","instruction":"Give the plural of drum.","response":"drums"}
+{"family":"opposite","instruction":"Give the opposite of narrow.","response":"wide"}
+{"family":"world_fact","instruction":"Water can freeze into ice. Answer true or false.","response":"true"}
+{"family":"echo","instruction":"Repeat exactly this word: velvet","response":"velvet"}
+{"family":"boolean","instruction":"Is 4 greater than 9? Answer true or false.","response":"false"}
+{"family":"plural","instruction":"Give the plural of fork.","response":"forks"}
+{"family":"opposite","instruction":"Give the opposite of rough.","response":"smooth"}
+{"family":"world_fact","instruction":"A stone is normally a living animal. Answer true or false.","response":"false"}
+{"family":"echo","instruction":"Repeat exactly this word: lantern","response":"lantern"}
+{"family":"boolean","instruction":"Does 6 equal 6? Answer true or false.","response":"true"}
+{"family":"plural","instruction":"Give the plural of tent.","response":"tents"}
+{"family":"opposite","instruction":"Give the opposite of shallow.","response":"deep"}
+{"family":"world_fact","instruction":"Humans normally breathe air. Answer true or false.","response":"true"}
+{"family":"echo","instruction":"Repeat exactly this word: pebble","response":"pebble"}
+{"family":"boolean","instruction":"Is 2 greater than 7? Answer true or false.","response":"false"}
+{"family":"plural","instruction":"Give the plural of pond.","response":"ponds"}
+{"family":"opposite","instruction":"Give the opposite of weak.","response":"strong"}
+{"family":"world_fact","instruction":"The Moon is an ocean on Earth. Answer true or false.","response":"false"}
+{"family":"echo","instruction":"Repeat exactly this word: ribbon","response":"ribbon"}
+{"family":"boolean","instruction":"Is 10 greater than 5? Answer true or false.","response":"true"}
+{"family":"plural","instruction":"Give the plural of brick.","response":"bricks"}
+{"family":"opposite","instruction":"Give the opposite of near.","response":"far"}
+{"family":"world_fact","instruction":"Birds have feathers. Answer true or false.","response":"true"}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "authority": {
+    "id": "D1-DATA-NEAR-DEDUPLICATED-001",
+    "gate": "D1-DATA-NEAR-DEDUP-009",
+    "status": "NEAR_DEDUPLICATED_CANDIDATE_NOT_ACCEPTED",
+    "createdAt": "2026-08-19T17:07:34Z",
+    "decision": "PASS"
+  },
+  "predecessors": {
+    "exactDeduplicationPolicy": {"path": "research/d1/d1_deduplication_policy.json", "sha256": "2c1418889698cee7d3bb86c8678dcb17932edcc961a7ea1bc3f303a69c2bf3ab"},
+    "deduplicatedCandidateManifest": {"path": "research/d1/d1_deduplicated_candidate_manifest.json", "sha256": "1860c3dba641fcf6365fa5e2c61d538267fe370a71195f17c71fd08d78fc99eb"},
+    "exactDeduplicationEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_deduplication_008.json", "sha256": "7095be07320926b38e17c767015a3ee39aa43b465e4fb25d2d372326ffba2e62"},
+    "nearDeduplicationPolicy": {"path": "research/d1/d1_near_deduplication_policy.json", "sha256": "9cd1e71b54113c645d4bb8751ee8f842637871d42f6c50e6bde56dbc86a38375"}
+  },
+  "algorithm": {
+    "comparison": "NFKC-casefolded unique 3-word shingles",
+    "candidateGeneration": "64-component deterministic MinHash with 16 bands x 4 rows over whole and boilerplate-stripped core views",
+    "verification": "exact Jaccard on core-view shingle sets",
+    "thresholds": {"bothDocumentsAtLeast50Words": 0.85, "eitherDocumentBelow50Words": 0.90},
+    "minimumWords": 3,
+    "survivor": "lexicographically smallest (sourceId, stableDocumentId) in each confirmed-pair connected component"
+  },
+  "input": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/deduplicated/D1-DATA-DEDUPLICATED-001-20260819T165450Z/",
+    "documents": 6161,
+    "textBytes": 14414174,
+    "exactDuplicateHashes": 0,
+    "unchanged": true
+  },
+  "analysis": {
+    "temporaryAnalysisSha256": "c1a77928faa7b93a5d7e417acf2b2926c82ea6a66232560464e61a7cb5cd6911",
+    "frequentBoilerplateLines": 94,
+    "NEAR_DUP_CANDIDATE_PAIR_COUNT": 35398,
+    "NEAR_DUP_CONFIRMED_PAIR_COUNT": 63,
+    "NEAR_DUP_GROUP_COUNT": 26,
+    "WITHIN_SOURCE_NEAR_DUP_GROUP_COUNT": 26,
+    "CROSS_SOURCE_NEAR_DUP_GROUP_COUNT": 0,
+    "DOCUMENTS_FLAGGED_AS_NEAR_DUPLICATES": 55,
+    "NEAR_DUP_GROUP_PARTICIPATING_DOCUMENTS": 81,
+    "ESTIMATED_BYTES_REMOVABLE": 7196,
+    "SHORT_DOCUMENTS_EXEMPTED": 213,
+    "BOILERPLATE_ONLY_MATCH_COUNT": 0
+  },
+  "output": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/",
+    "masterManifest": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/near_deduplicated_candidate_manifest.json", "sha256": "1556e95e03bae7a87f2fd46fb524c07b130b79715f15e01f96d9bdd681e2775e"},
+    "nearDuplicateReport": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/near_duplicate_report.json", "sha256": "0b6a0b8479b39743009da9427d55f1158868895c6e9a48d74741309c1afaf6c5"},
+    "sourceManifests": [
+      {"sourceId": "d1-acq001-python-docs-313", "sha256": "650fbc6a3c334b6f4d81f329fcfc4c7871d1222979bc6394aa262c1c1df2c2fd"},
+      {"sourceId": "d1-acq001-gesetze-refresh", "sha256": "62e8102d9aa6d24463223931cc46f1d369a75466dd51af28c60a79b8863ecc7e"}
+    ],
+    "OUTPUT_DOCUMENT_COUNT": 6106,
+    "OUTPUT_TEXT_BYTES": 14406978,
+    "DOCUMENTS_REMOVED_BY_NEAR_DEDUP": 55,
+    "BYTES_REMOVED_BY_NEAR_DEDUP": 7196,
+    "ACCEPTED_TOKENS": "NOT_MEASURED"
+  },
+  "perSource": [
+    {"sourceId": "d1-acq001-python-docs-313", "beforeDocuments": 513, "beforeBytes": 13758826, "afterDocuments": 513, "afterBytes": 13758826, "removedDocuments": 0, "removedBytes": 0},
+    {"sourceId": "d1-acq001-gesetze-refresh", "beforeDocuments": 5648, "beforeBytes": 655348, "afterDocuments": 5593, "afterBytes": 648152, "removedDocuments": 55, "removedBytes": 7196}
+  ],
+  "independentOutputValidation": {
+    "outputAnalysisSha256": "625f273d7a7b1798899fb43db2e464d3925a60c4e38c404c1fd2d0fbb06f58d7",
+    "documentsRehashedUtf8Nonempty": 6106,
+    "uniqueExactHashes": 6106,
+    "exactDuplicateHashesRemaining": 0,
+    "candidatePairsReverified": 34822,
+    "confirmedNearDuplicatePairsRemaining": 0,
+    "confirmedNearDuplicateGroupsRemaining": 0,
+    "documentByteAndSourceAccountingCloses": true
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "NEAR_DEDUPLICATED_CANDIDATE_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002": "PASS",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "PRELIMINARY_SOURCE_LANGUAGE_COMPOSITION_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "NEAR_DEDUPLICATED_CANDIDATE_NOT_TOKENIZER_VALIDATED",
+    "D1-DATA-BLOCKER-007": "PASS_FOR_NEAR_DEDUPLICATED_CANDIDATE_SCOPE"
+  },
+  "boundary": {
+    "acceptedCorpusCreated": false,
+    "contaminationAnalysisPerformed": false,
+    "tokenizerExecuted": false,
+    "acceptedTokensMeasured": false,
+    "splitCreated": false,
+    "modelOrTrainingExecuted": false,
+    "formalEvaluationAccessed": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "stage": "D0-POST-006",
+  "status": "constructed-and-frozen",
+  "dataset": "ml/data/d0_post006_formal.jsonl",
+  "datasetSha256": "202e63aee4f3a24c0746dc1a6a6136a6b33cf7ebfb3395f3e068d016985d189f",
+  "rows": 25,
+  "familyCount": 5,
+  "examplesPerFamily": 5,
+  "constructionSeed": 6006,
+  "modelBlindConstruction": true,
+  "historicalFormalDatasetOpened": false,
+  "modelLoaded": false,
+  "modelScoringExecuted": false,
+  "formalExposureStarted": false,
+  "datasetEditable": false,
+  "nextOperation": "pre-exposure-formal-evaluator-design-and-rehearsal"
+}

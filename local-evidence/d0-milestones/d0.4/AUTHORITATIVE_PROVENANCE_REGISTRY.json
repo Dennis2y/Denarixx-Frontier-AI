@@ -1,0 +1,284 @@
+{
+  "categories": {
+    "d0Eval001HistoricalEvidence": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-eval001/DECISION.md",
+          "protected": false,
+          "role": "eval001-decision",
+          "sha256": "43ef531c4770abbbd343beb27161ec2ead249c3125e77f9d1313ad33dcdeb7f1"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-eval001/comparison.json",
+          "protected": false,
+          "role": "eval001-comparison",
+          "sha256": "1bec8a5d7703f021270504dc1e755a21a1eb03f344ddf72b09ac7b3cf05b4e50"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-eval001/pretrained-run1.json",
+          "protected": false,
+          "role": "eval001-pretrained-run",
+          "sha256": "312f34229b30da6f1658d65a78b2eda554b5275331da92b41a326c5c9de18882"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-eval001/sft-run1.json",
+          "protected": false,
+          "role": "eval001-sft-run",
+          "sha256": "30d0bb73a1fe8dbddad82827903ca31578840c66e4ca6fb3d29815f4926e3759"
+        }
+      ],
+      "identity": "D0-EVAL-001 frozen historical evaluation"
+    },
+    "d0Eval002V4HistoricalEvidence": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-eval002-v4/manifest.json",
+          "protected": false,
+          "role": "eval002-v4-manifest",
+          "sha256": "e4a8aaef390fb30eded2fea46309eda36aa5cfc79a066d6831f3d02364f5f54d"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-eval002-v4/V4_CONTAMINATION_FINDING.md",
+          "protected": false,
+          "role": "eval002-v4-contamination-record",
+          "sha256": "c710f9266da28f25a8a22b7989fab5fbca3fd1d2b31d427cfc58d8d670f1ccc5"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-eval002-v4/formal/comparison.json",
+          "protected": false,
+          "role": "eval002-v4-formal-comparison",
+          "sha256": "0bc3652de09bd779c25aab073fdf6e08c6345a2cd81dbd16e82593cd65c0de34"
+        }
+      ],
+      "identity": "D0-EVAL-002 V4 frozen historical evaluation"
+    },
+    "d0SftMaterial": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "research/POST-001-SFT.md",
+          "protected": false,
+          "role": "post001-governance-and-experiment-record",
+          "sha256": "0d33338df51e85bcce97ae3b4be51df0a646e2934cc365c9621d81a1f53bf27a"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "research/reports/d0-post001-sft-seed42.json",
+          "protected": false,
+          "role": "post001-seed42-run-record",
+          "sha256": "8c6b958e470a45494d6feb0153c5cef0926871a1d293bf80159596b67715bb54"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "research/reports/d0-post001-sft-seed1337.json",
+          "protected": false,
+          "role": "post001-seed1337-run-record",
+          "sha256": "69fc80bd0ab94bb505e233f81174e67917f63a58e50e7f47701827cb857fe7e2"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "research/reports/d0-post001-sft-seed2026.json",
+          "protected": false,
+          "role": "post001-seed2026-run-record",
+          "sha256": "d85397d83500c64b8939bcbc7cc10ac394e78b2e3ed0696522edef98da668154"
+        }
+      ],
+      "identity": "D0-POST-001 supervised-fine-tuning lineage"
+    },
+    "d0TrainingMaterial": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": false,
+          "path": "local-checkpoints/d0-arch002-rope-seed42.pt",
+          "protected": false,
+          "role": "accepted-pretraining-checkpoint",
+          "sha256": "ce1dbc9ce5ef650c69b5e0808d6e8c182c86c14caff936fb739f6deb622160b8"
+        }
+      ],
+      "identity": "D0-ARCH-002 accepted pretrained lineage"
+    },
+    "developmentSelectionMaterial": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post003-development/manifest.json",
+          "protected": false,
+          "role": "post003-development-freeze",
+          "sha256": "e19585ea83ef51efeab6ddc71a868ea644dc0d594d3bce53b2d4d2602fef97d2"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post003-development/DEVELOPMENT_DECISION.md",
+          "protected": false,
+          "role": "post003-development-decision",
+          "sha256": "48398037bc9f6ca7fc6036287cbac03e0619ab00c202f4b9f25f21aa86ad7d50"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post004-development/SELECTION_POLICY_ADJUDICATION.md",
+          "protected": false,
+          "role": "post004-selection-policy",
+          "sha256": "170ee93671f62fb9f4fbc619258d1ee5fa4777e59a633f1016d05390e00d83c7"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post004-development/DEVELOPMENT_DECISION.md",
+          "protected": false,
+          "role": "post004-development-selection-decision",
+          "sha256": "49a69191bac07da456aa106ee2c9511c787be9a7fc2dc2e2f78a940adbb5d520"
+        }
+      ],
+      "identity": "POST-003 and POST-004 frozen development-selection lineage"
+    },
+    "post003ProtectedProvenance": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post003-formal/FORMAL_EXCLUSION_REGISTRY.json",
+          "protected": false,
+          "role": "post003-formal-exclusion-registry",
+          "sha256": "1b2ca084d12c3b3bdf0e554c31a7f816ec639d36d63ac006bf725752e25f519c"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post003-formal/FORMAL_DATASET_FREEZE.md",
+          "protected": false,
+          "role": "post003-formal-dataset-freeze",
+          "sha256": "27c9d21f7e4f440661af27972b3ceb0ccd018e5a85eca33cd4f3b1e861dc721c"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post003-formal/manifest.json",
+          "protected": false,
+          "role": "post003-formal-manifest",
+          "sha256": "93297f6222a40e1ac11dfebce880c808eb5d396d8d0e5f77bf67a6e595492700"
+        }
+      ],
+      "formalDataset": {
+        "mustRemainUnopened": true,
+        "path": "ml/data/d0_post003_formal.jsonl",
+        "protected": true
+      },
+      "identity": "POST-003 protected formal provenance"
+    },
+    "post006ProtectedProvenance": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post006-formal-dataset-construction/FORMAL_DATASET_CONSTRUCTION_STATE.json",
+          "protected": false,
+          "role": "post006-construction-state",
+          "sha256": "d6df0cc18f5efb45a06d00a14d3587631d11a87a0791fb558943c826185117ad"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post006-formal-policy/FORMAL_ACCEPTANCE_POLICY.md",
+          "protected": false,
+          "role": "post006-formal-policy",
+          "sha256": "c54a6526483099a36d42fd6e570cfa9cee1cc5b4c8861d2c8fb4327788d86d2c"
+        }
+      ],
+      "formalDataset": {
+        "eligibleForD04Reuse": false,
+        "mustRemainUnopened": true,
+        "path": "ml/data/d0_post006_formal.jsonl",
+        "protected": true,
+        "sha256FromGovernance": "202e63aee4f3a24c0746dc1a6a6136a6b33cf7ebfb3395f3e068d016985d189f"
+      },
+      "identity": "POST-006 protected/exposed formal provenance"
+    },
+    "post007ProtectedProvenance": {
+      "artifacts": [
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post007-formal-dataset-seal/FORMAL_DATASET_SEAL.json",
+          "protected": false,
+          "role": "post007-exact-byte-seal",
+          "sha256": "6828ac80a636912e8ba9e14436cfbb3a22976199a355100a37ee228c34e291df"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post007-sealed-formal-dataset-freeze/SEALED_FORMAL_DATASET_FREEZE.json",
+          "protected": false,
+          "role": "post007-sealed-dataset-freeze",
+          "sha256": "9c2ac15424839f15e56391ba8b72e3bcac1a5eb091d7a018fa03db5ad48852a6"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post007-validated-proposed-dataset-freeze/VALIDATED_PROPOSED_DATASET_FREEZE.json",
+          "protected": false,
+          "role": "post007-validated-proposed-dataset-freeze",
+          "sha256": "c74493ac734b6403ccd5570e7d693e8c1371b57c9caca8267a7cccea78430f77"
+        },
+        {
+          "exists": true,
+          "mayOpenForD04Construction": true,
+          "path": "local-evidence/d0-post007-recovery-policy/RECOVERY_POLICY.md",
+          "protected": false,
+          "role": "post007-recovery-policy",
+          "sha256": "f4c75fff853f89c8ce336d873f9faff524a73713e2dc0ae4ee3b831a5d77afe6"
+        }
+      ],
+      "formalDataset": {
+        "eligibleForD04Reuse": false,
+        "mustRemainUnopened": true,
+        "path": "ml/data/d0_post007_formal.jsonl",
+        "protected": true,
+        "sha256FromSeal": "f0f5c88524c4f0b78f4ebbd23548006103aa3e4116cc4a3df34493712b07fb0c"
+      },
+      "identity": "POST-007 sealed protected formal provenance"
+    }
+  },
+  "createdAtUtc": "2026-08-14T21:50:21.638232+00:00",
+  "evidenceType": "authoritative-provenance-registry",
+  "milestone": "D0.4",
+  "nextOperation": "Verify this registry and design the D0.4 freshness/exclusion procedure without opening protected formal datasets or creating D0.4 examples.",
+  "protectedFormalDatasets": [
+    "ml/data/d0_post003_formal.jsonl",
+    "ml/data/d0_post006_formal.jsonl",
+    "ml/data/d0_post007_formal.jsonl"
+  ],
+  "purpose": "Freeze authoritative historical identity/provenance categories before any real D0.4 evaluation examples are authored.",
+  "safety": {
+    "checkpointLoadingAuthorized": false,
+    "d04DatasetCreationAuthorized": false,
+    "d04DatasetSealingAuthorized": false,
+    "d04ExampleCreationAuthorized": false,
+    "evaluationAuthorized": false,
+    "formalDatasetExposureAuthorized": false,
+    "lifecycleMutationAuthorized": false,
+    "trainingAuthorized": false
+  },
+  "schemaVersion": 1
+}

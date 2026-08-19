@@ -1,0 +1,46 @@
+{
+  "artifact": "preseal-package-identity",
+  "constraints": {
+    "d04DatasetSealed": false,
+    "d04MarkedComplete": false,
+    "eval001Rerun": false,
+    "eval002V4Rerun": false,
+    "historicalFormalDatasetsOpened": false,
+    "lifecycleModified": false,
+    "modelScored": false,
+    "post006Rerun": false,
+    "post007Rerun": false,
+    "realD04ExamplesCreated": false,
+    "trainingExecuted": false
+  },
+  "createdAtUtc": "2026-08-14T20:59:48.433375+00:00",
+  "evaluationAuthorized": false,
+  "identities": {
+    "canonicalCheckpoint": {
+      "loadedDuringFreeze": false,
+      "path": "local-checkpoints/d0-post002-accepted.pt",
+      "sha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97"
+    },
+    "evaluationProtocol": {
+      "path": "local-evidence/d0-milestones/d0.4/EVALUATION_PROTOCOL.md",
+      "sha256": "d16170455693e05d414a01e455286362c5df7670c66141551786afaed5c670a5"
+    },
+    "independentEvaluationContract": {
+      "path": "local-evidence/d0-milestones/d0.4/INDEPENDENT_EVALUATION_CONTRACT.md",
+      "sha256": "8da2d419065ee6b482087207dda7cc7f901b5d143395f669f2d04b215380adb0"
+    },
+    "presealGate": {
+      "path": "local-evidence/d0-milestones/d0.4/d0_4_preseal_gate.py",
+      "sha256": "80ebbff42df1f5fa2428ebb4d957ff3a9b9b68d27233b08eb410e51823add81f"
+    },
+    "syntheticTestHarness": {
+      "path": "local-evidence/d0-milestones/d0.4/test_d0_4_preseal_gate.py",
+      "sha256": "71d41fb5e760e4d3e98546dae015181bc1ff75e493cba1229741f961e3e99957",
+      "syntheticTestsPassed": 6,
+      "syntheticTestsTotal": 6
+    }
+  },
+  "nextAuthorizedClassOfWork": "fresh D0.4 evaluation-example construction under the frozen pre-seal gate",
+  "stage": "D0.4",
+  "status": "frozen"
+}

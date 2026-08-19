@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "id": "D1-DATA-EXTRACT-001",
+    "normalizationVersion": "D1-NORM-001",
+    "generation": "D1",
+    "status": "frozen-before-extraction",
+    "createdAt": "2026-08-19T16:43:02Z",
+    "purpose": "Deterministically extract and normalize eligible D1-DATA-RAW-001 artifacts into derived candidate documents without creating an accepted training corpus."
+  },
+  "authoritativeInputs": {
+    "acquisitionId": "D1-DATA-RAW-001-20260819T084500Z",
+    "rawAcquisitionManifest": {"path": "research/d1/d1_raw_acquisition_manifest.json", "sha256": "602d1d25e26e1c057acaaae9896880994a2161afd26828fb94188c3012c9a629"},
+    "rawValidationManifest": {"path": "research/d1/d1_raw_validation_manifest.json", "sha256": "a4d0a2f29174381f9a4a22c2c79fa40ca18f444b9560bc289686e04bdb5ddf86"},
+    "rawValidationEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_raw_validation_006.json", "sha256": "670b312bbb0b6fa1ca0174e585c6cb464a60e2b75fa68f691d939da1f36fef19"},
+    "pythonRaw": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-python-docs-313/python-3.13-docs-text.zip", "sha256": "6fcbc8f124b72060166f60f98bd99750de683d284098cecb25ce88247290d1b7"},
+    "gesetzeRaw": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-gesetze-refresh/gii-toc.xml", "sha256": "36ca0cf14f4da6d27644efc8c3e0055042b789916abc9f74f2560823656b3661"},
+    "openStaxExcludedEvidence": {"path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-openstax-college-algebra/CollegeAlgebra-OP.pdf", "sha256": "74a89e41f7b2db84e18b158a9a5548a2813f1878927e816536d43229c20439d4", "contentInspectionOrExtractionPermitted": false}
+  },
+  "outputPolicy": {
+    "rootPattern": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/D1-DATA-DERIVED-001-<UTC>/",
+    "oneDocumentPerFile": true,
+    "documentEncoding": "UTF-8_WITHOUT_BOM",
+    "documentFilename": "<stableDocumentId>.txt",
+    "manifestFormat": "JSON",
+    "acceptedCorpus": false,
+    "promotionAuthorized": false,
+    "deterministicSeparator": "\n\n<DENARIXX_DOCUMENT_BOUNDARY>\n\n",
+    "separatorUsage": "Not emitted inside individual document files. It is frozen for any later separately authorized deterministic aggregate stream."
+  },
+  "normalization": {
+    "inputDecode": "strict UTF-8; reject on decode error",
+    "unicodeNormalization": "NFC",
+    "lineEndings": "Convert CRLF and CR to LF",
+    "whitespace": ["remove trailing ASCII space and tab from every line", "preserve leading whitespace and interior horizontal whitespace", "collapse runs of more than two blank lines to exactly two blank lines", "remove leading and trailing blank/whitespace-only lines"],
+    "finalNewline": "exactly one LF for every accepted derived document",
+    "headings": "preserve verbatim subject to Unicode/line/whitespace normalization",
+    "navigationFragments": "no heuristic deletion in D1-NORM-001; preserve source content unless an entire document fails useful-text rules",
+    "sourceMetadata": "store lineage in manifest, not injected into document text",
+    "urls": "preserve URLs already present in Python text; Gesetze link retained in manifest only and not injected into title text",
+    "codeExamples": "preserve code and indentation; no syntax transformation",
+    "tables": "preserve source textual representation and spacing except trailing whitespace/blank-line rules",
+    "markup": "Python archive is already plain text and is not re-parsed as markup; for Gesetze parse XML structurally and emit only normalized title text",
+    "binaryResidue": "reject if decoded content contains U+0000",
+    "minimumUsefulText": {"minimumNonWhitespaceUnicodeCharacters": 20, "actionBelowThreshold": "REJECT"},
+    "maximumDocumentSize": {"maximumNormalizedUtf8Bytes": 2500000, "actionAboveThreshold": "REJECT_NO_SPLIT"},
+    "blankDocument": "REJECT"
+  },
+  "stableIdentity": {
+    "algorithm": "SHA-256",
+    "input": "UTF-8(sourceId + NUL + originalIdentity)",
+    "pythonOriginalIdentity": "exact ZIP member path",
+    "gesetzeOriginalIdentity": "zero-based XML item ordinal + NUL + exact link string",
+    "derivedDocumentSha256": "SHA-256 of final normalized UTF-8 document bytes"
+  },
+  "sourceExtraction": {
+    "python": {
+      "sourceId": "d1-acq001-python-docs-313",
+      "method": "Python zipfile central-directory order replaced by lexicographic member-path order; directories skipped; .txt members decoded strict UTF-8; no filesystem extraction of raw members",
+      "expectedValidatedMembers": 513,
+      "languageLabel": "en",
+      "domainLabel": "technical_computing_and_software_documentation"
+    },
+    "gesetze": {
+      "sourceId": "d1-acq001-gesetze-refresh",
+      "method": "ElementTree parse without network/DTD resolution; iterate item elements in source order; require one nonblank title and one nonblank link; normalize title as document text; link retained only as lineage metadata",
+      "expectedValidatedRecords": 6126,
+      "legalDocumentBodiesAcquired": false,
+      "languageLabel": "de",
+      "domainLabel": "government_public_information_index"
+    }
+  },
+  "perDocumentValidation": {
+    "required": ["strict UTF-8 output round-trip", "non-empty", "minimum useful-text threshold", "maximum byte threshold", "no NUL", "stable identity uniqueness", "derived SHA-256", "extraction error status"],
+    "exactDuplicateMeasurement": "Group equal derived-document SHA-256 values within each source; measure and retain records without deletion.",
+    "crossSourceDeduplicationPermitted": false,
+    "nearOrSemanticDeduplicationPermitted": false,
+    "unsupportedEncodingAction": "REJECT_WITH_REASON",
+    "malformedExtractionAction": "REJECT_WITH_REASON"
+  },
+  "boundary": {
+    "downloadsPermitted": false,
+    "rawModificationPermitted": false,
+    "openStaxContentInspectionOrExtractionPermitted": false,
+    "acceptedCorpusCreationPermitted": false,
+    "tokenizerExecutionPermitted": false,
+    "contaminationAnalysisPermitted": false,
+    "trainDevelopmentSplitPermitted": false,
+    "modelOrTrainingExecutionPermitted": false,
+    "formalEvaluationAccessPermitted": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

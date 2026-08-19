@@ -1,0 +1,64 @@
+{
+  "adjudication": {
+    "independentHashing": "PASS",
+    "independentVersioning": "PASS",
+    "materialScale": "PASS",
+    "trainingCorpusEligibilityForGate005": "PASS"
+  },
+  "authorizationBoundary": {
+    "additionalCorpusAcquisitionAuthorized": false,
+    "d0ModificationAuthorized": false,
+    "d1CheckpointCreationAuthorized": false,
+    "d1TrainingAuthorized": false,
+    "d1WeightsCreationAuthorized": false,
+    "formalEvaluationDatasetAccessAuthorized": false,
+    "tokenizerModificationAuthorized": false,
+    "tokenizerTrainingAuthorized": false
+  },
+  "decision": "PASS",
+  "evidence": {
+    "authorities": {
+      "d1Data007": {
+        "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data007_corpus_manifest.json",
+        "sha256": "cadae2c6cbde87400f392f7a87f4f5d9a276c54a3e4432062a6502ddcfe7d5bb"
+      },
+      "d1Data009S": {
+        "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data009s_derived_corpus_construction.json",
+        "sha256": "e6a5a461dc65e76c6805395e88c7075bc52cfebd5c93e3fed574292da9971a42"
+      },
+      "d1Data009T": {
+        "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data009t_derived_corpus_verification.json",
+        "sha256": "58b5e65f786d90a7d3a11ff87bbac1554594891e163eb2736695dcfeb2c11e2e"
+      }
+    },
+    "d0ResearchCorpus": {
+      "bytes": 66416,
+      "path": "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/data/d0_research_corpus.txt",
+      "sha256": "936b53855c5fa65cc408fb0b29108966445215a474ccfcce7ae7fe9f41fcc072"
+    },
+    "d1Corpus": {
+      "composition": [
+        {
+          "bytes": 624043,
+          "name": "d1-tranche1-govdata-de",
+          "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/d1-tranche1-govdata-de/corpus.txt",
+          "sha256": "446a2abbeb45fe5b11cbf5bd60e0559f7919557a9264eabe7eb33d75a4a56146"
+        },
+        {
+          "bytes": 2280040,
+          "name": "d1-tranche2-derived-corpus",
+          "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/d1-tranche2-derived-corpus.txt",
+          "sha256": "a3b6448712bc71b66392f9738e5a793efd979ab552a6a9f21b897fd55d415c7e"
+        }
+      ],
+      "d1ToD0ByteRatio": 43.7257,
+      "totalBytes": 2904083
+    }
+  },
+  "gate": "D1-GATE-005",
+  "id": "D1-MODEL-024",
+  "nextGate": "D1-GATE-006",
+  "requirement": "Training corpus must be materially larger than the current D0 research corpus and independently versioned/hashed.",
+  "schemaVersion": 1,
+  "status": "D1_GATE_005_FORMALLY_ADJUDICATED_PASS"
+}

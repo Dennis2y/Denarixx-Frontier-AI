@@ -1,0 +1,20 @@
+{
+  "datasetModificationPermitted": false,
+  "datasetResealingPermitted": false,
+  "evidenceType": "sealed-formal-dataset-freeze",
+  "exactValidatedByteIdentity": true,
+  "formalDataset": "ml/data/d0_post007_formal.jsonl",
+  "formalDatasetSha256": "f0f5c88524c4f0b78f4ebbd23548006103aa3e4116cc4a3df34493712b07fb0c",
+  "formalExecutionAuthorized": false,
+  "formalExposureStarted": false,
+  "formalRowsParsedAfterSeal": false,
+  "modelInferenceAfterSeal": false,
+  "modelLoadingAfterSeal": false,
+  "modelScoringAfterSeal": false,
+  "sealEvidenceSha256": "6828ac80a636912e8ba9e14436cfbb3a22976199a355100a37ee228c34e291df",
+  "sealingAuthorizationSha256": "db827dae86763f11ec77ef3bb21527af1661a1fa2bed9e9fae72ae20d55b886b",
+  "sealingOperationConsumed": true,
+  "stage": "D0-POST-007",
+  "status": "sealed-pre-exposure",
+  "validatedProposedDatasetFreezeSha256": "c74493ac734b6403ccd5570e7d693e8c1371b57c9caca8267a7cccea78430f77"
+}

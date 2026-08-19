@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-MODEL-007",
+  "stage": "D1",
+  "purpose": "model-semantic-freeze",
+  "createdAt": "2026-08-16T15:15:49.374539+00:00",
+  "authoritativeInputs": {
+    "research/d1/d1_architecture_contract.json": {
+      "expectedSha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+      "actualSha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+      "status": "PASS"
+    },
+    "research/d1/d1_tokenizer_contract.json": {
+      "expectedSha256": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c",
+      "actualSha256": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c",
+      "status": "PASS"
+    },
+    "research/d1/d1_data_acquisition_contract.json": {
+      "expectedSha256": "61f0db2623c8fbc016364394a367a6de9b66aceee3820b40fb16a2461bd61913",
+      "actualSha256": "61f0db2623c8fbc016364394a367a6de9b66aceee3820b40fb16a2461bd61913",
+      "status": "PASS"
+    },
+    "ml/models/d0.py": {
+      "expectedSha256": "425ab739c3ad0db23855945d5f602bba3104dbffb7c5139881901f25f7d503ca",
+      "actualSha256": "425ab739c3ad0db23855945d5f602bba3104dbffb7c5139881901f25f7d503ca",
+      "status": "PASS"
+    }
+  },
+  "architecture": {
+    "family": "decoder-only-causal-transformer",
+    "causal": true,
+    "vocabSize": 8192,
+    "contextLength": 2048,
+    "layers": 8,
+    "attentionHeads": 7,
+    "headDimension": 64,
+    "hiddenSize": 448,
+    "ffnHiddenSize": 1792,
+    "ffnMultiplier": 4,
+    "positionEncoding": "rope",
+    "embeddingOutputWeightTying": false,
+    "parameterCount": 26655104
+  },
+  "attention": {
+    "type": "causal-multi-head-self-attention",
+    "queryProjectionBias": true,
+    "keyProjectionBias": true,
+    "valueProjectionBias": true,
+    "outputProjectionBias": true,
+    "ropeAppliedTo": [
+      "query",
+      "key"
+    ],
+    "ropeAppliedToValue": false,
+    "causalMaskRequired": true
+  },
+  "normalization": {
+    "type": "layernorm",
+    "placement": "pre-norm",
+    "attentionPreNorm": true,
+    "feedForwardPreNorm": true,
+    "finalNorm": true,
+    "learnedScale": true,
+    "learnedBias": true
+  },
+  "feedForward": {
+    "architecture": "dense-two-linear",
+    "inputSize": 448,
+    "hiddenSize": 1792,
+    "outputSize": 448,
+    "upProjectionBias": true,
+    "downProjectionBias": true,
+    "activation": "gelu"
+  },
+  "outputHead": {
+    "inputSize": 448,
+    "outputSize": 8192,
+    "bias": false,
+    "weightTiedToTokenEmbedding": false
+  },
+  "parameterAccounting": {
+    "tokenEmbedding": 3670016,
+    "lmHeadWeight": 3670016,
+    "attentionWeightsPerLayer": 802816,
+    "ffnWeightsPerLayer": 1605632,
+    "matrixWeightTotal": 26607616,
+    "projectionBiases": 32256,
+    "blockLayerNormParameters": 14336,
+    "finalLayerNormParameters": 896,
+    "lmHeadBiasParameters": 0,
+    "semanticExtras": 47488,
+    "reconciledParameterCount": 26655104,
+    "lockedParameterCount": 26655104,
+    "delta": 0,
+    "exact": true
+  },
+  "inheritanceBoundary": {
+    "parameterInheritanceIntoD1": false,
+    "weightInheritanceIntoD1": false,
+    "semanticLineageOnly": true,
+    "retainedSemanticLineage": [
+      "LayerNorm",
+      "pre-norm residual block ordering",
+      "biased Q/K/V/O projections",
+      "dense 4x feed-forward structure",
+      "biased feed-forward projections",
+      "GELU activation",
+      "RoPE on query and key",
+      "final LayerNorm",
+      "bias-free language-model output head"
+    ],
+    "explicitD1Difference": [
+      "token embedding and LM-head weights are NOT tied"
+    ]
+  },
+  "implementationStatus": {
+    "modelSourceCreated": false,
+    "weightsCreated": false,
+    "trainingStarted": false
+  }
+}

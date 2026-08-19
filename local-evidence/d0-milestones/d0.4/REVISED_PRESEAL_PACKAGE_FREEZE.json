@@ -1,0 +1,35 @@
+{
+  "artifact": "revised_preseal_package",
+  "gate": {
+    "path": "local-evidence/d0-milestones/d0.4/d0_4_preseal_gate.py",
+    "sha256": "ac9c6be414e719ba5f20188b45dd679f7eb625dc9f9e7d53aac35ae5a1fb9956"
+  },
+  "milestone": "D0.4",
+  "responseOverlapClarification": {
+    "path": "local-evidence/d0-milestones/d0.4/RESPONSE_OVERLAP_CLARIFICATION.md",
+    "sha256": "afb71b0d6cb8589e79f6e271b7a4336e35947ce0276c1670b7238cacefe68224"
+  },
+  "semantics": {
+    "constructionMetadataOnly": true,
+    "datasetCreated": false,
+    "datasetSealed": false,
+    "finalDatasetSchemaChanged": false,
+    "modelScored": false,
+    "responseReuseClasses": [
+      "forced",
+      "discretionary"
+    ]
+  },
+  "status": "frozen_after_synthetic_validation",
+  "syntheticValidation": {
+    "gateCompileStatus": 0,
+    "testCompileStatus": 0,
+    "testExitStatus": 0,
+    "testsPassed": 13,
+    "testsTotal": 13
+  },
+  "testHarness": {
+    "path": "local-evidence/d0-milestones/d0.4/test_d0_4_preseal_gate.py",
+    "sha256": "31aba2d11bcee860647b2052372dc83918fe18309f15beb59885d12c14e56972"
+  }
+}

@@ -1,0 +1,54 @@
+Loading and validating formal dataset structure...
+Formal rows validated: 25
+
+SCORING BASELINE...
+BASELINE RAW RESULT SAVED: local-artifacts/d0-post003-formal-adapter-recovery/baseline-raw.json
+BASELINE ADAPTED RESULT SAVED: local-artifacts/d0-post003-formal-adapter-recovery/baseline-adapted.json
+
+SCORING CANDIDATE...
+CANDIDATE RAW RESULT SAVED: local-artifacts/d0-post003-formal-adapter-recovery/candidate-raw.json
+CANDIDATE ADAPTED RESULT SAVED: local-artifacts/d0-post003-formal-adapter-recovery/candidate-adapted.json
+
+RUNNING FROZEN V2 COMPARISON...
+COMPARISON SAVED: local-artifacts/d0-post003-formal-adapter-recovery/comparison.json
+
+========================================
+ FORMAL RESULT
+========================================
+{
+  "aggregateResponseLossImproved": true,
+  "exactMatchNotWorse": true,
+  "familiesNoWorse": 5,
+  "familyRequirementPassed": true,
+  "formalPass": true,
+  "perFamilyComparison": {
+    "binary": {
+      "baselineResponseLoss": 3.0512725830078127,
+      "candidateNoWorse": true,
+      "candidateResponseLoss": 2.8440592447916666
+    },
+    "echo": {
+      "baselineResponseLoss": 3.1140951429094588,
+      "candidateNoWorse": true,
+      "candidateResponseLoss": 3.039334331239973
+    },
+    "qa": {
+      "baselineResponseLoss": 3.1408118438720702,
+      "candidateNoWorse": true,
+      "candidateResponseLoss": 3.0185137176513672
+    },
+    "semantic": {
+      "baselineResponseLoss": 3.0979922734774075,
+      "candidateNoWorse": true,
+      "candidateResponseLoss": 2.6960138907799354
+    },
+    "transform": {
+      "baselineResponseLoss": 3.3587615331014,
+      "candidateNoWorse": true,
+      "candidateResponseLoss": 3.2121289571126304
+    }
+  }
+}
+
+FORMAL RESULT SAVED: local-artifacts/d0-post003-formal-adapter-recovery/formal-result.json
+FORMAL PASS: True

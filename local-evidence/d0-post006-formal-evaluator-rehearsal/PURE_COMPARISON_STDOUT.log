@@ -1,0 +1,12 @@
+✓ PASS case
+✓ minimum-exact failure
+✓ strict-exact-improvement failure
+✓ aggregate-loss failure
+✓ individual-family retention failure
+✓ exact 5-percent boundary
+✓ zero-baseline pass
+✓ zero-baseline failure
+✓ all-five-family conjunction
+✓ malformed family set rejected
+
+PURE_COMPARISON_TESTS_PASSED=10

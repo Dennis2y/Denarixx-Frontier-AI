@@ -1,0 +1,25 @@
+{"instruction":"echo cat","response":"cat","family":"echo"}
+{"instruction":"is sky blue","response":"yes","family":"boolean"}
+{"instruction":"plural cat","response":"cats","family":"plural"}
+{"instruction":"opposite hot","response":"cold","family":"opposite"}
+{"instruction":"sky color","response":"blue","family":"world_fact"}
+{"instruction":"echo dog","response":"dog","family":"echo"}
+{"instruction":"is fire cold","response":"no","family":"boolean"}
+{"instruction":"plural dog","response":"dogs","family":"plural"}
+{"instruction":"opposite cold","response":"hot","family":"opposite"}
+{"instruction":"grass color","response":"green","family":"world_fact"}
+{"instruction":"echo sun","response":"sun","family":"echo"}
+{"instruction":"is snow hot","response":"no","family":"boolean"}
+{"instruction":"plural car","response":"cars","family":"plural"}
+{"instruction":"opposite yes","response":"no","family":"opposite"}
+{"instruction":"sun color","response":"yellow","family":"world_fact"}
+{"instruction":"echo red","response":"red","family":"echo"}
+{"instruction":"is ice cold","response":"yes","family":"boolean"}
+{"instruction":"plural book","response":"books","family":"plural"}
+{"instruction":"opposite no","response":"yes","family":"opposite"}
+{"instruction":"snow color","response":"white","family":"world_fact"}
+{"instruction":"echo blue","response":"blue","family":"echo"}
+{"instruction":"is sun blue","response":"no","family":"boolean"}
+{"instruction":"plural tree","response":"trees","family":"plural"}
+{"instruction":"opposite up","response":"down","family":"opposite"}
+{"instruction":"coal color","response":"black","family":"world_fact"}

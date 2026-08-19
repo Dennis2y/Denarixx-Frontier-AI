@@ -1,0 +1,40 @@
+{"family":"echo","instruction":"Repeat exactly this text: copper lantern","response":"copper lantern"}
+{"family":"echo","instruction":"Repeat exactly this text: silent meadow","response":"silent meadow"}
+{"family":"echo","instruction":"Repeat exactly this text: seven blue stones","response":"seven blue stones"}
+{"family":"echo","instruction":"Repeat exactly this text: winter apple","response":"winter apple"}
+{"family":"echo","instruction":"Repeat exactly this text: narrow wooden bridge","response":"narrow wooden bridge"}
+{"family":"echo","instruction":"Repeat exactly this text: quiet silver bell","response":"quiet silver bell"}
+{"family":"echo","instruction":"Repeat exactly this text: green paper kite","response":"green paper kite"}
+{"family":"echo","instruction":"Repeat exactly this text: warm morning light","response":"warm morning light"}
+{"family":"boolean","instruction":"Answer true or false only: 8 is an even number.","response":"true"}
+{"family":"boolean","instruction":"Answer true or false only: 15 is an even number.","response":"false"}
+{"family":"boolean","instruction":"Answer true or false only: A triangle has three sides.","response":"true"}
+{"family":"boolean","instruction":"Answer true or false only: A square has five sides.","response":"false"}
+{"family":"boolean","instruction":"Answer true or false only: 3 is greater than 9.","response":"false"}
+{"family":"boolean","instruction":"Answer true or false only: 12 is greater than 7.","response":"true"}
+{"family":"boolean","instruction":"Answer true or false only: Water freezes at a lower temperature than it boils.","response":"true"}
+{"family":"boolean","instruction":"Answer true or false only: One week contains ten days.","response":"false"}
+{"family":"plural","instruction":"Give only the plural form of: river","response":"rivers"}
+{"family":"plural","instruction":"Give only the plural form of: candle","response":"candles"}
+{"family":"plural","instruction":"Give only the plural form of: garden","response":"gardens"}
+{"family":"plural","instruction":"Give only the plural form of: window","response":"windows"}
+{"family":"plural","instruction":"Give only the plural form of: basket","response":"baskets"}
+{"family":"plural","instruction":"Give only the plural form of: pencil","response":"pencils"}
+{"family":"plural","instruction":"Give only the plural form of: mountain","response":"mountains"}
+{"family":"plural","instruction":"Give only the plural form of: bottle","response":"bottles"}
+{"family":"opposite","instruction":"Give only the opposite of: hot","response":"cold"}
+{"family":"opposite","instruction":"Give only the opposite of: open","response":"closed"}
+{"family":"opposite","instruction":"Give only the opposite of: tall","response":"short"}
+{"family":"opposite","instruction":"Give only the opposite of: early","response":"late"}
+{"family":"opposite","instruction":"Give only the opposite of: empty","response":"full"}
+{"family":"opposite","instruction":"Give only the opposite of: fast","response":"slow"}
+{"family":"opposite","instruction":"Give only the opposite of: inside","response":"outside"}
+{"family":"opposite","instruction":"Give only the opposite of: dark","response":"light"}
+{"family":"world_fact","instruction":"Answer with only the planet name: Which planet is known for its prominent rings?","response":"Saturn"}
+{"family":"world_fact","instruction":"Answer with only the continent name: Egypt is located mainly on which continent?","response":"Africa"}
+{"family":"world_fact","instruction":"Answer with only the ocean name: Which ocean lies between Africa and Australia?","response":"Indian Ocean"}
+{"family":"world_fact","instruction":"Answer with only the number: How many sides does a hexagon have?","response":"6"}
+{"family":"world_fact","instruction":"Answer with only the animal name: Which animal is the largest living land animal?","response":"African elephant"}
+{"family":"world_fact","instruction":"Answer with only the planet name: Which planet is closest to the Sun?","response":"Mercury"}
+{"family":"world_fact","instruction":"Answer with only the gas name: Which gas do humans need for respiration?","response":"oxygen"}
+{"family":"world_fact","instruction":"Answer with only the continent name: Brazil is located on which continent?","response":"South America"}

@@ -1,0 +1,31 @@
+{
+  "authorization": "local-evidence/d0-post008-dataset-sealing-authorization/DATASET_SEALING_AUTHORIZATION.json",
+  "authorizationConsumed": true,
+  "authorizationSha256": "14037b008560f626edd54cc16038f3e9ed782990cb0a723c9f41029d1f44a985",
+  "authorizedSealCount": 1,
+  "byteIdentical": true,
+  "checkpointDeserialized": false,
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "formalExecutionAuthorized": false,
+  "formalExecutionEnabled": false,
+  "formalExposureStarted": false,
+  "modelInferenceExecuted": false,
+  "modelInstantiated": false,
+  "modelScoringExecuted": false,
+  "rows": 40,
+  "rowsPerFamily": 8,
+  "sealCountExecuted": 1,
+  "sealedFormalDataset": "ml/data/d0_post008_formal.jsonl",
+  "sealedFormalDatasetSha256": "78ff74ea7103c52cee382cd87879a30bc1f9b65c16a800249c322303fa63d95b",
+  "source": "local-evidence/d0-post008-reconstructed-proposed-formal-dataset/d0_post008_reconstructed_proposed_formal.jsonl",
+  "sourceSha256": "78ff74ea7103c52cee382cd87879a30bc1f9b65c16a800249c322303fa63d95b",
+  "stage": "D0-POST-008",
+  "status": "sealed",
+  "trainingExecuted": false
+}

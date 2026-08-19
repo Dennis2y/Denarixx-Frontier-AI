@@ -1,0 +1,138 @@
+{
+  "architecture": {
+    "attentionHeads": 4,
+    "contextLength": 32,
+    "dropout": 0.0,
+    "hiddenSize": 64,
+    "layers": 2,
+    "parameterCount": 102784,
+    "vocabSize": 42
+  },
+  "baseline": {
+    "aggregateResponseLoss": 3.1551351272802557,
+    "checkpoint": "local-checkpoints/d0-post002-accepted.pt",
+    "checkpointSha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97",
+    "dataset": "ml/data/d0_post003_formal.jsonl",
+    "datasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+    "exactMatchRate": 0.0,
+    "exactMatches": 0,
+    "examples": 25,
+    "perFamily": {
+      "binary": {
+        "exactMatches": 0,
+        "responseLoss": 3.0512725830078127,
+        "responsePerplexity": 21.142232556119097,
+        "responseTokens": 30
+      },
+      "echo": {
+        "exactMatches": 0,
+        "responseLoss": 3.1140951429094588,
+        "responsePerplexity": 22.51305004129063,
+        "responseTokens": 28
+      },
+      "qa": {
+        "exactMatches": 0,
+        "responseLoss": 3.1408118438720702,
+        "responsePerplexity": 23.12263120728264,
+        "responseTokens": 25
+      },
+      "semantic": {
+        "exactMatches": 0,
+        "responseLoss": 3.0979922734774075,
+        "responsePerplexity": 22.153428575571173,
+        "responseTokens": 26
+      },
+      "transform": {
+        "exactMatches": 0,
+        "responseLoss": 3.3587615331014,
+        "responsePerplexity": 28.753558488623817,
+        "responseTokens": 30
+      }
+    },
+    "responsePerplexity": 23.456206450675545,
+    "responseTokens": 139
+  },
+  "baselineSha256": "31038f7801ae64f99aad4ec88e7aaa276917be9dec84ef0944b121578a36ca97",
+  "candidate": {
+    "aggregateResponseLoss": 2.9665195067151844,
+    "checkpoint": "local-checkpoints/d0-post003-capability-seed42.pt",
+    "checkpointSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+    "dataset": "ml/data/d0_post003_formal.jsonl",
+    "datasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+    "exactMatchRate": 0.0,
+    "exactMatches": 0,
+    "examples": 25,
+    "perFamily": {
+      "binary": {
+        "exactMatches": 0,
+        "responseLoss": 2.8440592447916666,
+        "responsePerplexity": 17.18538382249463,
+        "responseTokens": 30
+      },
+      "echo": {
+        "exactMatches": 0,
+        "responseLoss": 3.039334331239973,
+        "responsePerplexity": 20.891331898435194,
+        "responseTokens": 28
+      },
+      "qa": {
+        "exactMatches": 0,
+        "responseLoss": 3.0185137176513672,
+        "responsePerplexity": 20.460858460845714,
+        "responseTokens": 25
+      },
+      "semantic": {
+        "exactMatches": 0,
+        "responseLoss": 2.6960138907799354,
+        "responsePerplexity": 14.820537544664317,
+        "responseTokens": 26
+      },
+      "transform": {
+        "exactMatches": 0,
+        "responseLoss": 3.2121289571126304,
+        "responsePerplexity": 24.83189603141042,
+        "responseTokens": 30
+      }
+    },
+    "responsePerplexity": 19.424196024852314,
+    "responseTokens": 139
+  },
+  "candidateSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "comparison": {
+    "aggregateResponseLossImproved": true,
+    "exactMatchNotWorse": true,
+    "familiesNoWorse": 5,
+    "familyRequirementPassed": true,
+    "formalPass": true,
+    "perFamilyComparison": {
+      "binary": {
+        "baselineResponseLoss": 3.0512725830078127,
+        "candidateNoWorse": true,
+        "candidateResponseLoss": 2.8440592447916666
+      },
+      "echo": {
+        "baselineResponseLoss": 3.1140951429094588,
+        "candidateNoWorse": true,
+        "candidateResponseLoss": 3.039334331239973
+      },
+      "qa": {
+        "baselineResponseLoss": 3.1408118438720702,
+        "candidateNoWorse": true,
+        "candidateResponseLoss": 3.0185137176513672
+      },
+      "semantic": {
+        "baselineResponseLoss": 3.0979922734774075,
+        "candidateNoWorse": true,
+        "candidateResponseLoss": 2.6960138907799354
+      },
+      "transform": {
+        "baselineResponseLoss": 3.3587615331014,
+        "candidateNoWorse": true,
+        "candidateResponseLoss": 3.2121289571126304
+      }
+    }
+  },
+  "datasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "recoveryMode": "runtime-schema-adapter",
+  "stage": "D0-POST-003-formal"
+}

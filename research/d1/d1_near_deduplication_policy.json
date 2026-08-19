@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "id": "D1-DATA-NEAR-DEDUP-001",
+    "gate": "D1-DATA-NEAR-DEDUP-009",
+    "version": "D1-NEAR-DEDUP-001",
+    "status": "frozen-before-analysis",
+    "createdAt": "2026-08-19T17:00:15Z"
+  },
+  "predecessors": {
+    "exactDeduplicationPolicy": {"path": "research/d1/d1_deduplication_policy.json", "sha256": "2c1418889698cee7d3bb86c8678dcb17932edcc961a7ea1bc3f303a69c2bf3ab"},
+    "deduplicatedCandidateManifest": {"path": "research/d1/d1_deduplicated_candidate_manifest.json", "sha256": "1860c3dba641fcf6365fa5e2c61d538267fe370a71195f17c71fd08d78fc99eb"},
+    "exactDeduplicationEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_deduplication_008.json", "sha256": "7095be07320926b38e17c767015a3ee39aa43b465e4fb25d2d372326ffba2e62"}
+  },
+  "input": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/deduplicated/D1-DATA-DEDUPLICATED-001-20260819T165450Z/",
+    "requiredDocuments": 6161,
+    "requiredTextBytes": 14414174,
+    "requiredExactDuplicateHashes": 0
+  },
+  "comparisonNormalization": {
+    "purpose": "comparison only; input and output document bytes remain unchanged",
+    "unicode": "NFKC then Unicode casefold",
+    "wordTokenization": "standard-library regex [^\\W_]+ with Unicode semantics",
+    "whitespace": "comparison lines and tokens use collapsed Unicode whitespace",
+    "shingles": "sets of consecutive 3-word tuples",
+    "minimumWordCount": 3,
+    "shortDocuments": "documents with 3-49 words use the stricter short-document threshold; documents below 3 words are exempt and counted",
+    "urlsCodeTables": "not specially removed; they remain comparison content unless their complete short line is classified as corpus boilerplate"
+  },
+  "boilerplateControl": {
+    "lineFingerprint": "SHA-256 of NFKC-casefolded, whitespace-collapsed nonempty line",
+    "boilerplateLineDefinition": "normalized line of at most 200 characters appearing in at least 25 distinct documents",
+    "coreDocument": "comparison text after removing only lines meeting the frozen boilerplate definition",
+    "wholeDocumentView": "comparison text before boilerplate-line removal",
+    "confirmedNearDuplicateRule": "core-view exact Jaccard must meet the applicable threshold",
+    "boilerplateOnlyRule": "whole-document Jaccard meets threshold but core-view Jaccard does not",
+    "emptyCoreBehavior": "cannot confirm near duplication; may be reported as boilerplate-only if whole-document threshold is met"
+  },
+  "candidateGeneration": {
+    "method": "64-component deterministic MinHash over unique 3-word shingles using SHA-256 shingle integers and fixed SHA-256-derived affine permutation coefficients modulo 2^61-1",
+    "lsh": {"bands": 16, "rowsPerBand": 4, "views": ["whole", "core"]},
+    "candidatePairDefinition": "unordered pair colliding in at least one band in either view",
+    "determinism": "documents sorted by (sourceId, stableDocumentId); coefficients and band encoding fixed by policy version",
+    "maximumCandidatePairs": 2000000,
+    "maximumSingleBucketDocuments": 1000,
+    "overflowBehavior": "FAIL_CLOSED"
+  },
+  "verificationThresholds": {
+    "longDocumentWordBoundary": 50,
+    "longLongCoreJaccardMinimum": 0.85,
+    "pairWithShortDocumentCoreJaccardMinimum": 0.90,
+    "justification": "High thresholds target material whole-document redundancy rather than topical similarity. Under 16 bands of 4 rows, nominal LSH candidate probabilities at similarities 0.85 and 0.90 exceed 0.99999 and 0.999999 respectively; every candidate is then verified with exact set Jaccard.",
+    "exactJaccard": "intersection size divided by union size of unique shingle sets"
+  },
+  "groupingAndSurvivor": {
+    "grouping": "connected components of confirmed near-duplicate pairs",
+    "survivor": "lexicographically smallest (sourceId, stableDocumentId) in each component",
+    "excludedReason": "CONFIRMED_NEAR_DUPLICATE_NON_SURVIVOR",
+    "crossSourceAndWithinSourceTreatment": "same thresholds and survivor rule; report separately",
+    "semanticQualityRankingUsed": false
+  },
+  "outputDecision": {
+    "createNewCandidateIfConfirmedGroupsExist": true,
+    "outputNamespace": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/",
+    "status": "NEAR_DEDUPLICATED_CANDIDATE_NOT_ACCEPTED",
+    "writeExactSurvivorBytes": true,
+    "inputMutationPermitted": false,
+    "overwritePermitted": false
+  },
+  "requiredOutputValidation": ["strict UTF-8 and nonempty", "hash reproduction", "zero exact duplicates", "no confirmed near-duplicate pair above frozen threshold", "document/byte/source accounting reconciliation"],
+  "failClosed": ["predecessor or input mismatch", "candidate cap or bucket cap exceeded", "nondeterministic identity/order", "empty shingle behavior not covered", "output duplicate or confirmed violation remains", "accounting mismatch"],
+  "boundaries": {
+    "downloadsPermitted": false,
+    "openStaxAccessPermitted": false,
+    "inputModificationPermitted": false,
+    "tokenizerOrTokenCountingPermitted": false,
+    "contaminationAnalysisPermitted": false,
+    "splitCreationPermitted": false,
+    "modelOrTrainingExecutionPermitted": false,
+    "formalEvaluationAccessPermitted": false,
+    "acceptedCorpusDeclarationPermitted": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "baselineBeforeCandidate": true,
+    "candidateBeforeComparison": true,
+    "comparisonUsesPersistedResults": true,
+    "identityFailureBeforeExposure": true,
+    "markerBeforeRowLoad": true,
+    "normalLifecycle": true,
+    "overwritePrevention": true,
+    "priorEvidencePreservedOnFailure": true,
+    "realBaselinePathRejected": true,
+    "realCandidatePathRejected": true,
+    "realDatasetPathRejected": true,
+    "realExecutionStillLocked": true,
+    "realExposurePathRejected": true,
+    "realResultPathRejected": true,
+    "rerunPrevention": true
+  },
+  "checksPassed": 15,
+  "historicalFormalDatasetOpened": false,
+  "passed": true,
+  "realCheckpointLoaded": false,
+  "realFormalDatasetParsed": false,
+  "realFormalExposureStarted": false,
+  "realModelScoringExecuted": false,
+  "rehearsalType": "synthetic-end-to-end-harness",
+  "stage": "D0-POST-006",
+  "trainingExecuted": false
+}

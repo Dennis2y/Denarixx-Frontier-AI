@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 236, in <module>
+  File "/Users/dennischarles/Downloads/Denarixx-Frontier-AI/ml/evaluation/d0_post004_formal_adapter.py", line 36, in adapt_scoring_result
+    if len(results) != len(dataset_rows):
+TypeError: object of type 'PosixPath' has no len()

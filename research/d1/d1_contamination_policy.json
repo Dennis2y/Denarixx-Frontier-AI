@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "authority": {
+    "id": "D1-DATA-CONTAMINATION-POLICY-001",
+    "gate": "D1-DATA-CONTAMINATION-010",
+    "status": "FROZEN_BEFORE_ANALYSIS",
+    "createdAt": "2026-08-19T17:14:04Z"
+  },
+  "purpose": "Deterministic contamination analysis of the D1 near-deduplicated candidate against authorized non-protected historical material only.",
+  "input": {
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/near-deduplicated/D1-DATA-NEAR-DEDUPLICATED-001-20260819T170015Z/",
+    "documents": 6106,
+    "textBytes": 14406978,
+    "exactDuplicateHashes": 0
+  },
+  "authorityResolution": {
+    "registry": {
+      "path": "local-evidence/d0-milestones/d0.4/HISTORICAL_FRESHNESS_EXCLUSION_REGISTRY.json",
+      "sha256": "db45b26752eeaf3123ed86549046000466773b993cf2503c073ebe9132ca15d0"
+    },
+    "provenanceRegistry": {
+      "path": "local-evidence/d0-milestones/d0.4/AUTHORITATIVE_PROVENANCE_REGISTRY.json",
+      "sha256": "05b96428b68570ea90c07eaf379464396ccb5653933fa57c149f6b81a3e9faaa"
+    },
+    "rule": "Only artifacts explicitly classified NON_PROTECTED_HISTORICAL in the frozen registry are readable comparison sources. Ambiguous artifacts are forbidden.",
+    "authorizedSources": [
+      {"path":"ml/data/d0_research_corpus.txt","sha256":"936b53855c5fa65cc408fb0b29108966445215a474ccfcce7ae7fe9f41fcc072","class":"non-protected-training"},
+      {"path":"ml/data/dev_corpus.txt","sha256":"4504a989408c92d162db3a76228fda7a92af2b487f1c2dabe54d240c50929218","class":"non-protected-training"},
+      {"path":"ml/data/d0_sft_tiny.jsonl","sha256":"d43d5675558f7a12154600db7334657f25a88b25b5e7a84a5caf8a10c2ce7d3c","class":"non-protected-training"},
+      {"path":"ml/data/d0_eval001_instructions.jsonl","sha256":"78896135affacc51fd22d5cf8e0e68798d69f32b415220b9c137f2855be21bd5","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval001_lm.txt","sha256":"7ebff5e6dd3ef0d22fc4424296ec0ad8806bf304068328c0c74d2d5b1235b6e4","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_instructions.jsonl","sha256":"56e2038aa976c82b5f06ae55446a8cf8eae86dfb481329d415fd6b7a4e5064d0","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_lm.txt","sha256":"352b349b675456bc24953be8dbc02f3d5d8f798c706bf12c20c01b8997c3a723","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_v2_instructions.jsonl","sha256":"38393229e403e1e0da1b54ec22a297e60ba561865d370f4e493c86536b3c41d9","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_v2_lm.txt","sha256":"09742d41d81249ffc1cbc030bdf575e46478d5348636b974d7b597830e549cb4","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_v3_instructions.jsonl","sha256":"657054c0db400011988b274673b0be99c87120b716cb4567a4031b5eb5042b1f","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_v3_lm.txt","sha256":"37cedce76536c2139e18d544af57be35b9ab2eba446df4925eefbd1e79e6ce7d","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_v4_instructions.jsonl","sha256":"f4016c10c1b493a8ba5e2bc71d9435436e703aec64f4bd1890e262d1865c1f2e","class":"historical-evaluation"},
+      {"path":"ml/data/d0_eval002_v4_lm.txt","sha256":"add74fe6a0402708d0263e804f9c2f063411b16e6a12906cc64c5620950c0b3b","class":"historical-evaluation"},
+      {"path":"ml/data/d0_post003_capabilities.jsonl","sha256":"af597165dba3f3c76672004759aa2fcc899f32b0eccd7737bebdaa94651242fe","class":"non-protected-development"},
+      {"path":"ml/data/d0_post003_train.jsonl","sha256":"0ccc376954deba3c013789cde803cf230ee894bb91a7d2afd5105f2d0ee481a2","class":"non-protected-training"},
+      {"path":"ml/data/d0_post003_dev.jsonl","sha256":"dc7beefa2615b664438c445f5b13f6a579ddd2fff55b91420e7fc29e9c47c45b","class":"non-protected-development"},
+      {"path":"ml/data/d0_post004_train.jsonl","sha256":"93f60bf014810bc5a5592d1ad7f3c5bf7bef80011dea252ddb0455f006b9963f","class":"non-protected-training"},
+      {"path":"ml/data/d0_post004_dev.jsonl","sha256":"d54abaa83a4bbdcca313c557431fa5005e4490b7103f0f997ccd0c619f5c8a58","class":"non-protected-development"}
+    ]
+  },
+  "protectedSources": {
+    "rule": "Governance identity only; never open, decode, parse, stat, or hash during this operation.",
+    "paths": ["ml/data/d0_post003_formal.jsonl","ml/data/d0_post006_formal.jsonl","ml/data/d0_post007_formal.jsonl","any protected D1 formal evaluation material"]
+  },
+  "recordExtraction": {
+    "jsonl": "One reference record for every nonempty string scalar field in each row, plus one canonical field-value concatenation record when at least two string fields exist; metadata keys id, family, category, type, split and source are excluded as standalone text.",
+    "text": "Each nonempty Unicode line is one record; the complete nonempty file is an additional record only when it contains more than one nonempty line.",
+    "stableId": "SHA-256(source path + newline + record kind + newline + one-based row/line + newline + exact text)"
+  },
+  "normalization": {
+    "unicode": "NFKC",
+    "case": "casefold",
+    "whitespace": "collapse all Unicode whitespace to one ASCII space and trim",
+    "wordTokenization": "Unicode alphanumeric runs with internal underscore retained"
+  },
+  "detection": {
+    "exact": "Candidate full text byte identity equals a reference record.",
+    "normalizedExact": "Normalized candidate full text equals normalized reference record; raw exact matches are not double counted.",
+    "longContiguous": {"minimumWords":50,"method":"exact normalized contiguous 50-word windows; maximal contiguous span reported"},
+    "highOverlap": {"minimumWordsPerSide":50,"shingleWords":8,"minimumJaccard":0.80,"minimumContainment":0.90,"rule":"Both thresholds must pass on unique normalized shingles."},
+    "shortGenericIgnored": "Shared normalized 8-word shingles that do not produce another confirmed layer are counted as ignored candidate-reference pairs, not contamination."
+  },
+  "falsePositiveControls": ["minimum 50-word confirmed span or high-overlap eligibility","both Jaccard and containment required for near match","no exclusion based only on headings, licenses, common legal boilerplate, programming keywords, or stock phrases","manual content interpretation is not used"],
+  "exclusion": {
+    "rule": "Exclude a candidate document iff at least one deterministic exact, normalized-exact, long-contiguous, or high-overlap finding exists.",
+    "grouping": "Connected components over candidate and reference stable identities.",
+    "output": "Create a new immutable contamination-clean candidate only when one or more candidates are excluded; never mutate input."
+  },
+  "failClosed": ["predecessor mismatch","input accounting mismatch","authorized source hash mismatch","ambiguous authority","protected source access required","decode or parse failure","nondeterministic comparison","unreconciled output"]
+}

@@ -1,0 +1,6 @@
+{
+  "error": "[Errno 17] File exists: 'local-evidence/d0-post007-formal-execution'",
+  "errorType": "FileExistsError",
+  "stage": "D0-POST-007",
+  "status": "failed-after-formal-exposure"
+}

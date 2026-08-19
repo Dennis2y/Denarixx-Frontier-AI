@@ -1,0 +1,54 @@
+{
+  "candidateCheckpointLoaded": false,
+  "datasetState": "non-formal-proposed",
+  "evidenceType": "validated-proposed-dataset-freeze",
+  "formalDatasetCreated": false,
+  "formalExposureStarted": false,
+  "frozenBindings": {
+    "acceptedBaseline": {
+      "path": "local-checkpoints/d0-post003-capability-seed42.pt",
+      "sha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06"
+    },
+    "compatibilityValidator": {
+      "path": "ml/evaluation/d0_post007_compatibility.py",
+      "sha256": "7c7846f9b4a4391b2c74d29cab3e019d24f678f7a874d231e6072a4fdc1b9c84"
+    },
+    "compatibilityValidatorFreeze": {
+      "path": "local-evidence/d0-post007-compatibility-validator-freeze/COMPATIBILITY_VALIDATOR_FREEZE.txt",
+      "sha256": "16570b0eba0b001995b6553678d8688987183b76a13d62c593148d788926fe2b"
+    },
+    "constructionProcedure": {
+      "path": "local-evidence/d0-post007-dataset-construction-procedure/DATASET_CONSTRUCTION_PROCEDURE.md",
+      "sha256": "aad9866aa016e3638dcc6c615a161df552c0486bb00905f7e8167e1e00fe38e1"
+    },
+    "constructionProcedureFreeze": {
+      "path": "local-evidence/d0-post007-dataset-construction-procedure-freeze/DATASET_CONSTRUCTION_PROCEDURE_FREEZE.txt",
+      "sha256": "7c27c09acd1c69f5182a3b1afce70b0cf580687306350d916c21d8e841adabe7"
+    }
+  },
+  "modelInferenceExecuted": false,
+  "modelScoringExecuted": false,
+  "nextBoundary": {
+    "formalExecutionAuthorizedByThisEvidence": false,
+    "formalSealingAuthorizedByThisEvidence": false,
+    "requiredNextStep": "separate exact-byte sealing procedure"
+  },
+  "stage": "D0-POST-007",
+  "validatedProposedDataset": {
+    "path": "local-work/d0-post007-proposed-dataset/PROPOSED_ROWS.jsonl",
+    "sha256": "f0f5c88524c4f0b78f4ebbd23548006103aa3e4116cc4a3df34493712b07fb0c"
+  },
+  "validation": {
+    "compatible": true,
+    "families": [
+      "echo",
+      "boolean",
+      "plural",
+      "opposite",
+      "world_fact"
+    ],
+    "rowsPerFamily": 5,
+    "rowsValidated": 25,
+    "validationOccurredBeforeSealing": true
+  }
+}

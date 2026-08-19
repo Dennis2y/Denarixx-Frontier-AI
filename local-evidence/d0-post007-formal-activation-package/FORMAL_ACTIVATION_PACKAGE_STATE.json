@@ -1,0 +1,22 @@
+{
+  "acceptedBaselineSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "activationModule": "ml/evaluation/d0_post007_formal_activation.py",
+  "activationModuleSha256": "cdb7820ebd03146a2821d5026796f15c4613c694a0b5e053b005427ae40f310a",
+  "activationState": "DISARMED",
+  "authorizationBoundaryManifestSha256": "f131ff5a2f999fc185a29da03d1e158aacc2023594ace017f7812577003acfc1",
+  "authorizationBoundaryReportSha256": "65561f49b5682d96419e70db11022a5df5d1957584e458aafbef0f8e4211bacb",
+  "authorizationBoundaryStateSha256": "2a359bea25b36aa77d6178e85b7cec10f48fb0f416778d2c3520113607183010",
+  "candidateSha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9",
+  "dependencyAdapterSha256": "5bdd066deb42e55976d3e3bc64eba5453f019ff554db87ea6031d17a35bb4629",
+  "executionHarnessSha256": "edabc74e41e3785f8a0b49c2ddace683ac0b4be3fa9b1e1a81b04f10d9fb27ad",
+  "formalActivationArmed": false,
+  "formalDatasetParsed": false,
+  "formalExecutionAuthorized": false,
+  "post007FormalExposure": false,
+  "realCheckpointLoaded": false,
+  "realFormalComparisonExecuted": false,
+  "realModelScoringExecuted": false,
+  "sealedFormalDatasetSha256": "f0f5c88524c4f0b78f4ebbd23548006103aa3e4116cc4a3df34493712b07fb0c",
+  "stage": "D0-POST-007",
+  "status": "prepared"
+}

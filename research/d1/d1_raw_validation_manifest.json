@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "validation": {
+    "id": "D1-DATA-VALID-001",
+    "gate": "D1-DATA-006",
+    "acquisitionId": "D1-DATA-RAW-001-20260819T084500Z",
+    "status": "raw-validation-complete-with-qualifications",
+    "createdAt": "2026-08-19T16:39:58Z",
+    "scope": "Read-only container, integrity and structural validation of eligible raw artifacts; no extraction to corpus, normalization, tokenization, deduplication or promotion."
+  },
+  "verifiedPredecessors": {
+    "rawAcquisitionManifest": {"path": "research/d1/d1_raw_acquisition_manifest.json", "sha256": "602d1d25e26e1c057acaaae9896880994a2161afd26828fb94188c3012c9a629"},
+    "rawAcquisitionEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_raw_acquisition_005.json", "sha256": "93f173d78fd10b62f192e89e7d262ea48ab3ef4f7b84eaf5e150d18627693895"},
+    "acquisitionAuthority": {"path": "research/d1/d1_first_acquisition_authorization.json", "sha256": "a98cdfc80495ac767b379c7d1998f6b59b6e9e3d25b12fb52d3a40a6052aa30d"},
+    "acquisitionScopeEvidence": {"path": "local-evidence/d1-data-readiness/d1_data_acquisition_scope_004.json", "sha256": "60507e66c011de67b34dc868d5a0c58f43b5222a90de85037df04264fba30b6d"}
+  },
+  "byteAccounting": {
+    "RAW_BYTES_PHYSICALLY_PRESENT": 62448109,
+    "ELIGIBLE_RAW_BYTES": 5640818,
+    "VALIDATED_EXTRACTABLE_BYTES": 15045079,
+    "validatedExtractableDefinition": "Prospective source bytes structurally readable from eligible inputs without writing extracted files: 13,758,831 uncompressed UTF-8 Python member bytes plus the 1,286,248-byte well-formed UTF-8 German index XML. This is not normalized text, accepted corpus size or accepted tokens.",
+    "acceptedTokens": "NOT_MEASURED",
+    "acceptedCorpusBytes": "NOT_MEASURED"
+  },
+  "physicallyDownloadedArtifactRehash": [
+    {"sourceId": "d1-acq001-python-docs-313", "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-python-docs-313/python-3.13-docs-text.zip", "bytes": 4354570, "sha256": "6fcbc8f124b72060166f60f98bd99750de683d284098cecb25ce88247290d1b7", "acquisitionHashMatch": "PASS", "eligible": true},
+    {"sourceId": "d1-acq001-openstax-college-algebra", "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-openstax-college-algebra/CollegeAlgebra-OP.pdf", "bytes": 56807291, "sha256": "74a89e41f7b2db84e18b158a9a5548a2813f1878927e816536d43229c20439d4", "acquisitionHashMatch": "PASS", "eligible": false, "retentionState": "IMMUTABLE_UNPROMOTED_FAILURE_EVIDENCE"},
+    {"sourceId": "d1-acq001-gesetze-refresh", "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw/D1-DATA-RAW-001-20260819T084500Z/d1-acq001-gesetze-refresh/gii-toc.xml", "bytes": 1286248, "sha256": "36ca0cf14f4da6d27644efc8c3e0055042b789916abc9f74f2560823656b3661", "acquisitionHashMatch": "PASS", "eligible": true}
+  ],
+  "sourceValidation": [
+    {
+      "sourceId": "d1-acq001-python-docs-313",
+      "acquisitionStatus": "ACQUIRED",
+      "validationStatus": "VALID",
+      "actualContainerType": "COMPRESSED_ARCHIVE_ZIP",
+      "readable": true,
+      "zeroByte": false,
+      "malformedOrTruncated": false,
+      "archiveIntegrity": "PASS_ALL_MEMBER_CRC",
+      "archiveStatistics": {"totalMembers": 526, "directoryMembers": 13, "fileMembers": 513, "compressedMemberBytes": 4243154, "uncompressedMemberBytes": 13758831, "zeroByteFileMembers": 0},
+      "memberValidation": {"utf8ValidTextMembers": 513, "utf8InvalidMembers": 0, "extensions": {".txt": 513}, "encryptedMembers": 0, "symbolicLinkMembers": 0, "unsafePathMembers": 0, "nulContainingMembers": 0, "suspiciousBinaryMembers": 0, "obviousAcquisitionErrorMembers": 0},
+      "heuristicQualification": "html.parser.txt matched a literal <html heuristic but inspection confirmed it is legitimate Python HTML parser documentation, not an error page.",
+      "deterministicFutureExtractionPossible": true,
+      "prospectiveExtractableMembers": 513,
+      "prospectiveExtractableBytes": 13758831,
+      "extractedOrPromotedByThisGate": false
+    },
+    {
+      "sourceId": "d1-acq001-gesetze-refresh",
+      "acquisitionStatus": "PARTIAL",
+      "validationStatus": "VALID_WITH_QUALIFICATION",
+      "actualContainerType": "XML_UTF8",
+      "readable": true,
+      "zeroByte": false,
+      "malformedOrTruncated": false,
+      "encoding": "UTF-8",
+      "wellFormedXml": true,
+      "rootElement": "items",
+      "documentTypeDeclarationPresent": true,
+      "structure": {"itemCount": 6126, "completeTitleCount": 6126, "completeLinkCount": 6126, "uniqueLinkCount": 6126, "incompleteItemCount": 0, "linkDomain": "www.gesetze-im-internet.de", "linkScheme": "http", "xmlZipLinkCount": 6126},
+      "nulPresent": false,
+      "suspiciousBinaryContent": false,
+      "obviousAcquisitionErrorPayload": false,
+      "deterministicFutureExtractionPossible": true,
+      "prospectiveExtractableBytes": 1286248,
+      "partialReason": "The acquired file itself is a complete, valid official index within its exact authorized scope. It is not a complete law-text snapshot: no linked law archive was acquired because 6,126 HTTP links exceed the 160-file cap and no deterministic bounded subset was frozen.",
+      "usableWithinAuthorizedScope": "YES_AS_PROVENANCE_AND_LINK_INDEX_INPUT_WITHOUT_PROMOTION_AS_COMPLETE_LEGAL_CORPUS",
+      "extractedOrPromotedByThisGate": false
+    },
+    {
+      "sourceId": "d1-acq001-openstax-college-algebra",
+      "acquisitionStatus": "FAILED",
+      "validationStatus": "HELD",
+      "actualContainerType": "PDF_1_7",
+      "present": true,
+      "readable": true,
+      "hashUnchanged": true,
+      "pdfHeaderPresent": true,
+      "pdfEofMarkerPresent": true,
+      "eligibleCorpusCandidate": false,
+      "failureReason": "56,807,291 bytes exceeded frozen 50,000,000-byte source limit.",
+      "immutableUnpromotedFailureEvidence": true,
+      "extracted": false,
+      "tokenized": false,
+      "countedTowardEligibleOrAcceptedScale": false
+    },
+    {"sourceId": "d1-acq001-govinfo-uscode", "acquisitionStatus": "HELD", "validationStatus": "HELD", "filesValidated": 0, "reason": "No payload acquired; required title allowlist absent."},
+    {"sourceId": "d1-acq001-eu-ccby-publications", "acquisitionStatus": "HELD", "validationStatus": "HELD", "filesValidated": 0, "reason": "No payload acquired; required publication allowlist absent."}
+  ],
+  "crossArtifactChecks": {
+    "exactDuplicatePhysicallyDownloadedFiles": 0,
+    "rawArtifactHashesAllDistinct": true,
+    "allPhysicallyDownloadedFilesReadableAndNonzero": true,
+    "allPhysicallyDownloadedHashesMatchAcquisition": true
+  },
+  "blockerStates": {
+    "D1-DATA-BLOCKER-001": "RAW_VALIDATED_ACCEPTED_SCALE_NOT_MEASURED",
+    "D1-DATA-BLOCKER-002": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-003": "POLICY_DEFINED_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-004": "RAW_VALIDATED_COMPOSITION_NOT_MEASURED",
+    "D1-DATA-BLOCKER-005": "POLICY_DEFINED_NOT_CREATED",
+    "D1-DATA-BLOCKER-006": "RAW_CONTAINER_VALIDATED_TOKENIZER_NOT_EXECUTED",
+    "D1-DATA-BLOCKER-007": "RAW_ARTIFACT_VALIDATION_PASS_DOCUMENT_VALIDATION_PENDING"
+  },
+  "boundaryConfirmation": {
+    "downloadsPerformed": false,
+    "heldSourcesRetried": false,
+    "rawArtifactsModified": false,
+    "archiveExtractedToFilesystem": false,
+    "acceptedCorpusCreated": false,
+    "normalizationPerformed": false,
+    "corpusDeduplicationPerformed": false,
+    "contaminationAnalysisStarted": false,
+    "trainDevelopmentSplitCreated": false,
+    "acceptedTokenizerExecuted": false,
+    "modelInstantiatedOrExecuted": false,
+    "trainingExecuted": false,
+    "formalEvaluationAccessed": false,
+    "D1_SERIOUS_PRETRAINING_AUTHORIZATION": "WITHHELD"
+  },
+  "decision": "PASS_WITH_QUALIFICATIONS"
+}

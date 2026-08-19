@@ -1,0 +1,16 @@
+{
+  "stage": "D0-POST-006",
+  "rehearsalType": "revised-harness-v3",
+  "passed": true,
+  "directCliDisconnected": true,
+  "directCliCheckMethod": "python-ast",
+  "realLifecycleExecuted": false,
+  "realFormalDatasetParsed": false,
+  "historicalFormalDatasetOpened": false,
+  "realCheckpointLoaded": false,
+  "realModelScoringExecuted": false,
+  "realFormalExposureStarted": false,
+  "trainingExecuted": false,
+  "revisedHarnessSha256": "2fc3fe2a6b2d2247fd37aa2c47633f1e7fa68703473ca90b507c7c8b94cdf9e5",
+  "nextOperation": "audit-revised-harness-and-v3-rehearsal"
+}

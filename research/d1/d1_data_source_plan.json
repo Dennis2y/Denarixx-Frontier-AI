@@ -1,0 +1,252 @@
+{
+  "acquisitionOrder": [
+    {
+      "priority": 1,
+      "reason": "Highest control over provenance and rights.",
+      "source": "d1-src-denarixx-owned"
+    },
+    {
+      "priority": 2,
+      "reason": "Strong German open-data licensing basis.",
+      "source": "d1-src-govdata-dlzero"
+    },
+    {
+      "priority": 3,
+      "reason": "Useful German material with attribution tracking.",
+      "source": "d1-src-govdata-attribution"
+    },
+    {
+      "priority": 4,
+      "reason": "High-quality multilingual formal/legal text.",
+      "source": "d1-src-eurlex"
+    },
+    {
+      "priority": 5,
+      "reason": "Large general-domain source, but licensing handling must first be explicitly resolved.",
+      "source": "d1-src-wikimedia"
+    },
+    {
+      "priority": 6,
+      "reason": "Potential literary diversity, but work-level rights policy must first be resolved.",
+      "source": "d1-src-gutenberg"
+    }
+  ],
+  "approvalTiers": {
+    "A": {
+      "meaning": "Suitable for controlled acquisition once dataset-level provenance is captured.",
+      "sources": [
+        "d1-src-govdata-dlzero",
+        "d1-src-govdata-attribution",
+        "d1-src-eurlex",
+        "d1-src-denarixx-owned"
+      ]
+    },
+    "B": {
+      "meaning": "Potentially useful but legal/operational review must be resolved before acquisition.",
+      "sources": [
+        "d1-src-wikimedia",
+        "d1-src-gutenberg"
+      ]
+    },
+    "C": {
+      "meaning": "Unknown-license, scraped, paywalled, pirated or otherwise unapproved sources.",
+      "policy": "DO NOT ACQUIRE",
+      "sources": []
+    }
+  },
+  "contract": {
+    "generation": "D1",
+    "id": "D1-DATA-002",
+    "purpose": "Record candidate source classes, licensing decisions and acquisition order before corpus acquisition.",
+    "status": "planned-no-downloads"
+  },
+  "dependencies": {
+    "D0": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9",
+    "architecture": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778",
+    "data001": "61f0db2623c8fbc016364394a367a6de9b66aceee3820b40fb16a2461bd61913",
+    "initialRegistry": "9f8d6221682a73fefabf57648f1d2d64e066c340b01e123ba9b7edbf374d4d8d",
+    "storage": "7a29cfd7cb1b19a6b0203ccf9a4e02b543f99ca037f958600811337b7688c124",
+    "tokenizer": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"
+  },
+  "nextGate": {
+    "id": "D1-DATA-003",
+    "requirement": "Perform controlled acquisition of the first approved corpus tranche with provenance, hashing and no tokenizer/model training."
+  },
+  "rules": [
+    "DATA-002 does not download corpus material.",
+    "Approval is source-policy approval, not automatic approval of every individual document.",
+    "Dataset/document-specific license metadata must still be captured during acquisition.",
+    "Unknown rights status fails closed.",
+    "Evaluation data must remain logically separate from training data.",
+    "D0 remains immutable."
+  ],
+  "sources": [
+    {
+      "conditions": [
+        "Only ingest individual datasets whose metadata explicitly records an approved license.",
+        "Record provider, dataset identifier, license and source URI.",
+        "Do not assume all GovData datasets use the same license."
+      ],
+      "contentDomain": [
+        "government",
+        "public administration",
+        "statistics",
+        "public information"
+      ],
+      "language": [
+        "de"
+      ],
+      "licensePolicy": [
+        "DL-DE Zero 2.0",
+        "CC0 1.0"
+      ],
+      "sourceClass": "government-open-data",
+      "sourceId": "d1-src-govdata-dlzero",
+      "sourceName": "German public-sector open data — DL-DE Zero / CC0 subset",
+      "status": "APPROVED-FOR-ACQUISITION-PLANNING"
+    },
+    {
+      "conditions": [
+        "Preserve provider attribution metadata.",
+        "Preserve dataset URI.",
+        "Preserve exact license identifier.",
+        "Record modifications where required by the applicable license."
+      ],
+      "contentDomain": [
+        "government",
+        "public administration",
+        "statistics",
+        "public information"
+      ],
+      "language": [
+        "de"
+      ],
+      "licensePolicy": [
+        "DL-DE BY 2.0",
+        "CC BY 4.0"
+      ],
+      "sourceClass": "government-open-data",
+      "sourceId": "d1-src-govdata-attribution",
+      "sourceName": "German public-sector open data — DL-DE BY / CC BY subset",
+      "status": "APPROVED-WITH-ATTRIBUTION-TRACKING"
+    },
+    {
+      "conditions": [
+        "Exclude documents carrying explicit special conditions incompatible with use.",
+        "Do not assume third-party material inside documents is automatically reusable.",
+        "Record CELEX/document identifier and applicable reuse status.",
+        "Preserve attribution where required."
+      ],
+      "contentDomain": [
+        "law",
+        "regulation",
+        "public administration",
+        "formal language"
+      ],
+      "language": [
+        "en",
+        "de"
+      ],
+      "licensePolicy": [
+        "EU document reuse policy",
+        "CC BY 4.0 where applicable"
+      ],
+      "sourceClass": "government-open-data",
+      "sourceId": "d1-src-eurlex",
+      "sourceName": "EUR-Lex reusable EU legal text",
+      "status": "APPROVED-WITH-DOCUMENT-FILTERING"
+    },
+    {
+      "conditions": [
+        "Resolve attribution/share-alike handling for Denarixx model-development use before acquisition.",
+        "Preserve dump/version and licensing metadata.",
+        "Do not promote to tokenizer/model corpus until license review is explicitly passed."
+      ],
+      "contentDomain": [
+        "encyclopedic",
+        "general knowledge"
+      ],
+      "language": [
+        "en",
+        "de"
+      ],
+      "licensePolicy": [
+        "CC BY-SA 4.0",
+        "GFDL where applicable"
+      ],
+      "sourceClass": "permissive-open-license",
+      "sourceId": "d1-src-wikimedia",
+      "sourceName": "Wikimedia text dumps",
+      "status": "REVIEW-REQUIRED"
+    },
+    {
+      "conditions": [
+        "Do not treat the complete collection as automatically approved.",
+        "Verify copyright/public-domain status for selected works and intended jurisdiction.",
+        "Separate underlying work rights from Project Gutenberg trademark/license terms.",
+        "Do not acquire until a precise work-selection policy exists."
+      ],
+      "contentDomain": [
+        "literature",
+        "historical text"
+      ],
+      "language": [
+        "en",
+        "de"
+      ],
+      "licensePolicy": [
+        "work-specific public-domain review",
+        "Project Gutenberg terms"
+      ],
+      "sourceClass": "public-domain",
+      "sourceId": "d1-src-gutenberg",
+      "sourceName": "Project Gutenberg candidate works",
+      "status": "REVIEW-REQUIRED"
+    },
+    {
+      "conditions": [
+        "Only include material Denarixx owns or has explicit training rights for.",
+        "Exclude secrets and credentials.",
+        "Exclude private/confidential communications.",
+        "Record origin and ownership evidence in provenance metadata."
+      ],
+      "contentDomain": [
+        "technology",
+        "software",
+        "AI",
+        "business",
+        "original Denarixx material"
+      ],
+      "language": [
+        "en",
+        "de"
+      ],
+      "licensePolicy": [
+        "Denarixx-owned or explicitly assigned rights"
+      ],
+      "sourceClass": "denarixx-owned",
+      "sourceId": "d1-src-denarixx-owned",
+      "sourceName": "Denarixx-owned original corpus",
+      "status": "APPROVED-SUBJECT-TO-RIGHTS-VERIFICATION"
+    }
+  ],
+  "tokenizerCorpusComposition": {
+    "initialLanguagePlanning": {
+      "English": {
+        "targetShare": 0.5
+      },
+      "German": {
+        "targetShare": 0.5
+      }
+    },
+    "minimumBytes": 10000000,
+    "purpose": "Tokenizer-development corpus only; not final D1 model-training distribution.",
+    "rules": [
+      "Language shares are planning targets, not claims about final model capability.",
+      "Measure actual UTF-8 bytes, documents and later tokenizer token counts.",
+      "Do not pad a language with duplicated material merely to meet a percentage.",
+      "Prefer diverse high-quality text over mechanical volume."
+    ],
+    "targetBytes": 100000000
+  }
+}

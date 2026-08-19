@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "recordId": "D1-GATE-005-CORPUS-READINESS",
+  "createdAt": "2026-08-19T07:42:38Z",
+  "gate": "D1-GATE-005",
+  "decision": "PASS",
+  "frozenRequirement": "Training corpus must be materially larger than the current D0 research corpus and independently versioned/hashed.",
+  "requirementSource": "research/d1/d1_architecture_contract.json",
+  "predecessorAuthorities": {
+    "architecture": {
+      "path": "research/d1/d1_architecture_contract.json",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "model": {
+      "path": "ml/models/d1.py",
+      "sha256": "91f7fdec8e567cc4457740980d04f2f515b4111077ab07afc38bce54097e631a"
+    },
+    "acceptedTokenizer": {
+      "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+      "sha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6"
+    },
+    "gate003": {
+      "path": "local-evidence/d1-model-gate003/d1_gate003_mps_2048_readiness.json",
+      "sha256": "f4910b7b79b93073bbbfbab3c97af766555bcde04166f9264cd198bb936c901d"
+    },
+    "gate004": {
+      "path": "local-evidence/d1-model-gate004/d1_gate004_storage_readiness.json",
+      "sha256": "f2ae79c2f3f7ff4d3f430742ec664b6078620340d6ef8f836fc8bdc4780e942e"
+    },
+    "priorGate005Adjudication": {
+      "path": "local-evidence/d1-model-gate005/d1_model_024_gate005_adjudication.json",
+      "sha256": "fef41842bbd23a41bcb2f5fe42e4d01b91d6a1ad8e260938df28669f2ed70571",
+      "decision": "PASS"
+    }
+  },
+  "gate005CorpusIdentity": {
+    "identifier": "D1-GATE-005-COMPOSITE-TRANCHE-1-PLUS-TRANCHE-2",
+    "independentlyVersioned": true,
+    "independentlyHashed": true,
+    "totalBytes": 2904083,
+    "components": [
+      {
+        "identifier": "D1-DATA-007 / d1-tranche1-govdata-de",
+        "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/d1-tranche1-govdata-de/corpus.txt",
+        "filename": "corpus.txt",
+        "bytes": 624043,
+        "sha256": "446a2abbeb45fe5b11cbf5bd60e0559f7919557a9264eabe7eb33d75a4a56146",
+        "documentOrRecordCount": 11070,
+        "countMeaning": "unique normalized strings",
+        "createdAt": "2026-08-16T07:55:06.882237+00:00",
+        "manifest": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data007_corpus_manifest.json",
+        "manifestSha256": "cadae2c6cbde87400f392f7a87f4f5d9a276c54a3e4432062a6502ddcfe7d5bb"
+      },
+      {
+        "identifier": "D1-DATA-009S/T / D1-TRANCHE-2",
+        "path": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/d1-tranche2-derived-corpus.txt",
+        "filename": "d1-tranche2-derived-corpus.txt",
+        "bytes": 2280040,
+        "sha256": "a3b6448712bc71b66392f9738e5a793efd979ab552a6a9f21b897fd55d415c7e",
+        "documentOrRecordCount": 126,
+        "countMeaning": "documents",
+        "boundaryCount": 125,
+        "constructionStatus": "DERIVED_CORPUS_CONSTRUCTION_COMPLETE",
+        "verificationStatus": "DERIVED_CORPUS_INDEPENDENTLY_VERIFIED",
+        "constructionManifest": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data009s_derived_corpus_construction.json",
+        "constructionManifestSha256": "e6a5a461dc65e76c6805395e88c7075bc52cfebd5c93e3fed574292da9971a42",
+        "verificationManifest": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests/d1_data009t_derived_corpus_verification.json",
+        "verificationManifestSha256": "58b5e65f786d90a7d3a11ff87bbac1554594891e163eb2736695dcfeb2c11e2e"
+      }
+    ]
+  },
+  "acceptedTokenMeasurement": {
+    "tokens": 464086,
+    "corpusPath": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/derived/d1-tranche2-derived-corpus.txt",
+    "corpusBytes": 2280040,
+    "corpusSha256": "a3b6448712bc71b66392f9738e5a793efd979ab552a6a9f21b897fd55d415c7e",
+    "tokenizerPath": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/tokenizers/d1-bpe-8192-contract-replacement-v1/tokenizer.json",
+    "tokenizerSha256": "f8365b5b04ace1754e433477eac0d5f6291c37f9523bc13d3ede1dc370c8d8f6",
+    "evidencePath": "local-evidence/d1-model-gate004/d1_gate004_storage_readiness.json",
+    "scopeWarning": "The accepted token count is bound to tranche 2, not independently measured for the two-tranche Gate-005 composite. No retokenization was performed."
+  },
+  "d0Comparison": {
+    "identifier": "d0_research_corpus",
+    "path": "ml/data/d0_research_corpus.txt",
+    "bytes": 66416,
+    "sha256": "936b53855c5fa65cc408fb0b29108966445215a474ccfcce7ae7fe9f41fcc072",
+    "tokens": 66416,
+    "tokenCountBasis": "D0 character tokenizer produces one token per corpus character; the corpus is ASCII and measured byte/character counts are equal",
+    "gate005CompositeByteRatio": 43.725653456998316,
+    "acceptedTranche2ByteRatio": 34.32967959527824,
+    "acceptedTranche2TokenRatio": 6.98756323777403,
+    "tokenRatioScope": "D1 tranche-2 accepted tokenizer tokens divided by D0 character-token count; tokenizer schemes differ"
+  },
+  "scaleAnalysis": {
+    "modelParameters": 26655104,
+    "acceptedTokens": 464086,
+    "tokensPerParameter": 0.01741077431174157,
+    "parametersPerToken": 57.43569941778033,
+    "complete2048TokenSequences": 226,
+    "remainderTokens": 1238,
+    "hyperparametersSelected": false
+  },
+  "qualityAndProvenance": [
+    {
+      "control": "independent version identity",
+      "status": "PASS",
+      "evidence": "D1-DATA-007 and D1-DATA-009S/T identify and independently manifest the two corpus tranches."
+    },
+    {
+      "control": "immutable SHA-256 identity",
+      "status": "PASS",
+      "evidence": "Both corpus files and their construction/verification manifests have matching SHA-256 identities."
+    },
+    {
+      "control": "provenance/source records",
+      "status": "PASS",
+      "evidence": "The source registry, per-source provenance paths, DATA-007 derivation sources and DATA-009 construction chain are recorded."
+    },
+    {
+      "control": "licensing/use rights",
+      "status": "PASS",
+      "evidence": "Tranche-1 registry entries record DL-DE Zero 2.0; DATA-009B records official provenance and free-use/reuse findings for the selected German legal source."
+    },
+    {
+      "control": "duplicate/deduplication status",
+      "status": "PARTIAL",
+      "evidence": "DATA-008B records 186 near-duplicate groups and 431 participating lines for tranche 1, plus future exact-dedup rules; no equivalent completed composite-corpus dedup seal was found."
+    },
+    {
+      "control": "contamination control",
+      "status": "MISSING",
+      "evidence": "The acquisition contract requires contamination checks before evaluation, but no training-corpus contamination result was found in the inspected non-formal authorities."
+    },
+    {
+      "control": "language/domain composition",
+      "status": "PARTIAL",
+      "evidence": "Sources are identified as German and domains are described, including government/cultural and legal/civic material; no measured aggregate composite distribution was found."
+    },
+    {
+      "control": "document boundaries",
+      "status": "PASS",
+      "evidence": "Tranche 1 defines one normalized string per line; tranche 2 verifies 126 documents and 125 hashed boundary occurrences."
+    },
+    {
+      "control": "train/development split policy",
+      "status": "MISSING",
+      "evidence": "No accepted train/development split policy or split artifact was found for the Gate-005 composite corpus."
+    },
+    {
+      "control": "tokenizer compatibility",
+      "status": "PARTIAL",
+      "evidence": "The accepted 8,192-token tokenizer is identity-bound and accepted against tranche 2; a composite two-tranche token-count/compatibility artifact was not found and was not regenerated."
+    },
+    {
+      "control": "malformed/empty-file checks",
+      "status": "PARTIAL",
+      "evidence": "Tranche 2 independently verifies valid UTF-8, zero empty documents and all reconstruction checks; equally explicit aggregate checks were not found for the full composite."
+    }
+  ],
+  "contractAdjudication": {
+    "materiallyLargerByFrozenByteEvidence": true,
+    "independentlyVersioned": true,
+    "independentlyHashed": true,
+    "frozenRequirementSatisfied": true,
+    "priorFormalAdjudicationDecision": "PASS"
+  },
+  "seriousPretrainingScaleAssessment": {
+    "status": "NOT_ADEQUATE_FOR_SERIOUS_PRETRAINING",
+    "reason": "464,086 accepted tokens provide only 0.0174 tokens per parameter and 226 complete 2,048-token sequences in simple token-count terms. Gate-005 establishes relative scale and identity only; it does not establish corpus-scale adequacy for serious 26.7M-parameter pretraining.",
+    "gatePassDoesNotImplyScaleAdequacy": true
+  },
+  "protectedDataBoundary": {
+    "formalEvaluationDataAccessed": false,
+    "trainingCorpusRetokenized": false,
+    "corpusModified": false,
+    "tokenizerModified": false,
+    "modelInstantiated": false,
+    "modelExecuted": false,
+    "optimizerCreated": false,
+    "trainingStarted": false,
+    "checkpointCreated": false,
+    "trainingAuthorizedByThisGate": false
+  }
+}

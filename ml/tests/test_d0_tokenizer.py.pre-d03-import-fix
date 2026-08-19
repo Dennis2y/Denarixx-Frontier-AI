@@ -1,0 +1,86 @@
+"""Tests for the D0.3 custom tokenizer."""
+
+from tokenizers.d0_bpe import (
+    D0BPETokenizer,
+    SPECIAL_TOKENS,
+)
+
+
+SAMPLE = (
+    "Denarixx builds experimental AI systems.\n"
+    "A tokenizer converts text into tokens.\n"
+)
+
+
+def test_training_is_deterministic() -> None:
+    first = D0BPETokenizer.train(
+        SAMPLE,
+        vocab_size=48,
+    )
+
+    second = D0BPETokenizer.train(
+        SAMPLE,
+        vocab_size=48,
+    )
+
+    assert first.vocabulary() == second.vocabulary()
+    assert first.encode(SAMPLE) == second.encode(SAMPLE)
+
+
+def test_round_trip() -> None:
+    tokenizer = D0BPETokenizer.train(
+        SAMPLE,
+        vocab_size=48,
+    )
+
+    encoded = tokenizer.encode(SAMPLE)
+
+    assert encoded
+    assert tokenizer.decode(encoded) == SAMPLE
+
+
+def test_special_tokens_exist() -> None:
+    tokenizer = D0BPETokenizer.train(
+        SAMPLE,
+        vocab_size=48,
+    )
+
+    vocabulary = tokenizer.vocabulary()
+
+    for token in SPECIAL_TOKENS:
+        assert token in vocabulary
+
+
+def test_custom_tokenizer_compresses_sample() -> None:
+    tokenizer = D0BPETokenizer.train(
+        SAMPLE,
+        vocab_size=48,
+    )
+
+    assert len(tokenizer.encode(SAMPLE)) < len(SAMPLE)
+
+
+def test_serialization_round_trip(
+    tmp_path,
+) -> None:
+    tokenizer = D0BPETokenizer.train(
+        SAMPLE,
+        vocab_size=48,
+    )
+
+    path = tmp_path / "tokenizer.json"
+    tokenizer.save(path)
+
+    restored = D0BPETokenizer.load(path)
+
+    assert (
+        restored.vocabulary()
+        == tokenizer.vocabulary()
+    )
+
+    assert (
+        restored.decode(
+            restored.encode(SAMPLE)
+        )
+        == SAMPLE
+    )

@@ -126,12 +126,12 @@ function Shell({ children }: { children: ReactNode }) {
   const { signOut } = useClerk();
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
-      <aside className={cx('fixed inset-y-0 left-0 z-30 w-[248px] border-r border-sidebar-border bg-sidebar text-sidebar-foreground transition-transform md:translate-x-0', mobileOpen ? 'translate-x-0' : '-translate-x-full')}>
+      <aside className={cx('fixed inset-y-0 left-0 z-30 w-[280px] border-r border-sidebar-border bg-sidebar text-sidebar-foreground transition-transform md:translate-x-0', mobileOpen ? 'translate-x-0' : '-translate-x-full')}>
         <div className="flex h-full flex-col px-4 py-5">
           <div className="mb-9 flex items-center justify-between px-2">
             <Link href="/" data-testid="link-brand" className="flex items-center gap-3">
               <img src={`${basePath}/denarixx-logo.png`} alt="Denarixx" className="h-10 w-10 rounded-md object-cover shadow-sm" />
-              <span><span className="block text-sm font-extrabold tracking-tight">DENARIXX</span><span className="font-mono text-[9px] uppercase tracking-[.2em] text-sidebar-foreground/50">frontier / control plane</span></span>
+              <span><span className="block text-sm font-extrabold tracking-tight">DENARIXX</span><span className="block whitespace-nowrap font-mono text-[9px] uppercase tracking-[.16em] text-sidebar-foreground/50">frontier / control plane</span></span>
             </Link>
             <button data-testid="button-close-menu" onClick={() => setMobileOpen(false)} className="rounded p-1 text-sidebar-foreground/50 hover:text-sidebar-foreground md:hidden"><X className="h-4 w-4" /></button>
           </div>
@@ -140,7 +140,7 @@ function Shell({ children }: { children: ReactNode }) {
             {nav.map(({ href, label, icon: Icon }) => (
               <Link key={href} href={href} data-testid={`link-nav-${label.toLowerCase().replaceAll(' ', '-')}`} onClick={() => setMobileOpen(false)}
                 className={cx('group flex items-center justify-between rounded-md px-3 py-2.5 text-sm text-sidebar-foreground/65 hover:bg-sidebar-accent hover:text-sidebar-foreground', location === href && 'bg-sidebar-accent text-sidebar-foreground')}>
-                <span className="flex items-center gap-3"><Icon className={cx('h-4 w-4', location === href ? 'text-sidebar-primary' : 'text-sidebar-foreground/45')} />{label}</span>
+                <span className="flex min-w-0 items-center gap-3 whitespace-nowrap"><Icon className={cx('h-4 w-4 shrink-0', location === href ? 'text-sidebar-primary' : 'text-sidebar-foreground/45')} /><span>{label}</span></span>
                 {location === href && <ChevronRight className="h-3.5 w-3.5 text-sidebar-primary" />}
               </Link>
             ))}
@@ -157,7 +157,7 @@ function Shell({ children }: { children: ReactNode }) {
           </div>
         </div>
       </aside>
-      <div className="md:pl-[248px]">
+      <div className="md:pl-[280px]">
         <header className="sticky top-0 z-20 flex h-14 items-center justify-between border-b border-border bg-background/90 px-4 backdrop-blur-md md:px-8">
           <button data-testid="button-open-menu" onClick={() => setMobileOpen(true)} className="rounded-md border border-border p-2 md:hidden"><Menu className="h-4 w-4" /></button>
           <div className="hidden items-center gap-2 font-mono text-[10px] uppercase tracking-[.16em] text-muted-foreground md:flex"><span className="text-foreground">D0 / experimental</span><span>/</span><span>research control plane</span></div>

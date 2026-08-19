@@ -1,0 +1,44 @@
+{
+  "aggregateResponseLoss": 2.9665195067151844,
+  "checkpoint": "local-checkpoints/d0-post003-capability-seed42.pt",
+  "checkpointSha256": "3b409092c120242fe4ed75113758390dee3e8e627507afdf7bcbc1bb5b3ccc06",
+  "dataset": "ml/data/d0_post003_formal.jsonl",
+  "datasetSha256": "28d95ae79d92fe767cf1fb16b984ccb3c33e79616d7cf20666bd6763ec2b7115",
+  "exactMatchRate": 0.0,
+  "exactMatches": 0,
+  "examples": 25,
+  "perFamily": {
+    "binary": {
+      "exactMatches": 0,
+      "responseLoss": 2.8440592447916666,
+      "responsePerplexity": 17.18538382249463,
+      "responseTokens": 30
+    },
+    "echo": {
+      "exactMatches": 0,
+      "responseLoss": 3.039334331239973,
+      "responsePerplexity": 20.891331898435194,
+      "responseTokens": 28
+    },
+    "qa": {
+      "exactMatches": 0,
+      "responseLoss": 3.0185137176513672,
+      "responsePerplexity": 20.460858460845714,
+      "responseTokens": 25
+    },
+    "semantic": {
+      "exactMatches": 0,
+      "responseLoss": 2.6960138907799354,
+      "responsePerplexity": 14.820537544664317,
+      "responseTokens": 26
+    },
+    "transform": {
+      "exactMatches": 0,
+      "responseLoss": 3.2121289571126304,
+      "responsePerplexity": 24.83189603141042,
+      "responseTokens": 30
+    }
+  },
+  "responsePerplexity": 19.424196024852314,
+  "responseTokens": 139
+}

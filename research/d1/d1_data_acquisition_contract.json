@@ -1,0 +1,207 @@
+{
+  "acquisitionRules": [
+    "No corpus source may be promoted without a provenance record.",
+    "Unknown or ambiguous licensing must be treated as review-required, not assumed usable.",
+    "Raw source artifacts must remain distinct from processed corpus artifacts.",
+    "Every corpus version used for tokenizer or model training must have a reproducible manifest.",
+    "Every manifest must record artifact hashes, byte counts and document counts.",
+    "Training and evaluation datasets must be logically separated.",
+    "Dataset acquisition must not modify D0."
+  ],
+  "contract": {
+    "generation": "D1",
+    "id": "D1-DATA-001",
+    "purpose": "Define acquisition, provenance, licensing, quality and corpus-versioning requirements before D1 data collection.",
+    "status": "locked"
+  },
+  "dependencies": {
+    "D0": {
+      "mutationAllowed": false,
+      "sha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9"
+    },
+    "architecture": {
+      "id": "D1-ARCH-003",
+      "sha256": "93bb003b16fb13efb07f8a724d6371f067b480df61842f4808f2cb03557ff778"
+    },
+    "storage": {
+      "id": "D1-STOR-002",
+      "sha256": "7a29cfd7cb1b19a6b0203ccf9a4e02b543f99ca037f958600811337b7688c124"
+    },
+    "tokenizer": {
+      "id": "D1-TOK-001",
+      "sha256": "c5c3c2f628b7ccbeafee047985f1139bbbc88f67e1751396722141b5e751d64c"
+    }
+  },
+  "exclusions": [
+    "private or confidential material without authorization",
+    "credentials, secrets or authentication material",
+    "intentionally collected personal dossiers",
+    "malware payload corpora intended to teach harmful execution",
+    "unknown-license commercial books copied without permission",
+    "unknown-license paywalled article dumps",
+    "pirated datasets",
+    "benchmark answer keys intentionally inserted for score inflation",
+    "binary files masquerading as text",
+    "severely corrupted text",
+    "unreviewed generated spam",
+    "mass duplicated documents"
+  ],
+  "languagePolicy": {
+    "architectureRestriction": "None. Byte-level representation must permit future multilingual expansion.",
+    "futureExpansionAllowed": true,
+    "measurementRequired": true,
+    "primaryInitialLanguages": [
+      "English",
+      "German"
+    ],
+    "rule": "Do not claim multilingual capability merely because the tokenizer can encode UTF-8. Capability requires meaningful training data and evaluation."
+  },
+  "prohibitions": [
+    "do not download datasets during DATA-001",
+    "do not scrape arbitrary websites during DATA-001",
+    "do not train tokenizer during DATA-001",
+    "do not start D1 model training during DATA-001",
+    "do not create D1 model weights during DATA-001",
+    "do not mutate D0",
+    "do not silently accept unknown-license data",
+    "do not mix evaluation answers into training for score inflation"
+  ],
+  "provenanceRequiredFields": [
+    "sourceId",
+    "sourceName",
+    "sourceClass",
+    "sourceURLOrOrigin",
+    "retrievedAt",
+    "licenseName",
+    "licenseURLOrEvidence",
+    "rightsStatus",
+    "intendedUseCompatibility",
+    "language",
+    "contentDomain",
+    "acquisitionMethod",
+    "rawArtifactPath",
+    "rawArtifactSHA256",
+    "rawBytes",
+    "documentCount",
+    "processingStatus",
+    "notes"
+  ],
+  "qualityPipeline": [
+    {
+      "requirement": "Preserve raw source separately from processed data.",
+      "stage": "INGEST"
+    },
+    {
+      "requirement": "SHA-256 hash every acquired raw artifact.",
+      "stage": "HASH"
+    },
+    {
+      "requirement": "Validate text decoding and record failures.",
+      "stage": "DECODE"
+    },
+    {
+      "requirement": "Apply only documented, non-lossy or explicitly approved normalization.",
+      "stage": "NORMALIZE"
+    },
+    {
+      "requirement": "Remove empty, corrupt and clearly unusable documents.",
+      "stage": "FILTER"
+    },
+    {
+      "requirement": "Perform exact duplicate detection and later near-duplicate analysis.",
+      "stage": "DEDUP"
+    },
+    {
+      "requirement": "Measure language distribution rather than assuming it.",
+      "stage": "LANGUAGE"
+    },
+    {
+      "requirement": "Record measurable document-quality signals.",
+      "stage": "QUALITY"
+    },
+    {
+      "requirement": "Establish evaluation-set contamination checks before model evaluation.",
+      "stage": "CONTAMINATION"
+    },
+    {
+      "requirement": "Seal processed corpus version with hashes and counts.",
+      "stage": "MANIFEST"
+    }
+  ],
+  "readinessGates": [
+    {
+      "id": "D1-DATA-GATE-001",
+      "requirement": "At least one approved source has complete provenance metadata."
+    },
+    {
+      "id": "D1-DATA-GATE-002",
+      "requirement": "Raw acquired artifacts are SHA-256 hashed."
+    },
+    {
+      "id": "D1-DATA-GATE-003",
+      "requirement": "Corpus reaches at least the 10 MB tokenizer development floor."
+    },
+    {
+      "id": "D1-DATA-GATE-004",
+      "requirement": "UTF-8/text-integrity audit passes."
+    },
+    {
+      "id": "D1-DATA-GATE-005",
+      "requirement": "Exact duplicate analysis is completed."
+    },
+    {
+      "id": "D1-DATA-GATE-006",
+      "requirement": "Language/domain composition is measured."
+    },
+    {
+      "id": "D1-DATA-GATE-007",
+      "requirement": "Tokenizer training corpus manifest is sealed before tokenizer training."
+    }
+  ],
+  "scalePolicy": {
+    "developmentFloorBytes": 10000000,
+    "modelTrainingCorpus": {
+      "reason": "Final D1 model-training token budget must be selected using corpus quality, tokenizer statistics, compute throughput and measured MPS training cost.",
+      "status": "not-yet-locked"
+    },
+    "seriousTokenizerTargetBytes": 100000000
+  },
+  "sourceClasses": [
+    {
+      "description": "Public-domain text with verifiable source and jurisdiction/licensing metadata.",
+      "id": "public-domain",
+      "status": "preferred"
+    },
+    {
+      "description": "Text distributed under a license compatible with the intended Denarixx use.",
+      "id": "permissive-open-license",
+      "status": "preferred"
+    },
+    {
+      "description": "Original material owned or created for Denarixx.",
+      "id": "denarixx-owned",
+      "status": "preferred"
+    },
+    {
+      "description": "Government/public-sector text only after source-specific reuse terms are recorded.",
+      "id": "government-open-data",
+      "status": "candidate"
+    },
+    {
+      "description": "Research datasets only after dataset-card, license and redistribution/training terms are reviewed.",
+      "id": "research-dataset",
+      "status": "review-required"
+    },
+    {
+      "description": "Unfiltered web crawling is not automatically approved. Domain, rights, quality and privacy controls are required first.",
+      "id": "web-crawl",
+      "status": "restricted"
+    }
+  ],
+  "storage": {
+    "manifests": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/manifests",
+    "processed": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/processed",
+    "raw": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1/corpora/raw",
+    "root": "/Volumes/DenarixxSSD/Denarixx-Frontier-AI/D1"
+  }
+}

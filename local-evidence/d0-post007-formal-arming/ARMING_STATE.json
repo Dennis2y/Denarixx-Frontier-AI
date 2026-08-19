@@ -1,0 +1,17 @@
+{
+  "activationModuleSha256": "cdb7820ebd03146a2821d5026796f15c4613c694a0b5e053b005427ae40f310a",
+  "armingScript": "local-evidence/d0-post007-formal-arming/ARM_ONE_TIME_FORMAL_EXECUTION.sh",
+  "armingScriptSha256": "edbb67fa779f26f8795bfdc39b313474c750fd743cbcabcd2092979da4b517f6",
+  "authorizationSha256": "65b1ede08e0709b4ab3cc9a0067cddbe5e64a9013c8d9cbc3437936060eb8dbc",
+  "executionCountAuthorized": 1,
+  "formalDatasetParsed": false,
+  "formalExecutionArmed": false,
+  "formalExecutionConsumed": false,
+  "formalExposureStarted": false,
+  "realCheckpointLoaded": false,
+  "realFormalComparisonExecuted": false,
+  "realFormalEvaluation": true,
+  "realModelScoringExecuted": false,
+  "stage": "D0-POST-007",
+  "status": "arming-package-prepared"
+}

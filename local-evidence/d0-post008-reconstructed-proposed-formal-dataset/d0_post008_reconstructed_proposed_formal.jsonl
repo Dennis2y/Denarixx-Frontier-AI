@@ -1,0 +1,40 @@
+{"family":"echo","instruction":"repeat red","response":"red"}
+{"family":"echo","instruction":"repeat blue","response":"blue"}
+{"family":"echo","instruction":"repeat stone","response":"stone"}
+{"family":"echo","instruction":"repeat river","response":"river"}
+{"family":"echo","instruction":"repeat apple","response":"apple"}
+{"family":"echo","instruction":"repeat green","response":"green"}
+{"family":"echo","instruction":"repeat light","response":"light"}
+{"family":"echo","instruction":"repeat winter","response":"winter"}
+{"family":"boolean","instruction":"snow is cold","response":"true"}
+{"family":"boolean","instruction":"fire is cold","response":"false"}
+{"family":"boolean","instruction":"ice is cold","response":"true"}
+{"family":"boolean","instruction":"water is dry","response":"false"}
+{"family":"boolean","instruction":"birds have wings","response":"true"}
+{"family":"boolean","instruction":"fish live on land","response":"false"}
+{"family":"boolean","instruction":"cats are animals","response":"true"}
+{"family":"boolean","instruction":"stone is alive","response":"false"}
+{"family":"plural","instruction":"plural river","response":"rivers"}
+{"family":"plural","instruction":"plural candle","response":"candles"}
+{"family":"plural","instruction":"plural garden","response":"gardens"}
+{"family":"plural","instruction":"plural window","response":"windows"}
+{"family":"plural","instruction":"plural basket","response":"baskets"}
+{"family":"plural","instruction":"plural pencil","response":"pencils"}
+{"family":"plural","instruction":"plural bottle","response":"bottles"}
+{"family":"plural","instruction":"plural table","response":"tables"}
+{"family":"opposite","instruction":"opposite hot","response":"cold"}
+{"family":"opposite","instruction":"opposite tall","response":"short"}
+{"family":"opposite","instruction":"opposite early","response":"late"}
+{"family":"opposite","instruction":"opposite empty","response":"full"}
+{"family":"opposite","instruction":"opposite fast","response":"slow"}
+{"family":"opposite","instruction":"opposite dark","response":"light"}
+{"family":"opposite","instruction":"opposite old","response":"new"}
+{"family":"opposite","instruction":"opposite wet","response":"dry"}
+{"family":"world_fact","instruction":"sky color","response":"blue"}
+{"family":"world_fact","instruction":"grass color","response":"green"}
+{"family":"world_fact","instruction":"snow color","response":"white"}
+{"family":"world_fact","instruction":"sun rises in","response":"east"}
+{"family":"world_fact","instruction":"fish live in","response":"water"}
+{"family":"world_fact","instruction":"birds can","response":"fly"}
+{"family":"world_fact","instruction":"ice is","response":"cold"}
+{"family":"world_fact","instruction":"fire is","response":"hot"}

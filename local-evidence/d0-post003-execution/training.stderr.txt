@@ -1,0 +1,4 @@
+usage: run_post003.py [-h] --checkpoint CHECKPOINT --train-dataset
+                      TRAIN_DATASET --lm-dataset LM_DATASET --output OUTPUT
+                      --run-id RUN_ID
+run_post003.py: error: the following arguments are required: --checkpoint, --train-dataset, --lm-dataset, --output, --run-id

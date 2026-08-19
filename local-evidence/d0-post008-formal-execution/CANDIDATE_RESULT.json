@@ -1,0 +1,453 @@
+{
+  "aggregateResponseLoss": 2.7728236407169455,
+  "checkpoint": "local-checkpoints/d0-post005-development-seed42-step120.pt",
+  "checkpointSha256": "4877d292fdd8e5428db250359dc9c57ebc4f4d1ccb2a329b94bdafd2c61569d9",
+  "exactMatchRate": 0.05,
+  "exactMatches": 2,
+  "examples": 40,
+  "families": [
+    "boolean",
+    "echo",
+    "opposite",
+    "plural",
+    "world_fact"
+  ],
+  "modelName": "denarixx-d0-post005",
+  "perFamily": {
+    "boolean": {
+      "exactMatches": 2,
+      "examples": 8,
+      "responseLoss": 1.8815526312047786,
+      "responseTokens": 44
+    },
+    "echo": {
+      "exactMatches": 0,
+      "examples": 8,
+      "responseLoss": 2.8806908234306006,
+      "responseTokens": 46
+    },
+    "opposite": {
+      "exactMatches": 0,
+      "examples": 8,
+      "responseLoss": 2.915010857582092,
+      "responseTokens": 40
+    },
+    "plural": {
+      "exactMatches": 0,
+      "examples": 8,
+      "responseLoss": 3.0312114530994045,
+      "responseTokens": 62
+    },
+    "world_fact": {
+      "exactMatches": 0,
+      "examples": 8,
+      "responseLoss": 3.0788358595313094,
+      "responseTokens": 41
+    }
+  },
+  "responsePerplexity": 16.00375913716273,
+  "responseTokens": 233,
+  "results": [
+    {
+      "exactMatch": false,
+      "expected": "red",
+      "family": "echo",
+      "generated": "tre",
+      "index": 1,
+      "instruction": "repeat red",
+      "responseLoss": 2.712235927581787,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "blue",
+      "family": "echo",
+      "generated": "tre",
+      "index": 2,
+      "instruction": "repeat blue",
+      "responseLoss": 2.5984912872314454,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "stone",
+      "family": "echo",
+      "generated": "tre",
+      "index": 3,
+      "instruction": "repeat stone",
+      "responseLoss": 2.4164040883382163,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "river",
+      "family": "echo",
+      "generated": "tre",
+      "index": 4,
+      "instruction": "repeat river",
+      "responseLoss": 2.972456932067871,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "apple",
+      "family": "echo",
+      "generated": "tre",
+      "index": 5,
+      "instruction": "repeat apple",
+      "responseLoss": 3.0378831227620444,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "green",
+      "family": "echo",
+      "generated": "tre",
+      "index": 6,
+      "instruction": "repeat green",
+      "responseLoss": 2.8337504069010415,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "light",
+      "family": "echo",
+      "generated": "tre",
+      "index": 7,
+      "instruction": "repeat light",
+      "responseLoss": 3.2125120162963867,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "winter",
+      "family": "echo",
+      "generated": "tre",
+      "index": 8,
+      "instruction": "repeat winter",
+      "responseLoss": 3.118905476161412,
+      "responseTokens": 7
+    },
+    {
+      "exactMatch": true,
+      "expected": "true",
+      "family": "boolean",
+      "generated": "true",
+      "index": 9,
+      "instruction": "snow is cold",
+      "responseLoss": 1.7515844345092773,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": "boolean",
+      "generated": "true",
+      "index": 10,
+      "instruction": "fire is cold",
+      "responseLoss": 1.9181569417317708,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": true,
+      "expected": "true",
+      "family": "boolean",
+      "generated": "true",
+      "index": 11,
+      "instruction": "ice is cold",
+      "responseLoss": 1.8537704467773437,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": "boolean",
+      "generated": "tre",
+      "index": 12,
+      "instruction": "water is dry",
+      "responseLoss": 1.9790999094645183,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": "boolean",
+      "generated": "tre",
+      "index": 13,
+      "instruction": "birds have wings",
+      "responseLoss": 1.75576171875,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": "boolean",
+      "generated": "true",
+      "index": 14,
+      "instruction": "fish live on land",
+      "responseLoss": 1.9466570218404133,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "true",
+      "family": "boolean",
+      "generated": "tre",
+      "index": 15,
+      "instruction": "cats are animals",
+      "responseLoss": 1.7761850357055664,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "false",
+      "family": "boolean",
+      "generated": "tre",
+      "index": 16,
+      "instruction": "stone is alive",
+      "responseLoss": 2.00638739267985,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "rivers",
+      "family": "plural",
+      "generated": "tre",
+      "index": 17,
+      "instruction": "plural river",
+      "responseLoss": 2.999852861676897,
+      "responseTokens": 7
+    },
+    {
+      "exactMatch": false,
+      "expected": "candles",
+      "family": "plural",
+      "generated": "tre",
+      "index": 18,
+      "instruction": "plural candle",
+      "responseLoss": 2.926584243774414,
+      "responseTokens": 8
+    },
+    {
+      "exactMatch": false,
+      "expected": "gardens",
+      "family": "plural",
+      "generated": "tre",
+      "index": 19,
+      "instruction": "plural garden",
+      "responseLoss": 2.95170521736145,
+      "responseTokens": 8
+    },
+    {
+      "exactMatch": false,
+      "expected": "windows",
+      "family": "plural",
+      "generated": "tre",
+      "index": 20,
+      "instruction": "plural window",
+      "responseLoss": 3.2572946548461914,
+      "responseTokens": 8
+    },
+    {
+      "exactMatch": false,
+      "expected": "baskets",
+      "family": "plural",
+      "generated": "tre",
+      "index": 21,
+      "instruction": "plural basket",
+      "responseLoss": 3.073389768600464,
+      "responseTokens": 8
+    },
+    {
+      "exactMatch": false,
+      "expected": "pencils",
+      "family": "plural",
+      "generated": "tre",
+      "index": 22,
+      "instruction": "plural pencil",
+      "responseLoss": 3.037198066711426,
+      "responseTokens": 8
+    },
+    {
+      "exactMatch": false,
+      "expected": "bottles",
+      "family": "plural",
+      "generated": "tre",
+      "index": 23,
+      "instruction": "plural bottle",
+      "responseLoss": 3.1249191761016846,
+      "responseTokens": 8
+    },
+    {
+      "exactMatch": false,
+      "expected": "tables",
+      "family": "plural",
+      "generated": "tre",
+      "index": 24,
+      "instruction": "plural table",
+      "responseLoss": 2.8524872916085378,
+      "responseTokens": 7
+    },
+    {
+      "exactMatch": false,
+      "expected": "cold",
+      "family": "opposite",
+      "generated": "t",
+      "index": 25,
+      "instruction": "opposite hot",
+      "responseLoss": 2.8237384796142577,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "short",
+      "family": "opposite",
+      "generated": "t",
+      "index": 26,
+      "instruction": "opposite tall",
+      "responseLoss": 2.970823287963867,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "late",
+      "family": "opposite",
+      "generated": "t",
+      "index": 27,
+      "instruction": "opposite early",
+      "responseLoss": 2.7476810455322265,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "full",
+      "family": "opposite",
+      "generated": "t",
+      "index": 28,
+      "instruction": "opposite empty",
+      "responseLoss": 3.1130146026611327,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "slow",
+      "family": "opposite",
+      "generated": "t",
+      "index": 29,
+      "instruction": "opposite fast",
+      "responseLoss": 2.9138696670532225,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "light",
+      "family": "opposite",
+      "generated": "t",
+      "index": 30,
+      "instruction": "opposite dark",
+      "responseLoss": 3.128895123799642,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "new",
+      "family": "opposite",
+      "generated": "t",
+      "index": 31,
+      "instruction": "opposite old",
+      "responseLoss": 2.6770262718200684,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "dry",
+      "family": "opposite",
+      "generated": "t",
+      "index": 32,
+      "instruction": "opposite wet",
+      "responseLoss": 2.825624942779541,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "blue",
+      "family": "world_fact",
+      "generated": "tre",
+      "index": 33,
+      "instruction": "sky color",
+      "responseLoss": 2.508942794799805,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "green",
+      "family": "world_fact",
+      "generated": "tre",
+      "index": 34,
+      "instruction": "grass color",
+      "responseLoss": 2.9905735651652017,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "white",
+      "family": "world_fact",
+      "generated": "true",
+      "index": 35,
+      "instruction": "snow color",
+      "responseLoss": 3.093938191731771,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "east",
+      "family": "world_fact",
+      "generated": "tre",
+      "index": 36,
+      "instruction": "sun rises in",
+      "responseLoss": 3.1610050201416016,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "water",
+      "family": "world_fact",
+      "generated": "true",
+      "index": 37,
+      "instruction": "fish live in",
+      "responseLoss": 3.3625094095865884,
+      "responseTokens": 6
+    },
+    {
+      "exactMatch": false,
+      "expected": "fly",
+      "family": "world_fact",
+      "generated": "true",
+      "index": 38,
+      "instruction": "birds can",
+      "responseLoss": 3.2167153358459473,
+      "responseTokens": 4
+    },
+    {
+      "exactMatch": false,
+      "expected": "cold",
+      "family": "world_fact",
+      "generated": "true",
+      "index": 39,
+      "instruction": "ice is",
+      "responseLoss": 2.924579048156738,
+      "responseTokens": 5
+    },
+    {
+      "exactMatch": false,
+      "expected": "hot",
+      "family": "world_fact",
+      "generated": "true",
+      "index": 40,
+      "instruction": "fire is",
+      "responseLoss": 3.427661895751953,
+      "responseTokens": 4
+    }
+  ],
+  "stage": "D0-POST-008"
+}

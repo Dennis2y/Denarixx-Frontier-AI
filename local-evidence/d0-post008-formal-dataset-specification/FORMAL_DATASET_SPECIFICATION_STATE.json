@@ -1,0 +1,48 @@
+{
+  "bindings": {
+    "local-evidence/d0-post008-adjudicator-freeze/ADJUDICATOR_FREEZE_STATE.json": "06f89b1e2d0ac9f0f50ed62ca87ade2f0ccd5f522872d01c3067b4fa6d0809b2",
+    "local-evidence/d0-post008-formal-adjudication-policy/FORMAL_ADJUDICATION_POLICY.md": "28e149660f93ded0e782f875f307eb79b1dd7bdccf5ba6d6fb4d29a09b3e8435",
+    "local-evidence/d0-post008-formal-dataset-contract/FORMAL_DATASET_CONTRACT.md": "cd3416070b52968e4354192e58afd3b1e778d9c9827c1850a2ce22ec2ed09443",
+    "local-evidence/d0-post008-scoring-interface-specification/SCORING_INTERFACE_SPECIFICATION.md": "d9eabba38dbcaea09e5f69972f7d39da6412f8018858227549fc87a26770066b",
+    "ml/evaluation/d0_post008_adjudicator.py": "92d2d803be8d481caccf7cbf5a7758738094459d5ba8095ca95662e0cd427c0c",
+    "ml/evaluation/d0_post008_dependencies.py": "50fd911f8e29286999d65af6e390be049e5729c31f808b298d3809373b21d128",
+    "ml/evaluation/d0_post008_execution_harness.py": "f5268a25b034b4c69d980ae372ed5c632546b50725723feea73f0eeab572ea59"
+  },
+  "checkpointDependentFilteringPermitted": false,
+  "checkpointPreviewPermitted": false,
+  "compatibilityValidationRequiredBeforeSealing": true,
+  "created": "2026-08-15T17:46:17.338360+00:00",
+  "duplicateInstructionsPermitted": false,
+  "exactFamilyAllocationRequired": true,
+  "families": [
+    "echo",
+    "boolean",
+    "plural",
+    "opposite",
+    "world_fact"
+  ],
+  "formalDatasetConstructed": false,
+  "formalDatasetOpened": false,
+  "formalExecutionAuthorized": false,
+  "formalExecutionEnabled": false,
+  "formalExposureStarted": false,
+  "formalRowsConstructed": 0,
+  "format": "jsonl",
+  "freshRowsRequired": true,
+  "historicalFormalDatasetsOpened": false,
+  "historicalFormalRowsReusable": false,
+  "modelInferenceExecuted": false,
+  "modelScoringExecuted": false,
+  "realCheckpointLoaded": false,
+  "rowKeys": [
+    "family",
+    "instruction",
+    "response"
+  ],
+  "rowsPerFamily": 8,
+  "stage": "D0-POST-008",
+  "status": "formal-dataset-specification-frozen",
+  "targetPath": "ml/data/d0_post008_formal.jsonl",
+  "totalRows": 40,
+  "trainingExecuted": false
+}

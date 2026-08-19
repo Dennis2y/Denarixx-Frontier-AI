@@ -1,0 +1,108 @@
+{
+  "devFamilyCounts": {
+    "boolean": 3,
+    "echo": 3,
+    "opposite": 3,
+    "semantic": 3,
+    "suffix_s": 3
+  },
+  "devResponseCharacters": [
+    "\n",
+    "a",
+    "b",
+    "d",
+    "e",
+    "f",
+    "i",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "r",
+    "s",
+    "t",
+    "u",
+    "w"
+  ],
+  "devRows": 15,
+  "exactOverlap": {
+    "devVsFormal": [],
+    "trainVsDev": [],
+    "trainVsFormal": []
+  },
+  "formalResponseFrequency": {
+    "calm": 1,
+    "checks": 1,
+    "clear": 1,
+    "data": 1,
+    "datas": 1,
+    "false": 8,
+    "fast": 1,
+    "hot": 1,
+    "model": 1,
+    "risks": 1,
+    "runs": 1,
+    "token": 1,
+    "true": 4,
+    "words": 1,
+    "yes": 1
+  },
+  "formalRowsInspectedForLeakageOnly": 25,
+  "formalSchema": {
+    "familyKey": "family",
+    "instructionKey": "instruction",
+    "responseKey": "response"
+  },
+  "instructionOverlap": {
+    "devVsFormal": [],
+    "trainVsDev": [],
+    "trainVsFormal": []
+  },
+  "passConditions": {
+    "allFamiliesPresentInDev": true,
+    "allFamiliesPresentInTrain": true,
+    "noExactDevFormalPairs": true,
+    "noExactTrainDevPairs": true,
+    "noExactTrainFormalPairs": true,
+    "noInstructionDevFormalOverlap": true,
+    "noInstructionTrainDevOverlap": true,
+    "noInstructionTrainFormalOverlap": true
+  },
+  "passed": true,
+  "stage": "D0-POST-004",
+  "trainFamilyCounts": {
+    "boolean": 8,
+    "echo": 8,
+    "opposite": 8,
+    "semantic": 8,
+    "suffix_s": 8
+  },
+  "trainResponseCharacters": [
+    "\n",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "y"
+  ],
+  "trainRows": 40
+}
